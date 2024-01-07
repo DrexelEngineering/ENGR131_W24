@@ -33,14 +33,13 @@ parts:
             title: "10.0 Tips For Success"
   - caption: "Week 1\uFE0F\u20E3"
     chapters:
-      - file: week1/lecture1/lecture1
+      - file: week1/lecture1/Intro
         title: "Lecture 👩‍🏫"
         sections:
           - file: week1/lecture1/1_1_Why_Coding_is_the_most_important_skill
           - file: week1/lecture1/1_2_Who_is_Prof_Capps
           - file: week1/lecture1/1_3_Who_is_Prof_Agar
-                
-
+          - file: week1/lecture1/1_4_Engr131_Instructors
 
   # - caption: "Resources"
   #   chapters:
@@ -88,7 +87,7 @@ parts:
   #         - file: jupyterbook/week3/lecture3/3_extra_Intro_to_numpy
   #     - file: jupyterbook/week3/homework3/hw3-types
   #     - file: jupyterbook/week3/lab2/week_3_lab_intro
-  #     - file: jupyterbook/week3/lab2/lab2-scrabble      
+  #     - file: jupyterbook/week3/lab2/lab2-scrabble
   # - caption: "Week 4\uFE0F\u20E3"
   #   chapters:
   #     - file: jupyterbook/week4/lecture4/lecture4

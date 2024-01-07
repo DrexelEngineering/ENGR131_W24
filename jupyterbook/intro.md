@@ -6,7 +6,7 @@ You have the opportunity to learn the fundamentals of programming and algorithmi
 
 This term we will be using Piazza for class discussion. The system is highly catered to getting you help fast and efficiently from classmates, the TA, and Professors. Rather than emailing questions to the teaching staff, I encourage you to post your questions on Piazza.
 
-Find our class page at: https://piazza.com/drexel/winter2023/engr131/info
+Find our class page at: [Piazza](https://piazza.com/drexel/winter2024/engr131)
 
 ```{tableofcontents}
 ```
