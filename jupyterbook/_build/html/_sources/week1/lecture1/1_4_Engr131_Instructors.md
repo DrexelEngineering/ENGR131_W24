@@ -20,5 +20,5 @@ td, th {
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-| <img width="300" src="https://github.com/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/assets/instructor_photos/empty.png?raw=true">  |<img width="300" src="https://github.com/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/assets/instructor_photos/Ed.jpg?raw=true">  [Ed Liu (He/Him)](mailto:el662@drexel.edu) | <img width="300" src="https://github.com/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/assets/instructor_photos/empty.png?raw=true">  | |
+| <img width="300" src="https://github.com/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/assets/instructor_photos/empty.jpg?raw=true">  |<img width="300" src="https://github.com/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/assets/instructor_photos/Ed.jpg?raw=true">  [Ed Liu (He/Him)](mailto:el662@drexel.edu) | <img width="300" src="https://github.com/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/assets/instructor_photos/empty.jpg?raw=true">  | |
 

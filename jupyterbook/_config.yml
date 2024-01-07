@@ -3,7 +3,7 @@
 
 title: "ENGR 131: Winter 2024: Introductory Programming for Engineers"
 author: Shannon Capps and Joshua C. Agar
-logo: jupyterbook/assets/Drexel_Vertical stacked_Lockup_HEX.png
+logo: assets/Drexel_Logo.png
 
 only_build_toc_files: true
 
