@@ -1,0 +1,41 @@
+name: jupyterbook_builder
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get Commit Message
+        id: commit-message
+        run: echo "::set-output name=message::$(git log -1 --pretty=format:%s)"
+
+      - name: Conditional Step
+        if: contains(steps.commit-message.outputs.message, '[build]')
+        run: echo "Running build steps"
+
+      - name: Log in to Docker Hub
+        if: contains(steps.commit-message.outputs.message, '[build]')
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD_READ }}
+
+      - name: Pull Docker image
+        if: contains(steps.commit-message.outputs.message, '[build]')
+        run: docker pull ${{ secrets.TEST_GRADER }}
+
+      - name: Runs the grader
+        if: contains(steps.commit-message.outputs.message, '[build]')
+        run: docker run -v ${{ github.workspace }}/jupyterbook:/usr/src/app/ jagar2/engr_131_python_env:latest /bin/bash -c "jupyter-book clean ./jupyterbook && jupyter-book build ./jupyterbook"
+        # Local build -- docker run -v ./:/usr/src/app/ jagar2/engr_131_python_env:latest /bin/bash -c "jupyter-book clean ./jupyterbook && jupyter-book build ./jupyterbook"
+
+      - name: Auto-commit changes
+        if: contains(steps.commit-message.outputs.message, '[build]')
+        uses: stefanzweifel/git-auto-commit-action@v5
