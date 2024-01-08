@@ -9,8 +9,8 @@ only_build_toc_files: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
-execute:
-  execute_notebooks: force
+# execute:
+#   execute_notebooks: force
 # # Define the name of the latex output file for PDF builds
 # latex:
 #   latex_documents:
@@ -22,7 +22,7 @@ execute:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/DrexelEngineering/ENGR131_W2024 # Online location of your book
+  url: https://github.com/DrexelEngineering/ENGR131_W24 # Online location of your book
   branch: main # Which branch of the repository should be used when creating links (optional)
   path_to_book: jupyterbook # Optional path to your book, relative to the repository root
 

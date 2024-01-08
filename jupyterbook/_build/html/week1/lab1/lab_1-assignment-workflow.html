@@ -1,0 +1,1049 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Lab 1 - Using Jupyter Notebooks and Workflow for turning in Assignments &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'week1/lab1/lab_1-assignment-workflow';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="💻 Activity: Practice with Variables and Operators" href="../lecture1/1_13_Activity_1_2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/Drexel_Logo.png" class="logo__image only-light" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>
+    <script>document.write(`<img src="../../_static/Drexel_Logo.png" class="logo__image only-dark" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to ENGR 131
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Syllabus 📜</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../syllabus/index_syllabus.html">Syllabus</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/1_Intro.html">1.0 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/2_Contact_Process.html">2.0 Contact Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/3_Student_Learning_Information.html">3.0 Student Learning Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/4_Course_Materials.html">4.0 Course Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/5_Course_Schedule.html">5.0 Course Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/6_Earning_Credit.html">6.0 Earning Credit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/7_Expectations_of_Students.html">7.0 Expectations of Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/8_Academic_Policies.html">8.0 Academic Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/9_Counseling_Services.html">9.0 Counseling Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/10_Tips_For_Success.html">10.0 Tips For Success</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1️⃣</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lecture1/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_1_Why_Coding_is_the_most_important_skill.html">📝 Why Computer Programming is an Essential Skill</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_2_Who_is_Prof_Capps.html">📝 Who is Professor Capps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_3_Who_is_Prof_Agar.html">📝 Who is Professor Agar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_4_Engr131_Instructors.html">👨🏽👩🏾Engineering 131 Winter 2024 Instructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_5_Accessing_Course_Content.html">📝 Accessing Course Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_6_How_to_Use_Jupyterhub.html">📝 How to Use JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_7_Activity_1_Using_the_Jupyter_Hub.html">💻 Activity: Hello World JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_8_Introduction_to_Python.html">📝Why Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_9_Modules_and_Packages.html">📝Modules and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_10_Programming_Basics.html">📝Programming Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_11_Operators.html">📝 Python Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_12_Variables.html">📝 Variables and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lecture1/1_13_Activity_1_2.html">💻 Activity: Practice with Variables and Operators</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">🧪 Lab 1 Assignment Workflow</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://engr131.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week1/lab1/lab_1-assignment-workflow.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/week1/lab1/lab_1-assignment-workflow.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/week1/lab1/lab_1-assignment-workflow.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lab 1 - Using Jupyter Notebooks and Workflow for turning in Assignments</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-0-instructions-for-assignments-in-the-course">Part 0: Instructions for Assignments in the Course</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-and-test-taking">Quiz and Test Taking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-your-assignment">Starting Your Assignment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-entering-your-information-for-credit">Part 1: Entering Your Information for Credit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-building-your-t-shirt-logo">Part 2: Building Your T-Shirt Logo</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize Otter</span>
+<span class="kn">import</span> <span class="nn">otter</span>
+<span class="n">grader</span> <span class="o">=</span> <span class="n">otter</span><span class="o">.</span><span class="n">Notebook</span><span class="p">(</span><span class="s2">&quot;lab_1-assignment-workflow.ipynb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="lab-1-using-jupyter-notebooks-and-workflow-for-turning-in-assignments">
+<h1>Lab 1 - Using Jupyter Notebooks and Workflow for turning in Assignments<a class="headerlink" href="#lab-1-using-jupyter-notebooks-and-workflow-for-turning-in-assignments" title="Permalink to this heading">#</a></h1>
+<p>In this class we will be using Jupyter Notebooks for completing homeworks. This homework assignment will make sure you are comfortable using these tools.</p>
+<p>Jupyter notebooks are Java-Script Object Notation files that allow you to create documents to move and transport code and documentation that can be run interactively. The postfix for the file is <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>, you can think of this like a word document for python.</p>
+<p>In this homework assignment we want you to demonstrate your proficiency using this system. We will provide you some code that allows you to create your own personalized T-shirt logo.</p>
+<section id="part-0-instructions-for-assignments-in-the-course">
+<h2>Part 0: Instructions for Assignments in the Course<a class="headerlink" href="#part-0-instructions-for-assignments-in-the-course" title="Permalink to this heading">#</a></h2>
+<p>Computers work by following instructions exactly. Even the smallest of mistakes can cause a computer program not to work entirely. In this class we will expect that all of your work follows instructions exactly. We will provide many ways for you to check that you have not made a simple mistake in your assignments, however, just like a computer program if you do not follow instructions exactly you may not receive credit for your work. It is important that you read and understand all instructions for all assignments.</p>
+<p>Regrades and resubmissions will only be considered if there was an error in the submission or grading process. If instructions are not exactly followed this is not a valid reason for a regrade or resubmission.</p>
+<section id="quiz-and-test-taking">
+<h3>Quiz and Test Taking<a class="headerlink" href="#quiz-and-test-taking" title="Permalink to this heading">#</a></h3>
+<p>For quizzes and test you will be required to record your quiz and exam to ensure you are using only allowed resources. We will be using a monitoring software. For each assignment where monitoring is required you will be provided with a special link to access the assignment. You will be required to open this link in Google Chrome - other web browsers (specifically Safari are not supported). You will be required to share your entire screen and record yourself on video. If you do not have a webcam you will be required to purchase one. To receive credit for monitored assignment you will be required to start the recording before you open the assignment and end the recording after you have submitted the assignment on GitHub classroom.</p>
+</section>
+<section id="starting-your-assignment">
+<h3>Starting Your Assignment<a class="headerlink" href="#starting-your-assignment" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://online.wiseattend.com/student/testLink?c=ENGR131&amp;k=9614">Click this link to start your assignment</a></p>
+</section>
+</section>
+<section id="part-1-entering-your-information-for-credit">
+<h2>Part 1: Entering Your Information for Credit<a class="headerlink" href="#part-1-entering-your-information-for-credit" title="Permalink to this heading">#</a></h2>
+<p>To receive credit for assignments it is important we can identify your work from others. To do this we will ask you to enter your information in the following code block.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Please provide your first name, last name, Drexel ID, and Drexel email. Make sure these are provided as strings. &quot;STRINGS ARE TEXT ENCLOSED IN QUOTATION MARKS.&quot;</span>
+
+<span class="c1"># In the assignments you will see sections of code that you need to fill in that are marked with ... (three dots). Replace the ... with your code.</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="n">first_name</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">drexel_id</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">drexel_email</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q0-Your-Name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q0-Your-Name</pre> results:</strong></p><p><strong><pre style='display: inline;'>q0-Your-Name - 1</pre> message:</strong> It does not appear that you entered your information correctly. Please try again.</p><p><strong><pre style='display: inline;'>q0-Your-Name - 1</pre> result:</strong></p><pre>    ❌ Test case failed
+    Trying:
+        def get_local_part(email):
+            return email.split('@')[0]
+    Expecting nothing
+    ok
+    Trying:
+        local_part_email = get_local_part(drexel_email)
+    Expecting nothing
+    **********************************************************************
+    Line 3, in q0-Your-Name 0
+    Failed example:
+        local_part_email = get_local_part(drexel_email)
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q0-Your-Name 0[1]>", line 1, in <module>
+            local_part_email = get_local_part(drexel_email)
+          File "<doctest q0-Your-Name 0[0]>", line 2, in get_local_part
+            return email.split('@')[0]
+        AttributeError: 'ellipsis' object has no attribute 'split'
+    Trying:
+        assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
+    Expecting nothing
+    **********************************************************************
+    Line 4, in q0-Your-Name 0
+    Failed example:
+        assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q0-Your-Name 0[2]>", line 1, in <module>
+            assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
+        NameError: name 'local_part_email' is not defined
+</pre></div></div>
+</div>
+</section>
+<section id="part-2-building-your-t-shirt-logo">
+<h2>Part 2: Building Your T-Shirt Logo<a class="headerlink" href="#part-2-building-your-t-shirt-logo" title="Permalink to this heading">#</a></h2>
+<p>Instructions:</p>
+<ol class="arabic simple">
+<li><p>Open the notebook from the course website using the Jupyterhub. You can do this by clicking on the rocket ship and selecting jupyterhub.</p></li>
+<li><p>Copy and paste the provided code.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span><span class="p">,</span> <span class="n">ImageFont</span>
+<span class="kn">import</span> <span class="nn">skimage</span>
+<span class="kn">from</span> <span class="nn">skimage.transform</span> <span class="kn">import</span> <span class="n">rescale</span><span class="p">,</span> <span class="n">resize</span><span class="p">,</span> <span class="n">downscale_local_mean</span>
+<span class="c1">#import matplotlib.pyplot as plt</span>
+
+<span class="k">class</span> <span class="nc">your_branded_shirt</span><span class="p">():</span> 
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validation</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        
+        <span class="c1"># identifies the location of the drexel dragon file</span>
+        <span class="n">image_filename</span> <span class="o">=</span> <span class="s2">&quot;./drexel_dragon.png&quot;</span>
+
+        <span class="c1"># loads the drexel dragon file into a numpy array</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image_filename</span><span class="p">)</span>
+                
+        <span class="bp">self</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;./arial.TTF&quot;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">validation</span> <span class="o">=</span> <span class="n">validation</span>
+        
+
+    <span class="k">def</span> <span class="nf">color_random</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="c1"># selects a random int between 0,255 with size of 3 for RGB.</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;uint8&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># makes sure the color is not too blue to conceal the drexel logo</span>
+        <span class="k">if</span> <span class="n">color</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">150</span><span class="p">:</span>
+            <span class="n">color</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">150</span>
+
+        <span class="c1"># returns the color    </span>
+        <span class="k">return</span> <span class="n">color</span>
+
+
+    <span class="k">def</span> <span class="nf">rgb_to_hex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rgb</span><span class="p">):</span>
+        <span class="c1"># function to convert RGB to hex</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%02x%02x%02x</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">rgb</span>
+
+
+    <span class="k">def</span> <span class="nf">image_canvas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+
+        <span class="c1"># Create font</span>
+        <span class="n">pil_font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;unic&quot;</span><span class="p">)</span>
+
+        <span class="c1"># gets size of the text</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">text_width</span><span class="p">,</span> <span class="n">text_height</span> <span class="o">=</span> <span class="n">pil_font</span><span class="o">.</span><span class="n">getbbox</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="c1"># creates a canvas based on the size of the text</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">text_height</span><span class="p">,</span> <span class="n">text_width</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;uint8&quot;</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">text_phantom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+
+        <span class="c1"># Create font</span>
+        <span class="n">pil_font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;unic&quot;</span><span class="p">)</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">text_width</span><span class="p">,</span> <span class="n">text_height</span> <span class="o">=</span> <span class="n">pil_font</span><span class="o">.</span><span class="n">getbbox</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="c1"># create a blank canvas with extra space between lines</span>
+        <span class="n">canvas</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">text_width</span><span class="p">,</span> <span class="n">text_height</span><span class="p">],</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+
+        <span class="c1"># draw the text onto the canvas</span>
+        <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+
+        <span class="n">offset</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Calls the function to choose a random color</span>
+        <span class="n">color_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">color_random</span><span class="p">()</span>
+
+        <span class="c1"># converts the color from RGB to hex</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">rgb_to_hex</span><span class="p">((</span><span class="n">color_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color_</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color_</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+        
+        <span class="c1"># draws the text</span>
+        <span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">pil_font</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+
+        <span class="c1"># Convert the canvas into an array with values in [0, 1]</span>
+        <span class="k">return</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">multicolor_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        
+        <span class="c1"># creates the canvas</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_canvas</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+        
+        <span class="c1"># sets an initial position</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># for loop that goes around each letter in the text</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+            <span class="n">letter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_phantom</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+
+            <span class="c1">#Add the letter to the image</span>
+            <span class="n">out</span><span class="p">[</span><span class="mi">0</span> <span class="p">:</span> <span class="n">letter</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos</span> <span class="p">:</span> <span class="n">pos</span> <span class="o">+</span> <span class="n">letter</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">letter</span>
+            
+            <span class="c1"># adjusts the position so the letters do not overlap</span>
+            <span class="n">pos</span> <span class="o">+=</span> <span class="n">letter</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">out</span>
+
+
+    <span class="k">def</span> <span class="nf">build_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    
+        <span class="c1"># creates a 256,256,3 image where 3 represents RGB</span>
+        <span class="n">bkgr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">256</span><span class="p">,</span> <span class="mi">265</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;uint8&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Sets the background to be a random color</span>
+        <span class="n">bkgr</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">color_random</span><span class="p">()</span>
+
+        <span class="c1"># Resizes the image to fit within the frame</span>
+        <span class="n">image_resized</span> <span class="o">=</span> <span class="n">resize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="p">(</span><span class="mi">106</span><span class="p">,</span> <span class="mi">150</span><span class="p">),</span> <span class="n">anti_aliasing</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># places the drexel dragon image in the correct location</span>
+        <span class="n">bkgr</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">109</span><span class="p">,</span> <span class="p">(</span><span class="mi">256</span> <span class="o">-</span> <span class="mi">150</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> <span class="p">:</span> <span class="p">(</span><span class="mi">256</span> <span class="o">-</span> <span class="mi">150</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">150</span><span class="p">][</span>
+            <span class="n">image_resized</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span>
+        <span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">image_resized</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;uint8&quot;</span><span class="p">)[</span>
+            <span class="n">image_resized</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span>
+        <span class="p">]</span>
+
+        <span class="c1"># writes the word congratulations as multicolored text</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multicolor_image</span><span class="p">(</span><span class="s2">&quot;Congratulations!&quot;</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>
+
+        <span class="c1"># adds the word congratulations to the image under the dragon</span>
+        <span class="n">bkgr</span><span class="p">[</span>
+            <span class="mi">126</span> <span class="p">:</span> <span class="mi">126</span> <span class="o">+</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">256</span> <span class="o">-</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">//</span> <span class="mi">2</span> <span class="p">:</span> <span class="p">(</span><span class="mi">256</span> <span class="o">-</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="p">][</span><span class="n">out</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">]</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;uint8&quot;</span><span class="p">)[</span><span class="n">out</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">]</span>
+
+        <span class="c1"># moves the starting y position down a line</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="mi">126</span> <span class="o">+</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># You type your comment here for what this line of code does. </span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multicolor_image</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>
+
+        <span class="c1"># Adds your name to the image</span>
+        <span class="n">bkgr</span><span class="p">[</span>
+            <span class="n">y</span> <span class="o">+</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">256</span> <span class="o">-</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">//</span> <span class="mi">2</span> <span class="p">:</span> <span class="p">(</span><span class="mi">256</span> <span class="o">-</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="p">][</span><span class="n">out</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">]</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;uint8&quot;</span><span class="p">)[</span><span class="n">out</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">validation</span><span class="p">:</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">bkgr</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># makes the image</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">bkgr</span><span class="p">)</span>
+            
+            <span class="c1"># saves the image</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">_image.png&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># returns the plot </span>
+        <span class="k">return</span> <span class="n">image</span>
+
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>As you can see we have used <code class="docutils literal notranslate"><span class="pre">#</span></code> to add comments to the code. This is an important part of your assignments and grade. Comments show us that you not only completed the assignments but understand the code.</p></li>
+<li><p>The following code has 3 problems which need to be fixed so that it can run. We would like you to get comfortable reading error messages and using the <code class="docutils literal notranslate"><span class="pre">friendly.jupyter</span></code> to help you discover your errors. There are small errors or corrections that need to be made on lines 5, 25, and 130.</p></li>
+</ol>
+<p>Hint: you can simply view the line numbers by pressing <code class="docutils literal notranslate"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">l</span></code> when in a cell. You can toggle between typing and edit mode using the <code class="docutils literal notranslate"><span class="pre">esc</span></code> key.</p>
+<ol class="arabic simple" start="5">
+<li><p>You need to instantiate the the class by typing <code class="docutils literal notranslate"><span class="pre">shirt</span> <span class="pre">=</span>&#160; <span class="pre">your_branded_shirt()</span></code></p></li>
+<li><p>We would like you to call the <code class="docutils literal notranslate"><span class="pre">shirt.build_image</span></code> function to produce your image. You do this by typing <code class="docutils literal notranslate"><span class="pre">shirt.build_image(&quot;Your</span> <span class="pre">Name&quot;)</span></code> into a new cell after running the copied code. You replace &lt;Your Name&gt; with your actual name. Make sure your name is in <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> as this defines a string of characters in python.</p></li>
+</ol>
+<p>Hint: cells can be run by pressing <code class="docutils literal notranslate"><span class="pre">shift</span></code> + <code class="docutils literal notranslate"><span class="pre">enter</span></code></p>
+<ol class="arabic simple" start="7">
+<li><p>To turn in the assignment please download the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file and your image from the jupyter hub. You will then need to upload the files to the assignment on github classroom. Please name your files <code class="docutils literal notranslate"><span class="pre">YOURDREXELUSERNAME_HW1.ipynb</span></code> and <code class="docutils literal notranslate"><span class="pre">YOURDREXELUSERNAME_image.png</span></code>. Where you replace your drexel username with your actual drexel username. Due to the size of the class we will be using an automatic grading system. Upon submission your assignment will be graded, and a score file will appear in your git repository. This score file will tell you if you have passed all of the tests. If you have not passed all of the tests you can resubmit your assignment as many times as you would like before the due date. Assignments will not be accepted after the due date unless prior arrangements have been made with the instructors.</p></li>
+</ol>
+<p>Run the following code by pressing <code class="docutils literal notranslate"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">enter</span></code>, this is a module that helps explain errors to you.</p>
+<div class="cell tag_otter_ignore tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">friendly.jupyter</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question 1: Make Your Branded Shirt</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Paste your code here</span>
+
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ellipsis
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your command to run build image goes here</span>
+
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ellipsis
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q1-Make Your Branded Shirt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q1-Make Your Branded Shirt</pre> results:</strong></p><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 1</pre> message:</strong> Color random incorrectly implemented.</p><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 1</pre> result:</strong></p><pre>    ❌ Test case failed
+    Trying:
+        np.random.seed(42)
+    Expecting nothing
+    **********************************************************************
+    Line 1, in q1-Make Your Branded Shirt 0
+    Failed example:
+        np.random.seed(42)
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 0[0]>", line 1, in <module>
+            np.random.seed(42)
+        NameError: name 'np' is not defined
+    Trying:
+        random.seed(42)
+    Expecting nothing
+    ok
+    Trying:
+        shirt = your_branded_shirt(42)
+    Expecting nothing
+    **********************************************************************
+    Line 3, in q1-Make Your Branded Shirt 0
+    Failed example:
+        shirt = your_branded_shirt(42)
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 0[2]>", line 1, in <module>
+            shirt = your_branded_shirt(42)
+        NameError: name 'your_branded_shirt' is not defined
+    Trying:
+        assert all([102, 179, 92] == shirt.color_random())
+    Expecting nothing
+    **********************************************************************
+    Line 4, in q1-Make Your Branded Shirt 0
+    Failed example:
+        assert all([102, 179, 92] == shirt.color_random())
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 0[3]>", line 1, in <module>
+            assert all([102, 179, 92] == shirt.color_random())
+        NameError: name 'shirt' is not defined
+</pre><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 2</pre> message:</strong> rgb_to_hex random incorrectly implemented.</p><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 2</pre> result:</strong></p><pre>    ❌ Test case failed
+    Trying:
+        np.random.seed(50)
+    Expecting nothing
+    **********************************************************************
+    Line 1, in q1-Make Your Branded Shirt 1
+    Failed example:
+        np.random.seed(50)
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 1[0]>", line 1, in <module>
+            np.random.seed(50)
+        NameError: name 'np' is not defined
+    Trying:
+        random.seed(42)
+    Expecting nothing
+    ok
+    Trying:
+        shirt = your_branded_shirt(validation=True)
+    Expecting nothing
+    **********************************************************************
+    Line 3, in q1-Make Your Branded Shirt 1
+    Failed example:
+        shirt = your_branded_shirt(validation=True)
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 1[2]>", line 1, in <module>
+            shirt = your_branded_shirt(validation=True)
+        NameError: name 'your_branded_shirt' is not defined
+    Trying:
+        color = shirt.color_random()
+    Expecting nothing
+    **********************************************************************
+    Line 4, in q1-Make Your Branded Shirt 1
+    Failed example:
+        color = shirt.color_random()
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 1[3]>", line 1, in <module>
+            color = shirt.color_random()
+        NameError: name 'shirt' is not defined
+    Trying:
+        assert 'b0e08b' == shirt.rgb_to_hex((color[0], color[1], color[2]))
+    Expecting nothing
+    **********************************************************************
+    Line 5, in q1-Make Your Branded Shirt 1
+    Failed example:
+        assert 'b0e08b' == shirt.rgb_to_hex((color[0], color[1], color[2]))
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 1[4]>", line 1, in <module>
+            assert 'b0e08b' == shirt.rgb_to_hex((color[0], color[1], color[2]))
+        NameError: name 'shirt' is not defined
+</pre><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 3</pre> message:</strong> multicolor_image random incorrectly implemented.</p><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 3</pre> result:</strong></p><pre>    ❌ Test case failed
+    Trying:
+        np.random.seed(39)
+    Expecting nothing
+    **********************************************************************
+    Line 1, in q1-Make Your Branded Shirt 2
+    Failed example:
+        np.random.seed(39)
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 2[0]>", line 1, in <module>
+            np.random.seed(39)
+        NameError: name 'np' is not defined
+    Trying:
+        random.seed(42)
+    Expecting nothing
+    ok
+    Trying:
+        shirt = your_branded_shirt(39)
+    Expecting nothing
+    **********************************************************************
+    Line 3, in q1-Make Your Branded Shirt 2
+    Failed example:
+        shirt = your_branded_shirt(39)
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 2[2]>", line 1, in <module>
+            shirt = your_branded_shirt(39)
+        NameError: name 'your_branded_shirt' is not defined
+    Trying:
+        assert shirt.multicolor_image('Drexel', 40).flatten().sum() == 430370
+    Expecting nothing
+    **********************************************************************
+    Line 4, in q1-Make Your Branded Shirt 2
+    Failed example:
+        assert shirt.multicolor_image('Drexel', 40).flatten().sum() == 430370
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 2[3]>", line 1, in <module>
+            assert shirt.multicolor_image('Drexel', 40).flatten().sum() == 430370
+        NameError: name 'shirt' is not defined
+</pre><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 4</pre> message:</strong> text_phantom random incorrectly implemented.</p><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 4</pre> result:</strong></p><pre>    ❌ Test case failed
+    Trying:
+        np.random.seed(63)
+    Expecting nothing
+    **********************************************************************
+    Line 1, in q1-Make Your Branded Shirt 3
+    Failed example:
+        np.random.seed(63)
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 3[0]>", line 1, in <module>
+            np.random.seed(63)
+        NameError: name 'np' is not defined
+    Trying:
+        random.seed(42)
+    Expecting nothing
+    ok
+    Trying:
+        shirt = your_branded_shirt()
+    Expecting nothing
+    **********************************************************************
+    Line 3, in q1-Make Your Branded Shirt 3
+    Failed example:
+        shirt = your_branded_shirt()
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 3[2]>", line 1, in <module>
+            shirt = your_branded_shirt()
+        NameError: name 'your_branded_shirt' is not defined
+    Trying:
+        assert 211 == np.max(shirt.text_phantom('Engr_131', 40))
+    Expecting nothing
+    **********************************************************************
+    Line 4, in q1-Make Your Branded Shirt 3
+    Failed example:
+        assert 211 == np.max(shirt.text_phantom('Engr_131', 40))
+    Exception raised:
+        Traceback (most recent call last):
+          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
+            exec(compile(example.source, filename, "single",
+          File "<doctest q1-Make Your Branded Shirt 3[3]>", line 1, in <module>
+            assert 211 == np.max(shirt.text_phantom('Engr_131', 40))
+        NameError: name 'np' is not defined
+</pre></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./week1/lab1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../lecture1/1_13_Activity_1_2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">💻 Activity: Practice with Variables and Operators</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-0-instructions-for-assignments-in-the-course">Part 0: Instructions for Assignments in the Course</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-and-test-taking">Quiz and Test Taking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-your-assignment">Starting Your Assignment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-entering-your-information-for-credit">Part 1: Entering Your Information for Credit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-building-your-t-shirt-logo">Part 2: Building Your T-Shirt Logo</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Shannon Capps and Joshua C. Agar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
