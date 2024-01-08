@@ -498,50 +498,12 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell tag_otter-ignore docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q0-Your-Name&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q0-Your-Name</pre> results:</strong></p><p><strong><pre style='display: inline;'>q0-Your-Name - 1</pre> message:</strong> It does not appear that you entered your information correctly. Please try again.</p><p><strong><pre style='display: inline;'>q0-Your-Name - 1</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        def get_local_part(email):
-            return email.split('@')[0]
-    Expecting nothing
-    ok
-    Trying:
-        local_part_email = get_local_part(drexel_email)
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q0-Your-Name 0
-    Failed example:
-        local_part_email = get_local_part(drexel_email)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q0-Your-Name 0[1]>", line 1, in <module>
-            local_part_email = get_local_part(drexel_email)
-          File "<doctest q0-Your-Name 0[0]>", line 2, in get_local_part
-            return email.split('@')[0]
-        AttributeError: 'ellipsis' object has no attribute 'split'
-    Trying:
-        assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
-    Expecting nothing
-    **********************************************************************
-    Line 4, in q0-Your-Name 0
-    Failed example:
-        assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q0-Your-Name 0[2]>", line 1, in <module>
-            assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
-        NameError: name 'local_part_email' is not defined
-</pre></div></div>
 </div>
 </section>
 </section>
@@ -754,216 +716,12 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell tag_otter-ignore docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q1-Make Your Branded Shirt&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q1-Make Your Branded Shirt</pre> results:</strong></p><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 1</pre> message:</strong> Color random incorrectly implemented.</p><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 1</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        np.random.seed(42)
-    Expecting nothing
-    **********************************************************************
-    Line 1, in q1-Make Your Branded Shirt 0
-    Failed example:
-        np.random.seed(42)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 0[0]>", line 1, in <module>
-            np.random.seed(42)
-        NameError: name 'np' is not defined
-    Trying:
-        random.seed(42)
-    Expecting nothing
-    ok
-    Trying:
-        shirt = your_branded_shirt(42)
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q1-Make Your Branded Shirt 0
-    Failed example:
-        shirt = your_branded_shirt(42)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 0[2]>", line 1, in <module>
-            shirt = your_branded_shirt(42)
-        NameError: name 'your_branded_shirt' is not defined
-    Trying:
-        assert all([102, 179, 92] == shirt.color_random())
-    Expecting nothing
-    **********************************************************************
-    Line 4, in q1-Make Your Branded Shirt 0
-    Failed example:
-        assert all([102, 179, 92] == shirt.color_random())
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 0[3]>", line 1, in <module>
-            assert all([102, 179, 92] == shirt.color_random())
-        NameError: name 'shirt' is not defined
-</pre><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 2</pre> message:</strong> rgb_to_hex random incorrectly implemented.</p><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 2</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        np.random.seed(50)
-    Expecting nothing
-    **********************************************************************
-    Line 1, in q1-Make Your Branded Shirt 1
-    Failed example:
-        np.random.seed(50)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 1[0]>", line 1, in <module>
-            np.random.seed(50)
-        NameError: name 'np' is not defined
-    Trying:
-        random.seed(42)
-    Expecting nothing
-    ok
-    Trying:
-        shirt = your_branded_shirt(validation=True)
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q1-Make Your Branded Shirt 1
-    Failed example:
-        shirt = your_branded_shirt(validation=True)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 1[2]>", line 1, in <module>
-            shirt = your_branded_shirt(validation=True)
-        NameError: name 'your_branded_shirt' is not defined
-    Trying:
-        color = shirt.color_random()
-    Expecting nothing
-    **********************************************************************
-    Line 4, in q1-Make Your Branded Shirt 1
-    Failed example:
-        color = shirt.color_random()
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 1[3]>", line 1, in <module>
-            color = shirt.color_random()
-        NameError: name 'shirt' is not defined
-    Trying:
-        assert 'b0e08b' == shirt.rgb_to_hex((color[0], color[1], color[2]))
-    Expecting nothing
-    **********************************************************************
-    Line 5, in q1-Make Your Branded Shirt 1
-    Failed example:
-        assert 'b0e08b' == shirt.rgb_to_hex((color[0], color[1], color[2]))
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 1[4]>", line 1, in <module>
-            assert 'b0e08b' == shirt.rgb_to_hex((color[0], color[1], color[2]))
-        NameError: name 'shirt' is not defined
-</pre><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 3</pre> message:</strong> multicolor_image random incorrectly implemented.</p><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 3</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        np.random.seed(39)
-    Expecting nothing
-    **********************************************************************
-    Line 1, in q1-Make Your Branded Shirt 2
-    Failed example:
-        np.random.seed(39)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 2[0]>", line 1, in <module>
-            np.random.seed(39)
-        NameError: name 'np' is not defined
-    Trying:
-        random.seed(42)
-    Expecting nothing
-    ok
-    Trying:
-        shirt = your_branded_shirt(39)
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q1-Make Your Branded Shirt 2
-    Failed example:
-        shirt = your_branded_shirt(39)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 2[2]>", line 1, in <module>
-            shirt = your_branded_shirt(39)
-        NameError: name 'your_branded_shirt' is not defined
-    Trying:
-        assert shirt.multicolor_image('Drexel', 40).flatten().sum() == 430370
-    Expecting nothing
-    **********************************************************************
-    Line 4, in q1-Make Your Branded Shirt 2
-    Failed example:
-        assert shirt.multicolor_image('Drexel', 40).flatten().sum() == 430370
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 2[3]>", line 1, in <module>
-            assert shirt.multicolor_image('Drexel', 40).flatten().sum() == 430370
-        NameError: name 'shirt' is not defined
-</pre><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 4</pre> message:</strong> text_phantom random incorrectly implemented.</p><p><strong><pre style='display: inline;'>q1-Make Your Branded Shirt - 4</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        np.random.seed(63)
-    Expecting nothing
-    **********************************************************************
-    Line 1, in q1-Make Your Branded Shirt 3
-    Failed example:
-        np.random.seed(63)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 3[0]>", line 1, in <module>
-            np.random.seed(63)
-        NameError: name 'np' is not defined
-    Trying:
-        random.seed(42)
-    Expecting nothing
-    ok
-    Trying:
-        shirt = your_branded_shirt()
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q1-Make Your Branded Shirt 3
-    Failed example:
-        shirt = your_branded_shirt()
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 3[2]>", line 1, in <module>
-            shirt = your_branded_shirt()
-        NameError: name 'your_branded_shirt' is not defined
-    Trying:
-        assert 211 == np.max(shirt.text_phantom('Engr_131', 40))
-    Expecting nothing
-    **********************************************************************
-    Line 4, in q1-Make Your Branded Shirt 3
-    Failed example:
-        assert 211 == np.max(shirt.text_phantom('Engr_131', 40))
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Make Your Branded Shirt 3[3]>", line 1, in <module>
-            assert 211 == np.max(shirt.text_phantom('Engr_131', 40))
-        NameError: name 'np' is not defined
-</pre></div></div>
 </div>
 </section>
 <section id="part-4-submitting-your-assignment">
@@ -1030,7 +788,7 @@ document.write(`
 <li><p>Viewing your score</p></li>
 </ol>
 <p>Each <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file you have uploaded will have a file with the name of your file + <code class="docutils literal notranslate"><span class="pre">Grade_Report.md</span></code>. You can view this file by clicking on the file name. This will show you the results of the autograder.</p>
-<p><img alt="" src="week1/lab1/figs/submitting_12.png" /></p>
+<p><img alt="" src="../../_images/submitting_12.png" /></p>
 <p>We have both public and hidden tests. You will be able to see the score of both tests, but not the specific details of why the test passed or failed.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
