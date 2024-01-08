@@ -458,7 +458,7 @@ document.write(`
 <li><p>Repeat steps 2-3, 3 more times</p></li>
 </ol>
 <p>None of these steps can be inferred, they all need to be explicitly stated exactly.</p>
-<div class="cell tag_skip-execution docutils container">
+<div class="cell tag_skip-execution tag_skip docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python program to draw a ...</span>
 <span class="c1"># using Turtle Programming</span>
@@ -472,29 +472,8 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Python program to draw a ...</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># using Turtle Programming</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">mobilechelonian</span> <span class="kn">import</span> <span class="n">Turtle</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">skk</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-
-<span class="n">File</span> <span class="o">~/</span><span class="n">micromamba</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">ENGR131</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">mobilechelonian</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">math</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">widgets</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">notebook</span> <span class="kn">import</span> <span class="n">nbextensions</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">traitlets</span> <span class="kn">import</span> <span class="n">Unicode</span><span class="p">,</span> <span class="n">List</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-
-<span class="ne">ImportError</span>: cannot import name &#39;nbextensions&#39; from &#39;notebook&#39; (/home/ferroelectric/micromamba/envs/ENGR131/lib/python3.10/site-packages/notebook/__init__.py)
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell tag_skip-execution docutils container">
+<div class="cell tag_skip-execution tag_skip docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
 
@@ -531,52 +510,6 @@ document.write(`
     <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="mf">0.1</span>
 
 <span class="n">turtle</span><span class="o">.</span><span class="n">exitonclick</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TclError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">turtle</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">turtle</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">turtle</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">turtle</span><span class="o">.</span><span class="n">hideturtle</span><span class="p">()</span>
-
-<span class="nn">File &lt;string&gt;:6,</span> in <span class="ni">setup</span><span class="nt">(width, height, startx, starty)</span>
-
-<span class="nn">File ~/micromamba/envs/ENGR131/lib/python3.10/turtle.py:3664,</span> in <span class="ni">Screen</span><span class="nt">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">3660</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Return the singleton screen object.</span>
-<span class="g g-Whitespace">   </span><span class="mi">3661</span><span class="sd"> If none exists at the moment, create a new one and return it,</span>
-<span class="g g-Whitespace">   </span><span class="mi">3662</span><span class="sd"> else return the existing one.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">3663</span> <span class="k">if</span> <span class="n">Turtle</span><span class="o">.</span><span class="n">_screen</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3664</span>     <span class="n">Turtle</span><span class="o">.</span><span class="n">_screen</span> <span class="o">=</span> <span class="n">_Screen</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">3665</span> <span class="k">return</span> <span class="n">Turtle</span><span class="o">.</span><span class="n">_screen</span>
-
-<span class="nn">File ~/micromamba/envs/ENGR131/lib/python3.10/turtle.py:3680,</span> in <span class="ni">_Screen.__init__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3673</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">3674</span>     <span class="c1"># XXX there is no need for this code to be conditional,</span>
-<span class="g g-Whitespace">   </span><span class="mi">3675</span>     <span class="c1"># as there will be only a single _Screen instance, anyway</span>
-<span class="g g-Whitespace">   </span><span class="mi">3676</span>     <span class="c1"># XXX actually, the turtle demo is injecting root window,</span>
-<span class="g g-Whitespace">   </span><span class="mi">3677</span>     <span class="c1"># so perhaps the conditional creation of a root should be</span>
-<span class="g g-Whitespace">   </span><span class="mi">3678</span>     <span class="c1"># preserved (perhaps by passing it as an optional parameter)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3679</span>     <span class="k">if</span> <span class="n">_Screen</span><span class="o">.</span><span class="n">_root</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3680</span>         <span class="n">_Screen</span><span class="o">.</span><span class="n">_root</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_root</span> <span class="o">=</span> <span class="n">_Root</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">3681</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">_Screen</span><span class="o">.</span><span class="n">_title</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3682</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_root</span><span class="o">.</span><span class="n">ondestroy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_destroy</span><span class="p">)</span>
-
-<span class="nn">File ~/micromamba/envs/ENGR131/lib/python3.10/turtle.py:435,</span> in <span class="ni">_Root.__init__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">434</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">435</span>     <span class="n">TK</span><span class="o">.</span><span class="n">Tk</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-
-<span class="nn">File ~/micromamba/envs/ENGR131/lib/python3.10/tkinter/__init__.py:2299,</span> in <span class="ni">Tk.__init__</span><span class="nt">(self, screenName, baseName, className, useTk, sync, use)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2297</span>         <span class="n">baseName</span> <span class="o">=</span> <span class="n">baseName</span> <span class="o">+</span> <span class="n">ext</span>
-<span class="g g-Whitespace">   </span><span class="mi">2298</span> <span class="n">interactive</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="ne">-&gt; </span><span class="mi">2299</span> <span class="bp">self</span><span class="o">.</span><span class="n">tk</span> <span class="o">=</span> <span class="n">_tkinter</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">screenName</span><span class="p">,</span> <span class="n">baseName</span><span class="p">,</span> <span class="n">className</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">wantobjects</span><span class="p">,</span> <span class="n">useTk</span><span class="p">,</span> <span class="n">sync</span><span class="p">,</span> <span class="n">use</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2300</span> <span class="k">if</span> <span class="n">useTk</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2301</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_loadtk</span><span class="p">()</span>
-
-<span class="ne">TclError</span>: no display name and no $DISPLAY environment variable
 </pre></div>
 </div>
 </div>

@@ -405,8 +405,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-your-assignment">Starting Your Assignment</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-entering-your-information-for-credit">Part 1: Entering Your Information for Credit</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-building-your-t-shirt-logo">Part 2: Building Your T-Shirt Logo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-entering-your-information-for-credit">Part 2: Entering Your Information for Credit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-begin">Before you begin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-building-your-t-shirt-logo">Part 3: Building Your T-Shirt Logo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-submitting-your-assignment">Part 4: Submitting Your Assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fin">Fin</a></li>
 </ul>
             </nav>
         </div>
@@ -418,16 +423,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize Otter</span>
-<span class="kn">import</span> <span class="nn">otter</span>
-<span class="n">grader</span> <span class="o">=</span> <span class="n">otter</span><span class="o">.</span><span class="n">Notebook</span><span class="p">(</span><span class="s2">&quot;lab_1-assignment-workflow.ipynb&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section class="tex2jax_ignore mathjax_ignore" id="lab-1-using-jupyter-notebooks-and-workflow-for-turning-in-assignments">
+  <section class="tex2jax_ignore mathjax_ignore" id="lab-1-using-jupyter-notebooks-and-workflow-for-turning-in-assignments">
 <h1>Lab 1 - Using Jupyter Notebooks and Workflow for turning in Assignments<a class="headerlink" href="#lab-1-using-jupyter-notebooks-and-workflow-for-turning-in-assignments" title="Permalink to this heading">#</a></h1>
 <p>In this class we will be using Jupyter Notebooks for completing homeworks. This homework assignment will make sure you are comfortable using these tools.</p>
 <p>Jupyter notebooks are Java-Script Object Notation files that allow you to create documents to move and transport code and documentation that can be run interactively. The postfix for the file is <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>, you can think of this like a word document for python.</p>
@@ -443,11 +439,51 @@ document.write(`
 <section id="starting-your-assignment">
 <h3>Starting Your Assignment<a class="headerlink" href="#starting-your-assignment" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://online.wiseattend.com/student/testLink?c=ENGR131&amp;k=8553">Click this link to start your assignment</a></p>
+<p>This will prompt you to login to our proctoring service.</p>
+<p>Part 1: Login in to the Proctoring Service:</p>
+<ol class="arabic simple">
+<li><p>Click the link above</p></li>
+<li><p>Login with your Drexel email and Drexel Student ID</p></li>
+</ol>
+<p><img alt="" src="../../_images/wise_1.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>Starting Recording</p></li>
+</ol>
+<p>You need to make sure your web browser is allowed to access your camera and microphone. You will be prompted to allow this. Then you must share your entire screen and agree to the terms.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some browsers including Safari do not support screen sharing. Wise is tested on Google Chrome a free web browser. You can download Google Chrome <a class="reference external" href="https://www.google.com/chrome/">here</a></p>
+</div>
+<p><img alt="" src="../../_images/wise_2.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p>Accept the permissions for screen capture and recording</p></li>
+</ol>
+<p><img alt="" src="../../_images/wise_3.png" /></p>
+<ol class="arabic simple" start="5">
+<li><p>Take a picture of yourself using your webcam, this is used to verify your identity.</p></li>
+</ol>
+<p><img alt="" src="../../_images/wise_4.png" /></p>
+<ol class="arabic simple" start="6">
+<li><p>You will be presented with a link to begin your assignment. Click this link and you will be redirect to your JupyterHub with the assignment loaded.</p></li>
+</ol>
+<p><img alt="" src="../../_images/wise_5.png" /></p>
 </section>
 </section>
-<section id="part-1-entering-your-information-for-credit">
-<h2>Part 1: Entering Your Information for Credit<a class="headerlink" href="#part-1-entering-your-information-for-credit" title="Permalink to this heading">#</a></h2>
+<section id="part-2-entering-your-information-for-credit">
+<h2>Part 2: Entering Your Information for Credit<a class="headerlink" href="#part-2-entering-your-information-for-credit" title="Permalink to this heading">#</a></h2>
 <p>To receive credit for assignments it is important we can identify your work from others. To do this we will ask you to enter your information in the following code block.</p>
+<section id="before-you-begin">
+<h3>Before you begin<a class="headerlink" href="#before-you-begin" title="Permalink to this heading">#</a></h3>
+<p>Run this block of code that imports and sets up the autograder. This will allow you to check your work.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize Otter</span>
+<span class="kn">import</span> <span class="nn">otter</span>
+<span class="n">grader</span> <span class="o">=</span> <span class="n">otter</span><span class="o">.</span><span class="n">Notebook</span><span class="p">(</span><span class="s2">&quot;lab_1-assignment-workflow.ipynb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Please provide your first name, last name, Drexel ID, and Drexel email. Make sure these are provided as strings. &quot;STRINGS ARE TEXT ENCLOSED IN QUOTATION MARKS.&quot;</span>
@@ -508,8 +544,9 @@ document.write(`
 </pre></div></div>
 </div>
 </section>
-<section id="part-2-building-your-t-shirt-logo">
-<h2>Part 2: Building Your T-Shirt Logo<a class="headerlink" href="#part-2-building-your-t-shirt-logo" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="part-3-building-your-t-shirt-logo">
+<h2>Part 3: Building Your T-Shirt Logo<a class="headerlink" href="#part-3-building-your-t-shirt-logo" title="Permalink to this heading">#</a></h2>
 <p>Instructions:</p>
 <ol class="arabic simple">
 <li><p>Open the notebook from the course website using the Jupyterhub. You can do this by clicking on the rocket ship and selecting jupyterhub.</p></li>
@@ -929,6 +966,80 @@ document.write(`
 </pre></div></div>
 </div>
 </section>
+<section id="part-4-submitting-your-assignment">
+<h2>Part 4: Submitting Your Assignment<a class="headerlink" href="#part-4-submitting-your-assignment" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Saving your file:</p></li>
+</ol>
+<p>Press <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">+</span> <span class="pre">s</span></code> to save your file. You can also go to <code class="docutils literal notranslate"><span class="pre">file</span></code> and select <code class="docutils literal notranslate"><span class="pre">save</span> <span class="pre">and</span> <span class="pre">checkpoint</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li><p>Downloading your file:</p></li>
+</ol>
+<p>Go to <code class="docutils literal notranslate"><span class="pre">file</span></code> and select <code class="docutils literal notranslate"><span class="pre">download</span></code>. This will download your file to your local computer.</p>
+<p><img alt="" src="../../_images/submitting_1.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>Navigate to GitHub Classroom</p></li>
+</ol>
+<p>Use this <a class="reference external" href="https://classroom.github.com/a/58gsY_in">link</a> to navigate to the assignment on GitHub classroom.</p>
+<p><img alt="" src="../../_images/submitting_2.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p>Login/create an account</p></li>
+</ol>
+<p>If you already have a GitHub account you can login. If you do not have a GitHub account you will need to create one, by clicking create a new account.</p>
+<p>4.1 Create an account with a strong password</p>
+<p><img alt="" src="../../_images/submitting_3.png" /></p>
+<p>4.2 Verify your email address</p>
+<p><img alt="" src="../../_images/submitting_4.png" /></p>
+<p>4.3 Return to the assignment on GitHub classroom</p>
+<p>If you had to create an account you likely need to go back to Github classroom. You can do this by clicking this <a class="reference external" href="https://classroom.github.com/a/58gsY_in">link</a> again.</p>
+<ol class="arabic simple" start="5">
+<li><p>Joining the Classroom</p></li>
+</ol>
+<p>You will be prompted to join the classroom. Find your drexel username to link your username to your GitHub account.</p>
+<p>If for some reason your ID is not found click <code class="docutils literal notranslate"><span class="pre">skip</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">next</span> <span class="pre">step</span></code></p>
+<p><img alt="" src="../../_images/submitting_5.png" /></p>
+<ol class="arabic simple">
+<li><p>Accepting the assignment</p></li>
+</ol>
+<p>Click <code class="docutils literal notranslate"><span class="pre">accept</span> <span class="pre">this</span> <span class="pre">assignment</span></code> to accept the assignment.</p>
+<p><img alt="" src="../../_images/submitting_6.png" /></p>
+<ol class="arabic" start="7">
+<li><p>Making your repository</p>
+<p><img alt="" src="../../_images/submitting_7.png" /></p>
+</li>
+</ol>
+<p>GitHub will now make a repository for you to submit your assignment. You need to hit refresh to monitor the progress. When the repository is ready you will see a screen like this:</p>
+<p><img alt="" src="../../_images/submitting_8.png" /></p>
+<p>click the link to your repository.</p>
+<ol class="arabic simple">
+<li><p>Uploading your files</p></li>
+</ol>
+<p>In the top right corner you will see a button that says <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">file</span></code>, click this and select <code class="docutils literal notranslate"><span class="pre">Upload</span> <span class="pre">files</span></code>. You will then be prompted to upload your files. You can drag and drop your files into the box or select <code class="docutils literal notranslate"><span class="pre">choose</span> <span class="pre">your</span> <span class="pre">files</span></code> to select your files.</p>
+<p><img alt="" src="../../_images/submitting_9.png" /></p>
+<ol class="arabic simple" start="9">
+<li><p>Committing your files</p></li>
+</ol>
+<p>In Github uploading is called committing. This means that the files are saved and tracked by your repository. You can commit your files by scrolling to the bottom of the page and clicking <code class="docutils literal notranslate"><span class="pre">commit</span> <span class="pre">changes</span></code>. Make sure that you are uploading the correct file with a <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extension.</p>
+<p><img alt="" src="../../_images/submitting_10.png" /></p>
+<ol class="arabic simple" start="10">
+<li><p>Autograding</p></li>
+</ol>
+<p>Once you submit your file the autograder will run. You will see this by noticing a small yellow dot next to the repository name when refreshing. If you click on the yellow dot you can see the progress of the autograder. This will take a few minutes to complete. Once complete this will change to a checkmark.</p>
+<p><img alt="" src="../../_images/submitting_11.png" /></p>
+<ol class="arabic simple">
+<li><p>Viewing your score</p></li>
+</ol>
+<p>Each <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file you have uploaded will have a file with the name of your file + <code class="docutils literal notranslate"><span class="pre">Grade_Report.md</span></code>. You can view this file by clicking on the file name. This will show you the results of the autograder.</p>
+<p><img alt="" src="week1/lab1/figs/submitting_12.png" /></p>
+<p>We have both public and hidden tests. You will be able to see the score of both tests, but not the specific details of why the test passed or failed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In python and particularly jupyter notebooks it is common that during testing you run cells in a different order, or run cells and modify them. This can cause there to be local variables needed for your solution that would not be recreated on running your code again from scratch. Your assignment will be graded based on running your code from scratch. This means before you submit your assignment you should restart the kernel and run all cells. You can do this by clicking <code class="docutils literal notranslate"><span class="pre">Kernel</span></code> and selecting <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">and</span> <span class="pre">Run</span> <span class="pre">All</span></code>. If you code does not run as expected after restarting the kernel and running all cells it means you have an error in your code.</p>
+</div>
+</section>
+<section id="fin">
+<h2>Fin<a class="headerlink" href="#fin" title="Permalink to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -990,8 +1101,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-your-assignment">Starting Your Assignment</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-entering-your-information-for-credit">Part 1: Entering Your Information for Credit</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-building-your-t-shirt-logo">Part 2: Building Your T-Shirt Logo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-entering-your-information-for-credit">Part 2: Entering Your Information for Credit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-begin">Before you begin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-building-your-t-shirt-logo">Part 3: Building Your T-Shirt Logo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-submitting-your-assignment">Part 4: Submitting Your Assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fin">Fin</a></li>
 </ul>
   </nav></div>
 
