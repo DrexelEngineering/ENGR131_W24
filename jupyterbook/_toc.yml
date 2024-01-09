@@ -50,4 +50,6 @@ parts:
           - file: week1/lecture1/1_12_Variables
           - file: week1/lecture1/1_13_Activity_1_2
       - file: week1/lab1/lab_1-assignment-workflow
-        title: 🧪 Lab 1 Assignment Workflow 
+        title: 🧪 Lab 1 Assignment Workflow
+      - file: week1/homework1/Homework_1_Hello_World_Python
+        title: 🏡📝 Homework 1 Hello_World_Python
