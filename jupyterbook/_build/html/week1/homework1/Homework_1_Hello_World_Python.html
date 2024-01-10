@@ -457,7 +457,7 @@ document.write(`
 <section id="before-you-begin">
 <h3>Before you begin<a class="headerlink" href="#before-you-begin" title="Permalink to this heading">#</a></h3>
 <p>Run the block of code at the top of the notebook that imports and sets up the autograder. This will allow you to check your work.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Please provide your first name, last name, Drexel ID, and Drexel email. Make sure these are provided as strings. &quot;STRINGS ARE TEXT ENCLOSED IN QUOTATION MARKS.&quot;</span>
 
@@ -470,50 +470,12 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q0-Checking-Your-Name&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q0-Checking-Your-Name</pre> results:</strong></p><p><strong><pre style='display: inline;'>q0-Checking-Your-Name - 1</pre> message:</strong> It does not appear that you entered your information correctly. Please try again.</p><p><strong><pre style='display: inline;'>q0-Checking-Your-Name - 1</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        def get_local_part(email):
-            return email.split('@')[0]
-    Expecting nothing
-    ok
-    Trying:
-        local_part_email = get_local_part(drexel_email)
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q0-Checking-Your-Name 0
-    Failed example:
-        local_part_email = get_local_part(drexel_email)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q0-Checking-Your-Name 0[1]>", line 1, in <module>
-            local_part_email = get_local_part(drexel_email)
-          File "<doctest q0-Checking-Your-Name 0[0]>", line 2, in get_local_part
-            return email.split('@')[0]
-        AttributeError: 'ellipsis' object has no attribute 'split'
-    Trying:
-        assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
-    Expecting nothing
-    **********************************************************************
-    Line 4, in q0-Checking-Your-Name 0
-    Failed example:
-        assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q0-Checking-Your-Name 0[2]>", line 1, in <module>
-            assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
-        NameError: name 'local_part_email' is not defined
-</pre></div></div>
 </div>
 <div class="cell tag_otter_ignore tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -547,7 +509,7 @@ document.write(`
 
 </pre></div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import required packages here</span>
 
@@ -579,58 +541,12 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q1-Conducting-Simple-Math&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q1-Conducting-Simple-Math</pre> results:</strong></p><p><strong><pre style='display: inline;'>q1-Conducting-Simple-Math - 1</pre> message:</strong> Variables incorrectly defined.</p><p><strong><pre style='display: inline;'>q1-Conducting-Simple-Math - 1</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        a = question_1(printing=False)
-    Expecting nothing
-    ok
-    Trying:
-        assert a == 16
-    Expecting nothing
-    **********************************************************************
-    Line 2, in q1-Conducting-Simple-Math 0
-    Failed example:
-        assert a == 16
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Conducting-Simple-Math 0[1]>", line 1, in <module>
-            assert a == 16
-        AssertionError
-</pre><p><strong><pre style='display: inline;'>q1-Conducting-Simple-Math - 2</pre> message:</strong> Your code does not prints the result of sqrt_256.</p><p><strong><pre style='display: inline;'>q1-Conducting-Simple-Math - 2</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        from unittest.mock import patch
-    Expecting nothing
-    ok
-    Trying:
-        with patch('builtins.print') as mock_print:
-            a = question_1()
-            mock_print.assert_called_once_with(a)
-    Expecting nothing
-    **********************************************************************
-    Line 2, in q1-Conducting-Simple-Math 1
-    Failed example:
-        with patch('builtins.print') as mock_print:
-            a = question_1()
-            mock_print.assert_called_once_with(a)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-Conducting-Simple-Math 1[1]>", line 3, in <module>
-            mock_print.assert_called_once_with(a)
-          File "/opt/conda/envs/engr131/lib/python3.10/unittest/mock.py", line 940, in assert_called_once_with
-            raise AssertionError(msg)
-        AssertionError: Expected 'print' to be called once. Called 0 times.
-</pre></div></div>
 </div>
 </section>
 </section>
@@ -644,7 +560,7 @@ document.write(`
 <li><p>The division of e=48 by f=6.</p></li>
 <li><p>The remainder when g=17 is divided by h=5.</p></li>
 </ul>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This line of code defines a function</span>
 <span class="c1"># DO NOT CHANGE THIS LINE OF CODE</span>
@@ -678,98 +594,19 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sum result: Ellipsis
-Product result: Ellipsis
-Division result: Ellipsis
-Remainder result: Ellipsis
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q2-Applying-Simple-Mathematical-Operations&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q2-Applying-Simple-Mathematical-Operations</pre> results:</strong></p><p><strong><pre style='display: inline;'>q2-Applying-Simple-Mathematical-Operations - 1</pre> message:</strong> The variables are not implemented correctly.</p><p><strong><pre style='display: inline;'>q2-Applying-Simple-Mathematical-Operations - 1</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        output = question_2()
-    Expecting nothing
-    ok
-    Trying:
-        expected_values = (15, 23, 12, 4, 48, 6, 17, 5)
-    Expecting nothing
-    ok
-    Trying:
-        assert output[4:] == expected_values
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q2-Applying-Simple-Mathematical-Operations 0
-    Failed example:
-        assert output[4:] == expected_values
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q2-Applying-Simple-Mathematical-Operations 0[2]>", line 1, in <module>
-            assert output[4:] == expected_values
-        AssertionError
-</pre><p><strong><pre style='display: inline;'>q2-Applying-Simple-Mathematical-Operations - 2</pre> message:</strong> The sum of a and b is incorrect.</p><p><strong><pre style='display: inline;'>q2-Applying-Simple-Mathematical-Operations - 2</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        output = question_2()
-    Expecting nothing
-    ok
-    Trying:
-        solution = 38
-    Expecting nothing
-    ok
-    Trying:
-        assert output[0] == solution
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q2-Applying-Simple-Mathematical-Operations 1
-    Failed example:
-        assert output[0] == solution
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q2-Applying-Simple-Mathematical-Operations 1[2]>", line 1, in <module>
-            assert output[0] == solution
-        AssertionError
-</pre><p><strong><pre style='display: inline;'>q2-Applying-Simple-Mathematical-Operations - 3</pre> message:</strong> The product of c and d is incorrect.</p><p><strong><pre style='display: inline;'>q2-Applying-Simple-Mathematical-Operations - 3</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        output = question_2()
-    Expecting nothing
-    ok
-    Trying:
-        solution = 48
-    Expecting nothing
-    ok
-    Trying:
-        assert output[1] == solution
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q2-Applying-Simple-Mathematical-Operations 2
-    Failed example:
-        assert output[1] == solution
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q2-Applying-Simple-Mathematical-Operations 2[2]>", line 1, in <module>
-            assert output[1] == solution
-        AssertionError
-</pre></div></div>
 </div>
 </section>
 <section id="question-3-basic-printing-of-strings">
 <h2>Question 3: Basic Printing of Strings<a class="headerlink" href="#question-3-basic-printing-of-strings" title="Permalink to this heading">#</a></h2>
 <p>Print the following sentence in Python: <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">Python</span> <span class="pre">world!</span></code> Make sure to include the exclamation mark.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This line of code defines a function</span>
 <span class="c1"># DO NOT CHANGE THIS LINE OF CODE</span>
@@ -790,45 +627,18 @@ Remainder result: Ellipsis
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q3-Basic-Printing-of-Strings&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q3-Basic-Printing-of-Strings</pre> results:</strong></p><p><strong><pre style='display: inline;'>q3-Basic-Printing-of-Strings - 1</pre> message:</strong> Your code does not prints a string.</p><p><strong><pre style='display: inline;'>q3-Basic-Printing-of-Strings - 1</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        from unittest.mock import patch
-    Expecting nothing
-    ok
-    Trying:
-        with patch('builtins.print') as mock_print:
-            (a, string) = question_3()
-            mock_print.assert_called_once_with(string)
-    Expecting nothing
-    **********************************************************************
-    Line 2, in q3-Basic-Printing-of-Strings 0
-    Failed example:
-        with patch('builtins.print') as mock_print:
-            (a, string) = question_3()
-            mock_print.assert_called_once_with(string)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q3-Basic-Printing-of-Strings 0[1]>", line 3, in <module>
-            mock_print.assert_called_once_with(string)
-          File "/opt/conda/envs/engr131/lib/python3.10/unittest/mock.py", line 940, in assert_called_once_with
-            raise AssertionError(msg)
-        AssertionError: Expected 'print' to be called once. Called 0 times.
-</pre></div></div>
 </div>
 </section>
 <section id="question-4-assigning-variable-and-operations-on-variables">
 <h2>Question 4: Assigning Variable and Operations on Variables<a class="headerlink" href="#question-4-assigning-variable-and-operations-on-variables" title="Permalink to this heading">#</a></h2>
 <p>Create two variables: <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. Assign the value 10 to <code class="docutils literal notranslate"><span class="pre">a</span></code> and the value 20 to <code class="docutils literal notranslate"><span class="pre">b</span></code>. Then, create a third variable <code class="docutils literal notranslate"><span class="pre">c</span></code> that stores the sum of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. Print the value of <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This line of code defines a function</span>
 <span class="c1"># DO NOT CHANGE THIS LINE OF CODE</span>
@@ -853,66 +663,18 @@ Remainder result: Ellipsis
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q4-Assigning-Variable-and-Operations-on-Variables&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q4-Assigning-Variable-and-Operations-on-Variables</pre> results:</strong></p><p><strong><pre style='display: inline;'>q4-Assigning-Variable-and-Operations-on-Variables - 1</pre> message:</strong> The variable a is not correctly assigned.</p><p><strong><pre style='display: inline;'>q4-Assigning-Variable-and-Operations-on-Variables - 1</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        (a, b, c) = question_4(printing=False)
-    Expecting nothing
-    ok
-    Trying:
-        number = 10
-    Expecting nothing
-    ok
-    Trying:
-        assert a == number
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q4-Assigning-Variable-and-Operations-on-Variables 0
-    Failed example:
-        assert a == number
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q4-Assigning-Variable-and-Operations-on-Variables 0[2]>", line 1, in <module>
-            assert a == number
-        AssertionError
-</pre><p><strong><pre style='display: inline;'>q4-Assigning-Variable-and-Operations-on-Variables - 2</pre> message:</strong> The variable b is not correctly assigned.</p><p><strong><pre style='display: inline;'>q4-Assigning-Variable-and-Operations-on-Variables - 2</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        (a, b, c) = question_4(printing=False)
-    Expecting nothing
-    ok
-    Trying:
-        number = 20
-    Expecting nothing
-    ok
-    Trying:
-        assert b == number
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q4-Assigning-Variable-and-Operations-on-Variables 1
-    Failed example:
-        assert b == number
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q4-Assigning-Variable-and-Operations-on-Variables 1[2]>", line 1, in <module>
-            assert b == number
-        AssertionError
-</pre></div></div>
 </div>
 </section>
 <section id="question-5-printing-text-with-variables">
 <h2>Question 5: Printing Text with Variables<a class="headerlink" href="#question-5-printing-text-with-variables" title="Permalink to this heading">#</a></h2>
 <p>Create a variable named <code class="docutils literal notranslate"><span class="pre">course</span></code> and assign it the value “Drexel ENGR131”. Then, print the following sentence using this variable: “I am currently taking [course].”</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This line of code defines a function</span>
 <span class="c1"># DO NOT CHANGE THIS LINE OF CODE</span>
@@ -944,27 +706,8 @@ Remainder result: Ellipsis
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">UnboundLocalError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">27</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span>    <span class="k">return</span> <span class="n">course</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="c1"># This line of code calls the function</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="c1"># DO NOT CHANGE THIS LINE OF CODE</span>
-<span class="ne">---&gt; </span><span class="mi">27</span> <span class="n">output</span> <span class="o">=</span> <span class="n">question_5</span><span class="p">()</span>
-
-<span class="nn">Cell In[12], line 23,</span> in <span class="ni">question_5</span><span class="nt">(printing, *args)</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>    <span class="o">...</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="c1"># This line of code returns variables</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="c1"># DO NOT CHANGE THIS LINE OF CODE</span>
-<span class="ne">---&gt; </span><span class="mi">23</span> <span class="k">return</span> <span class="n">course</span>
-
-<span class="ne">UnboundLocalError</span>: local variable &#39;course&#39; referenced before assignment
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q5-Printing-Text-with-Variables&quot;</span><span class="p">)</span>
 </pre></div>
