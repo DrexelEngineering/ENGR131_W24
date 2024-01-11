@@ -53,3 +53,4 @@ parts:
         title: 🧪 Lab 1 Assignment Workflow
       - file: week1/homework1/Homework_1_Hello_World_Python
         title: 🏡📝 Homework 1 Hello World Python
+      - file: week1/NOTE_re-running_actions
