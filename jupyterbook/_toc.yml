@@ -54,3 +54,24 @@ parts:
       - file: week1/homework1/Homework_1_Hello_World_Python
         title: 🏡📝 Homework 1 Hello World Python
       - file: week1/NOTE_re-running_actions
+  - caption: "Week 2️⃣"
+    chapters:
+      - file: week2/lecture2/Intro
+        title: "Lecture 👩‍🏫"
+        sections:
+          - file: week2/lecture2/2_1_Modules_and_Packages
+          - file: week2/lecture2/2_2_Programming_Basics
+          - file: week2/lecture2/2_3_Operators
+          - file: week2/lecture2/2_4_Variables
+          - file: week2/lecture2/2_5_Activity_2_1
+          - file: week2/lecture2/2_6_Data_Types_non_num
+          - file: week2/lecture2/2_7_Dictionaries
+          - file: week2/lecture2/2_8_Lists_Tuples
+          - file: week2/lecture2/2_9_Working_with_Strings
+          - file: week2/lecture2/2_10_Activity_2_2_Profanity_Detector
+      - file: week2/lab2/lab2-scrabble
+        title: 🧪 Lab 2 Scrabble
+      - file: week2/homework2/hw2-math
+        title: 🏡📝 Homework 2 Using Python to Solve Math Problems
+      - file: week2/quiz2/quiz_2_Hello_World_Python
+        title: 🤔❓ Quiz 2 Hello World Python

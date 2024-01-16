@@ -1,0 +1,826 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>📝 Variables and Objects &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'week2/lecture2/2_4_Variables';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="💻 Activity: Practice with Variables and Operators" href="2_5_Activity_2_1.html" />
+    <link rel="prev" title="📝 Python Operators" href="2_3_Operators.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/Drexel_Logo.png" class="logo__image only-light" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>
+    <script>document.write(`<img src="../../_static/Drexel_Logo.png" class="logo__image only-dark" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to ENGR 131
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Syllabus 📜</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../syllabus/index_syllabus.html">Syllabus</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/1_Intro.html">1.0 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/2_Contact_Process.html">2.0 Contact Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/3_Student_Learning_Information.html">3.0 Student Learning Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/4_Course_Materials.html">4.0 Course Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/5_Course_Schedule.html">5.0 Course Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/6_Earning_Credit.html">6.0 Earning Credit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/7_Expectations_of_Students.html">7.0 Expectations of Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/8_Academic_Policies.html">8.0 Academic Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/9_Counseling_Services.html">9.0 Counseling Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/10_Tips_For_Success.html">10.0 Tips For Success</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week1/lecture1/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_1_Why_Coding_is_the_most_important_skill.html">📝 Why Computer Programming is an Essential Skill</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_2_Who_is_Prof_Capps.html">📝 Who is Professor Capps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_3_Who_is_Prof_Agar.html">📝 Who is Professor Agar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_4_Engr131_Instructors.html">👨🏽👩🏾Engineering 131 Winter 2024 Instructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_5_Accessing_Course_Content.html">📝 Accessing Course Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_6_How_to_Use_Jupyterhub.html">📝 How to Use JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_7_Activity_1_Using_the_Jupyter_Hub.html">💻 Activity: Hello World JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_8_Introduction_to_Python.html">📝Why Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_9_Modules_and_Packages.html">📝Modules and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_10_Programming_Basics.html">📝Programming Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_11_Operators.html">📝 Python Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_12_Variables.html">📝 Variables and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_13_Activity_1_2.html">💻 Activity: Practice with Variables and Operators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/lab1/lab_1-assignment-workflow.html">🧪 Lab 1 Assignment Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/homework1/Homework_1_Hello_World_Python.html">🏡📝 Homework 1 Hello World Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/NOTE_re-running_actions.html">Guide to Re-running an Action in GitHub</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2️⃣</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro.html">Lecture 👩‍🏫</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2_1_Modules_and_Packages.html">📝Modules and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_2_Programming_Basics.html">📝Programming Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_3_Operators.html">📝 Python Operators</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">📝 Variables and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_5_Activity_2_1.html">💻 Activity: Practice with Variables and Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_6_Data_Types_non_num.html">📝Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_7_Dictionaries.html">📝 Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_8_Lists_Tuples.html">📝 Collections in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_9_Working_with_Strings.html">📝 Working with Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_10_Activity_2_2_Profanity_Detector.html">💻 Activity 3.2: Profanity &amp; Word Count Detector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lab2/lab2-scrabble.html">🧪 Lab 2 Scrabble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework2/hw2-math.html">🏡📝 Homework 2 Using Python to Solve Math Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quiz2/quiz_2_Hello_World_Python.html">🤔❓ Quiz 2 Hello World Python</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://engr131.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week2/lecture2/2_4_Variables.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/week2/lecture2/2_4_Variables.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/week2/lecture2/2_4_Variables.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>📝 Variables and Objects</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-strings">Assigning Strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-sensitive">Case Sensitive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-names">Variable Names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-multiple-variables">Assigning Multiple Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objects">Objects</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-objects">String Objects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#float-objects">Float Objects</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="variables-and-objects">
+<h1>📝 Variables and Objects<a class="headerlink" href="#variables-and-objects" title="Permalink to this heading">#</a></h1>
+<p>Variables are containers for storing data values.</p>
+<p>Python does note require that you declare variables, they are created once assigned with the <code class="docutils literal notranslate"><span class="pre">=</span></code> operator</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Drexel&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drexel
+</pre></div>
+</div>
+</div>
+</div>
+<p>You do not need to declare the DataType of a variable it is inferred</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;float&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Drexel&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="assigning-strings">
+<h2>Assigning Strings<a class="headerlink" href="#assigning-strings" title="Permalink to this heading">#</a></h2>
+<p>Strings can be assigned with ” or ‘ quotes</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Drexel&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;Drexel&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can check if two variable have the same value using the <code class="docutils literal notranslate"><span class="pre">==</span></code> operator</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="case-sensitive">
+<h2>Case Sensitive<a class="headerlink" href="#case-sensitive" title="Permalink to this heading">#</a></h2>
+<p>Variables are case sensitive</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Drexel&quot;</span>
+<span class="n">A</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drexel
+5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="variable-names">
+<h2>Variable Names<a class="headerlink" href="#variable-names" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A variable name must start with a letter or the underscore character</p></li>
+<li><p>A variable name cannot start with a number</p></li>
+<li><p>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</p></li>
+<li><p>Variable names are case-sensitive (age, Age and AGE are three different variables)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myvar</span> <span class="o">=</span> <span class="s2">&quot;Drexel&quot;</span>
+<span class="n">my_var</span> <span class="o">=</span> <span class="s2">&quot;Drexel&quot;</span>
+<span class="n">_my_var</span> <span class="o">=</span> <span class="s2">&quot;Drexel&quot;</span>
+<span class="n">myVar</span> <span class="o">=</span> <span class="s2">&quot;Drexel&quot;</span>
+<span class="n">MYVAR</span> <span class="o">=</span> <span class="s2">&quot;Drexel&quot;</span>
+<span class="n">myvar2</span> <span class="o">=</span> <span class="s2">&quot;Drexel&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="assigning-multiple-variables">
+<h2>Assigning Multiple Variables<a class="headerlink" href="#assigning-multiple-variables" title="Permalink to this heading">#</a></h2>
+<p>Python allows you to assign values to multiple variables in one line:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="s2">&quot;Drexel&quot;</span><span class="p">,</span> <span class="s2">&quot;University&quot;</span><span class="p">,</span> <span class="s2">&quot;Engineering&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drexel
+University
+Engineering
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="objects">
+<h2>Objects<a class="headerlink" href="#objects" title="Permalink to this heading">#</a></h2>
+<p>All Python variables are objects who have behaviors based on their datatype.</p>
+<p>An object could be a:</p>
+<ul class="simple">
+<li><p>Integer</p></li>
+<li><p>String</p></li>
+<li><p>Floating point number</p></li>
+<li><p>Method</p></li>
+</ul>
+<p>Or any other data type</p>
+<section id="string-objects">
+<h3>String Objects<a class="headerlink" href="#string-objects" title="Permalink to this heading">#</a></h3>
+<p>When you define a string there are built-in method that can be applied.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DU</span> <span class="o">=</span> <span class="s2">&quot;Drexel University Engineering&quot;</span>
+
+<span class="c1"># splits based on a character</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">DU</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Drexel&#39;, &#39;University&#39;, &#39;Engineering&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">DU</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DREXEL UNIVERSITY ENGINEERING
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="float-objects">
+<h3>Float Objects<a class="headerlink" href="#float-objects" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mf">500.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span><span class="o">.</span><span class="n">is_integer</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;float&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./week2/lecture2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2_3_Operators.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">📝 Python Operators</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2_5_Activity_2_1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">💻 Activity: Practice with Variables and Operators</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-strings">Assigning Strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-sensitive">Case Sensitive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-names">Variable Names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-multiple-variables">Assigning Multiple Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objects">Objects</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-objects">String Objects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#float-objects">Float Objects</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Shannon Capps and Joshua C. Agar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

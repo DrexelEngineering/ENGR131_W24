@@ -1,0 +1,1237 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>📝 Python Operators &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'week2/lecture2/2_3_Operators';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="📝 Variables and Objects" href="2_4_Variables.html" />
+    <link rel="prev" title="📝Programming Basics" href="2_2_Programming_Basics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/Drexel_Logo.png" class="logo__image only-light" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>
+    <script>document.write(`<img src="../../_static/Drexel_Logo.png" class="logo__image only-dark" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to ENGR 131
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Syllabus 📜</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../syllabus/index_syllabus.html">Syllabus</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/1_Intro.html">1.0 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/2_Contact_Process.html">2.0 Contact Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/3_Student_Learning_Information.html">3.0 Student Learning Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/4_Course_Materials.html">4.0 Course Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/5_Course_Schedule.html">5.0 Course Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/6_Earning_Credit.html">6.0 Earning Credit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/7_Expectations_of_Students.html">7.0 Expectations of Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/8_Academic_Policies.html">8.0 Academic Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/9_Counseling_Services.html">9.0 Counseling Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/10_Tips_For_Success.html">10.0 Tips For Success</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week1/lecture1/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_1_Why_Coding_is_the_most_important_skill.html">📝 Why Computer Programming is an Essential Skill</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_2_Who_is_Prof_Capps.html">📝 Who is Professor Capps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_3_Who_is_Prof_Agar.html">📝 Who is Professor Agar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_4_Engr131_Instructors.html">👨🏽👩🏾Engineering 131 Winter 2024 Instructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_5_Accessing_Course_Content.html">📝 Accessing Course Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_6_How_to_Use_Jupyterhub.html">📝 How to Use JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_7_Activity_1_Using_the_Jupyter_Hub.html">💻 Activity: Hello World JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_8_Introduction_to_Python.html">📝Why Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_9_Modules_and_Packages.html">📝Modules and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_10_Programming_Basics.html">📝Programming Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_11_Operators.html">📝 Python Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_12_Variables.html">📝 Variables and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_13_Activity_1_2.html">💻 Activity: Practice with Variables and Operators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/lab1/lab_1-assignment-workflow.html">🧪 Lab 1 Assignment Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/homework1/Homework_1_Hello_World_Python.html">🏡📝 Homework 1 Hello World Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/NOTE_re-running_actions.html">Guide to Re-running an Action in GitHub</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2️⃣</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro.html">Lecture 👩‍🏫</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2_1_Modules_and_Packages.html">📝Modules and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_2_Programming_Basics.html">📝Programming Basics</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">📝 Python Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_4_Variables.html">📝 Variables and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_5_Activity_2_1.html">💻 Activity: Practice with Variables and Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_6_Data_Types_non_num.html">📝Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_7_Dictionaries.html">📝 Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_8_Lists_Tuples.html">📝 Collections in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_9_Working_with_Strings.html">📝 Working with Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_10_Activity_2_2_Profanity_Detector.html">💻 Activity 3.2: Profanity &amp; Word Count Detector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lab2/lab2-scrabble.html">🧪 Lab 2 Scrabble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework2/hw2-math.html">🏡📝 Homework 2 Using Python to Solve Math Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quiz2/quiz_2_Hello_World_Python.html">🤔❓ Quiz 2 Hello World Python</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://engr131.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week2/lecture2/2_3_Operators.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/week2/lecture2/2_3_Operators.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/week2/lecture2/2_3_Operators.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>📝 Python Operators</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">Arithmetic Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition">Addition <code class="docutils literal notranslate"><span class="pre">+</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subtraction">Subtraction <code class="docutils literal notranslate"><span class="pre">-</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">Multiplication <code class="docutils literal notranslate"><span class="pre">*</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#division">Division <code class="docutils literal notranslate"><span class="pre">/</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modulus">Modulus <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential">Exponential <code class="docutils literal notranslate"><span class="pre">**</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#floor-division">Floor Division <code class="docutils literal notranslate"><span class="pre">//</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">Assignment Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equals">Equals <code class="docutils literal notranslate"><span class="pre">=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-and-assignment">Addition and Assignment <code class="docutils literal notranslate"><span class="pre">+=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subtraction-and-assignment">Subtraction and Assignment <code class="docutils literal notranslate"><span class="pre">-=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-and-assignment">Multiplication and Assignment <code class="docutils literal notranslate"><span class="pre">*=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#division-and-assignment">Division and Assignment <code class="docutils literal notranslate"><span class="pre">/=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modulus-and-assignment">Modulus and Assignment <code class="docutils literal notranslate"><span class="pre">%=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#floor-division-and-assignment">Floor Division and Assignment <code class="docutils literal notranslate"><span class="pre">//=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-and-assignment">Exponential and Assignment <code class="docutils literal notranslate"><span class="pre">**=</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">Comparison Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equal-to">Equal To <code class="docutils literal notranslate"><span class="pre">==</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-equal-to">Not Equal To <code class="docutils literal notranslate"><span class="pre">!=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#greater-than">Greater Than <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#less-than">Less Than <code class="docutils literal notranslate"><span class="pre">&lt;</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#greater-than-equal-to">Greater Than Equal To <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#less-than-equal-to">Less Than Equal To <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operators">Logical Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#and-operator"><code class="docutils literal notranslate"><span class="pre">and</span></code> Operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#or-operator"><code class="docutils literal notranslate"><span class="pre">or</span></code> Operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-operator"><code class="docutils literal notranslate"><span class="pre">not</span></code> Operator</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-identity-operators">Python Identity Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-operator"><code class="docutils literal notranslate"><span class="pre">is</span></code> Operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-not-operator"><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code> Operator</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-operators">
+<h1>📝 Python Operators<a class="headerlink" href="#python-operators" title="Permalink to this heading">#</a></h1>
+<p>Operators are used to perform operations on variables and values.</p>
+<p>For example we can use the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator to add two number (or strings together)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">+</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Drexel&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="s1">&#39;Engineer&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Drexel Engineer&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="arithmetic-operators">
+<h2>Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this heading">#</a></h2>
+<p>These are operators that perform basic mathematical functions</p>
+<section id="addition">
+<h3>Addition <code class="docutils literal notranslate"><span class="pre">+</span></code><a class="headerlink" href="#addition" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="subtraction">
+<h3>Subtraction <code class="docutils literal notranslate"><span class="pre">-</span></code><a class="headerlink" href="#subtraction" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="multiplication">
+<h3>Multiplication <code class="docutils literal notranslate"><span class="pre">*</span></code><a class="headerlink" href="#multiplication" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="division">
+<h3>Division <code class="docutils literal notranslate"><span class="pre">/</span></code><a class="headerlink" href="#division" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.6666666666666667
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="modulus">
+<h3>Modulus <code class="docutils literal notranslate"><span class="pre">%</span></code><a class="headerlink" href="#modulus" title="Permalink to this heading">#</a></h3>
+<p>The remainder after dividing by a number</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exponential">
+<h3>Exponential <code class="docutils literal notranslate"><span class="pre">**</span></code><a class="headerlink" href="#exponential" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>125
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="floor-division">
+<h3>Floor Division <code class="docutils literal notranslate"><span class="pre">//</span></code><a class="headerlink" href="#floor-division" title="Permalink to this heading">#</a></h3>
+<p>the floor division <code class="docutils literal notranslate"><span class="pre">//</span></code> rounds the result of division down to the nearest whole number</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">//</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="assignment-operators">
+<h2>Assignment Operators<a class="headerlink" href="#assignment-operators" title="Permalink to this heading">#</a></h2>
+<p>These are operators that allow you to assign a value to a variable.</p>
+<section id="equals">
+<h3>Equals <code class="docutils literal notranslate"><span class="pre">=</span></code><a class="headerlink" href="#equals" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="addition-and-assignment">
+<h3>Addition and Assignment <code class="docutils literal notranslate"><span class="pre">+=</span></code><a class="headerlink" href="#addition-and-assignment" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="subtraction-and-assignment">
+<h3>Subtraction and Assignment <code class="docutils literal notranslate"><span class="pre">-=</span></code><a class="headerlink" href="#subtraction-and-assignment" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">-=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="multiplication-and-assignment">
+<h3>Multiplication and Assignment <code class="docutils literal notranslate"><span class="pre">*=</span></code><a class="headerlink" href="#multiplication-and-assignment" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">*=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="division-and-assignment">
+<h3>Division and Assignment <code class="docutils literal notranslate"><span class="pre">/=</span></code><a class="headerlink" href="#division-and-assignment" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">/=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.6666666666666667
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="modulus-and-assignment">
+<h3>Modulus and Assignment <code class="docutils literal notranslate"><span class="pre">%=</span></code><a class="headerlink" href="#modulus-and-assignment" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">%=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="floor-division-and-assignment">
+<h3>Floor Division and Assignment <code class="docutils literal notranslate"><span class="pre">//=</span></code><a class="headerlink" href="#floor-division-and-assignment" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">//=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exponential-and-assignment">
+<h3>Exponential and Assignment <code class="docutils literal notranslate"><span class="pre">**=</span></code><a class="headerlink" href="#exponential-and-assignment" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">**=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>125
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="comparison-operators">
+<h2>Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permalink to this heading">#</a></h2>
+<p>There are operators that allow you to compare two values or variables to see if they are the same or different.</p>
+<section id="equal-to">
+<h3>Equal To <code class="docutils literal notranslate"><span class="pre">==</span></code><a class="headerlink" href="#equal-to" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="not-equal-to">
+<h3>Not Equal To <code class="docutils literal notranslate"><span class="pre">!=</span></code><a class="headerlink" href="#not-equal-to" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="greater-than">
+<h3>Greater Than <code class="docutils literal notranslate"><span class="pre">&gt;</span></code><a class="headerlink" href="#greater-than" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="less-than">
+<h3>Less Than <code class="docutils literal notranslate"><span class="pre">&lt;</span></code><a class="headerlink" href="#less-than" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="greater-than-equal-to">
+<h3>Greater Than Equal To <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code><a class="headerlink" href="#greater-than-equal-to" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="less-than-equal-to">
+<h3>Less Than Equal To <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code><a class="headerlink" href="#less-than-equal-to" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="logical-operators">
+<h2>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this heading">#</a></h2>
+<p>Logical operators allow you to create logical statements between values or variables.</p>
+<section id="and-operator">
+<h3><code class="docutils literal notranslate"><span class="pre">and</span></code> Operator<a class="headerlink" href="#and-operator" title="Permalink to this heading">#</a></h3>
+<p>Returns True if both statements are true</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+False
+False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="or-operator">
+<h3><code class="docutils literal notranslate"><span class="pre">or</span></code> Operator<a class="headerlink" href="#or-operator" title="Permalink to this heading">#</a></h3>
+<p>Returns True if one statements is true</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="not-operator">
+<h3><code class="docutils literal notranslate"><span class="pre">not</span></code> Operator<a class="headerlink" href="#not-operator" title="Permalink to this heading">#</a></h3>
+<p>Returns true is the result is false, returns false if the results is true</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="kc">True</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+False
+True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="python-identity-operators">
+<h2>Python Identity Operators<a class="headerlink" href="#python-identity-operators" title="Permalink to this heading">#</a></h2>
+<p>Identity operators allow you to determine if two variables are physically the same. This means both value and location in memory.</p>
+<section id="is-operator">
+<h3><code class="docutils literal notranslate"><span class="pre">is</span></code> Operator<a class="headerlink" href="#is-operator" title="Permalink to this heading">#</a></h3>
+<p>Returns true if an object is the same in memory</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">5.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="is-not-operator">
+<h3><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code> Operator<a class="headerlink" href="#is-not-operator" title="Permalink to this heading">#</a></h3>
+<p>Returns true if the object are different in memory</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">5.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./week2/lecture2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2_2_Programming_Basics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">📝Programming Basics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2_4_Variables.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">📝 Variables and Objects</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">Arithmetic Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition">Addition <code class="docutils literal notranslate"><span class="pre">+</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subtraction">Subtraction <code class="docutils literal notranslate"><span class="pre">-</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">Multiplication <code class="docutils literal notranslate"><span class="pre">*</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#division">Division <code class="docutils literal notranslate"><span class="pre">/</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modulus">Modulus <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential">Exponential <code class="docutils literal notranslate"><span class="pre">**</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#floor-division">Floor Division <code class="docutils literal notranslate"><span class="pre">//</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">Assignment Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equals">Equals <code class="docutils literal notranslate"><span class="pre">=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-and-assignment">Addition and Assignment <code class="docutils literal notranslate"><span class="pre">+=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subtraction-and-assignment">Subtraction and Assignment <code class="docutils literal notranslate"><span class="pre">-=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-and-assignment">Multiplication and Assignment <code class="docutils literal notranslate"><span class="pre">*=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#division-and-assignment">Division and Assignment <code class="docutils literal notranslate"><span class="pre">/=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modulus-and-assignment">Modulus and Assignment <code class="docutils literal notranslate"><span class="pre">%=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#floor-division-and-assignment">Floor Division and Assignment <code class="docutils literal notranslate"><span class="pre">//=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-and-assignment">Exponential and Assignment <code class="docutils literal notranslate"><span class="pre">**=</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">Comparison Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equal-to">Equal To <code class="docutils literal notranslate"><span class="pre">==</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-equal-to">Not Equal To <code class="docutils literal notranslate"><span class="pre">!=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#greater-than">Greater Than <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#less-than">Less Than <code class="docutils literal notranslate"><span class="pre">&lt;</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#greater-than-equal-to">Greater Than Equal To <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#less-than-equal-to">Less Than Equal To <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operators">Logical Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#and-operator"><code class="docutils literal notranslate"><span class="pre">and</span></code> Operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#or-operator"><code class="docutils literal notranslate"><span class="pre">or</span></code> Operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-operator"><code class="docutils literal notranslate"><span class="pre">not</span></code> Operator</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-identity-operators">Python Identity Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-operator"><code class="docutils literal notranslate"><span class="pre">is</span></code> Operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-not-operator"><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code> Operator</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Shannon Capps and Joshua C. Agar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
