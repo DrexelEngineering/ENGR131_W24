@@ -69,6 +69,8 @@ parts:
           - file: week2/lecture2/2_8_Lists_Tuples
           - file: week2/lecture2/2_9_Working_with_Strings
           - file: week2/lecture2/2_10_Activity_2_2_Profanity_Detector
+      - file: week2/lab2/week_2_lab_intro
+        title: 📝 Week 2 - Lab Intro
       - file: week2/lab2/lab2-scrabble
         title: 🧪 Lab 2 Scrabble
       - file: week2/homework2/hw2-math
@@ -88,3 +90,7 @@ parts:
           - file: week3/lecture3/3_6_Activity_2_Image_Activity
       - file: week3/quiz3/jbook-quiz-3-math
         title: 🤔❓ Quiz 3 Using Python to Solve Math Problems
+      - file: week3/week_3_lab_intro
+      - file: week3/lab3/lab3-image
+      - file: week3/homework3/hw3-types
+

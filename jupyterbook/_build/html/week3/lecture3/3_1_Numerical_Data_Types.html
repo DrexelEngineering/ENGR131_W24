@@ -225,6 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_10_Activity_2_2_Profanity_Detector.html">💻 Activity 3.2: Profanity &amp; Word Count Detector</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/week_2_lab_intro.html">📝 Week 2 - Lab Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/lab2-scrabble.html">🧪 Lab 2 Scrabble</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/homework2/hw2-math.html">🏡📝 Homework 2 Using Python to Solve Math Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/quiz2/quiz_2_Hello_World_Python.html">🤔❓ Quiz 2 Hello World Python</a></li>
@@ -241,6 +242,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../quiz3/jbook-quiz-3-math.html">🤔❓ Quiz 3 Using Python to Solve Math Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_3_lab_intro.html">📝Week 3 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab3/lab3-image.html">🧪🖥 Lab 3: Image Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework3/hw3-types.html">Homework 3 - Understanding Data Types</a></li>
 </ul>
 
     </div>
@@ -500,26 +504,21 @@ document.write(`
 <p>A Python integer is more than just an integer. There is a bunch of other information saved with the integer value in python – this is why python (and scripting languages in general) are easier to use than low-level languages, but they are slightly less efficient.</p>
 <p>In most cases the efficiency of python is good enough!</p>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
@@ -527,108 +526,63 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28
-</pre></div>
-</div>
-</div>
 </div>
 <p>The size allocated to the variable a is bigger than is actually required because Python allocates more space for additional utility.</p>
 <p>Depending on your central processing unit (CPU) numbers might have a different size in memory. Older computers have 32-bit processors, this means the largest expressible number is <span class="math notranslate nohighlight">\(2^{31}-1\)</span>, if you have a 64-bit processor it is <span class="math notranslate nohighlight">\(2^{63}-1\)</span>.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9223372036854775807
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">63</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9223372036854775808
-</pre></div>
-</div>
-</div>
 </div>
 <p>Let’s try a bigger number:</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">102</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5070602400912917605986812821504
-</pre></div>
-</div>
-</div>
 </div>
 <p>Python will allocate more space and automatically add additional bytes to accommodate larger numbers</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># largest  0-digit number</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># smallest 1-digit number</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">30</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># largest  1-digit number</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">30</span><span class="p">)</span>  <span class="c1"># smallest 2-digit number</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">60</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># largest  2-digit number</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32
 </pre></div>
 </div>
 </div>
@@ -636,15 +590,10 @@ document.write(`
 </section>
 <section id="unsigned-integer">
 <h2>Unsigned Integer<a class="headerlink" href="#unsigned-integer" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>97
 </pre></div>
 </div>
 </div>
@@ -656,14 +605,9 @@ document.write(`
 <p class="admonition-title">Tip</p>
 <p>You can view a list of built-in methods by writing <code class="docutils literal notranslate"><span class="pre">&lt;obj&gt;.</span></code> and pressing <code class="docutils literal notranslate"><span class="pre">tab</span></code></p>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">nbytes</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
 </div>
@@ -678,21 +622,16 @@ G - Green <br>
 B - Blue <br>
 A - alpha (transparency)</p>
 <p>To define a 3-dimensional array, we type the following command:</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
 <span class="n">a</span><span class="o">.</span><span class="n">nbytes</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
 </div>
 <p>Let’s load an image of the Drexel dragon.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.io</span> <span class="kn">import</span> <span class="n">imread</span><span class="p">,</span> <span class="n">imshow</span>
 
@@ -701,22 +640,11 @@ A - alpha (transparency)</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fe68f239f60&gt;
-</pre></div>
-</div>
-<img alt="../../_images/541f598d8f4716f0e835eb0f269dcfd8cb7af6e28a0d87d2ba1ae628bbc52d91.png" src="../../_images/541f598d8f4716f0e835eb0f269dcfd8cb7af6e28a0d87d2ba1ae628bbc52d91.png" />
-</div>
 </div>
 <p>Let’s view the shape of the variable holding the image information.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drexel_dragon</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(310, 300, 4)
 </pre></div>
 </div>
 </div>
@@ -727,14 +655,9 @@ G - Green <br>
 B - Blue <br>
 A - alpha (transparency)</p>
 <p>Let’s view the datatype of <code class="docutils literal notranslate"><span class="pre">drexel_dragon</span></code>.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drexel_dragon</span><span class="o">.</span><span class="n">dtype</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;uint8&#39;)
 </pre></div>
 </div>
 </div>
@@ -750,27 +673,17 @@ A - alpha (transparency) <br></p>
 <p class="admonition-title">Tip</p>
 <p>if you want to execute a built in method you need to call the method with <code class="docutils literal notranslate"><span class="pre">{obj}.{method}()</span></code></p>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drexel_dragon</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">drexel_dragon</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(255, 0)
-</pre></div>
-</div>
-</div>
 </div>
 <p>Let’s validate that 255 is definable by 8 bits:</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">8</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>256
 </pre></div>
 </div>
 </div>
@@ -791,21 +704,16 @@ A - alpha (transparency) <br></p>
 </ul>
 <div class="math notranslate nohighlight">
 \[ value = S * 1.M * 2^{e-127}\]</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;str&quot;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1415927
 </pre></div>
 </div>
 </div>
@@ -824,7 +732,7 @@ A - alpha (transparency) <br></p>
 <li><p>Control theory</p></li>
 </ol>
 <p>In Python, the imaginary part is actually indicated with a <code class="docutils literal notranslate"><span class="pre">j</span></code> instead of an <code class="docutils literal notranslate"><span class="pre">i</span></code> for historical reasons.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">1.5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">0.8</span>
@@ -833,35 +741,19 @@ A - alpha (transparency) <br></p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1.5+0.8j)
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>complex
-</pre></div>
-</div>
-</div>
 </div>
 <p>We can use numpy to extract the real and imaginary components</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5
-0.8
 </pre></div>
 </div>
 </div>

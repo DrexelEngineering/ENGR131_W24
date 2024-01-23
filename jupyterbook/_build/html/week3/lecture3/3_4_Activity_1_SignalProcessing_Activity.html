@@ -223,6 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_10_Activity_2_2_Profanity_Detector.html">💻 Activity 3.2: Profanity &amp; Word Count Detector</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/week_2_lab_intro.html">📝 Week 2 - Lab Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/lab2-scrabble.html">🧪 Lab 2 Scrabble</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/homework2/hw2-math.html">🏡📝 Homework 2 Using Python to Solve Math Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/quiz2/quiz_2_Hello_World_Python.html">🤔❓ Quiz 2 Hello World Python</a></li>
@@ -239,6 +240,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../quiz3/jbook-quiz-3-math.html">🤔❓ Quiz 3 Using Python to Solve Math Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_3_lab_intro.html">📝Week 3 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab3/lab3-image.html">🧪🖥 Lab 3: Image Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework3/hw3-types.html">Homework 3 - Understanding Data Types</a></li>
 </ul>
 
     </div>
@@ -524,7 +528,7 @@ document.write(`
 <p>Now try applying the filter to <code class="docutils literal notranslate"><span class="pre">temperature_data</span></code> with a window size of 6.</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moving_average_of_temperatures_window_6</span> <span class="o">=</span> <span class="n">moving_average_filter_function</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">,</span><span class="n">window_size</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moving_average_of_temperatures_window_6</span> <span class="o">=</span> <span class="n">moving_average_filter_function</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">moving_average_of_temperatures_window_6</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -535,13 +539,13 @@ document.write(`
 </ol>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_value</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">)</span>
-<span class="n">min_value</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">)</span>
-<span class="n">average</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_value</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">average</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The maximum temperature over the 24-hour period was </span><span class="si">{</span><span class="n">max_value</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The minimum temperature over the 24-hour period was </span><span class="si">{</span><span class="n">min_value</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The average temperature over the 24-hour period was </span><span class="si">{</span><span class="n">average</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The maximum temperature over the 24-hour period was </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The minimum temperature over the 24-hour period was </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The average temperature over the 24-hour period was </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -553,9 +557,12 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">,</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">moving_average_of_temperatures_window_3</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">moving_average_of_temperatures_window_6</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="c1"># plot original hourly temperature in black</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="c1"># plot 3-hour average temperature in blue</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="c1"># plot 6-hour average temperature in red</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Hourly Temperature&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Temperature (˚C)&#39;</span><span class="p">)</span>
@@ -571,7 +578,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">temperature_data_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">)</span>
+<span class="n">temperature_data_array</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>

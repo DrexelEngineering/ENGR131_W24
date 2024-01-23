@@ -223,6 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_10_Activity_2_2_Profanity_Detector.html">💻 Activity 3.2: Profanity &amp; Word Count Detector</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/week_2_lab_intro.html">📝 Week 2 - Lab Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/lab2-scrabble.html">🧪 Lab 2 Scrabble</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/homework2/hw2-math.html">🏡📝 Homework 2 Using Python to Solve Math Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/quiz2/quiz_2_Hello_World_Python.html">🤔❓ Quiz 2 Hello World Python</a></li>
@@ -239,6 +240,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../quiz3/jbook-quiz-3-math.html">🤔❓ Quiz 3 Using Python to Solve Math Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_3_lab_intro.html">📝Week 3 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab3/lab3-image.html">🧪🖥 Lab 3: Image Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework3/hw3-types.html">Homework 3 - Understanding Data Types</a></li>
 </ul>
 
     </div>
@@ -458,8 +462,7 @@ document.write(`
 </section>
 <section id="instructions">
 <h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
-<p>Of course! Here are text-based instructions without code numbers, focusing on the modules needed:</p>
-<p><strong>Instructions:</strong></p>
+<p>In the code cell below, complete each step sequentially.</p>
 <p><strong>Step 1:</strong> Import the necessary modules:</p>
 <ul class="simple">
 <li><p>Import <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> as <code class="docutils literal notranslate"><span class="pre">plt</span></code>.</p></li>
@@ -468,23 +471,25 @@ document.write(`
 </ul>
 <p><strong>Step 2:</strong> Load the image:</p>
 <ul class="simple">
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">image.imread()</span></code> to load the Drexel University logo image from the specified file path.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">image.imread()</span></code> to load the Drexel University logo image from <code class="docutils literal notranslate"><span class="pre">./figs/Drexel_Logo.png</span></code>.</p></li>
 </ul>
 <p><strong>Step 3:</strong> Modify the image pixels:</p>
 <ul>
 <li><p>Set specific rectangular regions in the image to a custom color using indexing. Use the following information for the color and position:</p>
 <p><strong>Size:</strong></p>
 <ul class="simple">
-<li><p>from row 10 to row 59 and from column 250 to column 289</p></li>
+<li><p>from row 10 to row 59 (inclusive) and from column 250 to column 289 (inclusive)</p></li>
 </ul>
 <p><strong>Color:</strong></p>
 <ul class="simple">
-<li><p>Both rectangles have been modified to have the same custom color.</p></li>
-<li><p>The color is specified as <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">47,</span> <span class="pre">108,</span> <span class="pre">1]</span></code>, which represents an RGB color with the following values:</p></li>
+<li><p>The color is specified as <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">47,</span> <span class="pre">108,</span> <span class="pre">1]</span></code>, which represents an RGB color with the following values:</p>
+<ul>
 <li><p>Red: 0</p></li>
 <li><p>Green: 47</p></li>
 <li><p>Blue: 108</p></li>
 <li><p>Alpha (Transparency): 1 (indicating full opacity)</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -499,6 +504,7 @@ document.write(`
 <span class="o">...</span>
 
 <span class="c1"># use imread to load the images</span>
+<span class="o">...</span>
 
 <span class="c1"># Write the letter L using indexing</span>
 <span class="o">...</span>

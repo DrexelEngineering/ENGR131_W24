@@ -223,6 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_10_Activity_2_2_Profanity_Detector.html">💻 Activity 3.2: Profanity &amp; Word Count Detector</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/week_2_lab_intro.html">📝 Week 2 - Lab Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/lab2-scrabble.html">🧪 Lab 2 Scrabble</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/homework2/hw2-math.html">🏡📝 Homework 2 Using Python to Solve Math Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/quiz2/quiz_2_Hello_World_Python.html">🤔❓ Quiz 2 Hello World Python</a></li>
@@ -239,6 +240,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../quiz3/jbook-quiz-3-math.html">🤔❓ Quiz 3 Using Python to Solve Math Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_3_lab_intro.html">📝Week 3 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab3/lab3-image.html">🧪🖥 Lab 3: Image Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework3/hw3-types.html">Homework 3 - Understanding Data Types</a></li>
 </ul>
 
     </div>
@@ -482,7 +486,7 @@ document.write(`
 <p>Dictionaries are used to store data values in key:value pairs.</p>
 <p>A dictionary is a collection which is ordered and changeable. Dictionaries do not allow duplicates.</p>
 <p>Dictionaries are written with curly brackets, and have keys that correspond to values:</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Student&quot;</span><span class="p">:</span> <span class="s2">&quot;Jay&quot;</span><span class="p">,</span>
@@ -495,17 +499,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Student&#39;: &#39;Jay&#39;, &#39;University&#39;: &#39;Drexel&#39;, &#39;College&#39;: &#39;Engineering&#39;, &#39;class&#39;: 2024}
-</pre></div>
-</div>
-</div>
 </div>
 <section id="dictionary-items">
 <h2>Dictionary Items<a class="headerlink" href="#dictionary-items" title="Permalink to this heading">#</a></h2>
 <p>Dictionary items are ordered, changeable, and does not allow duplicates.</p>
 <p>Dictionary items are presented in key:value pairs and can be referred to by using the key name.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Student&quot;</span><span class="p">:</span> <span class="s2">&quot;Jay&quot;</span><span class="p">,</span>
@@ -515,11 +514,6 @@ document.write(`
 <span class="p">}</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">thisdict</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024
 </pre></div>
 </div>
 </div>
@@ -533,7 +527,7 @@ document.write(`
 <section id="changeable">
 <h2>Changeable<a class="headerlink" href="#changeable" title="Permalink to this heading">#</a></h2>
 <p>Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2025</span>
 
@@ -541,22 +535,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict</span><span class="p">[</span><span class="s2">&quot;major&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Undeclared Engineering&quot;</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">thisdict</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Student&#39;: &#39;Jay&#39;, &#39;University&#39;: &#39;Drexel&#39;, &#39;College&#39;: &#39;Engineering&#39;, &#39;class&#39;: 2025, &#39;major&#39;: &#39;Undeclared Engineering&#39;}
 </pre></div>
 </div>
 </div>
@@ -565,7 +549,7 @@ document.write(`
 <section id="duplicates-are-not-allowed">
 <h2>Duplicates are Not Allowed<a class="headerlink" href="#duplicates-are-not-allowed" title="Permalink to this heading">#</a></h2>
 <p>Dictionary keys must be unique. Dictionaries cannot have two items with the same key:</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Student&quot;</span><span class="p">:</span> <span class="s2">&quot;Jay&quot;</span><span class="p">,</span>
@@ -579,24 +563,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Student&#39;: &#39;Jay&#39;, &#39;University&#39;: &#39;Drexel&#39;, &#39;College&#39;: &#39;Engineering&#39;, &#39;class&#39;: &#39;Engr131&#39;}
-</pre></div>
-</div>
-</div>
 </div>
 <p>If code is written in this way, the dictionary will have the last entry to the key after the code is executed.</p>
 </section>
 <section id="dictionary-length">
 <h2>Dictionary Length<a class="headerlink" href="#dictionary-length" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">thisdict</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
@@ -605,7 +579,7 @@ document.write(`
 <section id="dictionary-item-types">
 <h2>Dictionary Item Types<a class="headerlink" href="#dictionary-item-types" title="Permalink to this heading">#</a></h2>
 <p>Items in dictionaries can be of any type</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Student&quot;</span><span class="p">:</span> <span class="s2">&quot;Jay&quot;</span><span class="p">,</span>
@@ -620,24 +594,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Student&#39;: &#39;Jay&#39;, &#39;University&#39;: &#39;Drexel&#39;, &#39;College&#39;: &#39;Engineering&#39;, &#39;class&#39;: 2024, &#39;colors&#39;: [&#39;blue&#39;, &#39;gold&#39;], &#39;graduated&#39;: False}
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="type-of-a-dictionary">
 <h2>Type of a Dictionary<a class="headerlink" href="#type-of-a-dictionary" title="Permalink to this heading">#</a></h2>
 <p>Python dictionaries are viewed as the type <code class="docutils literal notranslate"><span class="pre">dictionary</span></code>.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">thisdict</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;dict&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -646,7 +610,7 @@ document.write(`
 <section id="dictionary-constructor">
 <h2>Dictionary Constructor<a class="headerlink" href="#dictionary-constructor" title="Permalink to this heading">#</a></h2>
 <p>A dictionary is defined or built with code such as the following.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">Student</span><span class="o">=</span><span class="s2">&quot;Jay&quot;</span><span class="p">,</span>
@@ -660,14 +624,9 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">thisdict</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Student&#39;: &#39;Jay&#39;, &#39;University&#39;: &#39;Drexel&#39;, &#39;College&#39;: &#39;Engineering&#39;, &#39;Class&#39;: 2024, &#39;colors&#39;: [&#39;blue&#39;, &#39;gold&#39;], &#39;graduated&#39;: False}
 </pre></div>
 </div>
 </div>
@@ -678,28 +637,18 @@ document.write(`
 <section id="getting-a-value">
 <h3>Getting a Value<a class="headerlink" href="#getting-a-value" title="Permalink to this heading">#</a></h3>
 <p>The value associated with the key is accessed by putting the key in <code class="docutils literal notranslate"><span class="pre">[]</span></code> immediately following the dictionary name.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">thisdict</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">thisdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Class&quot;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024
 </pre></div>
 </div>
 </div>
@@ -708,16 +657,11 @@ document.write(`
 <section id="getting-keys">
 <h3>Getting Keys<a class="headerlink" href="#getting-keys" title="Permalink to this heading">#</a></h3>
 <p>Returns all the keys in a dictionary. The keys are returned in order.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">thisdict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;Student&#39;, &#39;University&#39;, &#39;College&#39;, &#39;Class&#39;, &#39;colors&#39;, &#39;graduated&#39;])
 </pre></div>
 </div>
 </div>
@@ -726,16 +670,11 @@ document.write(`
 <section id="get-values">
 <h3>Get Values<a class="headerlink" href="#get-values" title="Permalink to this heading">#</a></h3>
 <p>Returns all of the values in a dictionary. The values are returned in order</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">thisdict</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([&#39;Jay&#39;, &#39;Drexel&#39;, &#39;Engineering&#39;, 2024, [&#39;blue&#39;, &#39;gold&#39;], False])
 </pre></div>
 </div>
 </div>
@@ -744,16 +683,11 @@ document.write(`
 <section id="get-items">
 <h3>Get Items<a class="headerlink" href="#get-items" title="Permalink to this heading">#</a></h3>
 <p>This returns the key:value pairs. The results are returned in order.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">thisdict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_items([(&#39;Student&#39;, &#39;Jay&#39;), (&#39;University&#39;, &#39;Drexel&#39;), (&#39;College&#39;, &#39;Engineering&#39;), (&#39;Class&#39;, 2024), (&#39;colors&#39;, [&#39;blue&#39;, &#39;gold&#39;]), (&#39;graduated&#39;, False)])
 </pre></div>
 </div>
 </div>
@@ -766,7 +700,7 @@ document.write(`
 <h3>Updating Values<a class="headerlink" href="#updating-values" title="Permalink to this heading">#</a></h3>
 <section id="by-assignment">
 <h4>By Assignment<a class="headerlink" href="#by-assignment" title="Permalink to this heading">#</a></h4>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">thisdict</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">])</span>
 
@@ -776,26 +710,15 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024
-2025
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="using-the-update-method">
 <h4>Using the Update Method<a class="headerlink" href="#using-the-update-method" title="Permalink to this heading">#</a></h4>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Class&quot;</span><span class="p">:</span> <span class="mi">2024</span><span class="p">})</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">thisdict</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Student&#39;: &#39;Jay&#39;, &#39;University&#39;: &#39;Drexel&#39;, &#39;College&#39;: &#39;Engineering&#39;, &#39;Class&#39;: 2024, &#39;colors&#39;: [&#39;blue&#39;, &#39;gold&#39;], &#39;graduated&#39;: False}
 </pre></div>
 </div>
 </div>
@@ -805,7 +728,7 @@ document.write(`
 <section id="removing-items">
 <h3>Removing Items<a class="headerlink" href="#removing-items" title="Permalink to this heading">#</a></h3>
 <p>Removing by key value</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">Student</span><span class="o">=</span><span class="s2">&quot;Jay&quot;</span><span class="p">,</span>
@@ -822,22 +745,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Student&#39;: &#39;Jay&#39;, &#39;University&#39;: &#39;Drexel&#39;, &#39;College&#39;: &#39;Engineering&#39;, &#39;colors&#39;: [&#39;blue&#39;, &#39;gold&#39;], &#39;graduated&#39;: False}
-</pre></div>
-</div>
-</div>
 </div>
 <p>Removing the last item</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict</span><span class="o">.</span><span class="n">popitem</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">thisdict</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Student&#39;: &#39;Jay&#39;, &#39;University&#39;: &#39;Drexel&#39;, &#39;College&#39;: &#39;Engineering&#39;, &#39;colors&#39;: [&#39;blue&#39;, &#39;gold&#39;]}
 </pre></div>
 </div>
 </div>
@@ -847,7 +760,7 @@ document.write(`
 <section id="copying-a-dictionary">
 <h2>Copying a Dictionary<a class="headerlink" href="#copying-a-dictionary" title="Permalink to this heading">#</a></h2>
 <p>You might think that you can copy a dictionary using assignment.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict_copy</span> <span class="o">=</span> <span class="n">thisdict</span>
 </pre></div>
@@ -855,19 +768,14 @@ document.write(`
 </div>
 </div>
 <p>Actually, when you assign a dictionary to a new variable, it will occupy the same spot in memory.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict_copy</span> <span class="ow">is</span> <span class="n">thisdict</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will clear the dictionary</span>
 <span class="n">thisdict_copy</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -876,17 +784,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{}
-</pre></div>
-</div>
-</div>
 </div>
 <p>The original dictionary has been deleted.</p>
 <section id="copy-method">
 <h3><code class="docutils literal notranslate"><span class="pre">.copy()</span></code> method<a class="headerlink" href="#copy-method" title="Permalink to this heading">#</a></h3>
 <p>This method makes a copy in a different location in memory. It is necessary to make a copy in a different location in memory in order to modify each copy independently.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">Student</span><span class="o">=</span><span class="s2">&quot;Jay&quot;</span><span class="p">,</span>
@@ -902,27 +805,17 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict_copy</span> <span class="ow">is</span> <span class="n">thisdict</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
 </div>
 <p>The objects are not the same.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisdict_copy</span> <span class="o">==</span> <span class="n">thisdict</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -932,7 +825,7 @@ document.write(`
 <section id="clear-method">
 <h3><code class="docutils literal notranslate"><span class="pre">.clear()</span></code> method<a class="headerlink" href="#clear-method" title="Permalink to this heading">#</a></h3>
 <p>This method removes the key:value pairs from the dictionary to which it is applied.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will clear the dictionary</span>
 <span class="n">thisdict_copy</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -945,21 +838,13 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>thisdict_copy is now cleared:
-{}
-thisdict was unchanged:
-{&#39;Student&#39;: &#39;Jay&#39;, &#39;University&#39;: &#39;Drexel&#39;, &#39;College&#39;: &#39;Engineering&#39;, &#39;Class&#39;: 2024, &#39;colors&#39;: [&#39;blue&#39;, &#39;gold&#39;], &#39;graduated&#39;: False}
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>
 <section id="nested-dictionaries">
 <h2>Nested Dictionaries<a class="headerlink" href="#nested-dictionaries" title="Permalink to this heading">#</a></h2>
 <p>Using a single dictionary constructor, one can have nested dictionaries in one dictionary.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mystudents</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Student1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Quinn&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2024</span><span class="p">},</span>
@@ -971,14 +856,9 @@ thisdict was unchanged:
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Student1&#39;: {&#39;name&#39;: &#39;Quinn&#39;, &#39;year&#39;: 2024}, &#39;Student2&#39;: {&#39;name&#39;: &#39;River&#39;, &#39;year&#39;: 2022}, &#39;Student3&#39;: {&#39;name&#39;: &#39;Jay&#39;, &#39;year&#39;: 2023}}
-</pre></div>
-</div>
-</div>
 </div>
 <p>Alternatively, if those dictionaries are separately assigned, they can then be combined.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">student1</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Student&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Quinn&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2024</span><span class="p">}}</span>
 
@@ -989,11 +869,6 @@ thisdict was unchanged:
 <span class="n">mystudents</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Student1&quot;</span><span class="p">:</span> <span class="n">student1</span><span class="p">,</span> <span class="s2">&quot;Student2&quot;</span><span class="p">:</span> <span class="n">student2</span><span class="p">,</span> <span class="s2">&quot;Student3&quot;</span><span class="p">:</span> <span class="n">student3</span><span class="p">}</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">mystudents</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Student1&#39;: {&#39;Student&#39;: {&#39;name&#39;: &#39;Quinn&#39;, &#39;year&#39;: 2024}}, &#39;Student2&#39;: {&#39;Student&#39;: {&#39;name&#39;: &#39;River&#39;, &#39;year&#39;: 2022}}, &#39;Student3&#39;: {&#39;Student&#39;: {&#39;name&#39;: &#39;Jay&#39;, &#39;year&#39;: 2023}}}
 </pre></div>
 </div>
 </div>

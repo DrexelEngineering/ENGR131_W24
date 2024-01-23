@@ -223,6 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_10_Activity_2_2_Profanity_Detector.html">💻 Activity 3.2: Profanity &amp; Word Count Detector</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/week_2_lab_intro.html">📝 Week 2 - Lab Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/lab2-scrabble.html">🧪 Lab 2 Scrabble</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/homework2/hw2-math.html">🏡📝 Homework 2 Using Python to Solve Math Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week2/quiz2/quiz_2_Hello_World_Python.html">🤔❓ Quiz 2 Hello World Python</a></li>
@@ -239,6 +240,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../quiz3/jbook-quiz-3-math.html">🤔❓ Quiz 3 Using Python to Solve Math Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_3_lab_intro.html">📝Week 3 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab3/lab3-image.html">🧪🖥 Lab 3: Image Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework3/hw3-types.html">Homework 3 - Understanding Data Types</a></li>
 </ul>
 
     </div>
@@ -464,7 +468,7 @@ document.write(`
 <p>Lists are used to store multiple items in a single variable.</p>
 <section id="lists-are-ordered">
 <h3>Lists are ordered<a class="headerlink" href="#lists-are-ordered" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -472,14 +476,9 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
 </div>
 </div>
@@ -488,21 +487,16 @@ document.write(`
 <ul class="simple">
 <li><p>This can be done with the built-in method <code class="docutils literal notranslate"><span class="pre">&lt;obj&gt;.append(&lt;index&gt;)</span></code></p></li>
 </ul>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5]
 </pre></div>
 </div>
 </div>
@@ -511,26 +505,16 @@ document.write(`
 <ul class="simple">
 <li><p>this can be done with the built-in method <code class="docutils literal notranslate"><span class="pre">&lt;obj&gt;.pop(&lt;index&gt;)</span></code></p></li>
 </ul>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 4, 5]
 </pre></div>
 </div>
 </div>
@@ -538,21 +522,16 @@ document.write(`
 </section>
 <section id="lists-allow-duplications">
 <h3>Lists Allow Duplications<a class="headerlink" href="#lists-allow-duplications" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 1]
 </pre></div>
 </div>
 </div>
@@ -562,44 +541,34 @@ document.write(`
 <h3>Changing a value of a list<a class="headerlink" href="#changing-a-value-of-a-list" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Python supports indexing of ordered objects using <code class="docutils literal notranslate"><span class="pre">[{index}]</span></code>, it is important to note that the index starts at 0. </a></p>
+<p>Python supports indexing of ordered objects using <code class="docutils literal notranslate"><span class="pre">[{index}]</span></code>, it is important to note that the index starts at 0.</p>
 </div>
 <p><strong>Replacing a value</strong></p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Drexel&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Drexel&#39;, 1, 1]
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>Inserting a value</strong></p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Dragons&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Drexel&#39;, &#39;Dragons&#39;, 1, 1]
 </pre></div>
 </div>
 </div>
@@ -607,27 +576,22 @@ document.write(`
 </section>
 <section id="sorting-lists">
 <h3>Sorting Lists<a class="headerlink" href="#sorting-lists" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 <span class="n">list1</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 5]
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Drexel&quot;</span><span class="p">,</span> <span class="s2">&quot;Dragons&quot;</span><span class="p">]</span>
 <span class="n">list2</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
@@ -635,14 +599,9 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Dragons&#39;, &#39;Drexel&#39;]
 </pre></div>
 </div>
 </div>
@@ -650,14 +609,14 @@ document.write(`
 </section>
 <section id="lists-can-contain-multiple-data-types">
 <h3>Lists can contain multiple data types<a class="headerlink" href="#lists-can-contain-multiple-data-types" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Drexel&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
@@ -665,56 +624,31 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;
-&lt;class &#39;int&#39;&gt;
-&lt;class &#39;float&#39;&gt;
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>You can even store list of list</strong></p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="n">list1</span><span class="p">,</span> <span class="n">list1</span><span class="p">]</span>
 <span class="n">list2</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;Drexel&#39;, 1, 1.0], [&#39;Drexel&#39;, 1, 1.0]]
-</pre></div>
-</div>
-</div>
 </div>
 <p>or lists of lists of lists</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list3</span> <span class="o">=</span> <span class="p">[</span><span class="n">list2</span><span class="p">,</span> <span class="n">list2</span><span class="p">]</span>
 <span class="n">list3</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[&#39;Drexel&#39;, 1, 1.0], [&#39;Drexel&#39;, 1, 1.0]],
- [[&#39;Drexel&#39;, 1, 1.0], [&#39;Drexel&#39;, 1, 1.0]]]
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>You can get the length of a list using the method <code class="docutils literal notranslate"><span class="pre">len()</span></code></strong></p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list2</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list3</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-2
-2
 </pre></div>
 </div>
 </div>
@@ -728,27 +662,22 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Tuples are made using ({obj}, {obj})</p>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thistuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Drexel&quot;</span><span class="p">,</span> <span class="s2">&quot;Dragons&quot;</span><span class="p">,</span> <span class="n">list2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">thistuple</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Drexel&#39;, &#39;Dragons&#39;, [[&#39;Drexel&#39;, 1, 1.0], [&#39;Drexel&#39;, 1, 1.0]])
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>Usually tuples are used to move objects, which are then unpacked to be used.</strong></p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statement</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Drexel&quot;</span><span class="p">,</span> <span class="s2">&quot;Dragons&quot;</span><span class="p">,</span> <span class="s2">&quot;Football&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
@@ -758,14 +687,6 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mascot: </span><span class="si">{</span><span class="n">Mascot</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sport: </span><span class="si">{</span><span class="n">Sport</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Lifetime Losses: </span><span class="si">{</span><span class="n">losses</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>school: Drexel
-Mascot: Dragons
-Sport: Football
-Lifetime Losses: 0
 </pre></div>
 </div>
 </div>
