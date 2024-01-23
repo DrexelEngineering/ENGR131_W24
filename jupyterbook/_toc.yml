@@ -88,9 +88,9 @@ parts:
           - file: week3/lecture3/3_4_Activity_1_SignalProcessing_Activity
           - file: week3/lecture3/3_5_Intro_to_numpy
           - file: week3/lecture3/3_6_Activity_2_Image_Activity
-      - file: week3/quiz3/jbook-quiz-3-math
-        title: 🤔❓ Quiz 3 Using Python to Solve Math Problems
       - file: week3/week_3_lab_intro
       - file: week3/lab3/lab3-image
       - file: week3/homework3/hw3-types
+      - file: week3/quiz3/jbook-quiz-3-math
+        title: 🤔❓ Quiz 3 Using Python to Solve Math Problems
 
