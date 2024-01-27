@@ -93,4 +93,24 @@ parts:
       - file: week3/homework3/hw3-types
       - file: week3/quiz3/jbook-quiz-3-math
         title: 🤔❓ Quiz 3 Using Python to Solve Math Problems
+  - caption: "Week 4️⃣"
+    chapters:
+      - file: week4/lecture4/lecture4
+        title: "Lecture 👩‍🏫"
+        sections:
+          - file: week4/lecture4/0_Conceptual_Overview
+          - file: week4/lecture4/1_Introduction_to_functions
+          - file: week4/lecture4/2_activity_4_1
+          - file: week4/lecture4/3_Functions_as_objects
+          - file: week4/lecture4/4_Dynamic_Behavior_in_Python
+          - file: week4/lecture4/5_activity_4_2
+          - file: week4/lecture4/6_Debugging_in_functions
+          - file: week4/lecture4/7_Functions_that_Return
+          - file: week4/lecture4/8_activity_4_3
+          - file: week4/lecture4/9_activity_4_4
+      # - file: week3/week_3_lab_intro
+      # - file: week3/lab3/lab3-image
+      # - file: week3/homework3/hw3-types
+      - file: week4/quiz4/jbook-quiz4-types
+        title: 🤔❓ Quiz 4 Function Concepts in Python
 
