@@ -113,6 +113,9 @@ parts:
       # - file: week3/homework3/hw3-types
       - file: week4/quiz4/jbook-quiz4-types
         title: 🤔❓ Quiz 4 Function Concepts in Python
+<<<<<<< HEAD
       - file: week4/midtermPractice/midtermPractice
         title: 💪 Midterm Practice
+=======
+>>>>>>> 7b689596f64861861ba6f58390b3c28b26af9cad
 
