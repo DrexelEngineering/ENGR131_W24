@@ -260,11 +260,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="9_activity_4_4.html">💻 Activity 4.4: Using Functions to Build the Game of Craps</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../lab4/lab4-classifier.html">Lab Activity: Training a Neural Network Classifier</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../homework4/hw4-functions.html">🏡📝 Homework 4 - Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quiz4/jbook-quiz4-types.html">🤔❓ Quiz 4 Function Concepts in Python</a></li>
-<<<<<<< HEAD
 <li class="toctree-l1"><a class="reference internal" href="../midtermPractice/midtermPractice.html">💪 Midterm Practice</a></li>
-=======
->>>>>>> 7b689596f64861861ba6f58390b3c28b26af9cad
 </ul>
 
     </div>
@@ -468,11 +468,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#returning-multiple-values">Returning multiple values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-calling-functions">Functions calling Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-by-closure">Functions by Closure</a></li>
-<<<<<<< HEAD
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topic-not-on-exam-decorators">Advanced Topic (not on exam): Decorators</a><ul class="nav section-nav flex-column">
-=======
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topic-not-on-exam-maybe-bonus-decorators">Advanced Topic (not on exam - maybe bonus): Decorators</a><ul class="nav section-nav flex-column">
->>>>>>> 7b689596f64861861ba6f58390b3c28b26af9cad
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beautiful-python">Beautiful Python</a></li>
 </ul>
 </li>
@@ -571,6 +567,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_one</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">results</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">results</span>
 </pre></div>
 </div>
 </div>
@@ -588,6 +585,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -596,7 +598,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
@@ -640,14 +642,23 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">median</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mode_list</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.5714285714285716
 3.0
-[[3]]
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">median</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">mode_list</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;mode_list&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -670,11 +681,6 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multiplier</span><span class="p">(</span><span class="n">adder</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>110
 </pre></div>
 </div>
 </div>
@@ -720,20 +726,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">double</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
 </pre></div>
 </div>
 </div>
@@ -751,11 +747,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -763,20 +754,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>36
-</pre></div>
-</div>
-</div>
 </div>
 </section>
-<<<<<<< HEAD
 <section id="advanced-topic-not-on-exam-decorators">
 <h2>Advanced Topic (not on exam): Decorators<a class="headerlink" href="#advanced-topic-not-on-exam-decorators" title="Permalink to this heading">#</a></h2>
-=======
-<section id="advanced-topic-not-on-exam-maybe-bonus-decorators">
-<h2>Advanced Topic (not on exam - maybe bonus): Decorators<a class="headerlink" href="#advanced-topic-not-on-exam-maybe-bonus-decorators" title="Permalink to this heading">#</a></h2>
->>>>>>> 7b689596f64861861ba6f58390b3c28b26af9cad
 <p>Decorators are tools that take one function as an input and extend its capabilities.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -801,13 +782,6 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">say_whee</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Something is happening before the function is called.
-Whee!
-Something is happening after the function is called.
 </pre></div>
 </div>
 </div>
@@ -839,13 +813,6 @@ Something is happening after the function is called.
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Something is happening before the function is called.
-Whee!
-Something is happening after the function is called.
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>
@@ -861,11 +828,6 @@ Something is happening after the function is called.
         <span class="n">func</span><span class="p">()</span>
         <span class="n">func</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">wrapper_do_twice</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting decorators.py
 </pre></div>
 </div>
 </div>
@@ -888,12 +850,6 @@ Something is happening after the function is called.
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Whee!
-Whee!
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="decorators-with-arguments">
@@ -913,16 +869,6 @@ Whee!
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Jay&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">c:\Users\Joshua Agar\Documents\codes\Winter_2023_ENGR_131_private\jupyterbook\week4\lecture4\Functions_that_Return.ipynb Cell 47</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="o">----&gt;</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/Users/Joshua%20Agar/Documents/codes/Winter_2023_ENGR_131_private/jupyterbook/week4/lecture4/Functions_that_Return.ipynb#Y110sZmlsZQ%3D%3D?line=0&#39;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">greet</span><span class="p">(</span><span class="s1">&#39;Jay&#39;</span><span class="p">)</span>
-
-<span class="ne">TypeError</span>: wrapper_do_twice() takes 0 positional arguments but 1 was given
 </pre></div>
 </div>
 </div>
@@ -952,12 +898,6 @@ Whee!
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Jay&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Jay, I am a Drexel Dragon
-Hello Jay, I am a Drexel Dragon
 </pre></div>
 </div>
 </div>
@@ -1034,11 +974,7 @@ Hello Jay, I am a Drexel Dragon
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#returning-multiple-values">Returning multiple values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-calling-functions">Functions calling Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-by-closure">Functions by Closure</a></li>
-<<<<<<< HEAD
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topic-not-on-exam-decorators">Advanced Topic (not on exam): Decorators</a><ul class="nav section-nav flex-column">
-=======
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topic-not-on-exam-maybe-bonus-decorators">Advanced Topic (not on exam - maybe bonus): Decorators</a><ul class="nav section-nav flex-column">
->>>>>>> 7b689596f64861861ba6f58390b3c28b26af9cad
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beautiful-python">Beautiful Python</a></li>
 </ul>
 </li>
