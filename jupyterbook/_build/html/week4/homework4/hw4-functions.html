@@ -262,6 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../lecture4/9_activity_4_4.html">💻 Activity 4.4: Using Functions to Build the Game of Craps</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../lab4/week_4_lab_intro.html">📝Week 4 - Lab Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab4/lab4-classifier.html">Lab Activity: Training a Neural Network Classifier</a></li>
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">🏡📝 Homework 4 - Functions</a></li>
@@ -500,7 +501,7 @@ document.write(`
 <section id="before-you-begin">
 <h3>Before you begin<a class="headerlink" href="#before-you-begin" title="Permalink to this heading">#</a></h3>
 <p>Run the block of code at the top of the notebook that imports and sets up the autograder. This will allow you to check your work.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Please provide your first name, last name, Drexel ID, and Drexel email. Make sure these are provided as strings. &quot;STRINGS ARE TEXT ENCLOSED IN QUOTATION MARKS.&quot;</span>
 
@@ -513,50 +514,12 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q0-Checking-Your-Name&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q0-Checking-Your-Name</pre> results:</strong></p><p><strong><pre style='display: inline;'>q0-Checking-Your-Name - 1</pre> message:</strong> It does not appear that you entered your information correctly. Please try again.</p><p><strong><pre style='display: inline;'>q0-Checking-Your-Name - 1</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        def get_local_part(email):
-            return email.split('@')[0]
-    Expecting nothing
-    ok
-    Trying:
-        local_part_email = get_local_part(drexel_email)
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q0-Checking-Your-Name 0
-    Failed example:
-        local_part_email = get_local_part(drexel_email)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q0-Checking-Your-Name 0[1]>", line 1, in <module>
-            local_part_email = get_local_part(drexel_email)
-          File "<doctest q0-Checking-Your-Name 0[0]>", line 2, in get_local_part
-            return email.split('@')[0]
-        AttributeError: 'ellipsis' object has no attribute 'split'
-    Trying:
-        assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
-    Expecting nothing
-    **********************************************************************
-    Line 4, in q0-Checking-Your-Name 0
-    Failed example:
-        assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q0-Checking-Your-Name 0[2]>", line 1, in <module>
-            assert local_part_email == drexel_id, f"The DrexelID extracted from the email '{local_part_email}' does not match the Drexel ID '{drexel_id}'."
-        NameError: name 'local_part_email' is not defined
-</pre></div></div>
 </div>
 <p><strong>Question 1: Volume of a Sphere</strong></p>
 <p>The volume of a sphere with radius <span class="math notranslate nohighlight">\(r\)</span> is calculated using the equation:</p>
@@ -568,60 +531,19 @@ document.write(`
 <li><p>Implement your function so that it returns the volume of a sphere with radius <span class="math notranslate nohighlight">\(r\)</span></p></li>
 </ul>
 <p>Your code replaces the prompt:  <code class="docutils literal notranslate"><span class="pre">...</span></code></p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ellipsis
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q1-sphere&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q1-sphere</pre> results:</strong></p><p><strong><pre style='display: inline;'>q1-sphere - 1</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        assert type(sphere_volume(0)) == type(1.0)
-    Expecting nothing
-    **********************************************************************
-    Line 1, in q1-sphere 0
-    Failed example:
-        assert type(sphere_volume(0)) == type(1.0)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-sphere 0[0]>", line 1, in <module>
-            assert type(sphere_volume(0)) == type(1.0)
-        NameError: name 'sphere_volume' is not defined
-</pre><p><strong><pre style='display: inline;'>q1-sphere - 2</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        import math
-    Expecting nothing
-    ok
-    Trying:
-        assert sphere_volume(1) == 4 / 3 * math.pi
-    Expecting nothing
-    **********************************************************************
-    Line 2, in q1-sphere 1
-    Failed example:
-        assert sphere_volume(1) == 4 / 3 * math.pi
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q1-sphere 1[1]>", line 1, in <module>
-            assert sphere_volume(1) == 4 / 3 * math.pi
-        NameError: name 'sphere_volume' is not defined
-</pre></div></div>
 </div>
 <p><strong>Question 2: Simple Statistics</strong></p>
 <p>If you have a list which contains <span class="math notranslate nohighlight">\(N\)</span> values, <span class="math notranslate nohighlight">\(x_1\)</span> through <span class="math notranslate nohighlight">\(x_N\)</span>, the mean <span class="math notranslate nohighlight">\(\mu\)</span> is calculated as follows:</p>
@@ -631,7 +553,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[ \sigma = \sqrt{ \sum_{i=1}^{N} \frac{\left(x_{i} - \mu \right) ^ 2}{N - 1} } \]</div>
 <p>Note: Python actually has a built-in <code class="docutils literal notranslate"><span class="pre">statistics</span></code> library that can be used to compute the mean <span class="math notranslate nohighlight">\(\mu\)</span> and standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span>. The code below uses the library to compute these statsics from a list of numbers <code class="docutils literal notranslate"><span class="pre">L</span></code>:</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span>
 
@@ -639,12 +561,6 @@ document.write(`
 
 <span class="nb">print</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-1.5811388300841898
 </pre></div>
 </div>
 </div>
@@ -658,7 +574,7 @@ document.write(`
 <li><p>Return from the function a tuple containing (<span class="math notranslate nohighlight">\(\mu\)</span>, <span class="math notranslate nohighlight">\(\sigma\)</span>)</p></li>
 </ul>
 <p>Your code replaces the prompt:  <code class="docutils literal notranslate"><span class="pre">...</span></code></p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This function takes in a list L and returns a tuple containing its (mean, standard deviation)&quot;&quot;&quot;</span>
@@ -686,127 +602,12 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q2-stats&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q2-stats</pre> results:</strong></p><p><strong><pre style='display: inline;'>q2-stats - 1</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        ret = stats([0, 0, 0, 0, 0])
-    Expecting nothing
-    ok
-    Trying:
-        assert type(ret) == type((1, 2))
-    Expecting nothing
-    **********************************************************************
-    Line 2, in q2-stats 0
-    Failed example:
-        assert type(ret) == type((1, 2))
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q2-stats 0[1]>", line 1, in <module>
-            assert type(ret) == type((1, 2))
-        AssertionError
-    Trying:
-        assert len(ret) == 2
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q2-stats 0
-    Failed example:
-        assert len(ret) == 2
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q2-stats 0[2]>", line 1, in <module>
-            assert len(ret) == 2
-        TypeError: object of type 'NoneType' has no len()
-</pre><p><strong><pre style='display: inline;'>q2-stats - 2</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        ret = stats([0, 0, 0, 0, 0])
-    Expecting nothing
-    ok
-    Trying:
-        assert type(ret[0]) == type(0.0)
-    Expecting nothing
-    **********************************************************************
-    Line 2, in q2-stats 1
-    Failed example:
-        assert type(ret[0]) == type(0.0)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q2-stats 1[1]>", line 1, in <module>
-            assert type(ret[0]) == type(0.0)
-        TypeError: 'NoneType' object is not subscriptable
-    Trying:
-        assert type(ret[1]) == type(0.0)
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q2-stats 1
-    Failed example:
-        assert type(ret[1]) == type(0.0)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q2-stats 1[2]>", line 1, in <module>
-            assert type(ret[1]) == type(0.0)
-        TypeError: 'NoneType' object is not subscriptable
-</pre><p><strong><pre style='display: inline;'>q2-stats - 3</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        import numpy as np
-    Expecting nothing
-    ok
-    Trying:
-        (m, s) = stats([1, 2, 3, 4, 5])
-    Expecting nothing
-    **********************************************************************
-    Line 2, in q2-stats 2
-    Failed example:
-        (m, s) = stats([1, 2, 3, 4, 5])
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q2-stats 2[1]>", line 1, in <module>
-            (m, s) = stats([1, 2, 3, 4, 5])
-        TypeError: cannot unpack non-iterable NoneType object
-    Trying:
-        assert np.isclose(m, 3.0)
-    Expecting nothing
-    **********************************************************************
-    Line 3, in q2-stats 2
-    Failed example:
-        assert np.isclose(m, 3.0)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q2-stats 2[2]>", line 1, in <module>
-            assert np.isclose(m, 3.0)
-        NameError: name 'm' is not defined
-    Trying:
-        assert np.isclose(s, 1.5811388300841898)
-    Expecting nothing
-    **********************************************************************
-    Line 4, in q2-stats 2
-    Failed example:
-        assert np.isclose(s, 1.5811388300841898)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q2-stats 2[3]>", line 1, in <module>
-            assert np.isclose(s, 1.5811388300841898)
-        NameError: name 's' is not defined
-</pre></div></div>
 </div>
 <p><strong>Question 3: Kinetic Energy</strong></p>
 <p>The kinetic energy of an object <span class="math notranslate nohighlight">\(E_k\)</span> of an object is computed using its mass <span class="math notranslate nohighlight">\(m\)</span> and velocity <span class="math notranslate nohighlight">\(v\)</span> using the following equation:</p>
@@ -818,79 +619,19 @@ document.write(`
 <li><p>The function should return the kinetic energy</p></li>
 </ul>
 <p>Your code replaces the prompt:  <code class="docutils literal notranslate"><span class="pre">...</span></code></p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ellipsis
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q3-kinetic&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><p><strong style='color: red;'><pre style='display: inline;'>q3-kinetic</pre> results:</strong></p><p><strong><pre style='display: inline;'>q3-kinetic - 1</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        assert type(kinetic_energy(0, 0)) == type(1.0)
-    Expecting nothing
-    **********************************************************************
-    Line 1, in q3-kinetic 0
-    Failed example:
-        assert type(kinetic_energy(0, 0)) == type(1.0)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q3-kinetic 0[0]>", line 1, in <module>
-            assert type(kinetic_energy(0, 0)) == type(1.0)
-        NameError: name 'kinetic_energy' is not defined
-</pre><p><strong><pre style='display: inline;'>q3-kinetic - 2</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        import numpy as np
-    Expecting nothing
-    ok
-    Trying:
-        assert np.isclose(kinetic_energy(2, 2), 4)
-    Expecting nothing
-    **********************************************************************
-    Line 2, in q3-kinetic 1
-    Failed example:
-        assert np.isclose(kinetic_energy(2, 2), 4)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q3-kinetic 1[1]>", line 1, in <module>
-            assert np.isclose(kinetic_energy(2, 2), 4)
-        NameError: name 'kinetic_energy' is not defined
-</pre><p><strong><pre style='display: inline;'>q3-kinetic - 3</pre> result:</strong></p><pre>    ❌ Test case failed
-    Trying:
-        import numpy as np
-    Expecting nothing
-    ok
-    Trying:
-        assert np.isclose(kinetic_energy(5.5, 13.6), 508.63999999999993)
-    Expecting nothing
-    **********************************************************************
-    Line 2, in q3-kinetic 2
-    Failed example:
-        assert np.isclose(kinetic_energy(5.5, 13.6), 508.63999999999993)
-    Exception raised:
-        Traceback (most recent call last):
-          File "/opt/conda/envs/engr131/lib/python3.10/doctest.py", line 1350, in __run
-            exec(compile(example.source, filename, "single",
-          File "<doctest q3-kinetic 2[1]>", line 1, in <module>
-            assert np.isclose(kinetic_energy(5.5, 13.6), 508.63999999999993)
-        NameError: name 'kinetic_energy' is not defined
-</pre></div></div>
 </div>
 </section>
 </section>

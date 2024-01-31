@@ -108,7 +108,7 @@ parts:
           - file: week4/lecture4/7_Functions_that_Return
           - file: week4/lecture4/8_activity_4_3
           - file: week4/lecture4/9_activity_4_4
-      - file: week4/week_4_lab_intro
+      - file: week4/lab4/week_4_lab_intro
         title: 📝Week 4 - Lab Intro
       - file: week4/lab4/lab4-classifier
         title: 🧪 Lab Activity - Training a Neural Network Classifier
