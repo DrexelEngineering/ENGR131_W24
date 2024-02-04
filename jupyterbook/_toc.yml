@@ -81,7 +81,7 @@ parts:
     chapters:
       - file: week3/lecture3/Intro
         title: "Lecture 👩‍🏫"
-        sections: 
+        sections:
           - file: week3/lecture3/3_1_Numerical_Data_Types
           - file: week3/lecture3/3_2_Dictionaries
           - file: week3/lecture3/3_3_Lists_Tuples
@@ -118,4 +118,7 @@ parts:
         title: 🤔❓ Quiz 4 Function Concepts in Python
       - file: week4/midtermPractice/midtermPractice
         title: 💪 Midterm Practice
-
+  - caption: "Week 5️⃣"
+    chapters:
+      - file: week5/midterm_exam
+        title: 📖😊🎓 Midterm Exam
