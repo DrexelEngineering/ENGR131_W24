@@ -14,11 +14,11 @@ Beginning on Friday, January 19, TAs will hold office hours in the [Academic Cen
 
 11 am - noon on Fridays, David Kahn
 
-noon - 1 pm on Fridays, Peihan Li
-
 1-2 pm on Fridays, Bryan Berman
 
 2-3 pm on Fridays, Ritu Ghosh
+
+5-6 pm on Fridays, Peihan Li
 
 
 1-2 pm on Mondays, Andy Wiggins

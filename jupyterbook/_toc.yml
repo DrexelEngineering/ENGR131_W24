@@ -122,3 +122,5 @@ parts:
     chapters:
       - file: week5/midterm_exam
         title: 📖😊🎓 Midterm Exam
+      - file: week5/lab5/lab5-installAnaconda
+        title: 🧪🖥 Week 5 - Set up Local Jupyter Notebooks

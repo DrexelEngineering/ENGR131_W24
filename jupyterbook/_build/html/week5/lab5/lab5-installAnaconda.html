@@ -1,0 +1,901 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>🧪🖥 Week 5 - Set up Local Jupyter Notebooks &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'week5/lab5/lab5-installAnaconda';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Midterm Exam" href="../midterm_exam.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/Drexel_Logo.png" class="logo__image only-light" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>
+    <script>document.write(`<img src="../../_static/Drexel_Logo.png" class="logo__image only-dark" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to ENGR 131
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Syllabus 📜</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../syllabus/index_syllabus.html">Syllabus</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/1_Intro.html">1.0 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/2_Contact_Process.html">2.0 Contact Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/3_Student_Learning_Information.html">3.0 Student Learning Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/4_Course_Materials.html">4.0 Course Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/5_Course_Schedule.html">5.0 Course Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/6_Earning_Credit.html">6.0 Earning Credit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/7_Expectations_of_Students.html">7.0 Expectations of Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/8_Academic_Policies.html">8.0 Academic Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/9_Counseling_Services.html">9.0 Counseling Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/10_Tips_For_Success.html">10.0 Tips For Success</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week1/lecture1/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_1_Why_Coding_is_the_most_important_skill.html">📝 Why Computer Programming is an Essential Skill</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_2_Who_is_Prof_Capps.html">📝 Who is Professor Capps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_3_Who_is_Prof_Agar.html">📝 Who is Professor Agar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_4_Engr131_Instructors.html">👨🏽👩🏾Engineering 131 Winter 2024 Instructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_5_Accessing_Course_Content.html">📝 Accessing Course Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_6_How_to_Use_Jupyterhub.html">📝 How to Use JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_7_Activity_1_Using_the_Jupyter_Hub.html">💻 Activity: Hello World JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_8_Introduction_to_Python.html">📝Why Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_9_Modules_and_Packages.html">📝Modules and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_10_Programming_Basics.html">📝Programming Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_11_Operators.html">📝 Python Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_12_Variables.html">📝 Variables and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_13_Activity_1_2.html">💻 Activity: Practice with Variables and Operators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/lab1/lab_1-assignment-workflow.html">🧪 Lab 1 Assignment Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/homework1/Homework_1_Hello_World_Python.html">🏡📝 Homework 1 Hello World Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/NOTE_re-running_actions.html">Guide to Re-running an Action in GitHub</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week2/lecture2/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_1_Modules_and_Packages.html">📝Modules and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_2_Programming_Basics.html">📝Programming Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_3_Operators.html">📝 Python Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_4_Variables.html">📝 Variables and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_5_Activity_2_1.html">💻 Activity: Practice with Variables and Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_6_Data_Types_non_num.html">📝Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_7_Dictionaries.html">📝 Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_8_Lists_Tuples.html">📝 Collections in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_9_Working_with_Strings.html">📝 Working with Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_10_Activity_2_2_Profanity_Detector.html">💻 Activity 3.2: Profanity &amp; Word Count Detector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/week_2_lab_intro.html">📝 Week 2 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/lab2-scrabble.html">🧪 Lab 2 Scrabble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/homework2/hw2-math.html">🏡📝 Homework 2 Using Python to Solve Math Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/quiz2/quiz_2_Hello_World_Python.html">🤔❓ Quiz 2 Hello World Python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week3/lecture3/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_1_Numerical_Data_Types.html">📝 Numerical Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_2_Dictionaries.html">📝 Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_3_Lists_Tuples.html">📝 Collections in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_4_Activity_1_SignalProcessing_Activity.html">💻 Activity 3.1: Indoor Temperature Control with Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_5_Intro_to_numpy.html">📝 Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_6_Activity_2_Image_Activity.html">💻 Activity 3.2: Drawing a Blue “L” on an Image using NumPy and Matplotlib</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week3/week_3_lab_intro.html">📝Week 3 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week3/lab3/lab3-image.html">🧪🖥 Lab 3: Image Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week3/homework3/hw3-types.html">🏡📝 Homework 3 - Understanding Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week3/quiz3/jbook-quiz-3-math.html">🤔❓ Quiz 3 Using Python to Solve Math Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week4/lecture4/lecture4.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/0_Conceptual_Overview.html">📝 Conceptual Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/1_Introduction_to_functions.html">📝 Introduction to Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/2_activity_4_1.html">💻 Activity 4.1: Build a function to convert inches to feet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/3_Functions_as_objects.html">📝Functions as Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/4_Dynamic_Behavior_in_Python.html">📝 Dynamic Behavior in Python</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/5_activity_4_2.html">💻 Activity 4.2: Solving an Old School Punishment With a New Trick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/6_Debugging_in_functions.html">📝 Debugging in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/7_Functions_that_Return.html">📝 Return Output using Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/8_activity_4_3.html">💻 Activity 4.3: Analyzing Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/9_activity_4_4.html">💻 Activity 4.4: Using Functions to Build the Game of Craps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week4/lab4/week_4_lab_intro.html">📝Week 4 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week4/lab4/lab4-classifier.html">Lab Activity: Training a Neural Network Classifier</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../week4/homework4/hw4-functions.html">🏡📝 Homework 4 - Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week4/quiz4/jbook-quiz4-types.html">🤔❓ Quiz 4 Function Concepts in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week4/midtermPractice/midtermPractice.html">💪 Midterm Practice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5️⃣</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../midterm_exam.html">📖😊🎓 Midterm Exam</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">🧪🖥 Week 5 - Set up Local Jupyter Notebooks</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://engr131.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week5/lab5/lab5-installAnaconda.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/week5/lab5/lab5-installAnaconda.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/week5/lab5/lab5-installAnaconda.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>🧪🖥 Week 5 - Set up Local Jupyter Notebooks</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-install-anaconda">A. Install Anaconda</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#intel">Intel</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#m1-3">M1-3</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continue-below">Continue below</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-install-jupyterlab">B. Install JupyterLab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-create-an-environment-for-engr-131">C. Create an Environment for ENGR 131</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-launch-jupyterlab">D. Launch JupyterLab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-create-the-engr131-kernel">E. Create the engr131 Kernel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Windows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mac-or-linux">Mac or Linux</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-test-jupyterlab-with-engr131-kernel">F. Test JupyterLab with engr131 Kernel</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="week-5-set-up-local-jupyter-notebooks">
+<h1>🧪🖥 Week 5 - Set up Local Jupyter Notebooks<a class="headerlink" href="#week-5-set-up-local-jupyter-notebooks" title="Permalink to this heading">#</a></h1>
+<p>In this lab, you will install software to run Jupyter Notebooks locally so that you can complete your assignments on your own computer.</p>
+<section id="a-install-anaconda">
+<h2>A. Install Anaconda<a class="headerlink" href="#a-install-anaconda" title="Permalink to this heading">#</a></h2>
+<p>Please choose the appropriate subsection based on whether you use a computer with Windows, Mac, or Linux.</p>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple" start="0">
+<li><p>Open <a class="reference external" href="https://www.anaconda.com/download">this link</a> to download Anaconda in a browser tab.</p></li>
+<li><p>Follow the instructions in the documentation below.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+
+<span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://docs.anaconda.com/anaconda/install/windows/&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="1200"
+            height="600"
+            src="https://docs.anaconda.com/anaconda/install/windows/"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+</section>
+<section id="macos">
+<h3>MacOS<a class="headerlink" href="#macos" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple" start="0">
+<li><p>Click the Apple in the upper left corner of your screen, and choose “About this Mac” from the drop down menu.</p></li>
+</ol>
+<p>In the window that pops up, look for the word <strong>Processor</strong>.</p>
+<ul class="simple">
+<li><p>If the words following <strong>Processor</strong> include “Intel”, follow the instructions under #### Intel below.</p></li>
+<li><p>If the words following <strong>Processor</strong> include “M1”, “M2”, or “M3”, follow the instructions under #### M1-3 below.</p></li>
+</ul>
+<section id="intel">
+<h4>Intel<a class="headerlink" href="#intel" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="https://www.anaconda.com/download#downloads">Anaconda downloads</a>.</p></li>
+</ol>
+<p>Click the link titled <em>64-Bit Graphical Installer (610.5 MB)</em> under the Mac logo.</p>
+</section>
+<section id="m1-3">
+<h4>M1-3<a class="headerlink" href="#m1-3" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="https://www.anaconda.com/download#downloads">Anaconda downloads</a>.</p></li>
+</ol>
+<p>Click the link titled <em>64-Bit (M1) Graphical Installer (643.9 MB)</em> under the Mac logo.</p>
+</section>
+</section>
+<section id="continue-below">
+<h3>Continue below<a class="headerlink" href="#continue-below" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple" start="2">
+<li><p>Follow the instructions below starting at Step 2.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://docs.anaconda.com/anaconda/install/mac-os/&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="1200"
+            height="600"
+            src="https://docs.anaconda.com/anaconda/install/mac-os/"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<section id="linux">
+<h4>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple" start="0">
+<li><p>Open <a class="reference external" href="https://www.anaconda.com/download">this link</a> to download Anaconda in a browser tab.</p></li>
+<li><p>Follow the instructions in the documentation below.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://docs.anaconda.com/anaconda/install/linux/&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="1200"
+            height="600"
+            src="https://docs.anaconda.com/anaconda/install/linux/"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+</section>
+</section>
+</section>
+<section id="b-install-jupyterlab">
+<h2>B. Install JupyterLab<a class="headerlink" href="#b-install-jupyterlab" title="Permalink to this heading">#</a></h2>
+<ol class="arabic" start="0">
+<li><p>Open the Anaconda Navigator application you just installed.</p></li>
+<li><p>Click “Install” under JupyterLab.</p>
+<p>1a. If “Launch” appears under JupyterLab instead of “Install”, then you do not need to take this step.</p>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="c1"># Specify the filename of the image in the same folder</span>
+<span class="n">image_filename</span> <span class="o">=</span> <span class="s1">&#39;installJupyterLab.jpg&#39;</span>
+
+<span class="c1"># Display the image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">image_filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/f6d7fd715136ed039ad00687808f14ce81997eba87247edd6283ed9d48186728.jpg" src="../../_images/f6d7fd715136ed039ad00687808f14ce81997eba87247edd6283ed9d48186728.jpg" />
+</div>
+</div>
+</section>
+<section id="c-create-an-environment-for-engr-131">
+<h2>C. Create an Environment for ENGR 131<a class="headerlink" href="#c-create-an-environment-for-engr-131" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple" start="0">
+<li><p>Download <a class="reference external" href="https://drexel0-my.sharepoint.com/:u:/g/personal/sc3623_drexel_edu/ES2YLPn_UotMgH2EaTMeoBUBGJkBg80qN3EjuOtl6Xrh_g?e=I34k0n">this file</a> to a location where you can find it. Do not change the file name, which should be  <code class="docutils literal notranslate"><span class="pre">engr131_24.yml</span></code>.</p></li>
+<li><p>In Anaconda Navigator, click Environments on the left navigation panel.</p></li>
+<li><p>Click Import at the bottom of the window.</p></li>
+<li><p>Choose the file that you downloaded in Step 0. Leave the new environment name as <code class="docutils literal notranslate"><span class="pre">engr131_24</span></code>.</p></li>
+<li><p>Click Import.</p></li>
+<li><p>Make sure that engr131_24 is now in the list under “base(root)” and is highlighted in green. Click the name “engr131_24” to select it if it is not green.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="c1"># Specify the filename of the image in the same folder</span>
+<span class="n">image_filename</span> <span class="o">=</span> <span class="s1">&#39;envImport.jpg&#39;</span>
+
+<span class="c1"># Display the image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">image_filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/c20d29e17930e69519cc73548520887d56aac38ab8d8a0c02baf85e6cd50a738.jpg" src="../../_images/c20d29e17930e69519cc73548520887d56aac38ab8d8a0c02baf85e6cd50a738.jpg" />
+</div>
+</div>
+</section>
+<section id="d-launch-jupyterlab">
+<h2>D. Launch JupyterLab<a class="headerlink" href="#d-launch-jupyterlab" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple" start="0">
+<li><p>In Anaconda Navigator, click the Home button in the left navigation panel.</p></li>
+<li><p>Find JupyterLab (not Jupyter notebooks) in the applications panel.</p></li>
+<li><p>Click “Launch” under JupyterLab.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify the filename of the image in the same folder</span>
+<span class="n">image_filename</span> <span class="o">=</span> <span class="s1">&#39;launchJupyterLab.jpg&#39;</span>
+
+<span class="c1"># Display the image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">image_filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/5ab31360d229365340024089e72d417f354749b2a6f4638868863afa8a1e3d26.jpg" src="../../_images/5ab31360d229365340024089e72d417f354749b2a6f4638868863afa8a1e3d26.jpg" />
+</div>
+</div>
+</section>
+<section id="e-create-the-engr131-kernel">
+<h2>E. Create the engr131 Kernel<a class="headerlink" href="#e-create-the-engr131-kernel" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3>Windows<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple" start="0">
+<li><p>Go to Anaconda Navigator Home</p></li>
+<li><p>Look for the CMD.exe PROMPT application, and click Install beneath it.</p></li>
+<li><p>Launch CMD.exe PROMPT application by clicking Launch beneath it.</p></li>
+<li><p>In the command prompt window that opens, enter exactly the following at the prompts.</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">engr131_24</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">(engr131_24)$</span> <span class="pre">conda</span> <span class="pre">install</span> <span class="pre">ipykernel</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">(engr131_24)$</span> <span class="pre">ipython</span> <span class="pre">kernel</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">--name=engr131</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">(engr131_24)$</span> <span class="pre">conda</span> <span class="pre">deactivate</span></code></p>
+<ol class="arabic simple" start="3">
+<li><p>Then, close the command prompt window. Proceed to Step F. Test JupyterLab with engr131 Kernel.</p></li>
+</ol>
+</section>
+<section id="mac-or-linux">
+<h3>Mac or Linux<a class="headerlink" href="#mac-or-linux" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple" start="0">
+<li><p>In your default browser, JupyterLab should be open.</p></li>
+<li><p>Click on “Terminal” to open a terminal.</p></li>
+<li><p>In the terminal window, enter the following at the prompts.</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">engr131_24</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">(engr131_24)$</span> <span class="pre">conda</span> <span class="pre">install</span> <span class="pre">ipykernel</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">(engr131_24)$</span> <span class="pre">ipython</span> <span class="pre">kernel</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">--name=engr131</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">(engr131_24)$</span> <span class="pre">conda</span> <span class="pre">deactivate</span></code></p>
+<ol class="arabic simple" start="3">
+<li><p>Then, close the terminal window by click the “x” beside “Terminal 1”.</p></li>
+</ol>
+</section>
+</section>
+<section id="f-test-jupyterlab-with-engr131-kernel">
+<h2>F. Test JupyterLab with engr131 Kernel<a class="headerlink" href="#f-test-jupyterlab-with-engr131-kernel" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple" start="0">
+<li><p>In your default browser, JupyterLab should be open.</p></li>
+<li><p>Click the button indicated below to upload the midterm .ipynb file (or a quiz .ipynb file that you have saved on your computer).</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="c1"># Specify the filename of the image in the same folder</span>
+<span class="n">image_filename</span> <span class="o">=</span> <span class="s1">&#39;uploadNotebook.jpg&#39;</span>
+
+<span class="c1"># Display the image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">image_filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/eb4b80903abbc541be5a7585a8367a775351a11cfba35b785de9c6fb707f65aa.jpg" src="../../_images/eb4b80903abbc541be5a7585a8367a775351a11cfba35b785de9c6fb707f65aa.jpg" />
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Click on the uploaded file name in the left panel to open it.</p></li>
+<li><p>Click on the words “Python 3 (ipykernel)” in the upper right part of the window.</p></li>
+<li><p>In the dialog box that opens, use the dropdown menu to choose the engr131 kernel.</p></li>
+<li><p>Click the button indicated below to always start the preferred kernel. Then, click Select.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="c1"># Specify the filename of the image in the same folder</span>
+<span class="n">image_filename</span> <span class="o">=</span> <span class="s1">&#39;selectKernelv1.jpg&#39;</span>
+
+<span class="c1"># Display the image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">image_filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/c70d3cfa5809d957ebe9c7f3998ac15689c13ff4a38dc1b68e1a5c22f464eea4.jpg" src="../../_images/c70d3cfa5809d957ebe9c7f3998ac15689c13ff4a38dc1b68e1a5c22f464eea4.jpg" />
+</div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Try to execute the cells in the notebook.</p></li>
+<li><p>Work with a TA or LA if you receive an error.</p></li>
+<li><p>When running this file produces an output.log file in the panel on the left of the window, you have confirmed that you have a local JupyterLab working that you can use on future assignments.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./week5/lab5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../midterm_exam.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Midterm Exam</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-install-anaconda">A. Install Anaconda</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#intel">Intel</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#m1-3">M1-3</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continue-below">Continue below</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-install-jupyterlab">B. Install JupyterLab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-create-an-environment-for-engr-131">C. Create an Environment for ENGR 131</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-launch-jupyterlab">D. Launch JupyterLab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-create-the-engr131-kernel">E. Create the engr131 Kernel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Windows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mac-or-linux">Mac or Linux</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-test-jupyterlab-with-engr131-kernel">F. Test JupyterLab with engr131 Kernel</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Shannon Capps and Joshua C. Agar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

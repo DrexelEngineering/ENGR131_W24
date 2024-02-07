@@ -1,0 +1,14 @@
+name: engr131_24
+dependencies:
+  - ipykernel
+  - jupyterlab
+  - numpy
+  - scipy
+  - IPython
+  - ipywidgets
+  - cryptography
+  - pip
+  - pip:
+    - otter-grader
+    - drexel_jupyter_logger
+    - ENGR131-Util-2024
