@@ -11,4 +11,4 @@ dependencies:
   - pip:
     - otter-grader
     - drexel_jupyter_logger
-    - ENGR131-Util-2024
+    - ENGR131_2024
