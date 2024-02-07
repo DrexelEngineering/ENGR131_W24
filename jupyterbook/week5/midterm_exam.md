@@ -10,4 +10,4 @@ Make sure you close all software and windows. The only program running on your c
 
 To start the midterm please click the link to start Wise.
 
-[CLICK HERE](https://online.wiseattend.com/student/testLink?c=ENGR131&k=7578)
+[CLICK HERE](https://online.wiseattend.com/student/testLink?c=ENGR131&k=7057)

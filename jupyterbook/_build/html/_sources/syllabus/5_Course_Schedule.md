@@ -12,8 +12,8 @@ The following outlines the course coverage by term week:
 | 6-2/13 | Branching & Loops | Ch. 8,9 | *application* | HW6 (Branching)| Lab6 (Rock, Paper, Scissors) |
 | 7-2/20 | Flow Control & File Handling | Ch. 10 | *application* | HW7 (Loops) | Lab7 (DNA Analysis) |
 | 8-2/27 | Lists & Dictionaries | Ch. 11 | *application* | HW8 (Strings) | Lab8 (Audio Signal Processing) |
-| 9-3/5 | Classes | Ch. 12,13 | *application* | HW9 (Triangulation) | Lab9 (Pollutant Tracking) |
-| 10-3/12 | Visualization & Exceptions | Ch. 14,15 | *application* | No HW | Final Preparation |
+| 9-3/5 | Classes | Ch. 12,13 | *application* | HW9 (Classes) | Lab9 (Pollutant Tracking) |
+| 10-3/12 | Visualization & Exceptions | Ch. 14,15 | *application* | No HW | Lab10 (Plotting and Fitting) |
 | 11-3/19 | **Final Exam**  | |  |  |  |
 
 <br>
