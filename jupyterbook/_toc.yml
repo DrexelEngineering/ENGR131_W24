@@ -115,7 +115,7 @@ parts:
       - file: week4/homework4/hw4-functions
         title: 🏡📝 Homework 4 - Functions
       - file: week4/quiz4/jbook-quiz4-types
-        title: 🤔❓ Quiz 4 Function Concepts in Python
+        title: 🤔❓ Quiz 4 DataTypes
       - file: week4/midtermPractice/midtermPractice
         title: 💪 Midterm Practice
   - caption: "Week 5️⃣"
@@ -124,3 +124,21 @@ parts:
         title: 📖😊🎓 Midterm Exam
       - file: week5/lab5/lab5-installAnaconda
         title: 🧪🖥 Week 5 - Set up Local Jupyter Notebooks
+  - caption: "Week 6️⃣"
+    chapters:
+      - file: week6/lecture6/lecture6
+        title: "Lecture 👩‍🏫"
+        sections:
+          - file: week6/lecture6/1_intro_branching
+          - file: week6/lecture6/2_activity_6_1
+          - file: week6/lecture6/3_intro_loops_integrals
+          - file: week6/lecture6/4_activity_6_2
+          - file: week6/lecture6/5_activity_6_3
+      # - file: week4/lab4/week_4_lab_intro
+      #   title: 📝Week 4 - Lab Intro
+      # - file: week4/lab4/lab4-classifier
+      #   title: 🧪 Lab Activity - Training a Neural Network Classifier
+      # - file: week4/homework4/hw4-functions
+      #   title: 🏡📝 Homework 4 - Functions
+      - file: week6/quiz6/jbook-quiz6-functions
+        title: 🤔❓ Quiz 6 Functions
