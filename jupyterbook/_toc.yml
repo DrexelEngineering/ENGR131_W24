@@ -140,5 +140,5 @@ parts:
       #   title: 🧪 Lab Activity - Training a Neural Network Classifier
       # - file: week4/homework4/hw4-functions
       #   title: 🏡📝 Homework 4 - Functions
-      - file: week6/quiz6/jbook-quiz6-functions
-        title: 🤔❓ Quiz 6 Functions
+      # - file: week6/quiz6/jbook-quiz6-functions
+      #   title: 🤔❓ Quiz 6 Functions
