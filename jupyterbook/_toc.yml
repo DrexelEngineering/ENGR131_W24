@@ -138,5 +138,5 @@ parts:
         title: 📝Week 6 - Lab Intro
       - file: week6/lab6/lab6-RPS
         title: 🧪 Lab 6 Rock Paper Scissors
-      - file: week6/homework6/hw6-branching
+      - file: week6/hw6/hw6-branching
         title: 🏡📝 Homework 6 - Branching
