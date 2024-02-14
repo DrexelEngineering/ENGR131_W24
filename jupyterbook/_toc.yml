@@ -134,11 +134,9 @@ parts:
           - file: week6/lecture6/3_intro_loops_integrals
           - file: week6/lecture6/4_activity_6_2
           - file: week6/lecture6/5_activity_6_3
-      # - file: week4/lab4/week_4_lab_intro
-      #   title: 📝Week 4 - Lab Intro
-      # - file: week4/lab4/lab4-classifier
-      #   title: 🧪 Lab Activity - Training a Neural Network Classifier
-      # - file: week4/homework4/hw4-functions
-      #   title: 🏡📝 Homework 4 - Functions
-      # - file: week6/quiz6/jbook-quiz6-functions
-      #   title: 🤔❓ Quiz 6 Functions
+      - file: week6/lab6/week_6_lab_intro
+        title: 📝Week 6 - Lab Intro
+      - file: week6/lab6/lab6-RPS
+        title: 🧪 Lab 6 Rock Paper Scissors
+      - file: week6/homework6/hw6-branching
+        title: 🏡📝 Homework 6 - Branching
