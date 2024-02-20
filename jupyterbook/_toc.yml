@@ -140,3 +140,19 @@ parts:
         title: 🧪 Lab 6 Rock Paper Scissors
       - file: week6/hw6/hw6-branching
         title: 🏡📝 Homework 6 - Branching
+  - caption: "Lecture 7️⃣"
+    chapters:
+      - file: week7/lecture7/0_Lecture_7
+        title: "👩‍🏫 Lecture 7"
+        sections:
+          - file: week7/lecture7/1_Iterators
+          - file: week7/lecture7/2_Nested_Lists
+          - file: week7/lecture7/3_activity_current
+          - file: week7/lecture7/4_break_continue
+          - file: week7/lecture7/5_activity_modulus_operator
+          - file: week7/lecture7/6_enumerate
+          - file: week7/lecture7/7_file_handling
+      # - file: week7/lab7/lab7-DNA
+      #   title: "🧪 Lab 7: DNA Analysis"
+      # - file: week7/hw7/hw7-loops
+      #   title: "🏡📝 Homework 7 - Loops and Flow Control"
