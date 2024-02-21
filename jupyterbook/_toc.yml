@@ -152,7 +152,9 @@ parts:
           - file: week7/lecture7/5_activity_modulus_operator
           - file: week7/lecture7/6_enumerate
           - file: week7/lecture7/7_file_handling
-      # - file: week7/lab7/lab7-DNA
-      #   title: "🧪 Lab 7: DNA Analysis"
-      # - file: week7/hw7/hw7-loops
-      #   title: "🏡📝 Homework 7 - Loops and Flow Control"
+      - file: week7/lab7/week_7_lab_intro
+        title: "📝 Week 7 - Lab Intro"
+      - file: week7/lab7/lab7-DNA
+        title: "🧪 Lab 7: DNA Analysis"
+      - file: week7/hw7/hw7-loops
+        title: "🏡📝 Homework 7 - Loops and Flow Control"

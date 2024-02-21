@@ -65,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'week7/lecture7/7_file_handling';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="📝Week 7 - Lab Intro" href="../lab7/week_7_lab_intro.html" />
     <link rel="prev" title="Review of Enumerate" href="6_enumerate.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -298,6 +299,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">File Handling</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../lab7/week_7_lab_intro.html">📝 Week 7 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab7/lab7-DNA.html">🧪 Lab 7: DNA Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw7/hw7-loops.html">🏡📝 Homework 7 - Loops and Flow Control</a></li>
 </ul>
 
     </div>
@@ -663,7 +667,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/src/app/jupyterbook/week7/lecture7/MyTestFile.txt
-If True the file exists : True
+If True the file exists : False
 </pre></div>
 </div>
 </div>
@@ -684,7 +688,7 @@ If True the file exists : True
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MyTestFile.txt
-If True the file exists : True
+If True the file exists : False
 </pre></div>
 </div>
 </div>
@@ -778,7 +782,7 @@ If True the file exists : True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object Path.iterdir at 0x7f222105edc0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object Path.iterdir at 0x7ffffced2ce0&gt;
 </pre></div>
 </div>
 </div>
@@ -792,18 +796,18 @@ If True the file exists : True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1_Iterators.ipynb
-images
-5_activity_modulus_operator.ipynb
-Metro_Interstate_Traffic_Volume.csv
-MyTestFile.txt
-0_Lecture_7.md
-Metro_Interstate_Traffic_Volume.xls
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2_Nested_Lists.ipynb
 6_enumerate.ipynb
+0_Lecture_7.md
+4_break_continue.ipynb
+1_Iterators.ipynb
 7_file_handling.ipynb
 3_activity_current.ipynb
-2_Nested_Lists.ipynb
-4_break_continue.ipynb
+images
+Metro_Interstate_Traffic_Volume.xls
+5_activity_modulus_operator.ipynb
+.ipynb_checkpoints
+Metro_Interstate_Traffic_Volume.csv
 </pre></div>
 </div>
 </div>
@@ -835,6 +839,25 @@ Metro_Interstate_Traffic_Volume.xls
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/conda/envs/engr131/lib/python3.10/site-packages/IPython/core/interactiveshell.py:310,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">303</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">304</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">305</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">310</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./MyTestFile.txt&#39;
 </pre></div>
 </div>
 </div>
@@ -1107,21 +1130,7 @@ line 1 is:  added line as list 2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">shutil</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">shutil</span><span class="o">.</span><span class="n">copyfile</span><span class="p">(</span><span class="s1">&#39;./MyTestFile copy.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;./MyTestFile.txt&#39;</span><span class="p">)</span>
-
-<span class="nn">File /opt/conda/envs/engr131/lib/python3.10/shutil.py:254,</span> in <span class="ni">copyfile</span><span class="nt">(src, dst, follow_symlinks)</span>
-<span class="g g-Whitespace">    </span><span class="mi">252</span>     <span class="n">os</span><span class="o">.</span><span class="n">symlink</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">readlink</span><span class="p">(</span><span class="n">src</span><span class="p">),</span> <span class="n">dst</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">253</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">254</span>     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fsrc</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">255</span>         <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">256</span>             <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">dst</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fdst</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">257</span>                 <span class="c1"># macOS</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./MyTestFile copy.txt&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;./MyTestFile.txt&#39;
 </pre></div>
 </div>
 </div>
@@ -1435,6 +1444,15 @@ Name: traffic_volume, Length: 94, dtype: int64
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Review of Enumerate</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../lab7/week_7_lab_intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">📝Week 7 - Lab Intro</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
