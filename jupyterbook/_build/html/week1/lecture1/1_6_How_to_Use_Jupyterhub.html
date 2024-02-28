@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>📝 How to Use JupyterHub &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -19,49 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week1/lecture1/1_6_How_to_Use_Jupyterhub';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,10 +71,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -120,11 +114,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -158,7 +155,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -309,14 +317,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/1_Introduction_to_Classes.html">📝Classes</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/2_Activity_1_building_a_sensor.html">💻 Activity: Building a Sensor Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Creating_Multiple_Objects_of_a_Class.html">📝Creating Multiple Objects of a Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Creating_Multiple_Objects_of_a_Class.html">📝 Creating Multiple Objects of a Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Inheritance.html">📝 Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/4_Creating_a_Circuit_Class.html">📝 Creating a Class for Storing and Operating on Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/5_Activity_2_Make_Parallel_Circuit_Class.html">💻 Activity: Create a Class for Parallel Circuits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/6_Activity_lrc.html">💻 Activity: Building the game LCR</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/lab8/Week_8_lab_intro.html">🧪 📝 Week 8 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/lab8/lab8-audio.html">🧪 Lab 8: Audio Synthesis with Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/hw8/hw8-strings.html">🏡📝 Homework 8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8practice-functions-loops.html">🤔❓ ⌛️ Quiz 8 Practice - Using Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz_link.html">🤔❓ Quiz Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8link.html">🤔❓ Quiz Link</a></li>
 </ul>
 
     </div>
@@ -371,7 +383,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://engrjhub.eastus.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week1/lecture1/1_6_How_to_Use_Jupyterhub.ipynb&branch=main" target="_blank"
+      <li><a href="https://engr131.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week1/lecture1/1_6_How_to_Use_Jupyterhub.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -591,21 +603,21 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="how-to-use-jupyterhub">
-<h1>📝 How to Use JupyterHub<a class="headerlink" href="#how-to-use-jupyterhub" title="Permalink to this heading">#</a></h1>
+<h1>📝 How to Use JupyterHub<a class="headerlink" href="#how-to-use-jupyterhub" title="Link to this heading">#</a></h1>
 <p>There are a variety of ways that you can use, program, and interact with Python. All have their advantages and disadvantages.</p>
 <p>For this course we have set up a JupyterHub. This will be the supported computing platform for this course.</p>
 <section id="engr131-jupyterhub">
-<h2>ENGR131 JupyterHub<a class="headerlink" href="#engr131-jupyterhub" title="Permalink to this heading">#</a></h2>
+<h2>ENGR131 JupyterHub<a class="headerlink" href="#engr131-jupyterhub" title="Link to this heading">#</a></h2>
 <p>This JupyterHub is hosted by NRP Nautilus an NSF Funded Federated Kubernetes Cluster.</p>
 <section id="connecting">
-<h3>Connecting<a class="headerlink" href="#connecting" title="Permalink to this heading">#</a></h3>
+<h3>Connecting<a class="headerlink" href="#connecting" title="Link to this heading">#</a></h3>
 <p>The JupyterHub can be accessed at <a class="reference external" href="https://engr131.nrp-nautilus.io/">jupyterhub</a></p>
 </section>
 <section id="logging-in">
-<h3>Logging In<a class="headerlink" href="#logging-in" title="Permalink to this heading">#</a></h3>
+<h3>Logging In<a class="headerlink" href="#logging-in" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Navigate to the course website <a class="reference external" href="https://courses.coe.drexel.edu/ENGR/ENGR131W24/">jupyterbook</a></p></li>
 </ol>
@@ -639,18 +651,18 @@ document.write(`
 </section>
 </section>
 <section id="computing-requirements-for-engr-131">
-<h2>Computing Requirements for ENGR 131<a class="headerlink" href="#computing-requirements-for-engr-131" title="Permalink to this heading">#</a></h2>
+<h2>Computing Requirements for ENGR 131<a class="headerlink" href="#computing-requirements-for-engr-131" title="Link to this heading">#</a></h2>
 <p>When you login to the JupyterHub all of the computation is conducted on a remote server. You can access the JupyterHub on any laptop with a web browser (Windows, Mac, Linux, Chromebook). You can even access the JupyterHub from a tablet or phone.</p>
 <p>If you have concerns about access to computing resources please contact Prof. <a class="reference external" href="mailto:engr131w23&#37;&#52;&#48;drexel&#46;edu">Capps</a>, or Prof. <a class="reference external" href="mailto:engr131w23&#37;&#52;&#48;drexel&#46;edu">Agar</a></p>
 <section id="jupyterlab-interface">
-<h3>JupyterLab Interface<a class="headerlink" href="#jupyterlab-interface" title="Permalink to this heading">#</a></h3>
+<h3>JupyterLab Interface<a class="headerlink" href="#jupyterlab-interface" title="Link to this heading">#</a></h3>
 <p><img alt="" src="../../_images/interface_jupyterlab.webp" /></p>
 <ul class="simple">
 <li><p>JupyterLab provides flexible building blocks for interactive, exploratory computing.</p></li>
 </ul>
 </section>
 <section id="menu-bar">
-<h3>Menu Bar<a class="headerlink" href="#menu-bar" title="Permalink to this heading">#</a></h3>
+<h3>Menu Bar<a class="headerlink" href="#menu-bar" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>File: actions related to files and directories</p></li>
 <li><p>Edit: actions related to editing documents and other activities</p></li>
@@ -663,7 +675,7 @@ document.write(`
 </ul>
 </section>
 <section id="left-sidebar">
-<h3>Left Sidebar<a class="headerlink" href="#left-sidebar" title="Permalink to this heading">#</a></h3>
+<h3>Left Sidebar<a class="headerlink" href="#left-sidebar" title="Link to this heading">#</a></h3>
 <p><img alt="" src="../../_images/interface_left.png" /></p>
 <p>The left sidebar contains a number of commonly-used tabs including:</p>
 <ul class="simple">
@@ -675,7 +687,7 @@ document.write(`
 </ul>
 </section>
 <section id="right-sidebar">
-<h3>Right Sidebar<a class="headerlink" href="#right-sidebar" title="Permalink to this heading">#</a></h3>
+<h3>Right Sidebar<a class="headerlink" href="#right-sidebar" title="Link to this heading">#</a></h3>
 <p><img alt="" src="../../_images/interface_right.png" /></p>
 <ul class="simple">
 <li><p>The property inspector (active in notebooks)</p></li>
@@ -683,28 +695,28 @@ document.write(`
 </ul>
 </section>
 <section id="main-work-area">
-<h3>Main Work Area<a class="headerlink" href="#main-work-area" title="Permalink to this heading">#</a></h3>
+<h3>Main Work Area<a class="headerlink" href="#main-work-area" title="Link to this heading">#</a></h3>
 <p>The main work area in JupyterLab enables you to arrange documents (notebooks, text files, etc.) and other activities (terminals, code consoles, etc.) into panels of tabs that can be resized or subdivided.</p>
 <p>Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide a tab panel by dragging a tab to the left, right, top, or bottom of the panel:</p>
 </section>
 <section id="navigating-tabs">
-<h3>Navigating Tabs<a class="headerlink" href="#navigating-tabs" title="Permalink to this heading">#</a></h3>
+<h3>Navigating Tabs<a class="headerlink" href="#navigating-tabs" title="Link to this heading">#</a></h3>
 <p>The Tabs panel in the left sidebar lists the open documents or activities in the main work area:</p>
 <p><img alt="" src="../../_images/interface_tabs.webp" /></p>
 <p>The same information is also available in the Tabs menu:</p>
 <p><img alt="" src="../../_images/interface_tabs_menu.png" /></p>
 </section>
 <section id="context-menus">
-<h3>Context Menus<a class="headerlink" href="#context-menus" title="Permalink to this heading">#</a></h3>
+<h3>Context Menus<a class="headerlink" href="#context-menus" title="Link to this heading">#</a></h3>
 <p><img alt="" src="../../_images/Context_Menu.png" /></p>
 <p>Context of files can be accessed using a right-click</p>
 </section>
 <section id="supported-tasks-and-file-types">
-<h3>Supported Tasks and File Types<a class="headerlink" href="#supported-tasks-and-file-types" title="Permalink to this heading">#</a></h3>
+<h3>Supported Tasks and File Types<a class="headerlink" href="#supported-tasks-and-file-types" title="Link to this heading">#</a></h3>
 <p>JupyerLab supports most standard file types. Most files can be opened directly within the browser.</p>
 <p>You will use many of the functionality inside JupyterLab</p>
 <section id="terminal">
-<h4>Terminal<a class="headerlink" href="#terminal" title="Permalink to this heading">#</a></h4>
+<h4>Terminal<a class="headerlink" href="#terminal" title="Link to this heading">#</a></h4>
 <p>You can access a terminal by clicking:</p>
 <p><img alt="" src="../../_images/Terminal.png" /></p>
 <p>The terminal provides a command-line prompt. This allows you to provide text-based instructions to the computer.</p>
@@ -714,7 +726,7 @@ document.write(`
 </ul>
 </section>
 <section id="jupyter-notebook">
-<h4>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this heading">#</a></h4>
+<h4>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Link to this heading">#</a></h4>
 <p><img alt="" src="../../_images/jupyter_notebook.png" /></p>
 <ul class="simple">
 <li><p>Jupyter Notebooks is an open-source interactive programming environments</p></li>
@@ -724,7 +736,7 @@ document.write(`
 </ul>
 </section>
 <section id="python-editor">
-<h4>Python Editor<a class="headerlink" href="#python-editor" title="Permalink to this heading">#</a></h4>
+<h4>Python Editor<a class="headerlink" href="#python-editor" title="Link to this heading">#</a></h4>
 <p><img alt="" src="../../_images/Python_editor.png" /></p>
 <ul class="simple">
 <li><p>You can use JupyterLab as a interactive development environment to write Python files</p></li>
@@ -792,6 +804,7 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -843,7 +856,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -867,8 +880,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

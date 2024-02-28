@@ -36,7 +36,7 @@ html:
 launch_buttons:
   notebook_interface: "jupyterlab"
   colab_url: "https://colab.research.google.com"
-  jupyterhub_url: "https://engrjhub.eastus.cloudapp.azure.com/"
+  jupyterhub_url: "https://engr131.nrp-nautilus.io/"
 
 
 sphinx:

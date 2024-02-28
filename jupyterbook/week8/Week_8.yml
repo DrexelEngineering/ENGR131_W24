@@ -8,8 +8,8 @@
         title: "👩‍🏫 📝Creating Multiple Objects of a Class"
       - file: week8/lecture8/3_Inheritance
         title: "👩‍🏫 📝 Inheritance"
-      - file: week8/lecture8/4_Creating_Multiple_Objects_of_a_Circuit_Class
-        title: "👩‍🏫 📝Creating Multiple Objects of a Class"
+      - file: week8/lecture8/4_Creating_a_Circuit_Class
+        title: "👩‍🏫 📝Creating a Circuit Class"
       - file: week8/lecture8/5_Activity_2_Make_Parallel_Circuit_Class
         title: "👩‍🏫 💻 Activity: Create a Class for Parallel Circuits"
       - file: week8/lecture8/6_Activity_lrc
@@ -24,5 +24,5 @@
         title: "🏡📝 Homework 8"
       - file: week8/quiz8/quiz8practice-functions-loops
         title: "🤔❓ ⌛️ Quiz 8 Practice - Using Functions"
-      - file: week8/quiz8/quiz_link
+      - file: week8/quiz8/quiz8link
         title: "🤔❓ Quiz Link"

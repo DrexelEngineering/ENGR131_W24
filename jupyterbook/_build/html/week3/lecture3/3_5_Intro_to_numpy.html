@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>📝 Introduction to NumPy &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -19,49 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week3/lecture3/3_5_Intro_to_numpy';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,10 +71,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -120,11 +114,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -158,7 +155,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -309,14 +317,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/1_Introduction_to_Classes.html">📝Classes</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/2_Activity_1_building_a_sensor.html">💻 Activity: Building a Sensor Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Creating_Multiple_Objects_of_a_Class.html">📝Creating Multiple Objects of a Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Creating_Multiple_Objects_of_a_Class.html">📝 Creating Multiple Objects of a Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Inheritance.html">📝 Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/4_Creating_a_Circuit_Class.html">📝 Creating a Class for Storing and Operating on Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/5_Activity_2_Make_Parallel_Circuit_Class.html">💻 Activity: Create a Class for Parallel Circuits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/6_Activity_lrc.html">💻 Activity: Building the game LCR</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/lab8/Week_8_lab_intro.html">🧪 📝 Week 8 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/lab8/lab8-audio.html">🧪 Lab 8: Audio Synthesis with Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/hw8/hw8-strings.html">🏡📝 Homework 8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8practice-functions-loops.html">🤔❓ ⌛️ Quiz 8 Practice - Using Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz_link.html">🤔❓ Quiz Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8link.html">🤔❓ Quiz Link</a></li>
 </ul>
 
     </div>
@@ -371,7 +383,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://engrjhub.eastus.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week3/lecture3/3_5_Intro_to_numpy.ipynb&branch=main" target="_blank"
+      <li><a href="https://engr131.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week3/lecture3/3_5_Intro_to_numpy.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -611,10 +623,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-numpy">
-<h1>📝 Introduction to NumPy<a class="headerlink" href="#introduction-to-numpy" title="Permalink to this heading">#</a></h1>
+<h1>📝 Introduction to NumPy<a class="headerlink" href="#introduction-to-numpy" title="Link to this heading">#</a></h1>
 <p>NumPy is</p>
 <ul class="simple">
 <li><p>a package used to accelerate mathematical operations.</p></li>
@@ -632,7 +644,7 @@ document.write(`
 <li><p>so efficient because it is written in C, but it is easy to use like Python.</p></li>
 </ul>
 <section id="importing-numpy">
-<h2>Importing NumPy<a class="headerlink" href="#importing-numpy" title="Permalink to this heading">#</a></h2>
+<h2>Importing NumPy<a class="headerlink" href="#importing-numpy" title="Link to this heading">#</a></h2>
 <p>To use NumPy you need to import it. The convention for importing NumPy is:</p>
 <p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code></p>
 <div class="admonition note">
@@ -641,7 +653,7 @@ document.write(`
 </div>
 </section>
 <section id="what-is-the-difference-between-a-python-list-and-a-numpy-array">
-<h2>What is the difference between a Python list and a NumPy array?<a class="headerlink" href="#what-is-the-difference-between-a-python-list-and-a-numpy-array" title="Permalink to this heading">#</a></h2>
+<h2>What is the difference between a Python list and a NumPy array?<a class="headerlink" href="#what-is-the-difference-between-a-python-list-and-a-numpy-array" title="Link to this heading">#</a></h2>
 <p>NumPy gives you an enormous range of fast and efficient ways of creating arrays and manipulating numerical data inside them.</p>
 <ul class="simple">
 <li><p>Python list can contain different data types within a single list, all of the elements in a NumPy array should be homogeneous (of the same data type).</p></li>
@@ -651,10 +663,10 @@ document.write(`
 </ul>
 </section>
 <section id="what-is-an-array">
-<h2>What is an Array?<a class="headerlink" href="#what-is-an-array" title="Permalink to this heading">#</a></h2>
+<h2>What is an Array?<a class="headerlink" href="#what-is-an-array" title="Link to this heading">#</a></h2>
 <p>An array is a central data structure of the NumPy library. An array is a grid of values and it contains information about the raw data, how to locate an element, and how to interpret an element. It has a grid of elements that can be indexed in <a class="reference external" href="https://numpy.org/doc/stable/user/quickstart.html#quickstart-indexing-slicing-and-iterating">various ways</a>. The elements are all of the same type, referred to as the array dtype.</p>
 <section id="initializing-arrays">
-<h3>Initializing Arrays<a class="headerlink" href="#initializing-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Initializing Arrays<a class="headerlink" href="#initializing-arrays" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># importing numpy</span>
@@ -680,7 +692,7 @@ document.write(`
 </div>
 </section>
 <section id="accessing-an-element">
-<h3>Accessing an element<a class="headerlink" href="#accessing-an-element" title="Permalink to this heading">#</a></h3>
+<h3>Accessing an element<a class="headerlink" href="#accessing-an-element" title="Link to this heading">#</a></h3>
 <p>We can access the elements in the array using square brackets.</p>
 <ul class="simple">
 <li><p>In NumPy starts at 0. That means that if you want to access the first element in your array, you’ll be accessing element <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
@@ -695,7 +707,7 @@ document.write(`
 </section>
 </section>
 <section id="array-types">
-<h2>Array Types<a class="headerlink" href="#array-types" title="Permalink to this heading">#</a></h2>
+<h2>Array Types<a class="headerlink" href="#array-types" title="Link to this heading">#</a></h2>
 <p>You might occasionally hear an array referred to as a “ndarray,” which is shorthand for “N-dimensional array.” An N-dimensional array is simply an array with any number of dimensions.</p>
 <ul class="simple">
 <li><p>1D, or one-dimensional array - Vector - magnitude and direction</p></li>
@@ -704,7 +716,7 @@ document.write(`
 <li><p>4D or beyond tensor - elasticity, magnetism</p></li>
 </ul>
 <section id="attributes-of-an-array">
-<h3>Attributes of an Array<a class="headerlink" href="#attributes-of-an-array" title="Permalink to this heading">#</a></h3>
+<h3>Attributes of an Array<a class="headerlink" href="#attributes-of-an-array" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>An array is usually a fixed-size container of items of the same type and size.</p></li>
 <li><p>The number of dimensions and items in an array is defined by its shape.</p></li>
@@ -727,7 +739,7 @@ document.write(`
 </div>
 <p>Your array has 2 axes. The first axis has a length of 2 and the second axis has a length of 3.</p>
 <section id="modifying-arrays">
-<h4>Modifying Arrays<a class="headerlink" href="#modifying-arrays" title="Permalink to this heading">#</a></h4>
+<h4>Modifying Arrays<a class="headerlink" href="#modifying-arrays" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>The contents of an array can be accessed and modified by indexing or slicing the array</p></li>
 <li><p>Arrays are mutable.</p></li>
@@ -745,7 +757,7 @@ document.write(`
 </section>
 </section>
 <section id="creating-basic-arrays">
-<h2>Creating Basic Arrays<a class="headerlink" href="#creating-basic-arrays" title="Permalink to this heading">#</a></h2>
+<h2>Creating Basic Arrays<a class="headerlink" href="#creating-basic-arrays" title="Link to this heading">#</a></h2>
 <p>To create a NumPy array, you can use the function <code class="docutils literal notranslate"><span class="pre">np.array()</span></code>.</p>
 <p><img alt="" src="../../_images/np_array.png" /></p>
 <div class="cell tag_skip-execution docutils container">
@@ -756,7 +768,7 @@ document.write(`
 </div>
 </div>
 <section id="preallocating-a-numpy-array">
-<h3>Preallocating a NumPy Array<a class="headerlink" href="#preallocating-a-numpy-array" title="Permalink to this heading">#</a></h3>
+<h3>Preallocating a NumPy Array<a class="headerlink" href="#preallocating-a-numpy-array" title="Link to this heading">#</a></h3>
 <p>Sometimes it is useful to preallocate an array in memory.</p>
 <ul class="simple">
 <li><p>This can be done using the <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> or <code class="docutils literal notranslate"><span class="pre">np.ones</span></code> methods.</p></li>
@@ -776,7 +788,7 @@ document.write(`
 </div>
 </div>
 <section id="an-empty-array">
-<h4>An Empty array<a class="headerlink" href="#an-empty-array" title="Permalink to this heading">#</a></h4>
+<h4>An Empty array<a class="headerlink" href="#an-empty-array" title="Link to this heading">#</a></h4>
 <p>When you use <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> or <code class="docutils literal notranslate"><span class="pre">np.ones</span></code>, you need to rewrite all the states in memory, which takes time.</p>
 <p>An empty array is filled with random values from the current memory state in the ram. This is much more efficient if initializing large arrays.</p>
 <div class="cell tag_skip-execution docutils container">
@@ -790,7 +802,7 @@ document.write(`
 </div>
 </section>
 <section id="an-ordered-array">
-<h4>An ordered array<a class="headerlink" href="#an-ordered-array" title="Permalink to this heading">#</a></h4>
+<h4>An ordered array<a class="headerlink" href="#an-ordered-array" title="Link to this heading">#</a></h4>
 <p>You can build an ordered array starting from 0 using <code class="docutils literal notranslate"><span class="pre">np.arange()</span></code> method</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -827,7 +839,7 @@ document.write(`
 </section>
 </section>
 <section id="adding-removing-and-sorting-elements">
-<h2>Adding, Removing, and Sorting Elements<a class="headerlink" href="#adding-removing-and-sorting-elements" title="Permalink to this heading">#</a></h2>
+<h2>Adding, Removing, and Sorting Elements<a class="headerlink" href="#adding-removing-and-sorting-elements" title="Link to this heading">#</a></h2>
 <p>Sorting an element is simple with <code class="docutils literal notranslate"><span class="pre">np.sort()</span></code>. You can specify the axis, kind, and order when you call the function.</p>
 <p>If you start with this array:</p>
 <div class="cell tag_skip-execution docutils container">
@@ -853,7 +865,7 @@ document.write(`
 <li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.partition.html#numpy.partition">partition</a>, which is a partial sort.</p></li>
 </ul>
 <section id="concatenating-arrays">
-<h3>Concatenating Arrays<a class="headerlink" href="#concatenating-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Concatenating Arrays<a class="headerlink" href="#concatenating-arrays" title="Link to this heading">#</a></h3>
 <p>If you start with these arrays:</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -884,7 +896,7 @@ document.write(`
 </section>
 </section>
 <section id="determining-the-shape-and-size-of-an-array">
-<h2>Determining the shape and size of an array?<a class="headerlink" href="#determining-the-shape-and-size-of-an-array" title="Permalink to this heading">#</a></h2>
+<h2>Determining the shape and size of an array?<a class="headerlink" href="#determining-the-shape-and-size-of-an-array" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ndarray.ndim</span></code> will tell you the number of axes, or dimensions, of the array.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ndarray.size</span></code> will tell you the total number of elements of the array. This is the product of the elements of the array’s shape.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ndarray.shape</span></code> will display a tuple of integers that indicate the number of elements stored along each dimension of the array. If, for example, you have a 2-D array with 2 rows and 3 columns, the shape of your array is (2, 3).</p>
@@ -927,7 +939,7 @@ document.write(`
 </div>
 </section>
 <section id="reshaping-an-array">
-<h2>Reshaping an Array<a class="headerlink" href="#reshaping-an-array" title="Permalink to this heading">#</a></h2>
+<h2>Reshaping an Array<a class="headerlink" href="#reshaping-an-array" title="Link to this heading">#</a></h2>
 <p>Using <code class="docutils literal notranslate"><span class="pre">arr.reshape()</span></code> will give a new shape to an array without changing the data. Just remember that when you use the reshape method, the array you want to produce needs to have the same number of elements as the original array. If you start with an array with 12 elements, you’ll need to make sure that your new array also has a total of 12 elements.</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -947,7 +959,7 @@ document.write(`
 </div>
 </section>
 <section id="adding-and-removing-an-axis">
-<h2>Adding and Removing an Axis<a class="headerlink" href="#adding-and-removing-an-axis" title="Permalink to this heading">#</a></h2>
+<h2>Adding and Removing an Axis<a class="headerlink" href="#adding-and-removing-an-axis" title="Link to this heading">#</a></h2>
 <p>You can use <code class="docutils literal notranslate"><span class="pre">np.newaxis</span></code> and <code class="docutils literal notranslate"><span class="pre">np.expand_dims</span></code> to increase the dimensions of your existing array.</p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">np.newaxis</span></code> will increase the dimensions of your array by one dimension when used once. This means that a 1D array will become a 2D array, a 2D array will become a 3D array, and so on.</p>
 <p>For example, if you start with this array:</p>
@@ -978,7 +990,7 @@ document.write(`
 </div>
 </section>
 <section id="indexing-and-slicing">
-<h2>Indexing and Slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this heading">#</a></h2>
+<h2>Indexing and Slicing<a class="headerlink" href="#indexing-and-slicing" title="Link to this heading">#</a></h2>
 <p>You can index and slice NumPy arrays in the same ways you can slice Python lists.</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -1080,7 +1092,7 @@ document.write(`
 </div>
 </section>
 <section id="how-to-create-arrays-from-existing-data">
-<h2>How to create arrays from existing data?<a class="headerlink" href="#how-to-create-arrays-from-existing-data" title="Permalink to this heading">#</a></h2>
+<h2>How to create arrays from existing data?<a class="headerlink" href="#how-to-create-arrays-from-existing-data" title="Link to this heading">#</a></h2>
 <p>Let’s say you have this array:</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -1128,10 +1140,10 @@ document.write(`
 <p><a class="reference external" href="https://numpy.org/doc/stable/user/quickstart.html#quickstart-stacking-arrays">Learn more about stacking and splitting arrays here</a></p>
 </section>
 <section id="copies-and-views">
-<h2>Copies and Views<a class="headerlink" href="#copies-and-views" title="Permalink to this heading">#</a></h2>
+<h2>Copies and Views<a class="headerlink" href="#copies-and-views" title="Link to this heading">#</a></h2>
 <p>When operating and manipulating arrays, their data is sometimes copied into a new array and sometimes not. This is often a source of confusion for beginners. There are three cases:</p>
 <section id="no-copy-at-all">
-<h3>No Copy at All<a class="headerlink" href="#no-copy-at-all" title="Permalink to this heading">#</a></h3>
+<h3>No Copy at All<a class="headerlink" href="#no-copy-at-all" title="Link to this heading">#</a></h3>
 <p>Simple assignments make no copy of objects or their data.</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -1158,7 +1170,7 @@ document.write(`
 <p>See, they really are the same, this is useful if you want to save memory</p>
 </section>
 <section id="view-or-shallow-copy">
-<h3>View or Shallow Copy<a class="headerlink" href="#view-or-shallow-copy" title="Permalink to this heading">#</a></h3>
+<h3>View or Shallow Copy<a class="headerlink" href="#view-or-shallow-copy" title="Link to this heading">#</a></h3>
 <p>Different array objects can share the same data. The <code class="docutils literal notranslate"><span class="pre">view</span></code> method creates a new array object that looks at the same data.</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -1206,7 +1218,7 @@ document.write(`
 <p>Note that operations on the object can be applied without affecting the original object. If a value is changed, it does effect the original object.</p>
 </section>
 <section id="deep-copy">
-<h3>Deep Copy<a class="headerlink" href="#deep-copy" title="Permalink to this heading">#</a></h3>
+<h3>Deep Copy<a class="headerlink" href="#deep-copy" title="Link to this heading">#</a></h3>
 <p>The copy method makes a complete copy of the array and its data.</p>
 <p>This will consume the same amount of memory as the original object.</p>
 <div class="cell tag_skip-execution docutils container">
@@ -1247,7 +1259,7 @@ document.write(`
 </section>
 </section>
 <section id="basic-array-operations">
-<h2>Basic array operations<a class="headerlink" href="#basic-array-operations" title="Permalink to this heading">#</a></h2>
+<h2>Basic array operations<a class="headerlink" href="#basic-array-operations" title="Link to this heading">#</a></h2>
 <p>Once you’ve created your arrays, you can start to work with them. Let’s say, for example, that you’ve created two arrays, one called “data” and one called “ones”.</p>
 <p><img alt="" src="../../_images/np_array_dataones.png" /></p>
 <p>You can add the arrays together with the plus sign.</p>
@@ -1316,7 +1328,7 @@ document.write(`
 <p>Besides <code class="docutils literal notranslate"><span class="pre">sum</span></code>. there are a plethora of built in calculations. You can discover more <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.ndarray.html#calculation">here</a></p>
 </section>
 <section id="broadcasting">
-<h2>Broadcasting<a class="headerlink" href="#broadcasting" title="Permalink to this heading">#</a></h2>
+<h2>Broadcasting<a class="headerlink" href="#broadcasting" title="Link to this heading">#</a></h2>
 <p>There are times when you might want to carry out an operation between an array and a single number (also called an operation between a vector and a scalar) or between arrays of two different sizes. For example, your array (we’ll call it “data”) might contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with:</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -1336,7 +1348,7 @@ document.write(`
 <p><a class="reference external" href="https://numpy.org/doc/stable/user/basics.broadcasting.html#basics-broadcasting">Learn more about broadcasting here.</a></p>
 </section>
 <section id="finding-unique-items-and-counts">
-<h2>Finding Unique Items and Counts<a class="headerlink" href="#finding-unique-items-and-counts" title="Permalink to this heading">#</a></h2>
+<h2>Finding Unique Items and Counts<a class="headerlink" href="#finding-unique-items-and-counts" title="Link to this heading">#</a></h2>
 <p>You can find the unique elements in an array easily with <code class="docutils literal notranslate"><span class="pre">np.unique</span></code></p>
 <p>For example, if you start with this array:</p>
 <div class="cell tag_skip-execution docutils container">
@@ -1367,7 +1379,7 @@ document.write(`
 <p>There are many more options which can be read in the doc string.</p>
 </section>
 <section id="transposing-and-reshaping">
-<h2>Transposing and Reshaping<a class="headerlink" href="#transposing-and-reshaping" title="Permalink to this heading">#</a></h2>
+<h2>Transposing and Reshaping<a class="headerlink" href="#transposing-and-reshaping" title="Link to this heading">#</a></h2>
 <p>It’s common to need to transpose your matrices. NumPy arrays have the property T that allows you to transpose a matrix.</p>
 <p><img alt="" src="../../_images/np_transposing_reshaping.png" /></p>
 <div class="cell tag_skip-execution docutils container">
@@ -1455,6 +1467,7 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1526,7 +1539,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1550,8 +1563,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

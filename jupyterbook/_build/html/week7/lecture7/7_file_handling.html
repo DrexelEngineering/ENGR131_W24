@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>File Handling &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -19,49 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week7/lecture7/7_file_handling';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,10 +71,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -120,11 +114,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -158,7 +155,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -309,14 +317,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/1_Introduction_to_Classes.html">📝Classes</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/2_Activity_1_building_a_sensor.html">💻 Activity: Building a Sensor Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Creating_Multiple_Objects_of_a_Class.html">📝Creating Multiple Objects of a Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Creating_Multiple_Objects_of_a_Class.html">📝 Creating Multiple Objects of a Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Inheritance.html">📝 Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/4_Creating_a_Circuit_Class.html">📝 Creating a Class for Storing and Operating on Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/5_Activity_2_Make_Parallel_Circuit_Class.html">💻 Activity: Create a Class for Parallel Circuits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/6_Activity_lrc.html">💻 Activity: Building the game LCR</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/lab8/Week_8_lab_intro.html">🧪 📝 Week 8 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/lab8/lab8-audio.html">🧪 Lab 8: Audio Synthesis with Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/hw8/hw8-strings.html">🏡📝 Homework 8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8practice-functions-loops.html">🤔❓ ⌛️ Quiz 8 Practice - Using Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz_link.html">🤔❓ Quiz Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8link.html">🤔❓ Quiz Link</a></li>
 </ul>
 
     </div>
@@ -371,7 +383,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://engrjhub.eastus.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week7/lecture7/7_file_handling.ipynb&branch=main" target="_blank"
+      <li><a href="https://engr131.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week7/lecture7/7_file_handling.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -604,10 +616,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="file-handling">
-<h1>File Handling<a class="headerlink" href="#file-handling" title="Permalink to this heading">#</a></h1>
+<h1>File Handling<a class="headerlink" href="#file-handling" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>File handling is a good way to persist data after a program terminates.</p></li>
 </ul>
@@ -621,7 +633,7 @@ document.write(`
 <li><p>In Python you can open nearly any type of file.</p></li>
 </ul>
 <section id="where-are-files-located">
-<h2>Where are files located?<a class="headerlink" href="#where-are-files-located" title="Permalink to this heading">#</a></h2>
+<h2>Where are files located?<a class="headerlink" href="#where-are-files-located" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Files are located on physical non-volatile memory (e.g., spinning disk, solid-state flash, NVMe)</p></li>
 </ul>
@@ -631,14 +643,14 @@ document.write(`
 <p><img alt="" src="../../_images/FileSystems.png" /></p>
 </section>
 <section id="browsing-the-filesystem-from-python">
-<h2>Browsing the filesystem from Python<a class="headerlink" href="#browsing-the-filesystem-from-python" title="Permalink to this heading">#</a></h2>
+<h2>Browsing the filesystem from Python<a class="headerlink" href="#browsing-the-filesystem-from-python" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Python has tools to browse the filesystem and modify and write files</p></li>
 </ul>
 <ul class="simple">
 <li><p>Python provides the <code class="docutils literal notranslate"><span class="pre">pathlib</span></code> module for  navigating through directories and files, creating folders, identifying file paths, and so on.</p></li>
 </ul>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 </pre></div>
@@ -646,11 +658,11 @@ document.write(`
 </div>
 </div>
 <section id="getting-the-current-working-directory">
-<h3>Getting the current working directory<a class="headerlink" href="#getting-the-current-working-directory" title="Permalink to this heading">#</a></h3>
+<h3>Getting the current working directory<a class="headerlink" href="#getting-the-current-working-directory" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This is the path where you are currently operating in</p></li>
 </ul>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
@@ -658,19 +670,19 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/src/app/jupyterbook/week7/lecture7
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/mnt/c/Users/jca92/Documents/codes/Winter_2023_ENGR_131_private/jupyterbook/week6/lecture6
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="specifying-paths">
-<h3>Specifying Paths<a class="headerlink" href="#specifying-paths" title="Permalink to this heading">#</a></h3>
+<h3>Specifying Paths<a class="headerlink" href="#specifying-paths" title="Link to this heading">#</a></h3>
 <p>There are two ways to specify paths:</p>
 <ol class="arabic simple">
 <li><p>The <strong>absolute</strong> path of a file declares its path, beginning with the root folder</p></li>
 </ol>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will join the current working directory and the test file</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span><span class="s2">&quot;MyTestFile.txt&quot;</span><span class="p">))</span>
@@ -681,8 +693,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/src/app/jupyterbook/week7/lecture7/MyTestFile.txt
-If True the file exists : False
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/mnt/c/Users/jca92/Documents/codes/Winter_2023_ENGR_131_private/jupyterbook/week6/lecture6/MyTestFile.txt
+If True the file exists : True
 </pre></div>
 </div>
 </div>
@@ -690,7 +702,7 @@ If True the file exists : False
 <ol class="arabic simple" start="2">
 <li><p>The <strong>relative</strong> path of a file declares its path in relation to the current working directory</p></li>
 </ol>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will join the current working directory and the test file</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">))</span>
@@ -703,16 +715,16 @@ If True the file exists : False
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MyTestFile.txt
-If True the file exists : False
+If True the file exists : True
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="making-folders">
-<h3>Making folders<a class="headerlink" href="#making-folders" title="Permalink to this heading">#</a></h3>
+<h3>Making folders<a class="headerlink" href="#making-folders" title="Link to this heading">#</a></h3>
 <p>You can make folders or directories with Python</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># creates a path object</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;./new_made_folder&#39;</span><span class="p">)</span>
@@ -725,10 +737,10 @@ If True the file exists : False
 </div>
 </section>
 <section id="how-to-change-your-current-working-directory">
-<h3>How to change your current working directory<a class="headerlink" href="#how-to-change-your-current-working-directory" title="Permalink to this heading">#</a></h3>
+<h3>How to change your current working directory<a class="headerlink" href="#how-to-change-your-current-working-directory" title="Link to this heading">#</a></h3>
 <p>You can use the <code class="docutils literal notranslate"><span class="pre">os.chdir</span></code> method</p>
 <p>Let’s move to the new folder we created</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
@@ -737,34 +749,34 @@ If True the file exists : False
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/src/app/jupyterbook/week7/lecture7/new_made_folder
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/mnt/c/Users/jca92/Documents/codes/Winter_2023_ENGR_131_private/jupyterbook/week6/lecture6/new_made_folder
 </pre></div>
 </div>
 </div>
 </div>
 <p>You can move back one folder using the “..” path</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/src/app/jupyterbook/week7/lecture7
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/mnt/c/Users/jca92/Documents/codes/Winter_2023_ENGR_131_private/jupyterbook/week6/lecture6
 </pre></div>
 </div>
 </div>
@@ -775,9 +787,9 @@ If True the file exists : False
 </div>
 </section>
 <section id="removing-a-directory">
-<h3>Removing a directory<a class="headerlink" href="#removing-a-directory" title="Permalink to this heading">#</a></h3>
+<h3>Removing a directory<a class="headerlink" href="#removing-a-directory" title="Link to this heading">#</a></h3>
 <p>It is possible to remove a directory using the <code class="docutils literal notranslate"><span class="pre">.rmdir()</span></code> method on a path object.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">rmdir</span><span class="p">()</span>
 </pre></div>
@@ -786,9 +798,9 @@ If True the file exists : False
 </div>
 </section>
 <section id="listing-files-in-a-directory">
-<h3>Listing files in a directory<a class="headerlink" href="#listing-files-in-a-directory" title="Permalink to this heading">#</a></h3>
+<h3>Listing files in a directory<a class="headerlink" href="#listing-files-in-a-directory" title="Link to this heading">#</a></h3>
 <p>You can list files in a directory using the <code class="docutils literal notranslate"><span class="pre">.listdir()</span></code> method</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
@@ -797,13 +809,13 @@ If True the file exists : False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object Path.iterdir at 0x7f570168adc0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object Path.iterdir at 0x7fefc6025a10&gt;
 </pre></div>
 </div>
 </div>
 </div>
 <p>This created an object called a generator. Generators can be iterated through using loops</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
@@ -811,17 +823,16 @@ If True the file exists : False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1_Iterators.ipynb
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.ipynb_checkpoints
+Activity_3_Determining_the_superbowl_winner.ipynb
+Activity_3_Determining_the_superbowl_winner_solutions.ipynb
+file_handling.ipynb
 images
-5_activity_modulus_operator.ipynb
 Metro_Interstate_Traffic_Volume.csv
-0_Lecture_7.md
 Metro_Interstate_Traffic_Volume.xls
-6_enumerate.ipynb
-7_file_handling.ipynb
-3_activity_current.ipynb
-2_Nested_Lists.ipynb
-4_break_continue.ipynb
+MyTestFile copy.txt
+MyTestFile.txt
+Super Bowl Propositions.xlsx
 </pre></div>
 </div>
 </div>
@@ -829,7 +840,7 @@ Metro_Interstate_Traffic_Volume.xls
 </section>
 </section>
 <section id="reading-and-writing-data">
-<h2>Reading and Writing Data<a class="headerlink" href="#reading-and-writing-data" title="Permalink to this heading">#</a></h2>
+<h2>Reading and Writing Data<a class="headerlink" href="#reading-and-writing-data" title="Link to this heading">#</a></h2>
 <p>There are different access modes for reading and writing files in python</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">r</span></code>: opens a file for reading. The read mode throws an error when the file doesn’t exist.</p></li>
@@ -845,42 +856,23 @@ Metro_Interstate_Traffic_Volume.xls
 <li><p><code class="docutils literal notranslate"><span class="pre">x</span></code>: the create mode is used to create files in Python. An error is thrown if the file exists.</p></li>
 </ul>
 <section id="opening-files-in-python">
-<h3>Opening files in Python<a class="headerlink" href="#opening-files-in-python" title="Permalink to this heading">#</a></h3>
+<h3>Opening files in Python<a class="headerlink" href="#opening-files-in-python" title="Link to this heading">#</a></h3>
 <p>To open a file in Python, we can use the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function.</p>
 <ul class="simple">
 <li><p>It takes at least two arguments — the filename, and the mode description — and returns a file object</p></li>
 </ul>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-
-<span class="nn">File /opt/conda/envs/engr131/lib/python3.10/site-packages/IPython/core/interactiveshell.py:310,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">303</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
-<span class="g g-Whitespace">    </span><span class="mi">304</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">306</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">308</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">310</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./MyTestFile.txt&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="reading-files">
-<h3>Reading files<a class="headerlink" href="#reading-files" title="Permalink to this heading">#</a></h3>
+<h3>Reading files<a class="headerlink" href="#reading-files" title="Link to this heading">#</a></h3>
 <p>You can read the file object using the <code class="docutils literal notranslate"><span class="pre">.read()</span></code> method. This returns all characters.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
@@ -897,7 +889,7 @@ Metro_Interstate_Traffic_Volume.xls
 <li><p>The read automatically adds line breaks \n but since we did not interpret the string it displays the text</p></li>
 <li><p>We cannot read a file twice, once it read to the end you need to open the file to start over</p></li>
 </ul>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
@@ -909,7 +901,7 @@ Metro_Interstate_Traffic_Volume.xls
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
@@ -926,9 +918,9 @@ This is the last line of my test file
 </div>
 </section>
 <section id="reading-a-line">
-<h3>Reading a line<a class="headerlink" href="#reading-a-line" title="Permalink to this heading">#</a></h3>
+<h3>Reading a line<a class="headerlink" href="#reading-a-line" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> method allows you to read one line of a file a time.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
@@ -948,9 +940,9 @@ This is the last line of my test file
 </div>
 </section>
 <section id="reading-all-lines">
-<h3>Reading all lines<a class="headerlink" href="#reading-all-lines" title="Permalink to this heading">#</a></h3>
+<h3>Reading all lines<a class="headerlink" href="#reading-all-lines" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">.readlines()</span></code> method returns all lines in a file as a list</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 
@@ -971,10 +963,10 @@ line 2 is: This is the last line of my test file
 </div>
 </section>
 <section id="closing-files">
-<h3>Closing Files<a class="headerlink" href="#closing-files" title="Permalink to this heading">#</a></h3>
+<h3>Closing Files<a class="headerlink" href="#closing-files" title="Link to this heading">#</a></h3>
 <p>Files like kitchen cabinets do not close themselves. If you don’t close a file it runs the risk of it being corrupted.</p>
 <p>To close a file use the <code class="docutils literal notranslate"><span class="pre">.close()</span></code> method</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
@@ -984,15 +976,15 @@ line 2 is: This is the last line of my test file
 </section>
 </section>
 <section id="the-with-statement">
-<h2>The <code class="docutils literal notranslate"><span class="pre">with</span></code> Statement<a class="headerlink" href="#the-with-statement" title="Permalink to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">with</span></code> Statement<a class="headerlink" href="#the-with-statement" title="Link to this heading">#</a></h2>
 <p>Since it is so easy to forget to close a file it is best practice to use the <code class="docutils literal notranslate"><span class="pre">with</span></code>. <code class="docutils literal notranslate"><span class="pre">with</span></code> automatically closes a file after the last operation in a scope (i.e., what is indented) is complete.</p>
 <section id="syntax">
-<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h3>
+<h3>Syntax<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;filename&quot;</span><span class="p">,</span> <span class="s2">&quot;mode&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">local_object</span><span class="p">:</span>
     <span class="n">local_object</span><span class="o">.</span><span class="n">do_something</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()):</span>
@@ -1013,11 +1005,11 @@ line 2 is: This is the last line of my test file
 </section>
 </section>
 <section id="writing-to-a-file">
-<h2>Writing to a file<a class="headerlink" href="#writing-to-a-file" title="Permalink to this heading">#</a></h2>
+<h2>Writing to a file<a class="headerlink" href="#writing-to-a-file" title="Link to this heading">#</a></h2>
 <p>When writing to a file it is best practice to use the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement.</p>
 <section id="appending-to-a-file">
-<h3>Appending to a file<a class="headerlink" href="#appending-to-a-file" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
+<h3>Appending to a file<a class="headerlink" href="#appending-to-a-file" title="Link to this heading">#</a></h3>
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;a+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="c1"># we need to add the new line character</span>
@@ -1027,7 +1019,7 @@ line 2 is: This is the last line of my test file
 </div>
 </div>
 <p>Since we are going to read and print the file many times let’s make a function</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
     <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
@@ -1038,7 +1030,7 @@ line 2 is: This is the last line of my test file
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1058,9 +1050,9 @@ line 3 is:  manual added line
 </div>
 </section>
 <section id="writing-multiple-lines-at-once-with-writelines-method">
-<h3>Writing multiple lines at once with <code class="docutils literal notranslate"><span class="pre">.writelines()</span></code> method<a class="headerlink" href="#writing-multiple-lines-at-once-with-writelines-method" title="Permalink to this heading">#</a></h3>
+<h3>Writing multiple lines at once with <code class="docutils literal notranslate"><span class="pre">.writelines()</span></code> method<a class="headerlink" href="#writing-multiple-lines-at-once-with-writelines-method" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">.writelines()</span></code> adds a list to a file</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> added line as list 1&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> added line as list 2&#39;</span><span class="p">]</span>
 
@@ -1071,7 +1063,7 @@ line 3 is:  manual added line
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1094,7 +1086,7 @@ line 5 is:  added line as list 2
 </div>
 </div>
 <p><strong>What happens when we change <code class="docutils literal notranslate"><span class="pre">a+</span></code> to <code class="docutils literal notranslate"><span class="pre">w</span></code></strong></p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;added line as list 1&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> added line as list 2&#39;</span><span class="p">]</span>
 
@@ -1105,7 +1097,7 @@ line 5 is:  added line as list 2
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;./MyTestFile.txt&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1122,8 +1114,8 @@ line 1 is:  added line as list 2
 <p>We overwrote the file. Good thing we have a copy. Let’s delete the modified file and replace it with our backup copy.</p>
 </section>
 <section id="deleting-the-file">
-<h3>Deleting the file<a class="headerlink" href="#deleting-the-file" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
+<h3>Deleting the file<a class="headerlink" href="#deleting-the-file" title="Link to this heading">#</a></h3>
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;./MyTestFile.txt&#39;</span><span class="p">)</span>
 
@@ -1134,8 +1126,8 @@ line 1 is:  added line as list 2
 </div>
 </section>
 <section id="copying-the-file-using-shutil-copyfile">
-<h3>Copying the file using <code class="docutils literal notranslate"><span class="pre">shutil.copyfile()</span></code><a class="headerlink" href="#copying-the-file-using-shutil-copyfile" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
+<h3>Copying the file using <code class="docutils literal notranslate"><span class="pre">shutil.copyfile()</span></code><a class="headerlink" href="#copying-the-file-using-shutil-copyfile" title="Link to this heading">#</a></h3>
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shutil</span>
 
@@ -1152,15 +1144,15 @@ line 1 is:  added line as list 2
 </section>
 </section>
 <section id="opening-common-file-formats">
-<h2>Opening Common File Formats<a class="headerlink" href="#opening-common-file-formats" title="Permalink to this heading">#</a></h2>
+<h2>Opening Common File Formats<a class="headerlink" href="#opening-common-file-formats" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">.txt</span></code> files are great because of their simplicity and interoperability sometimes data is stored in more complex structures. Python provides tools to open nearly any file format ever created. We will introduce opening some common file formats.</p>
 <section id="comma-separated-variables">
-<h3>Comma Separated Variables<a class="headerlink" href="#comma-separated-variables" title="Permalink to this heading">#</a></h3>
+<h3>Comma Separated Variables<a class="headerlink" href="#comma-separated-variables" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Many system monitoring and manufacturing sensors record several variables at a single time. These are commonly stored as comma separated variable</p></li>
 </ul>
 <p>If you were a city planner you might be interested in understanding traffic patterns depending on several factors.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 
@@ -1197,7 +1189,7 @@ line 1 is:  added line as list 2
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">headers</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">values_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -1213,7 +1205,7 @@ line 1 is:  added line as list 2
 </div>
 </section>
 <section id="loading-an-excel-file">
-<h3>Loading an Excel File<a class="headerlink" href="#loading-an-excel-file" title="Permalink to this heading">#</a></h3>
+<h3>Loading an Excel File<a class="headerlink" href="#loading-an-excel-file" title="Link to this heading">#</a></h3>
 <p>There are more developed tools that can deal with more complex data structures, and have more elaborate built it methods.</p>
 <p>One package is called Pandas</p>
 <div class="cell tag_skip-execution docutils container">
@@ -1228,7 +1220,7 @@ line 1 is:  added line as list 2
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -1238,7 +1230,7 @@ line 1 is:  added line as list 2
 </div>
 </div>
 <p>Pandas DataFrames have many functions:</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -1340,7 +1332,7 @@ line 1 is:  added line as list 2
 </div></div></div>
 </div>
 <p>Getting the max value</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;rain_1h&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre></div>
@@ -1353,7 +1345,7 @@ line 1 is:  added line as list 2
 </div>
 </div>
 <p>Getting the Unique Values</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;weather_description&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 </pre></div>
@@ -1379,7 +1371,7 @@ line 1 is:  added line as list 2
 </div>
 </div>
 <p>Multilevel indexing</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;rain_1h&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">][</span><span class="s1">&#39;traffic_volume&#39;</span><span class="p">]</span>
 </pre></div>
@@ -1403,7 +1395,7 @@ Name: traffic_volume, Length: 94, dtype: int64
 </div>
 </div>
 <p>Even plotting</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;rain_1h&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">][</span><span class="s1">&#39;traffic_volume&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
 </pre></div>
@@ -1477,6 +1469,7 @@ Name: traffic_volume, Length: 94, dtype: int64
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1541,7 +1534,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1565,8 +1558,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

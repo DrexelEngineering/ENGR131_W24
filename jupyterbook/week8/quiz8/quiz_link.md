@@ -1,3 +1,5 @@
 # Quiz Link
 
-To start your quiz please log into wise with the following link: [Wise](https://online.wiseattend.com/student/testLink?c=ENGR131&k=9444)
+To start your quiz, please log into Wise by copying the following text and pasting it into a Chrome browser bar. 
+
+https://online.wiseattend.com/student/testLink?c=ENGR131&k=9444

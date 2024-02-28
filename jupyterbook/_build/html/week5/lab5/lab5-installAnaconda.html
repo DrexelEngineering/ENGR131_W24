@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>🧪🖥 Week 5 - Set up Local Jupyter Notebooks &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -19,49 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week5/lab5/lab5-installAnaconda';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,10 +71,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -120,11 +114,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -158,7 +155,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -309,14 +317,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/1_Introduction_to_Classes.html">📝Classes</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/2_Activity_1_building_a_sensor.html">💻 Activity: Building a Sensor Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Creating_Multiple_Objects_of_a_Class.html">📝Creating Multiple Objects of a Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Creating_Multiple_Objects_of_a_Class.html">📝 Creating Multiple Objects of a Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Inheritance.html">📝 Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/4_Creating_a_Circuit_Class.html">📝 Creating a Class for Storing and Operating on Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/5_Activity_2_Make_Parallel_Circuit_Class.html">💻 Activity: Create a Class for Parallel Circuits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/6_Activity_lrc.html">💻 Activity: Building the game LCR</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/lab8/Week_8_lab_intro.html">🧪 📝 Week 8 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/lab8/lab8-audio.html">🧪 Lab 8: Audio Synthesis with Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/hw8/hw8-strings.html">🏡📝 Homework 8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8practice-functions-loops.html">🤔❓ ⌛️ Quiz 8 Practice - Using Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz_link.html">🤔❓ Quiz Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8link.html">🤔❓ Quiz Link</a></li>
 </ul>
 
     </div>
@@ -371,7 +383,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://engrjhub.eastus.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week5/lab5/lab5-installAnaconda.ipynb&branch=main" target="_blank"
+      <li><a href="https://engr131.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week5/lab5/lab5-installAnaconda.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -592,16 +604,16 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="week-5-set-up-local-jupyter-notebooks">
-<h1>🧪🖥 Week 5 - Set up Local Jupyter Notebooks<a class="headerlink" href="#week-5-set-up-local-jupyter-notebooks" title="Permalink to this heading">#</a></h1>
+<h1>🧪🖥 Week 5 - Set up Local Jupyter Notebooks<a class="headerlink" href="#week-5-set-up-local-jupyter-notebooks" title="Link to this heading">#</a></h1>
 <p>In this lab, you will install software to run Jupyter Notebooks locally so that you can complete your assignments on your own computer.</p>
 <section id="a-install-anaconda">
-<h2>A. Install Anaconda<a class="headerlink" href="#a-install-anaconda" title="Permalink to this heading">#</a></h2>
+<h2>A. Install Anaconda<a class="headerlink" href="#a-install-anaconda" title="Link to this heading">#</a></h2>
 <p>Please choose the appropriate subsection based on whether you use a computer with Windows, Mac, or Linux.</p>
 <section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">#</a></h3>
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading">#</a></h3>
 <ol class="arabic simple" start="0">
 <li><p>Open <a class="reference external" href="https://www.anaconda.com/download">this link</a> to download Anaconda in a browser tab.</p></li>
 <li><p>Follow the instructions in the documentation below.</p></li>
@@ -628,7 +640,7 @@ document.write(`
 </div>
 </section>
 <section id="macos">
-<h3>MacOS<a class="headerlink" href="#macos" title="Permalink to this heading">#</a></h3>
+<h3>MacOS<a class="headerlink" href="#macos" title="Link to this heading">#</a></h3>
 <ol class="arabic simple" start="0">
 <li><p>Click the Apple in the upper left corner of your screen, and choose “About this Mac” from the drop down menu.</p></li>
 </ol>
@@ -638,14 +650,14 @@ document.write(`
 <li><p>If the words following <strong>Processor</strong> include “M1”, “M2”, or “M3”, follow the instructions under #### M1-3 below.</p></li>
 </ul>
 <section id="intel">
-<h4>Intel<a class="headerlink" href="#intel" title="Permalink to this heading">#</a></h4>
+<h4>Intel<a class="headerlink" href="#intel" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p>Go to <a class="reference external" href="https://www.anaconda.com/download#downloads">Anaconda downloads</a>.</p></li>
 </ol>
 <p>Click the link titled <em>64-Bit Graphical Installer (610.5 MB)</em> under the Mac logo.</p>
 </section>
 <section id="m1-3">
-<h4>M1-3<a class="headerlink" href="#m1-3" title="Permalink to this heading">#</a></h4>
+<h4>M1-3<a class="headerlink" href="#m1-3" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p>Go to <a class="reference external" href="https://www.anaconda.com/download#downloads">Anaconda downloads</a>.</p></li>
 </ol>
@@ -653,7 +665,7 @@ document.write(`
 </section>
 </section>
 <section id="continue-below">
-<h3>Continue below<a class="headerlink" href="#continue-below" title="Permalink to this heading">#</a></h3>
+<h3>Continue below<a class="headerlink" href="#continue-below" title="Link to this heading">#</a></h3>
 <ol class="arabic simple" start="2">
 <li><p>Follow the instructions below starting at Step 2.</p></li>
 </ol>
@@ -676,7 +688,7 @@ document.write(`
         </div></div>
 </div>
 <section id="linux">
-<h4>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">#</a></h4>
+<h4>Linux<a class="headerlink" href="#linux" title="Link to this heading">#</a></h4>
 <ol class="arabic simple" start="0">
 <li><p>Open <a class="reference external" href="https://www.anaconda.com/download">this link</a> to download Anaconda in a browser tab.</p></li>
 <li><p>Follow the instructions in the documentation below.</p></li>
@@ -703,7 +715,7 @@ document.write(`
 </section>
 </section>
 <section id="b-install-jupyterlab">
-<h2>B. Install JupyterLab<a class="headerlink" href="#b-install-jupyterlab" title="Permalink to this heading">#</a></h2>
+<h2>B. Install JupyterLab<a class="headerlink" href="#b-install-jupyterlab" title="Link to this heading">#</a></h2>
 <ol class="arabic" start="0">
 <li><p>Open the Anaconda Navigator application you just installed.</p></li>
 <li><p>Click “Install” under JupyterLab.</p>
@@ -728,7 +740,7 @@ document.write(`
 </div>
 </section>
 <section id="c-create-an-environment-for-engr-131">
-<h2>C. Create an Environment for ENGR 131<a class="headerlink" href="#c-create-an-environment-for-engr-131" title="Permalink to this heading">#</a></h2>
+<h2>C. Create an Environment for ENGR 131<a class="headerlink" href="#c-create-an-environment-for-engr-131" title="Link to this heading">#</a></h2>
 <ol class="arabic simple" start="0">
 <li><p>Download <a class="reference download internal" download="" href="../../_downloads/b3e86d9ec859d613dade57db2eb170b0/engr131_24.yml"><span class="xref download myst">this file</span></a> to a location where you can find it. Do not change the file name, which should be  <code class="docutils literal notranslate"><span class="pre">engr131_24.yml</span></code>.</p></li>
 <li><p>In Anaconda Navigator, click Environments on the left navigation panel.</p></li>
@@ -755,7 +767,7 @@ document.write(`
 </div>
 </section>
 <section id="d-launch-jupyterlab">
-<h2>D. Launch JupyterLab<a class="headerlink" href="#d-launch-jupyterlab" title="Permalink to this heading">#</a></h2>
+<h2>D. Launch JupyterLab<a class="headerlink" href="#d-launch-jupyterlab" title="Link to this heading">#</a></h2>
 <ol class="arabic simple" start="0">
 <li><p>In Anaconda Navigator, click the Home button in the left navigation panel.</p></li>
 <li><p>Find JupyterLab (not Jupyter notebooks) in the applications panel.</p></li>
@@ -777,9 +789,9 @@ document.write(`
 </div>
 </section>
 <section id="e-create-the-engr131-kernel">
-<h2>E. Create the engr131 Kernel<a class="headerlink" href="#e-create-the-engr131-kernel" title="Permalink to this heading">#</a></h2>
+<h2>E. Create the engr131 Kernel<a class="headerlink" href="#e-create-the-engr131-kernel" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3>Windows<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Windows<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <ol class="arabic simple" start="0">
 <li><p>Go to Anaconda Navigator Home</p></li>
 <li><p>Look for the CMD.exe PROMPT application, and click Install beneath it.</p></li>
@@ -795,7 +807,7 @@ document.write(`
 </ol>
 </section>
 <section id="mac-or-linux">
-<h3>Mac or Linux<a class="headerlink" href="#mac-or-linux" title="Permalink to this heading">#</a></h3>
+<h3>Mac or Linux<a class="headerlink" href="#mac-or-linux" title="Link to this heading">#</a></h3>
 <ol class="arabic simple" start="0">
 <li><p>In your default browser, JupyterLab should be open.</p></li>
 <li><p>Click on “Terminal” to open a terminal.</p></li>
@@ -811,7 +823,7 @@ document.write(`
 </section>
 </section>
 <section id="f-test-jupyterlab-with-engr131-kernel">
-<h2>F. Test JupyterLab with engr131 Kernel<a class="headerlink" href="#f-test-jupyterlab-with-engr131-kernel" title="Permalink to this heading">#</a></h2>
+<h2>F. Test JupyterLab with engr131 Kernel<a class="headerlink" href="#f-test-jupyterlab-with-engr131-kernel" title="Link to this heading">#</a></h2>
 <ol class="arabic simple" start="0">
 <li><p>In your default browser, JupyterLab should be open.</p></li>
 <li><p>Click the button indicated below to upload the midterm .ipynb file (or a quiz .ipynb file that you have saved on your computer).</p></li>
@@ -919,6 +931,7 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -971,7 +984,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -995,8 +1008,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
