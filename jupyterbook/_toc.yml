@@ -187,3 +187,20 @@ parts:
         title: "🤔❓ ⌛️ Quiz 8 Practice - Using Functions"
       - file: week8/quiz8/quiz8link
         title: "🤔❓ Quiz Link"
+  - caption: "week 9"
+    chapters:
+      - file: week9/lecture9/0_lecture9
+        title: "👩‍🏫 Lecture 9"
+        sections:
+          - file: week9/lecture9/1_Introduction_plotting
+          - file: week9/lecture9/2_Activity_1_refining_a_plot
+          - file: week9/lecture9/3_Colormaps
+          - file: week9/lecture9/4_Activity_2_Bubble_plot
+          - file: week9/lecture9/5_Curve_Fitting
+          - file: week9/lecture9/6_Interactive_Graphics
+      # - file: week9/lab9/lab9-pollutant
+      #   title: "🧪 Lab 9: Pollutant Triangulation"
+      # - file: week9/hw9/hw9-classes
+      #   title: "🏡📝 Homework 9"
+      - file: week9/quiz9/quiz9-classes-practice
+        title: "🤔❓ ⌛️ Quiz 9 Practice - Classes"

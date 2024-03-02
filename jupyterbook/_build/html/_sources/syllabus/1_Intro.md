@@ -4,7 +4,7 @@
 
 **Office Hours:**
 
-Prof. Capps: 1:00 pm - 2:00 pm on Thursdays in Room 209 of 3101 Market Street
+Prof. Capps: 11:00 am - 12:00 pm on Fridays in Room 209 of 3101 Market Street
 
 Prof. Agar: 11:00 am - 12 pm on Thursdays Location Curtis 261C
 

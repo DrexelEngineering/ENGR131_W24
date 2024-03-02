@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>📝 Python Operators &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -18,45 +19,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week1/lecture1/1_11_Operators';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -71,9 +76,10 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -114,14 +120,11 @@
 </form></div>
   </div>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,18 +158,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -330,6 +322,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8practice-functions-loops.html">🤔❓ ⌛️ Quiz 8 Practice - Using Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8link.html">🤔❓ Quiz Link</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week9/lecture9/0_lecture9.html">👩‍🏫 Lecture 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/1_Introduction_plotting.html">📝 Introduction to Plotting in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/2_Activity_1_refining_a_plot.html">💻 Activity: Refining a Simple Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/3_Colormaps.html">📝 Choices for Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/4_Activity_2_Bubble_plot.html">💻 Activity: Making a Updated Bubble Plot of Engineering Jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/5_Curve_Fitting.html">📝 Curve Fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/6_Interactive_Graphics.html">📝 Interactive Plotting with Bokeh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week9/quiz9/quiz9-classes-practice.html">🤔❓ ⌛️ Quiz 9 Practice - Classes</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -383,7 +388,7 @@
       
       
       
-      <li><a href="https://engr131.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week1/lecture1/1_11_Operators.ipynb&branch=main" target="_blank"
+      <li><a href="https://engrjhub.eastus.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week1/lecture1/1_11_Operators.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -623,10 +628,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-operators">
-<h1>📝 Python Operators<a class="headerlink" href="#python-operators" title="Link to this heading">#</a></h1>
+<h1>📝 Python Operators<a class="headerlink" href="#python-operators" title="Permalink to this heading">#</a></h1>
 <p>Operators are used to perform operations on variables and values.</p>
 <p>For example we can use the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator to add two number (or strings together)</p>
 <div class="cell docutils container">
@@ -654,10 +659,10 @@ document.write(`
 </div>
 </div>
 <section id="arithmetic-operators">
-<h2>Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Link to this heading">#</a></h2>
+<h2>Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this heading">#</a></h2>
 <p>These are operators that perform basic mathematical functions</p>
 <section id="addition">
-<h3>Addition <code class="docutils literal notranslate"><span class="pre">+</span></code><a class="headerlink" href="#addition" title="Link to this heading">#</a></h3>
+<h3>Addition <code class="docutils literal notranslate"><span class="pre">+</span></code><a class="headerlink" href="#addition" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -675,7 +680,7 @@ document.write(`
 </div>
 </section>
 <section id="subtraction">
-<h3>Subtraction <code class="docutils literal notranslate"><span class="pre">-</span></code><a class="headerlink" href="#subtraction" title="Link to this heading">#</a></h3>
+<h3>Subtraction <code class="docutils literal notranslate"><span class="pre">-</span></code><a class="headerlink" href="#subtraction" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -693,7 +698,7 @@ document.write(`
 </div>
 </section>
 <section id="multiplication">
-<h3>Multiplication <code class="docutils literal notranslate"><span class="pre">*</span></code><a class="headerlink" href="#multiplication" title="Link to this heading">#</a></h3>
+<h3>Multiplication <code class="docutils literal notranslate"><span class="pre">*</span></code><a class="headerlink" href="#multiplication" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -711,7 +716,7 @@ document.write(`
 </div>
 </section>
 <section id="division">
-<h3>Division <code class="docutils literal notranslate"><span class="pre">/</span></code><a class="headerlink" href="#division" title="Link to this heading">#</a></h3>
+<h3>Division <code class="docutils literal notranslate"><span class="pre">/</span></code><a class="headerlink" href="#division" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -729,7 +734,7 @@ document.write(`
 </div>
 </section>
 <section id="modulus">
-<h3>Modulus <code class="docutils literal notranslate"><span class="pre">%</span></code><a class="headerlink" href="#modulus" title="Link to this heading">#</a></h3>
+<h3>Modulus <code class="docutils literal notranslate"><span class="pre">%</span></code><a class="headerlink" href="#modulus" title="Permalink to this heading">#</a></h3>
 <p>The remainder after dividing by a number</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -748,7 +753,7 @@ document.write(`
 </div>
 </section>
 <section id="exponential">
-<h3>Exponential <code class="docutils literal notranslate"><span class="pre">**</span></code><a class="headerlink" href="#exponential" title="Link to this heading">#</a></h3>
+<h3>Exponential <code class="docutils literal notranslate"><span class="pre">**</span></code><a class="headerlink" href="#exponential" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -766,7 +771,7 @@ document.write(`
 </div>
 </section>
 <section id="floor-division">
-<h3>Floor Division <code class="docutils literal notranslate"><span class="pre">//</span></code><a class="headerlink" href="#floor-division" title="Link to this heading">#</a></h3>
+<h3>Floor Division <code class="docutils literal notranslate"><span class="pre">//</span></code><a class="headerlink" href="#floor-division" title="Permalink to this heading">#</a></h3>
 <p>the floor division <code class="docutils literal notranslate"><span class="pre">//</span></code> rounds the result of division down to the nearest whole number</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -786,10 +791,10 @@ document.write(`
 </section>
 </section>
 <section id="assignment-operators">
-<h2>Assignment Operators<a class="headerlink" href="#assignment-operators" title="Link to this heading">#</a></h2>
+<h2>Assignment Operators<a class="headerlink" href="#assignment-operators" title="Permalink to this heading">#</a></h2>
 <p>These are operators that allow you to assign a value to a variable.</p>
 <section id="equals">
-<h3>Equals <code class="docutils literal notranslate"><span class="pre">=</span></code><a class="headerlink" href="#equals" title="Link to this heading">#</a></h3>
+<h3>Equals <code class="docutils literal notranslate"><span class="pre">=</span></code><a class="headerlink" href="#equals" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -806,7 +811,7 @@ document.write(`
 </div>
 </section>
 <section id="addition-and-assignment">
-<h3>Addition and Assignment <code class="docutils literal notranslate"><span class="pre">+=</span></code><a class="headerlink" href="#addition-and-assignment" title="Link to this heading">#</a></h3>
+<h3>Addition and Assignment <code class="docutils literal notranslate"><span class="pre">+=</span></code><a class="headerlink" href="#addition-and-assignment" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -824,7 +829,7 @@ document.write(`
 </div>
 </section>
 <section id="subtraction-and-assignment">
-<h3>Subtraction and Assignment <code class="docutils literal notranslate"><span class="pre">-=</span></code><a class="headerlink" href="#subtraction-and-assignment" title="Link to this heading">#</a></h3>
+<h3>Subtraction and Assignment <code class="docutils literal notranslate"><span class="pre">-=</span></code><a class="headerlink" href="#subtraction-and-assignment" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -842,7 +847,7 @@ document.write(`
 </div>
 </section>
 <section id="multiplication-and-assignment">
-<h3>Multiplication and Assignment <code class="docutils literal notranslate"><span class="pre">*=</span></code><a class="headerlink" href="#multiplication-and-assignment" title="Link to this heading">#</a></h3>
+<h3>Multiplication and Assignment <code class="docutils literal notranslate"><span class="pre">*=</span></code><a class="headerlink" href="#multiplication-and-assignment" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -860,7 +865,7 @@ document.write(`
 </div>
 </section>
 <section id="division-and-assignment">
-<h3>Division and Assignment <code class="docutils literal notranslate"><span class="pre">/=</span></code><a class="headerlink" href="#division-and-assignment" title="Link to this heading">#</a></h3>
+<h3>Division and Assignment <code class="docutils literal notranslate"><span class="pre">/=</span></code><a class="headerlink" href="#division-and-assignment" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -878,7 +883,7 @@ document.write(`
 </div>
 </section>
 <section id="modulus-and-assignment">
-<h3>Modulus and Assignment <code class="docutils literal notranslate"><span class="pre">%=</span></code><a class="headerlink" href="#modulus-and-assignment" title="Link to this heading">#</a></h3>
+<h3>Modulus and Assignment <code class="docutils literal notranslate"><span class="pre">%=</span></code><a class="headerlink" href="#modulus-and-assignment" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -896,7 +901,7 @@ document.write(`
 </div>
 </section>
 <section id="floor-division-and-assignment">
-<h3>Floor Division and Assignment <code class="docutils literal notranslate"><span class="pre">//=</span></code><a class="headerlink" href="#floor-division-and-assignment" title="Link to this heading">#</a></h3>
+<h3>Floor Division and Assignment <code class="docutils literal notranslate"><span class="pre">//=</span></code><a class="headerlink" href="#floor-division-and-assignment" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -914,7 +919,7 @@ document.write(`
 </div>
 </section>
 <section id="exponential-and-assignment">
-<h3>Exponential and Assignment <code class="docutils literal notranslate"><span class="pre">**=</span></code><a class="headerlink" href="#exponential-and-assignment" title="Link to this heading">#</a></h3>
+<h3>Exponential and Assignment <code class="docutils literal notranslate"><span class="pre">**=</span></code><a class="headerlink" href="#exponential-and-assignment" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -933,10 +938,10 @@ document.write(`
 </section>
 </section>
 <section id="comparison-operators">
-<h2>Comparison Operators<a class="headerlink" href="#comparison-operators" title="Link to this heading">#</a></h2>
+<h2>Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permalink to this heading">#</a></h2>
 <p>There are operators that allow you to compare two values or variables to see if they are the same or different.</p>
 <section id="equal-to">
-<h3>Equal To <code class="docutils literal notranslate"><span class="pre">==</span></code><a class="headerlink" href="#equal-to" title="Link to this heading">#</a></h3>
+<h3>Equal To <code class="docutils literal notranslate"><span class="pre">==</span></code><a class="headerlink" href="#equal-to" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -956,7 +961,7 @@ False
 </div>
 </section>
 <section id="not-equal-to">
-<h3>Not Equal To <code class="docutils literal notranslate"><span class="pre">!=</span></code><a class="headerlink" href="#not-equal-to" title="Link to this heading">#</a></h3>
+<h3>Not Equal To <code class="docutils literal notranslate"><span class="pre">!=</span></code><a class="headerlink" href="#not-equal-to" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -976,7 +981,7 @@ True
 </div>
 </section>
 <section id="greater-than">
-<h3>Greater Than <code class="docutils literal notranslate"><span class="pre">&gt;</span></code><a class="headerlink" href="#greater-than" title="Link to this heading">#</a></h3>
+<h3>Greater Than <code class="docutils literal notranslate"><span class="pre">&gt;</span></code><a class="headerlink" href="#greater-than" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -996,7 +1001,7 @@ False
 </div>
 </section>
 <section id="less-than">
-<h3>Less Than <code class="docutils literal notranslate"><span class="pre">&lt;</span></code><a class="headerlink" href="#less-than" title="Link to this heading">#</a></h3>
+<h3>Less Than <code class="docutils literal notranslate"><span class="pre">&lt;</span></code><a class="headerlink" href="#less-than" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1016,7 +1021,7 @@ True
 </div>
 </section>
 <section id="greater-than-equal-to">
-<h3>Greater Than Equal To <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code><a class="headerlink" href="#greater-than-equal-to" title="Link to this heading">#</a></h3>
+<h3>Greater Than Equal To <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code><a class="headerlink" href="#greater-than-equal-to" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1036,7 +1041,7 @@ False
 </div>
 </section>
 <section id="less-than-equal-to">
-<h3>Less Than Equal To <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code><a class="headerlink" href="#less-than-equal-to" title="Link to this heading">#</a></h3>
+<h3>Less Than Equal To <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code><a class="headerlink" href="#less-than-equal-to" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1057,10 +1062,10 @@ True
 </section>
 </section>
 <section id="logical-operators">
-<h2>Logical Operators<a class="headerlink" href="#logical-operators" title="Link to this heading">#</a></h2>
+<h2>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this heading">#</a></h2>
 <p>Logical operators allow you to create logical statements between values or variables.</p>
 <section id="and-operator">
-<h3><code class="docutils literal notranslate"><span class="pre">and</span></code> Operator<a class="headerlink" href="#and-operator" title="Link to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">and</span></code> Operator<a class="headerlink" href="#and-operator" title="Permalink to this heading">#</a></h3>
 <p>Returns True if both statements are true</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1082,7 +1087,7 @@ False
 </div>
 </section>
 <section id="or-operator">
-<h3><code class="docutils literal notranslate"><span class="pre">or</span></code> Operator<a class="headerlink" href="#or-operator" title="Link to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">or</span></code> Operator<a class="headerlink" href="#or-operator" title="Permalink to this heading">#</a></h3>
 <p>Returns True if one statements is true</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1104,7 +1109,7 @@ False
 </div>
 </section>
 <section id="not-operator">
-<h3><code class="docutils literal notranslate"><span class="pre">not</span></code> Operator<a class="headerlink" href="#not-operator" title="Link to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">not</span></code> Operator<a class="headerlink" href="#not-operator" title="Permalink to this heading">#</a></h3>
 <p>Returns true is the result is false, returns false if the results is true</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1151,10 +1156,10 @@ True
 </section>
 </section>
 <section id="python-identity-operators">
-<h2>Python Identity Operators<a class="headerlink" href="#python-identity-operators" title="Link to this heading">#</a></h2>
+<h2>Python Identity Operators<a class="headerlink" href="#python-identity-operators" title="Permalink to this heading">#</a></h2>
 <p>Identity operators allow you to determine if two variables are physically the same. This means both value and location in memory.</p>
 <section id="is-operator">
-<h3><code class="docutils literal notranslate"><span class="pre">is</span></code> Operator<a class="headerlink" href="#is-operator" title="Link to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">is</span></code> Operator<a class="headerlink" href="#is-operator" title="Permalink to this heading">#</a></h3>
 <p>Returns true if an object is the same in memory</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1189,7 +1194,7 @@ True
 </div>
 </section>
 <section id="is-not-operator">
-<h3><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code> Operator<a class="headerlink" href="#is-not-operator" title="Link to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code> Operator<a class="headerlink" href="#is-not-operator" title="Permalink to this heading">#</a></h3>
 <p>Returns true if the object are different in memory</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1283,7 +1288,6 @@ True
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1355,7 +1359,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -1379,8 +1383,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

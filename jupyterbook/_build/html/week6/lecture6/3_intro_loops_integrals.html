@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>📝 Introduction to Loops with Integrals &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -18,48 +19,52 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="application/vnd.jupyter.widget-state+json">{"state": {"097b8377064d4ac2ab5e64acde796470": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "26004b08c084427fa70ce39b16c6d58e": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": null, "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "1f330e1e6c374914b626c5f90ab1fef8": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "Add", "disabled": false, "icon": "", "layout": "IPY_MODEL_097b8377064d4ac2ab5e64acde796470", "style": "IPY_MODEL_26004b08c084427fa70ce39b16c6d58e", "tabbable": null, "tooltip": null}}, "bfded15974b248d6899680ee3a47df9c": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "7b7eb3b7cac74b59a7a8ed60c2d9c31e": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_bfded15974b248d6899680ee3a47df9c", "msg_id": "", "outputs": [], "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"2dcf5aa1f1fa4a2aa9b3ef7f523b0264": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "c3fb5901b2ae4e47a799c09f3c2914bb": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": null, "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "d048d957ec50475e807373602345ad1e": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "Add", "disabled": false, "icon": "", "layout": "IPY_MODEL_2dcf5aa1f1fa4a2aa9b3ef7f523b0264", "style": "IPY_MODEL_c3fb5901b2ae4e47a799c09f3c2914bb", "tabbable": null, "tooltip": null}}, "eeccad215668497e880bffcb9026ce7f": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9ab67125d0f34114a2342c128c9b499a": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_eeccad215668497e880bffcb9026ce7f", "msg_id": "", "outputs": [], "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week6/lecture6/3_intro_loops_integrals';</script>
@@ -76,9 +81,10 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -119,14 +125,11 @@
 </form></div>
   </div>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -160,18 +163,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -335,6 +327,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8practice-functions-loops.html">🤔❓ ⌛️ Quiz 8 Practice - Using Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8link.html">🤔❓ Quiz Link</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week9/lecture9/0_lecture9.html">👩‍🏫 Lecture 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/1_Introduction_plotting.html">📝 Introduction to Plotting in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/2_Activity_1_refining_a_plot.html">💻 Activity: Refining a Simple Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/3_Colormaps.html">📝 Choices for Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/4_Activity_2_Bubble_plot.html">💻 Activity: Making a Updated Bubble Plot of Engineering Jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/5_Curve_Fitting.html">📝 Curve Fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/6_Interactive_Graphics.html">📝 Interactive Plotting with Bokeh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week9/quiz9/quiz9-classes-practice.html">🤔❓ ⌛️ Quiz 9 Practice - Classes</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -388,7 +393,7 @@
       
       
       
-      <li><a href="https://engr131.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week6/lecture6/3_intro_loops_integrals.ipynb&branch=main" target="_blank"
+      <li><a href="https://engrjhub.eastus.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week6/lecture6/3_intro_loops_integrals.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -623,16 +628,16 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-loops-with-integrals">
-<h1>📝 Introduction to Loops with Integrals<a class="headerlink" href="#introduction-to-loops-with-integrals" title="Link to this heading">#</a></h1>
+<h1>📝 Introduction to Loops with Integrals<a class="headerlink" href="#introduction-to-loops-with-integrals" title="Permalink to this heading">#</a></h1>
 <section id="utility-of-loops">
-<h2>Utility of loops<a class="headerlink" href="#utility-of-loops" title="Link to this heading">#</a></h2>
+<h2>Utility of loops<a class="headerlink" href="#utility-of-loops" title="Permalink to this heading">#</a></h2>
 <p>Branching causes specific blocks of code to be executed only under certain conditions. The conditions are articulated as logical expressions.</p>
 </section>
 <section id="how-do-you-write-loops">
-<h2>How do you write loops?<a class="headerlink" href="#how-do-you-write-loops" title="Link to this heading">#</a></h2>
+<h2>How do you write loops?<a class="headerlink" href="#how-do-you-write-loops" title="Permalink to this heading">#</a></h2>
 <p>The simplest version of loop is a “for loop”.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">looping_variable</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
     <span class="n">code_block</span>
@@ -662,7 +667,7 @@ Drexel University offers a program in Computer Engineering.
 </div>
 </section>
 <section id="for-loops-with-branching">
-<h2>For Loops with Branching<a class="headerlink" href="#for-loops-with-branching" title="Link to this heading">#</a></h2>
+<h2>For Loops with Branching<a class="headerlink" href="#for-loops-with-branching" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample voltage measurements</span>
@@ -697,7 +702,7 @@ Voltage measurements at threshold levels: [3.3, 12.0, 3.3, 12.0]
 </div>
 </div>
 <section id="loops-with-flow-control">
-<h3>Loops with Flow Control<a class="headerlink" href="#loops-with-flow-control" title="Link to this heading">#</a></h3>
+<h3>Loops with Flow Control<a class="headerlink" href="#loops-with-flow-control" title="Permalink to this heading">#</a></h3>
 <p>Sometimes it is important to add conditional flow control to the loops. This can be done with continue, pass, and break statements.</p>
 <p>Incorporating <code class="docutils literal notranslate"><span class="pre">continue</span></code>, <code class="docutils literal notranslate"><span class="pre">pass</span></code>, and <code class="docutils literal notranslate"><span class="pre">break</span></code> into the previous example can demonstrate their utility in controlling the flow of a for loop. These statements are useful in Python for managing loop execution under specific conditions:</p>
 <ul class="simple">
@@ -707,7 +712,7 @@ Voltage measurements at threshold levels: [3.3, 12.0, 3.3, 12.0]
 </ul>
 </section>
 <section id="modified-example-with-continue-pass-and-break">
-<h3>Modified Example with <code class="docutils literal notranslate"><span class="pre">continue</span></code>, <code class="docutils literal notranslate"><span class="pre">pass</span></code>, and <code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#modified-example-with-continue-pass-and-break" title="Link to this heading">#</a></h3>
+<h3>Modified Example with <code class="docutils literal notranslate"><span class="pre">continue</span></code>, <code class="docutils literal notranslate"><span class="pre">pass</span></code>, and <code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#modified-example-with-continue-pass-and-break" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample voltage measurements</span>
@@ -756,7 +761,7 @@ Critical voltage measurements: [-1]
 </div>
 </section>
 <section id="explanation">
-<h3>Explanation<a class="headerlink" href="#explanation" title="Link to this heading">#</a></h3>
+<h3>Explanation<a class="headerlink" href="#explanation" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Critical Condition with <code class="docutils literal notranslate"><span class="pre">break</span></code></strong>: We added a condition at the beginning of the loop to check for critical system failures, exemplified here by negative voltages. If such a condition is detected, a message is printed, the voltage is added to <code class="docutils literal notranslate"><span class="pre">critical_voltages</span></code>, and <code class="docutils literal notranslate"><span class="pre">break</span></code> is used to exit the loop immediately. This could represent a situation where processing needs to stop because of a significant error or anomaly.</p></li>
 <li><p><strong>Threshold Check with <code class="docutils literal notranslate"><span class="pre">continue</span></code></strong>: After handling the critical condition, we check if the voltage is at either threshold value. If so, we add it to <code class="docutils literal notranslate"><span class="pre">threshold_voltages</span></code> and then use <code class="docutils literal notranslate"><span class="pre">continue</span></code> to skip the remaining code in the loop, moving directly to the next iteration. This ensures that threshold voltages are not also classified as safe voltages.</p></li>
@@ -765,7 +770,7 @@ Critical voltage measurements: [-1]
 </section>
 </section>
 <section id="loops-with-enumerate">
-<h2>Loops with Enumerate<a class="headerlink" href="#loops-with-enumerate" title="Link to this heading">#</a></h2>
+<h2>Loops with Enumerate<a class="headerlink" href="#loops-with-enumerate" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> function is a built-in function that returns an iterator of tuples containing indices and values from an iterable. It is often used in loops to keep track of the index of the current item.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -790,7 +795,7 @@ Signal peak detected at position 7 with strength 2.2
 </div>
 </div>
 <section id="id1">
-<h3>Explanation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h3>Explanation<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Enumerate Function</strong>: <code class="docutils literal notranslate"><span class="pre">enumerate(signal_strengths)</span></code> takes the <code class="docutils literal notranslate"><span class="pre">signal_strengths</span></code> list and returns an enumerate object. This object generates pairs containing the index of each element and the element’s value itself (<code class="docutils literal notranslate"><span class="pre">index,</span> <span class="pre">strength</span></code>).</p></li>
 <li><p><strong>Loop with Index and Value</strong>: Inside the loop, <code class="docutils literal notranslate"><span class="pre">index</span></code> represents the position of the measurement in the list, and <code class="docutils literal notranslate"><span class="pre">strength</span></code> is the measurement value. This allows us to easily refer to both the measurement’s value and its position.</p></li>
@@ -799,7 +804,7 @@ Signal peak detected at position 7 with strength 2.2
 </section>
 </section>
 <section id="loops-on-dictionaries">
-<h2>Loops on Dictionaries<a class="headerlink" href="#loops-on-dictionaries" title="Link to this heading">#</a></h2>
+<h2>Loops on Dictionaries<a class="headerlink" href="#loops-on-dictionaries" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dictionary of construction materials and their properties</span>
@@ -850,7 +855,7 @@ Materials with compressive strength above 50 MPa:
 </div>
 </div>
 <section id="id2">
-<h3>Explanation<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h3>Explanation<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Looping Through Dictionary</strong>: The <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">material,</span> <span class="pre">properties</span> <span class="pre">in</span> <span class="pre">construction_materials.items():</span></code> loop iterates over the <code class="docutils literal notranslate"><span class="pre">construction_materials</span></code> dictionary. <code class="docutils literal notranslate"><span class="pre">material</span></code> is the key (e.g., ‘concrete’, ‘steel’), and <code class="docutils literal notranslate"><span class="pre">properties</span></code> is the value, which is another dictionary containing the properties of each material.</p></li>
 <li><p><strong>Nested Loop for Properties</strong>: Inside the first loop, another loop iterates through the properties of each material. This nested loop allows for printing out all properties of each material in a readable format.</p></li>
@@ -859,7 +864,7 @@ Materials with compressive strength above 50 MPa:
 </section>
 </section>
 <section id="loops-with-zips">
-<h2>Loops with Zips<a class="headerlink" href="#loops-with-zips" title="Link to this heading">#</a></h2>
+<h2>Loops with Zips<a class="headerlink" href="#loops-with-zips" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Molar masses of compounds in g/mol (for simplicity, assume uniform across mixtures)</span>
@@ -889,7 +894,7 @@ Average molar mass of mixture: 34.41 g/mol
 </div>
 </div>
 <section id="id3">
-<h3>Explanation<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h3>Explanation<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Zip Function</strong>: <code class="docutils literal notranslate"><span class="pre">zip(molar_masses,</span> <span class="pre">mixture)</span></code> pairs each molar mass with its corresponding mass fraction in the mixture. This is crucial for performing calculations that depend on corresponding elements from multiple lists.</p></li>
 <li><p><strong>Loop Over Mixtures</strong>: The outer loop <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">mixture</span> <span class="pre">in</span> <span class="pre">mixtures_fractions:</span></code> iterates over each list of mass fractions (each representing a different mixture).</p></li>
@@ -899,7 +904,7 @@ Average molar mass of mixture: 34.41 g/mol
 </section>
 </section>
 <section id="while-loops">
-<h2>While Loops<a class="headerlink" href="#while-loops" title="Link to this heading">#</a></h2>
+<h2>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this heading">#</a></h2>
 <p>While loops are used to execute a block of code repeatedly as long as a specified condition is true. This is useful when the number of iterations is not known beforehand and depends on certain conditions being met.</p>
 <ul class="simple">
 <li><p>You must be careful for a while loop to not run indefinitely. This can happen if the condition never becomes false. This is called an infinite loop and can cause the program to become unresponsive.</p></li>
@@ -910,10 +915,10 @@ Average molar mass of mixture: 34.41 g/mol
 </pre></div>
 </div>
 <section id="example-estimating-the-square-root-using-newton-s-method">
-<h3>Example: Estimating the Square Root using Newton’s Method<a class="headerlink" href="#example-estimating-the-square-root-using-newton-s-method" title="Link to this heading">#</a></h3>
+<h3>Example: Estimating the Square Root using Newton’s Method<a class="headerlink" href="#example-estimating-the-square-root-using-newton-s-method" title="Permalink to this heading">#</a></h3>
 <p>Newton’s method, also known as the Newton-Raphson method, is an efficient, iterative approach for finding approximations to the roots (or zeroes) of a real-valued function. This example demonstrates how a while loop can be used to implement Newton’s method for estimating the square root of a number, a basic yet practical application in engineering for tasks such as stress analysis, signal processing, and control systems design.</p>
 <section id="newton-s-method-for-square-roots">
-<h4>Newton’s Method for Square Roots<a class="headerlink" href="#newton-s-method-for-square-roots" title="Link to this heading">#</a></h4>
+<h4>Newton’s Method for Square Roots<a class="headerlink" href="#newton-s-method-for-square-roots" title="Permalink to this heading">#</a></h4>
 <p>The Newton-Raphson formula to find the square root of a number <code class="docutils literal notranslate"><span class="pre">x</span></code> can be simplified as:</p>
 <div class="math notranslate nohighlight">
 \[new\_estimate = \frac{1}{2} \left( estimate + \frac{x}{estimate} \right) \]</div>
@@ -958,7 +963,7 @@ Average molar mass of mixture: 34.41 g/mol
 </section>
 </section>
 <section id="id4">
-<h3>Explanation<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h3>Explanation<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Initial Estimate</strong>: The initial guess for the square root is half the target value, a common starting point for positive numbers.</p></li>
 <li><p><strong>While Loop</strong>: The loop continues iterating until the difference between successive estimates of the square root is smaller than a specified tolerance, indicating convergence.</p></li>
@@ -968,7 +973,7 @@ Average molar mass of mixture: 34.41 g/mol
 </section>
 </section>
 <section id="useful-for-user-interactions">
-<h2>Useful for User Interactions<a class="headerlink" href="#useful-for-user-interactions" title="Link to this heading">#</a></h2>
+<h2>Useful for User Interactions<a class="headerlink" href="#useful-for-user-interactions" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>useful when you have a system waiting for a user response – for example, a game waiting for a player to make a move, or a chatbot waiting for a user to input a message. Commonly called callbacks.</p></li>
 </ul>
@@ -999,18 +1004,18 @@ Average molar mass of mixture: 34.41 g/mol
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "1f330e1e6c374914b626c5f90ab1fef8"}</script><script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "7b7eb3b7cac74b59a7a8ed60c2d9c31e"}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "d048d957ec50475e807373602345ad1e"}</script><script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "9ab67125d0f34114a2342c128c9b499a"}</script></div>
 </div>
 </section>
 <section id="while-loops-with-flow-control-statements">
-<h2>While Loops with Flow Control Statements<a class="headerlink" href="#while-loops-with-flow-control-statements" title="Link to this heading">#</a></h2>
+<h2>While Loops with Flow Control Statements<a class="headerlink" href="#while-loops-with-flow-control-statements" title="Permalink to this heading">#</a></h2>
 <section id="real-example-water-treatment-chemical-dosage-optimization">
-<h3>Real Example: Water Treatment Chemical Dosage Optimization<a class="headerlink" href="#real-example-water-treatment-chemical-dosage-optimization" title="Link to this heading">#</a></h3>
+<h3>Real Example: Water Treatment Chemical Dosage Optimization<a class="headerlink" href="#real-example-water-treatment-chemical-dosage-optimization" title="Permalink to this heading">#</a></h3>
 <p><strong>Scenario</strong>: In a water treatment process, the optimal chemical dosage for treating a batch of water depends on various factors like water quality parameters (e.g., pH, turbidity) and chemical concentration. The goal is to iteratively adjust the chemical dosage based on the water quality outcome, aiming for a target quality level with minimal chemical usage.</p>
 <p>The process involves incrementally adjusting the chemical dosage and observing the resulting water quality. If the water quality meets the target criteria, the process stops. If not, the dosage is adjusted based on the observed quality.</p>
 </section>
 <section id="simplified-logic-for-dosage-optimization">
-<h3>Simplified Logic for Dosage Optimization<a class="headerlink" href="#simplified-logic-for-dosage-optimization" title="Link to this heading">#</a></h3>
+<h3>Simplified Logic for Dosage Optimization<a class="headerlink" href="#simplified-logic-for-dosage-optimization" title="Permalink to this heading">#</a></h3>
 <p><strong>Objective</strong>: Find the optimal dosage of a treatment chemical to achieve a target turbidity level in water.</p>
 <p><strong>Assumptions</strong>:</p>
 <ul class="simple">
@@ -1085,7 +1090,7 @@ Final optimized chemical dosage: 1.00
 </div>
 </section>
 <section id="id5">
-<h3>Explanation<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h3>Explanation<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Simulation</strong>: The change in turbidity after each treatment is simulated with a random fluctuation around the target to mimic real-world uncertainty.</p></li>
 <li><p><strong>Dosage Adjustment</strong>: Dosage is adjusted iteratively based on whether the current turbidity is above or below the target.</p></li>
@@ -1095,7 +1100,7 @@ Final optimized chemical dosage: 1.00
 </section>
 </section>
 <section id="using-loops-in-integration">
-<h2>Using loops in integration<a class="headerlink" href="#using-loops-in-integration" title="Link to this heading">#</a></h2>
+<h2>Using loops in integration<a class="headerlink" href="#using-loops-in-integration" title="Permalink to this heading">#</a></h2>
 <p>Many engineering applications require integration, which can be understood as calculating the area under a curve. For example, consider the following:</p>
 <ul class="simple">
 <li><p>estimating the force of water against a bridge or dam</p></li>
@@ -1175,7 +1180,6 @@ Final optimized chemical dosage: 1.00
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1242,7 +1246,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -1266,8 +1270,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>
