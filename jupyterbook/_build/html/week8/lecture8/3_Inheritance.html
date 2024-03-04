@@ -579,14 +579,18 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance-example">Inheritance Example</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-a-parent-class-with-a-method">Step 1: Create a parent class with a method</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-a-parent-class-with-a-method">Step 1: Create a parent class with a method</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-creating-a-child-class">Step 2: Creating a Child Class;</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Testing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-adding-inheritance">Step 3: Adding Inheritance</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test">Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-creating-a-child-class">Step 2: Creating a Child Class;</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Testing</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-adding-inheritance">Step 3: Adding Inheritance</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test">Test</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -648,9 +652,8 @@ Class DerivedClass(BaseClass):
 </div>
 </div>
 </div>
-</section>
 <section id="testing">
-<h3>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">#</a></h3>
+<h4>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">#</a></h4>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jedi</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Darth Vader&quot;</span><span class="p">,</span> <span class="mi">56</span><span class="p">)</span>
@@ -667,7 +670,7 @@ Class DerivedClass(BaseClass):
 </section>
 </section>
 <section id="step-2-creating-a-child-class">
-<h2>Step 2: Creating a Child Class;<a class="headerlink" href="#step-2-creating-a-child-class" title="Permalink to this heading">#</a></h2>
+<h3>Step 2: Creating a Child Class;<a class="headerlink" href="#step-2-creating-a-child-class" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Create a child class of <code class="docutils literal notranslate"><span class="pre">Person</span></code>, <code class="docutils literal notranslate"><span class="pre">Jedi</span></code> that has a method <code class="docutils literal notranslate"><span class="pre">Print</span></code> that prints <code class="docutils literal notranslate"><span class="pre">Jedi's</span> <span class="pre">use</span> <span class="pre">the</span> <span class="pre">force</span></code></p></li>
 </ul>
@@ -681,7 +684,7 @@ Class DerivedClass(BaseClass):
 </div>
 </div>
 <section id="id1">
-<h3>Testing<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h4>Testing<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># instantiate the parent class</span>
@@ -702,6 +705,7 @@ Jedi&#39;s use the force
 </div>
 </div>
 </div>
+</section>
 </section>
 <section id="step-3-adding-inheritance">
 <h3>Step 3: Adding Inheritance<a class="headerlink" href="#step-3-adding-inheritance" title="Permalink to this heading">#</a></h3>
@@ -738,9 +742,8 @@ Jedi&#39;s use the force
 </div>
 </div>
 </div>
-</section>
 <section id="test">
-<h3>Test<a class="headerlink" href="#test" title="Permalink to this heading">#</a></h3>
+<h4>Test<a class="headerlink" href="#test" title="Permalink to this heading">#</a></h4>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">darth_vader</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Darth Vader&quot;</span><span class="p">,</span> <span class="mi">56</span><span class="p">)</span>
@@ -758,6 +761,7 @@ Luke Skywalker True
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -826,14 +830,18 @@ Luke Skywalker True
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance-example">Inheritance Example</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-a-parent-class-with-a-method">Step 1: Create a parent class with a method</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-a-parent-class-with-a-method">Step 1: Create a parent class with a method</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-creating-a-child-class">Step 2: Creating a Child Class;</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Testing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-adding-inheritance">Step 3: Adding Inheritance</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test">Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-creating-a-child-class">Step 2: Creating a Child Class;</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Testing</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-adding-inheritance">Step 3: Adding Inheritance</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test">Test</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
