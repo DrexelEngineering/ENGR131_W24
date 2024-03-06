@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>💻 Activity: Refining a Simple Plot &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -19,49 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week9/lecture9/2_Activity_1_refining_a_plot';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,10 +71,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -120,11 +114,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -158,7 +155,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -313,6 +321,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Inheritance.html">📝 Inheritance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/4_Creating_a_Circuit_Class.html">📝 Creating a Class for Storing and Operating on Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/5_Activity_2_Make_Parallel_Circuit_Class.html">💻 Activity: Create a Class for Parallel Circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/5_sol_Activity_2_Make_Parallel_Circuit_Class.html">💻 Activity: Create a Class for Parallel Circuits (solution)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/6_Activity_lrc.html">💻 Activity: Building the game LCR</a></li>
 </ul>
 </li>
@@ -333,7 +342,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6_Interactive_Graphics.html">📝 Interactive Plotting with Bokeh</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../lab9/lab9-pollutant.html">🧪 Lab 9: Pollutant Triangulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw9/hw9-classes.html">🏡📝 Homework 9</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quiz9/quiz9-classes-practice.html">🤔❓ ⌛️ Quiz 9 Practice - Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quiz9/quiz9link.html">🤔❓ Quiz Link</a></li>
 </ul>
 
     </div>
@@ -598,14 +610,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="activity-refining-a-simple-plot">
-<h1>💻 Activity: Refining a Simple Plot<a class="headerlink" href="#activity-refining-a-simple-plot" title="Permalink to this heading">#</a></h1>
+<h1>💻 Activity: Refining a Simple Plot<a class="headerlink" href="#activity-refining-a-simple-plot" title="Link to this heading">#</a></h1>
 <p>In every lab and many classes, you’ll need to visualize data, which requires making it meaningful to your audience.</p>
 <p>Please work alongside me as we refine a simple plot of the trigonometric functions sine and cosine.</p>
 <section id="create-data">
-<h2>Create data<a class="headerlink" href="#create-data" title="Permalink to this heading">#</a></h2>
+<h2>Create data<a class="headerlink" href="#create-data" title="Link to this heading">#</a></h2>
 <p>The first step is to get the data for the sine and cosine functions.</p>
 <p>Note that we import <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> from <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. You’ll need to import this module when you want to use <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> to visualize 2-D data.</p>
 <div class="cell tag_skip-execution docutils container">
@@ -641,7 +653,7 @@ document.write(`
 </div>
 </div>
 <section id="customizing-plots">
-<h3>Customizing Plots<a class="headerlink" href="#customizing-plots" title="Permalink to this heading">#</a></h3>
+<h3>Customizing Plots<a class="headerlink" href="#customizing-plots" title="Link to this heading">#</a></h3>
 <p>Matplotlib was made to make 2-dimensional plotting easy! Nevertheless, tremendous customization is possible if desired as described in these resources and other documentation.</p>
 <p><a class="reference external" href="http://matplotlib.sourceforge.net/users/customizing.html">Customizing matplotlib </a></p>
 <p><a class="reference external" href="https://matplotlib.org/stable/tutorials/introductory/pyplot.html#controlling-line-properties">Controlling line properties</a></p>
@@ -663,7 +675,7 @@ document.write(`
 </div>
 </div>
 <section id="setting-limits">
-<h4>Setting Limits<a class="headerlink" href="#setting-limits" title="Permalink to this heading">#</a></h4>
+<h4>Setting Limits<a class="headerlink" href="#setting-limits" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlim.html">xlim() command </a></p>
 <p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylim.html">ylim() command</a></p>
 <p>The current limits of the figure are a bit too tight, so we want to extend the range of the x- and y-axes.</p>
@@ -693,7 +705,7 @@ document.write(`
 </div>
 </section>
 <section id="setting-ticks">
-<h4>Setting Ticks<a class="headerlink" href="#setting-ticks" title="Permalink to this heading">#</a></h4>
+<h4>Setting Ticks<a class="headerlink" href="#setting-ticks" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xticks">xticks() command</a></p>
 <p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.yticks">yticks() command</a></p>
 <p>The current ticks are not ideal because they do not show the interesting values (+/-π,+/-π/2) for sine and cosine.</p>
@@ -728,7 +740,7 @@ document.write(`
 </div>
 </section>
 <section id="setting-the-tick-labels">
-<h4>Setting the Tick Labels<a class="headerlink" href="#setting-the-tick-labels" title="Permalink to this heading">#</a></h4>
+<h4>Setting the Tick Labels<a class="headerlink" href="#setting-the-tick-labels" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="https://matplotlib.org/stable/tutorials/text/text_intro.html">Working with text</a></p>
 <p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xticklabels">set_xticklabels()</a></p>
 <p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_yticklabels">set_yticklabels()</a></p>
@@ -772,7 +784,7 @@ document.write(`
 </div>
 </section>
 <section id="moving-splines">
-<h4>Moving Splines<a class="headerlink" href="#moving-splines" title="Permalink to this heading">#</a></h4>
+<h4>Moving Splines<a class="headerlink" href="#moving-splines" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="https://matplotlib.org/stable/gallery/spines/spines.html">Splines</a></p>
 <p>Splines are the lines connecting the axis tick marks and noting the boundaries of the data area.</p>
 <p>They can be placed at arbitrary positions. Until now, they were on the border of the axis.</p>
@@ -823,7 +835,7 @@ document.write(`
 </div>
 </section>
 <section id="adding-a-legend">
-<h4>Adding a Legend<a class="headerlink" href="#adding-a-legend" title="Permalink to this heading">#</a></h4>
+<h4>Adding a Legend<a class="headerlink" href="#adding-a-legend" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="https://matplotlib.org/stable/tutorials/intermediate/legend_guide.html">Legend guide</a></p>
 <p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend">legend() command</a></p>
 <p>Legends are necessary for accurate interpretation of graphics.</p>
@@ -930,6 +942,7 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -971,7 +984,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -995,8 +1008,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

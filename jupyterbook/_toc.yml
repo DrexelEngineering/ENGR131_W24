@@ -175,6 +175,8 @@ parts:
             title: "📝 Creating a Class for Storing and Operating on Information"
           - file: week8/lecture8/5_Activity_2_Make_Parallel_Circuit_Class
             title: "💻 Activity: Create a Class for Parallel Circuits"
+          - file: week8/lecture8/5_sol_Activity_2_Make_Parallel_Circuit_Class
+            title: "💻 Activity: Create a Class for Parallel Circuits (solution)"
           - file: week8/lecture8/6_Activity_lrc
             title: "💻 Activity: Building the game LCR"
       - file: week8/lab8/Week_8_lab_intro
@@ -198,9 +200,11 @@ parts:
           - file: week9/lecture9/4_Activity_2_Bubble_plot
           - file: week9/lecture9/5_Curve_Fitting
           - file: week9/lecture9/6_Interactive_Graphics
-      # - file: week9/lab9/lab9-pollutant
-      #   title: "🧪 Lab 9: Pollutant Triangulation"
-      # - file: week9/hw9/hw9-classes
-      #   title: "🏡📝 Homework 9"
+      - file: week9/lab9/lab9-pollutant
+        title: "🧪 Lab 9: Pollutant Triangulation"
+      - file: week9/hw9/hw9-classes
+        title: "🏡📝 Homework 9"
       - file: week9/quiz9/quiz9-classes-practice
         title: "🤔❓ ⌛️ Quiz 9 Practice - Classes"
+      - file: week9/quiz9/quiz9link
+        title: "🤔❓ Quiz Link"
