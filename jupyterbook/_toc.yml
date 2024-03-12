@@ -202,9 +202,15 @@ parts:
           - file: week9/lecture9/6_Interactive_Graphics
       - file: week9/lab9/lab9-pollutant
         title: "🧪 Lab 9: Pollutant Triangulation"
+      - file: week9/lab9/week_9_lab_intro
+        title: "🧪 📝 Week 9 - Lab Intro"
       - file: week9/hw9/hw9-classes
         title: "🏡📝 Homework 9"
       - file: week9/quiz9/quiz9-classes-practice
         title: "🤔❓ ⌛️ Quiz 9 Practice - Classes"
       - file: week9/quiz9/quiz9link
         title: "🤔❓ Quiz Link"
+  - caption: "week 10"
+    chapters:
+      - file: week10/Final_Exam_Practice
+        title: "📚✍️🧠 Practice Final"

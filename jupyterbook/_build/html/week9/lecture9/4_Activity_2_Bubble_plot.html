@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>💻 Activity: Making a Updated Bubble Plot of Engineering Jobs &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -18,45 +19,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week9/lecture9/4_Activity_2_Bubble_plot';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -71,9 +76,10 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -114,14 +120,11 @@
 </form></div>
   </div>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,18 +158,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -343,9 +335,14 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../lab9/lab9-pollutant.html">🧪 Lab 9: Pollutant Triangulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab9/week_9_lab_intro.html">🧪 📝 Week 9 - Lab Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hw9/hw9-classes.html">🏡📝 Homework 9</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quiz9/quiz9-classes-practice.html">🤔❓ ⌛️ Quiz 9 Practice - Classes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quiz9/quiz9link.html">🤔❓ Quiz Link</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">week 10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week10/Final_Exam_Practice.html">📚✍️🧠 Practice Final</a></li>
 </ul>
 
     </div>
@@ -606,10 +603,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="activity-making-a-updated-bubble-plot-of-engineering-jobs">
-<h1>💻 Activity: Making a Updated Bubble Plot of Engineering Jobs<a class="headerlink" href="#activity-making-a-updated-bubble-plot-of-engineering-jobs" title="Link to this heading">#</a></h1>
+<h1>💻 Activity: Making a Updated Bubble Plot of Engineering Jobs<a class="headerlink" href="#activity-making-a-updated-bubble-plot-of-engineering-jobs" title="Permalink to this heading">#</a></h1>
 <p>In this activity, we will make a bubble plot of more recent Bureau of Labor Statistics data for projected engineering jobs.</p>
 <p>Again, add code where there are <code class="docutils literal notranslate"><span class="pre">...</span></code></p>
 <div class="cell tag_skip-execution docutils container">
@@ -623,7 +620,7 @@ document.write(`
 </div>
 </div>
 <section id="read-data">
-<h2>0. Read data<a class="headerlink" href="#read-data" title="Link to this heading">#</a></h2>
+<h2>0. Read data<a class="headerlink" href="#read-data" title="Permalink to this heading">#</a></h2>
 <p>The Bureau of Labor Statistics makes projections about the growth of jobs in given areas. These data need to be read into this Jupyter Notebook to plot them.</p>
 <p>Dataframes are the structure that pandas uses, which is helpful for columns and rows of different kinds of data.</p>
 <div class="cell tag_skip-execution docutils container">
@@ -644,7 +641,7 @@ document.write(`
 </div>
 </section>
 <section id="make-a-simple-plot">
-<h2>1. Make a simple plot<a class="headerlink" href="#make-a-simple-plot" title="Link to this heading">#</a></h2>
+<h2>1. Make a simple plot<a class="headerlink" href="#make-a-simple-plot" title="Permalink to this heading">#</a></h2>
 <p>The next step is to make a simple bubble plot, which is just a scatter plot with the markers sized by another dimension of the data.</p>
 <p>Like the one we saw earlier in class, we want to see the employment percent change, 2021-2031, on the x-axis, the median annual wage, 2021, on the y-axis, and the number of jobs in 2021 influencing the size of the marker.</p>
 <ul class="simple">
@@ -670,7 +667,7 @@ document.write(`
 </div>
 </section>
 <section id="add-axes-labels-and-a-title">
-<h2>2. Add axes labels and a title<a class="headerlink" href="#add-axes-labels-and-a-title" title="Link to this heading">#</a></h2>
+<h2>2. Add axes labels and a title<a class="headerlink" href="#add-axes-labels-and-a-title" title="Permalink to this heading">#</a></h2>
 <p>The next step is to add informative labels and a title.</p>
 <ul class="simple">
 <li><p>Copy your code from up above to replace the commented, incomplete code.</p></li>
@@ -698,7 +695,7 @@ document.write(`
 </div>
 </section>
 <section id="label-the-points-and-interpret">
-<h2>3. Label the points and interpret<a class="headerlink" href="#label-the-points-and-interpret" title="Link to this heading">#</a></h2>
+<h2>3. Label the points and interpret<a class="headerlink" href="#label-the-points-and-interpret" title="Permalink to this heading">#</a></h2>
 <p>The final step is to label each of the bubbles.</p>
 <ul class="simple">
 <li><p>Copy your code from up above to replace the commented, incomplete code.</p></li>
@@ -733,7 +730,7 @@ document.write(`
 </div>
 </div>
 <section id="what-kind-of-engineering-does-this-suggest-would-be-likely-to-have-more-jobs-when-you-graduate-than-now">
-<h3>What kind of engineering does this suggest would be likely to have more jobs when you graduate than now?<a class="headerlink" href="#what-kind-of-engineering-does-this-suggest-would-be-likely-to-have-more-jobs-when-you-graduate-than-now" title="Link to this heading">#</a></h3>
+<h3>What kind of engineering does this suggest would be likely to have more jobs when you graduate than now?<a class="headerlink" href="#what-kind-of-engineering-does-this-suggest-would-be-likely-to-have-more-jobs-when-you-graduate-than-now" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 </section>
@@ -795,7 +792,6 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -833,7 +829,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -857,8 +853,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

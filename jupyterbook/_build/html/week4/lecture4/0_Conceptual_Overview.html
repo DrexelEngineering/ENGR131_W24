@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>📝 Conceptual Overview &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -18,45 +19,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week4/lecture4/0_Conceptual_Overview';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -71,9 +76,10 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -114,14 +120,11 @@
 </form></div>
   </div>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,18 +158,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -343,9 +335,14 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../week9/lab9/lab9-pollutant.html">🧪 Lab 9: Pollutant Triangulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week9/lab9/week_9_lab_intro.html">🧪 📝 Week 9 - Lab Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week9/hw9/hw9-classes.html">🏡📝 Homework 9</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week9/quiz9/quiz9-classes-practice.html">🤔❓ ⌛️ Quiz 9 Practice - Classes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week9/quiz9/quiz9link.html">🤔❓ Quiz Link</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">week 10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week10/Final_Exam_Practice.html">📚✍️🧠 Practice Final</a></li>
 </ul>
 
     </div>
@@ -618,18 +615,18 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="conceptual-overview">
-<h1>📝 Conceptual Overview<a class="headerlink" href="#conceptual-overview" title="Link to this heading">#</a></h1>
+<h1>📝 Conceptual Overview<a class="headerlink" href="#conceptual-overview" title="Permalink to this heading">#</a></h1>
 <p>We have covered a lot of topics so far. It is important to consolidate this information.</p>
 <section id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
 <p>Variables provide a simple human-readable reference to a python object.</p>
 <p>Anything can be stored as a variable using an assignment <code class="docutils literal notranslate"><span class="pre">=</span></code> operator</p>
 <p>Variables are important because they allow you to reuse and transport python objects in useful ways</p>
 <section id="defining-an-integer-variable">
-<h3>Defining an integer variable<a class="headerlink" href="#defining-an-integer-variable" title="Link to this heading">#</a></h3>
+<h3>Defining an integer variable<a class="headerlink" href="#defining-an-integer-variable" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">1</span>
@@ -639,7 +636,7 @@ document.write(`
 </div>
 </section>
 <section id="defining-a-string-variable">
-<h3>Defining a string variable<a class="headerlink" href="#defining-a-string-variable" title="Link to this heading">#</a></h3>
+<h3>Defining a string variable<a class="headerlink" href="#defining-a-string-variable" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;string&quot;</span>
@@ -650,7 +647,7 @@ document.write(`
 </section>
 </section>
 <section id="datatypes">
-<h2>DataTypes<a class="headerlink" href="#datatypes" title="Link to this heading">#</a></h2>
+<h2>DataTypes<a class="headerlink" href="#datatypes" title="Permalink to this heading">#</a></h2>
 <p>We have used DataTypes and there are many different DataTypes. The most common are:</p>
 <ol class="arabic simple">
 <li><p>Strings - a series of characters interpreted literally</p></li>
@@ -665,7 +662,7 @@ document.write(`
 <p>When a computer tries to perform an operation (e.g. add) a string it is completely different than the same operation on an integer.</p>
 <p>A good analogy is that the method you would take to get to Drexel via public transportation or driving is different. If you have a car and are provided with a bus pass you will not get to class. Similarly, if you are presented with a bus and a car key you will also not get to class.</p>
 <section id="operations-on-datatypes">
-<h3>Operations on DataTypes<a class="headerlink" href="#operations-on-datatypes" title="Link to this heading">#</a></h3>
+<h3>Operations on DataTypes<a class="headerlink" href="#operations-on-datatypes" title="Permalink to this heading">#</a></h3>
 <p>For operations to work the DataType and the method must match.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -701,7 +698,7 @@ document.write(`
 </section>
 </section>
 <section id="mutability">
-<h2>Mutability<a class="headerlink" href="#mutability" title="Link to this heading">#</a></h2>
+<h2>Mutability<a class="headerlink" href="#mutability" title="Permalink to this heading">#</a></h2>
 <p>Object in computers are stored in binary 1s and 0s. There are many structures that can be used to store objects and they effect the behavior.</p>
 <p>As a very simple example assume a simple coding:</p>
 <p>Binary	Symbol</p>
@@ -726,7 +723,7 @@ document.write(`
 <p>If you had a string made up of 3 emojis ☮️❤️😀 010110101111 and you wanted to add a fourth, you may, or may not be able to do that depending on how your memory is allocated. This is why string are immutable.</p>
 <p><strong>Aside:</strong> There is an additional layer between the ID and the physical location in memory which can be changed. Thus there can be changes in memory allocation without changing the object ID.</p>
 <section id="immutable">
-<h3>Immutable<a class="headerlink" href="#immutable" title="Link to this heading">#</a></h3>
+<h3>Immutable<a class="headerlink" href="#immutable" title="Permalink to this heading">#</a></h3>
 <p>Immutable - unable to be changed</p>
 <p>In practice, some objects types are made immutable to ensure object permanence and minimize the chance for bugs</p>
 <p><strong>Immutable DataTypes:</strong> integer, string, float, tuple</p>
@@ -739,7 +736,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4433450928
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140164650743472
 &lt;class &#39;str&#39;&gt;
 </pre></div>
 </div>
@@ -755,7 +752,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4433329776
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140164650540272
 &lt;class &#39;str&#39;&gt;
 1001
 </pre></div>
@@ -771,7 +768,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4377115664
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140164731997520
 &lt;class &#39;int&#39;&gt;
 </pre></div>
 </div>
@@ -786,7 +783,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4377118896
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140164732000752
 &lt;class &#39;int&#39;&gt;
 </pre></div>
 </div>
@@ -795,7 +792,7 @@ document.write(`
 <p>The ID is different, a new object was created.</p>
 </section>
 <section id="mutable">
-<h3>Mutable<a class="headerlink" href="#mutable" title="Link to this heading">#</a></h3>
+<h3>Mutable<a class="headerlink" href="#mutable" title="Permalink to this heading">#</a></h3>
 <p>List, Dictionaries, Functions are mutable - This means they can be directly changed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -806,7 +803,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4433330112
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140164650734080
 &lt;class &#39;list&#39;&gt;
 </pre></div>
 </div>
@@ -821,7 +818,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4433330112
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140164650734080
 &lt;class &#39;list&#39;&gt;
 </pre></div>
 </div>
@@ -836,7 +833,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4433477952
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140164650893504
 &lt;class &#39;list&#39;&gt;
 </pre></div>
 </div>
@@ -851,7 +848,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4433477952
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140164650893504
 &lt;class &#39;list&#39;&gt;
 </pre></div>
 </div>
@@ -860,7 +857,7 @@ document.write(`
 </section>
 </section>
 <section id="objects-in-python">
-<h2>Objects in Python<a class="headerlink" href="#objects-in-python" title="Link to this heading">#</a></h2>
+<h2>Objects in Python<a class="headerlink" href="#objects-in-python" title="Permalink to this heading">#</a></h2>
 <p>Everything in memory in Python is an object.</p>
 <p><strong>Why are objects important?</strong></p>
 <div class="toggle docutils container">
@@ -897,14 +894,14 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The id of a is 4429934976
-The id of b is 4429934976
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The id of a is 140164650625856
+The id of b is 140164650625856
 </pre></div>
 </div>
 </div>
 </div>
 <section id="copying-objects">
-<h3>Copying Objects<a class="headerlink" href="#copying-objects" title="Link to this heading">#</a></h3>
+<h3>Copying Objects<a class="headerlink" href="#copying-objects" title="Permalink to this heading">#</a></h3>
 <p>You can make copies of an object (if they are mutable)</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -939,7 +936,7 @@ True
 <p><code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> have the same values but they are not the same objects</p>
 </section>
 <section id="attributes-of-objects">
-<h3>Attributes of Objects<a class="headerlink" href="#attributes-of-objects" title="Link to this heading">#</a></h3>
+<h3>Attributes of Objects<a class="headerlink" href="#attributes-of-objects" title="Permalink to this heading">#</a></h3>
 <p>Objects have can have attributes beyond just their values</p>
 <p>For example, consider your car. Besides having a unique identifier to your car you might also want to know the year, make, and model, an object allows you to bundle that information into the same variable.</p>
 <p>Objects of a common type can also have methods. Continuing the analogy, a car has a method to drive in forward or reverse.</p>
@@ -1031,7 +1028,6 @@ True
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1081,7 +1077,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -1105,8 +1101,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

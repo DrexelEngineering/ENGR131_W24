@@ -1,0 +1,1554 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>⌛️ Practice Final Exam &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'week10/Final_Exam_Practice';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Quiz Link" href="../week9/quiz9/quiz9link.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Drexel_Logo.png" class="logo__image only-light" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>
+    <script>document.write(`<img src="../_static/Drexel_Logo.png" class="logo__image only-dark" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to ENGR 131
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Syllabus 📜</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../syllabus/index_syllabus.html">Syllabus</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/1_Intro.html">1.0 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/2_Contact_Process.html">2.0 Contact Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/3_Student_Learning_Information.html">3.0 Student Learning Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/4_Course_Materials.html">4.0 Course Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/5_Course_Schedule.html">5.0 Course Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/6_Earning_Credit.html">6.0 Earning Credit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/7_Expectations_of_Students.html">7.0 Expectations of Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/8_Academic_Policies.html">8.0 Academic Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/9_Counseling_Services.html">9.0 Counseling Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/10_Tips_For_Success.html">10.0 Tips For Success</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../week1/lecture1/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_1_Why_Coding_is_the_most_important_skill.html">📝 Why Computer Programming is an Essential Skill</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_2_Who_is_Prof_Capps.html">📝 Who is Professor Capps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_3_Who_is_Prof_Agar.html">📝 Who is Professor Agar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_4_Engr131_Instructors.html">👨🏽👩🏾Engineering 131 Winter 2024 Instructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_5_Accessing_Course_Content.html">📝 Accessing Course Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_6_How_to_Use_Jupyterhub.html">📝 How to Use JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_7_Activity_1_Using_the_Jupyter_Hub.html">💻 Activity: Hello World JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_8_Introduction_to_Python.html">📝Why Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_9_Modules_and_Packages.html">📝Modules and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_10_Programming_Basics.html">📝Programming Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_11_Operators.html">📝 Python Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_12_Variables.html">📝 Variables and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week1/lecture1/1_13_Activity_1_2.html">💻 Activity: Practice with Variables and Operators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../week1/lab1/lab_1-assignment-workflow.html">🧪 Lab 1 Assignment Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week1/homework1/Homework_1_Hello_World_Python.html">🏡📝 Homework 1 Hello World Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week1/NOTE_re-running_actions.html">Guide to Re-running an Action in GitHub</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../week2/lecture2/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../week2/lecture2/2_1_Modules_and_Packages.html">📝Modules and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week2/lecture2/2_2_Programming_Basics.html">📝Programming Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week2/lecture2/2_3_Operators.html">📝 Python Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week2/lecture2/2_4_Variables.html">📝 Variables and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week2/lecture2/2_5_Activity_2_1.html">💻 Activity: Practice with Variables and Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week2/lecture2/2_6_Data_Types_non_num.html">📝Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week2/lecture2/2_7_Dictionaries.html">📝 Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week2/lecture2/2_8_Lists_Tuples.html">📝 Collections in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week2/lecture2/2_9_Working_with_Strings.html">📝 Working with Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week2/lecture2/2_10_Activity_2_2_Profanity_Detector.html">💻 Activity 3.2: Profanity &amp; Word Count Detector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../week2/lab2/week_2_lab_intro.html">📝 Week 2 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week2/lab2/lab2-scrabble.html">🧪 Lab 2 Scrabble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week2/homework2/hw2-math.html">🏡📝 Homework 2 Using Python to Solve Math Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week2/quiz2/quiz_2_Hello_World_Python.html">🤔❓ Quiz 2 Hello World Python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../week3/lecture3/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../week3/lecture3/3_1_Numerical_Data_Types.html">📝 Numerical Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week3/lecture3/3_2_Dictionaries.html">📝 Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week3/lecture3/3_3_Lists_Tuples.html">📝 Collections in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week3/lecture3/3_4_Activity_1_SignalProcessing_Activity.html">💻 Activity 3.1: Indoor Temperature Control with Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week3/lecture3/3_5_Intro_to_numpy.html">📝 Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week3/lecture3/3_6_Activity_2_Image_Activity.html">💻 Activity 3.2: Drawing a Blue “L” on an Image using NumPy and Matplotlib</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../week3/week_3_lab_intro.html">📝Week 3 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week3/lab3/lab3-image.html">🧪🖥 Lab 3: Image Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week3/homework3/hw3-types.html">🏡📝 Homework 3 - Understanding Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week3/quiz3/jbook-quiz-3-math.html">🤔❓ Quiz 3 Using Python to Solve Math Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../week4/lecture4/lecture4.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../week4/lecture4/0_Conceptual_Overview.html">📝 Conceptual Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week4/lecture4/1_Introduction_to_functions.html">📝 Introduction to Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week4/lecture4/2_activity_4_1.html">💻 Activity 4.1: Build a function to convert inches to feet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week4/lecture4/3_Functions_as_objects.html">📝Functions as Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week4/lecture4/4_Dynamic_Behavior_in_Python.html">📝 Dynamic Behavior in Python</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../week4/lecture4/5_activity_4_2.html">💻 Activity 4.2: Solving an Old School Punishment With a New Trick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week4/lecture4/6_Debugging_in_functions.html">📝 Debugging in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week4/lecture4/7_Functions_that_Return.html">📝 Return Output using Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week4/lecture4/8_activity_4_3.html">💻 Activity 4.3: Analyzing Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week4/lecture4/9_activity_4_4.html">💻 Activity 4.4: Using Functions to Build the Game of Craps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../week4/lab4/week_4_lab_intro.html">📝Week 4 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week4/lab4/lab4-classifier.html">Lab Activity: Training a Neural Network Classifier</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../week4/homework4/hw4-functions.html">🏡📝 Homework 4 - Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week4/quiz4/jbook-quiz4-types.html">🤔❓ Quiz 4 DataTypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week4/midtermPractice/midtermPractice.html">💪 Midterm Practice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week5/midterm_exam.html">📖😊🎓 Midterm Exam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week5/lab5/lab5-installAnaconda.html">🧪🖥 Week 5 - Set up Local Jupyter Notebooks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../week6/lecture6/lecture6.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../week6/lecture6/1_intro_branching.html">📝 Introduction to Branching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week6/lecture6/2_activity_6_1.html">💻 Activity 6.1: Nuclear Plant Temperature Alert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week6/lecture6/3_intro_loops_integrals.html">📝 Introduction to Loops with Integrals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week6/lecture6/4_activity_6_2.html">💻 Activity 6.2: Taking integrals with loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week6/lecture6/5_activity_6_3.html">💻 Activity 6.3: Advancing integral evaluations by combining loops and branches</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../week6/lab6/week_6_lab_intro.html">📝Week 6 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week6/lab6/lab6-RPS.html">Lab 6: Rock, Paper, Scissors Game</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../week6/hw6/hw6-branching.html">🏡📝 Homework 6 - Branching</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture 7️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../week7/lecture7/0_Lecture_7.html">👩‍🏫 Lecture 7</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../week7/lecture7/1_Iterators.html">Ordered Iteration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week7/lecture7/2_Nested_Lists.html">Accessing Items in a List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week7/lecture7/3_activity_current.html">💻 Activity: Accessing Items in a List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week7/lecture7/4_break_continue.html">Interrupting Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week7/lecture7/5_activity_modulus_operator.html">💻 Activity: Write the modulus operator using a while loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week7/lecture7/6_enumerate.html">Review of Enumerate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week7/lecture7/7_file_handling.html">File Handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../week7/lab7/week_7_lab_intro.html">📝 Week 7 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week7/lab7/lab7-DNA.html">🧪 Lab 7: DNA Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week7/hw7/hw7-loops.html">🏡📝 Homework 7 - Loops and Flow Control</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../week8/lecture8/Week_8.html">👩‍🏫 Lecture 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../week8/lecture8/1_Introduction_to_Classes.html">📝Classes</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../week8/lecture8/2_Activity_1_building_a_sensor.html">💻 Activity: Building a Sensor Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week8/lecture8/3_Creating_Multiple_Objects_of_a_Class.html">📝 Creating Multiple Objects of a Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week8/lecture8/3_Inheritance.html">📝 Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week8/lecture8/4_Creating_a_Circuit_Class.html">📝 Creating a Class for Storing and Operating on Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week8/lecture8/5_Activity_2_Make_Parallel_Circuit_Class.html">💻 Activity: Create a Class for Parallel Circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week8/lecture8/5_sol_Activity_2_Make_Parallel_Circuit_Class.html">💻 Activity: Create a Class for Parallel Circuits (solution)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week8/lecture8/6_Activity_lrc.html">💻 Activity: Building the game LCR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../week8/lab8/Week_8_lab_intro.html">🧪 📝 Week 8 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week8/lab8/lab8-audio.html">🧪 Lab 8: Audio Synthesis with Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week8/hw8/hw8-strings.html">🏡📝 Homework 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week8/quiz8/quiz8practice-functions-loops.html">🤔❓ ⌛️ Quiz 8 Practice - Using Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week8/quiz8/quiz8link.html">🤔❓ Quiz Link</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../week9/lecture9/0_lecture9.html">👩‍🏫 Lecture 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../week9/lecture9/1_Introduction_plotting.html">📝 Introduction to Plotting in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week9/lecture9/2_Activity_1_refining_a_plot.html">💻 Activity: Refining a Simple Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week9/lecture9/3_Colormaps.html">📝 Choices for Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week9/lecture9/4_Activity_2_Bubble_plot.html">💻 Activity: Making a Updated Bubble Plot of Engineering Jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week9/lecture9/5_Curve_Fitting.html">📝 Curve Fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../week9/lecture9/6_Interactive_Graphics.html">📝 Interactive Plotting with Bokeh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../week9/lab9/lab9-pollutant.html">🧪 Lab 9: Pollutant Triangulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week9/lab9/week_9_lab_intro.html">🧪 📝 Week 9 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week9/hw9/hw9-classes.html">🏡📝 Homework 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week9/quiz9/quiz9-classes-practice.html">🤔❓ ⌛️ Quiz 9 Practice - Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week9/quiz9/quiz9link.html">🤔❓ Quiz Link</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">week 10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">📚✍️🧠 Practice Final</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://engrjhub.eastus.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week10/Final_Exam_Practice.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/week10/Final_Exam_Practice.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/DrexelEngineering/ENGR131_W24" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/DrexelEngineering/ENGR131_W24/issues/new?title=Issue%20on%20page%20%2Fweek10/Final_Exam_Practice.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/week10/Final_Exam_Practice.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>⌛️ Practice Final Exam</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-entering-your-information-for-credit">Part 1: Entering Your Information for Credit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-begin">Before you begin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5-making-a-graph">Question 5: Making a Graph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended">Recommended</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6-using-data-types-30-points">Question 6: Using Data Types (30 Points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Recommended</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-7-building-a-thermometer-36-points">Question 7: Building a Thermometer (36 Points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Recommended</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8-determining-a-price-for-a-circuit-40-points">Question 8: Determining a Price for a Circuit (40 Points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Recommended</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9-plotting-and-fitting-60-points">Question 9: Plotting and Fitting (60 Points):</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Recommended</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validating-your-log-file">Validating your log file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-your-assignment">Submitting Your Assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-your-score">Viewing your score</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fin">Fin</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize Otter</span>
+<span class="kn">import</span> <span class="nn">otter</span>
+<span class="n">grader</span> <span class="o">=</span> <span class="n">otter</span><span class="o">.</span><span class="n">Notebook</span><span class="p">(</span><span class="s2">&quot;Final_Exam_Practice.ipynb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="practice-final-exam">
+<h1>⌛️ Practice Final Exam<a class="headerlink" href="#practice-final-exam" title="Permalink to this heading">#</a></h1>
+<p>This Practice Final Exam is designed to test your mastery of the Python programming language. You will be asked to respond to a series of questions both multiple choice and short answer problems using python. 10% of the points earned on this practice final prior to the exam will be added to your final exam score.</p>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
+<p>You are allowed to use anything with the python kernel to help you solve the problems. You must run all code and press the submit button when shown to record your grades. If you do not do this your scores might not be recorded. All of your responses should be persistent if you restart the kernel, however entries can only be updated if you run the cell and hit submit.</p>
+</section>
+<section id="part-1-entering-your-information-for-credit">
+<h2>Part 1: Entering Your Information for Credit<a class="headerlink" href="#part-1-entering-your-information-for-credit" title="Permalink to this heading">#</a></h2>
+<p>To receive credit for assignments, it is important we can identify your work from others. To do this, we will ask you to enter your information in the following code block.</p>
+<p>You must hit submit and see the message saying the data is saved. If you do not see this message contact your instructor to ensure you are getting credit for your work.</p>
+<p><strong>Note: do not delete the output.log file or the .responses.json file or you might lose your current work.</strong></p>
+<section id="before-you-begin">
+<h3>Before you begin<a class="headerlink" href="#before-you-begin" title="Permalink to this heading">#</a></h3>
+<p>Run the block of code at the top of the notebook that imports and sets up the autograder. This will allow you to check your work.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pkg_resources</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">call</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">package_name</span> <span class="o">=</span> <span class="s1">&#39;ENGR131_Util_2024&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.0.0&#39;</span>
+<span class="n">package_version</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">package_name</span><span class="si">}</span><span class="s1">==</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Check if the package and version are installed</span>
+    <span class="n">pkg_resources</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">package_version</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">package_version</span><span class="si">}</span><span class="s1"> is already installed.&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">DistributionNotFound</span><span class="p">:</span>
+    <span class="c1"># If not installed, install the package</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">package_version</span><span class="si">}</span><span class="s1"> not found. Installing...&#39;</span><span class="p">)</span>
+    <span class="n">call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="s1">&#39;pip&#39;</span><span class="p">,</span> <span class="s1">&#39;install&#39;</span><span class="p">,</span> <span class="n">package_version</span><span class="p">])</span>
+<span class="k">except</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">VersionConflict</span><span class="p">:</span>
+    <span class="c1"># If a different version is installed, you can choose to upgrade/downgrade</span>
+    <span class="n">installed_packages</span> <span class="o">=</span> <span class="p">{</span><span class="n">dist</span><span class="o">.</span><span class="n">key</span><span class="p">:</span> <span class="n">dist</span><span class="o">.</span><span class="n">version</span> <span class="k">for</span> <span class="n">dist</span> <span class="ow">in</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">working_set</span><span class="p">}</span>
+    <span class="n">installed_version</span> <span class="o">=</span> <span class="n">installed_packages</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">package_name</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">package_name</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">installed_version</span><span class="si">}</span><span class="s1"> is installed, but </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s1"> is required.&#39;</span><span class="p">)</span>
+    <span class="c1"># Optionally, upgrade or downgrade the package to the required version</span>
+    <span class="n">call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="s1">&#39;pip&#39;</span><span class="p">,</span> <span class="s1">&#39;install&#39;</span><span class="p">,</span> <span class="s1">&#39;--upgrade&#39;</span><span class="p">,</span> <span class="n">package_version</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ENGR131_Util_2024</span> <span class="kn">import</span> <span class="n">responses</span><span class="p">,</span> <span class="n">StudentInfoForm</span><span class="p">,</span> <span class="n">cell_logger</span>
+<span class="kn">from</span> <span class="nn">ENGR131_Util_2024</span> <span class="kn">import</span> <span class="n">submit_question</span><span class="p">,</span> <span class="n">ResponseStore</span><span class="p">,</span> <span class="n">ValidateLogFile</span>
+
+
+<span class="c1"># Register the log function to be called before any cell is executed</span>
+<span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;pre_run_cell&#39;</span><span class="p">,</span> <span class="n">cell_logger</span><span class="p">)</span>
+<span class="n">responses</span><span class="p">[</span><span class="s2">&quot;assignment&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;practicefinal_1&quot;</span>
+
+<span class="n">StudentInfoForm</span><span class="p">(</span><span class="o">**</span><span class="n">responses</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question 1: Match the Correct Definition</strong></p>
+<p><em>18 points</em></p>
+<p>Please run the block of code below and respond to the prompts with the most suitable response.</p>
+<p>Make sure you hit the submit button or your grade will not be recorded. Confirmation that your responses are recorded will appear below the code block. We will only grade your most recent set of responses. You can submit entries as many times as you like.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from ENGR131_Util_2024 import DataTypes</span>
+<span class="kn">from</span> <span class="nn">ENGR131_Util_2024</span> <span class="kn">import</span> <span class="n">responses</span>
+<span class="kn">from</span> <span class="nn">ENGR131_Util_2024</span> <span class="kn">import</span> <span class="n">TypesQuestion</span>
+
+<span class="n">TypesQuestion</span><span class="p">(</span><span class="o">**</span><span class="n">responses</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question 2: Select the option that matches the definition</strong></p>
+<p><em>9 points</em></p>
+<p>Please run the block of code below and respond to the prompts with the most suitable response.</p>
+<p>Make sure you hit the submit button or your grade will not be recorded. Confirmation that your responses are recorded will appear below the code block. We will only grade your most recent set of responses. You can submit entries as many times as you like.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ENGR131_Util_2024</span> <span class="kn">import</span> <span class="n">MCQQuestion</span>
+<span class="kn">from</span> <span class="nn">ENGR131_Util_2024</span> <span class="kn">import</span> <span class="n">responses</span>
+
+<span class="n">MCQQuestion</span><span class="p">(</span><span class="o">**</span><span class="n">responses</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question 3: Select all statements which are TRUE</strong></p>
+<p><em>20 points</em></p>
+<p>Please run the block of code below and respond to the prompts with the most suitable response.</p>
+<p>Make sure you hit the submit button or your grade will not be recorded. Confirmation that your responses are recorded will appear below the code block. We will only grade your most recent set of responses. You can submit entries as many times as you like.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ENGR131_Util_2024</span> <span class="kn">import</span> <span class="n">responses</span>
+<span class="kn">from</span> <span class="nn">ENGR131_Util_2024</span> <span class="kn">import</span> <span class="n">SelectMany</span>
+
+
+<span class="n">SelectMany</span><span class="p">(</span><span class="o">**</span><span class="n">responses</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question 4: Reading and Interpreting Python Code</strong></p>
+<p><em>50 points</em></p>
+<p>You are provided with the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>   <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="mi">2</span>   <span class="n">even</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">3</span>   <span class="n">odd</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">4</span>
+<span class="mi">5</span>   <span class="k">while</span> <span class="n">odd</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+<span class="mi">6</span>       <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+<span class="mi">7</span>           <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="mi">8</span>               <span class="n">even</span> <span class="o">+=</span> <span class="n">num</span>
+<span class="mi">9</span>           <span class="k">else</span><span class="p">:</span>
+<span class="mi">10</span>              <span class="n">odd</span> <span class="o">+=</span> <span class="n">num</span>
+</pre></div>
+</div>
+<p>Please run the block of code below and respond to the prompts with the most suitable response.</p>
+<p>Make sure you hit the submit button or your grade will not be recorded. Confirmation that your responses are recorded will appear below the code block. We will only grade your most recent set of responses. You can submit entries as many times as you like.</p>
+<ol class="arabic simple">
+<li><p>You will be asked to select the most relevant comment for the lines of code selected.</p></li>
+<li><p>You will be asked to describe how the code is executed. Please use the debugger tool to help ensure you have a correct answer.</p>
+<ol class="arabic simple">
+<li><p>Line number: This is the line number of the code that is run during the execution of the code.</p></li>
+<li><p>Variable Changed: This is the variable whose value is changed during the execution of the code. <em>Note</em> if no variable is changed - such as when evaluating logical expressions, select “None”.</p></li>
+<li><p>Current Value: This is the value of the variable after the line of code is executed. If a logical expression is evaluated, please enter the value of the logical expression.</p></li>
+<li><p>DataType: This is the data type of the variable after the line of code is executed. If a logical expression is evaluated, please enter the data type of the logical expression.</p></li>
+</ol>
+</li>
+</ol>
+<p><strong>Note</strong>: The autograder has mechanisms to provide partial credit. If you skip a step, it will continue grading at the next correct step.</p>
+<p>We provide the code in Python for your convenience.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="n">even</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">odd</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">odd</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+   <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+      <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+         <span class="n">even</span> <span class="o">+=</span> <span class="n">num</span>
+      <span class="k">else</span><span class="p">:</span>
+         <span class="n">odd</span> <span class="o">+=</span> <span class="n">num</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ENGR131_Util_2024</span> <span class="kn">import</span> <span class="n">ReadingPythonQuestion</span>
+<span class="kn">from</span> <span class="nn">ENGR131_Util_2024</span> <span class="kn">import</span> <span class="n">responses</span>
+
+<span class="n">ReadingPythonQuestion</span><span class="p">(</span><span class="o">**</span><span class="n">responses</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="question-5-making-a-graph">
+<h2>Question 5: Making a Graph<a class="headerlink" href="#question-5-making-a-graph" title="Permalink to this heading">#</a></h2>
+<p><em>35 points</em></p>
+<p>A friend gives you a card with the following function written on it. You need to figure out what they are saying. Implement a function to reveal the hidden message.</p>
+<ol class="arabic simple">
+<li><p>Import the packages you need.</p>
+<ul class="simple">
+<li><p>You will need <code class="docutils literal notranslate"><span class="pre">numpy</span></code> import this as the variable <code class="docutils literal notranslate"><span class="pre">np</span></code></p></li>
+<li><p>You will need the <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> module from <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. Import <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> as a variable <code class="docutils literal notranslate"><span class="pre">plt</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Make a function called <code class="docutils literal notranslate"><span class="pre">draw_card_eq</span></code>.</p>
+<ul class="simple">
+<li><p>This should take one input <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li>
+<li><p>Create a linearly-spaced vector using the <code class="docutils literal notranslate"><span class="pre">linspace</span></code> method in <code class="docutils literal notranslate"><span class="pre">np</span></code>.</p>
+<ul>
+<li><p>The vector should go from 0 to <span class="math notranslate nohighlight">\(2\pi\)</span> with 2000 steps.</p></li>
+<li><p>Assign this vector to the variable <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Write the equation for <code class="docutils literal notranslate"><span class="pre">x</span></code>:
+$<span class="math notranslate nohighlight">\( x = a(16(\sin(t))^3)\)</span>$</p></li>
+<li><p>Write the equation for <code class="docutils literal notranslate"><span class="pre">y</span></code>:
+$<span class="math notranslate nohighlight">\( y = a(13\cos(t) - 5\cos(2t) - 2\cos(3t) - \cos(4t))\)</span>$</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method in <code class="docutils literal notranslate"><span class="pre">plt</span></code> to plot <code class="docutils literal notranslate"><span class="pre">x</span></code> vs <code class="docutils literal notranslate"><span class="pre">y</span></code>, set the plot color to <code class="docutils literal notranslate"><span class="pre">red</span></code> using the input <code class="docutils literal notranslate"><span class="pre">red</span></code> as a string</p>
+<ul>
+<li><p>Save this to the variable <code class="docutils literal notranslate"><span class="pre">plot_</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Return <code class="docutils literal notranslate"><span class="pre">plot_</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Call the function <code class="docutils literal notranslate"><span class="pre">draw_card_eq</span></code> with <code class="docutils literal notranslate"><span class="pre">a</span></code> equal to 1. Doing so will reveal the message.</p>
+<ul class="simple">
+<li><p>Save the output of the function to a variable <code class="docutils literal notranslate"><span class="pre">plot_</span></code>.</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your import statements go here.</span>
+<span class="c1"># We would recommend checking this with the autograder.</span>
+<span class="c1"># Completion of this step should pass tests 1-2.</span>
+<span class="o">...</span>
+
+<span class="c1"># Your function goes here</span>
+<span class="c1"># We would recommend checking this with the autograder.</span>
+<span class="c1"># Completion of this step should pass test 3.</span>
+<span class="o">...</span>
+
+<span class="c1"># Call your function here</span>
+<span class="c1"># Make sure your check your code with the autograder. If you do not run the autograder your responses will not be graded.</span>
+<span class="c1"># Completion of this step pass all tests.</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q5 - Making a Graph&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="recommended">
+<h2>Recommended<a class="headerlink" href="#recommended" title="Permalink to this heading">#</a></h2>
+<p>We recommend that you run the following code to ensure your responses are recorded. This is an extra measure to ensure your results are aaved.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">submit_question</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="question-6-using-data-types-30-points">
+<h2>Question 6: Using Data Types (30 Points)<a class="headerlink" href="#question-6-using-data-types-30-points" title="Permalink to this heading">#</a></h2>
+<p>We have written a function that converts a DataType. Pass values with the expected DataTypes as defined below to the <code class="docutils literal notranslate"><span class="pre">convert_to_string</span></code> function. The function will print the output.</p>
+<ol class="arabic simple" start="0">
+<li><p>Run the <code class="docutils literal notranslate"><span class="pre">convert_to_string</span></code> function first.</p></li>
+<li><p>Pass an integer <code class="docutils literal notranslate"><span class="pre">42</span></code> to <code class="docutils literal notranslate"><span class="pre">convert_to_string</span></code>.</p>
+<ul class="simple">
+<li><p>Save the output to a variable <code class="docutils literal notranslate"><span class="pre">int_</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Pass an float <code class="docutils literal notranslate"><span class="pre">3.14159</span></code> to <code class="docutils literal notranslate"><span class="pre">convert_to_string</span></code>.</p>
+<ul class="simple">
+<li><p>Save the output to a variable <code class="docutils literal notranslate"><span class="pre">float_</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Pass an boolean with a true value to <code class="docutils literal notranslate"><span class="pre">convert_to_string</span></code>.</p>
+<ul class="simple">
+<li><p>Save the output to a variable <code class="docutils literal notranslate"><span class="pre">bool_</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Pass an string <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">love</span> <span class="pre">coding</span></code> to <code class="docutils literal notranslate"><span class="pre">convert_to_string</span></code>.</p>
+<ul class="simple">
+<li><p>Save the output to a variable <code class="docutils literal notranslate"><span class="pre">string_</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Pass a list of integers <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code> to <code class="docutils literal notranslate"><span class="pre">convert_to_string</span></code>.</p>
+<ul class="simple">
+<li><p>Save the output to a variable <code class="docutils literal notranslate"><span class="pre">list_</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Pass a tuple of values <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> to <code class="docutils literal notranslate"><span class="pre">convert_to_string</span></code>.</p>
+<ul class="simple">
+<li><p>Save the output to a variable <code class="docutils literal notranslate"><span class="pre">tuple_</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Pass a dictionary with a key <code class="docutils literal notranslate"><span class="pre">name</span></code> and a value <code class="docutils literal notranslate"><span class="pre">jay</span></code> as a string and a key <code class="docutils literal notranslate"><span class="pre">age</span></code> and a value <code class="docutils literal notranslate"><span class="pre">12</span></code> as an integer to <code class="docutils literal notranslate"><span class="pre">convert_to_string</span></code>.</p>
+<ul class="simple">
+<li><p>Save the output to a variable <code class="docutils literal notranslate"><span class="pre">dict_</span></code>.</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_to_string</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="n">elements</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+        <span class="n">elements</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="n">pairs</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="p">[</span><span class="s2">&quot;Key = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; Value = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pairs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Pass an integer `42` to `convert_to_string`. </span>
+<span class="c1"># Save the output to a variable `int_`.</span>
+<span class="c1"># completion of this step will pass test 1</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Pass an float `3.14159` to `convert_to_string`. </span>
+<span class="c1"># Save the output to a variable `float_`.</span>
+<span class="c1"># completion of this step will pass test 2</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. Pass an boolean with a true value to `convert_to_string`. </span>
+<span class="c1"># Save the output to a variable `bool_`.</span>
+<span class="c1"># completion of this step will pass test 3</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4. Pass an string `I love coding` to `convert_to_string`. </span>
+<span class="c1"># Save the output to a variable `string_`.</span>
+<span class="c1"># completion of this step will pass test 4</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. Pass a list of integers `1`, `2`, `3` to `convert_to_string`. </span>
+<span class="c1"># Save the output to a variable `list_`.</span>
+<span class="c1"># completion of this step will pass test 5</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6. Pass a tuple of values `a`, `b`, `c` to `convert_to_string`. </span>
+<span class="c1"># Save the output to a variable `tuple_`.</span>
+<span class="c1"># completion of this step will pass test 6</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7. Pass a dictionary with a key `name` and a value `jay` as a string and a key `age` and a value `12` as an integer to `convert_to_string`. </span>
+<span class="c1"># Save the output to a variable `dict_`.</span>
+<span class="c1"># completion of this step will pass test 7</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q6 - Exploring DataTypes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Recommended<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>We recommend that you run the following code to ensure your responses are recorded. This is an extra measure to ensure your results are aaved.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">submit_question</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="question-7-building-a-thermometer-36-points">
+<h2>Question 7: Building a Thermometer (36 Points)<a class="headerlink" href="#question-7-building-a-thermometer-36-points" title="Permalink to this heading">#</a></h2>
+<p>In chemical engineering, it is common to monitor the temperature of a reactor. We will build a class to implement a temperature sensor. This sensor will save and also set a temperature value in Celsius. Additionally, the class will convert the temperature given in Celsius to Fahrenheit.</p>
+<ol class="arabic simple">
+<li><p>Build a class called <code class="docutils literal notranslate"><span class="pre">Thermometer</span></code>. This class will have to be initialized and have two methods.</p>
+<ul class="simple">
+<li><p>Add an initialization method that accepts an initial temperature in Celsius as a variable <code class="docutils literal notranslate"><span class="pre">temperature</span></code>.</p>
+<ul>
+<li><p>Save the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> as an object attribute <code class="docutils literal notranslate"><span class="pre">temperature_c</span></code>. This is the temperature in <span class="math notranslate nohighlight">\(^{\circ}C\)</span> .</p></li>
+</ul>
+</li>
+<li><p>Build a method <code class="docutils literal notranslate"><span class="pre">set_temperature</span></code> that will set the object attribute <code class="docutils literal notranslate"><span class="pre">temperature_c</span></code>.</p>
+<ul>
+<li><p>This method takes one input <code class="docutils literal notranslate"><span class="pre">temperature</span></code>.</p></li>
+<li><p>We want to make sure the input is a number. Do this by <strong>trying</strong> to convert it to a <code class="docutils literal notranslate"><span class="pre">float</span></code> using the built in <code class="docutils literal notranslate"><span class="pre">float</span></code> method.</p>
+<ul>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is a number that can be converted to a float, save it to the object attribute <code class="docutils literal notranslate"><span class="pre">temperature_c</span></code>.</p></li>
+</ul>
+</li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">temperature</span></code> cannot be converted to a float, set the object attribute <code class="docutils literal notranslate"><span class="pre">temperature_c</span></code> to the string ‘fail’.</p></li>
+</ul>
+</li>
+<li><p>Build a method <code class="docutils literal notranslate"><span class="pre">to_fahrenheit</span></code> that converts the temperature from Celsius to Fahrenheit.</p>
+<ul>
+<li><p>Convert the temperature using the following equation.
+$<span class="math notranslate nohighlight">\(Fahrenheit = \frac{9}{5}Celsius +32 \)</span>$</p></li>
+<li><p>Return the temperature in Fahrenheit.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Instantiate a <code class="docutils literal notranslate"><span class="pre">Thermometer</span></code> <code class="docutils literal notranslate"><span class="pre">water_sensor</span></code> with an initial <code class="docutils literal notranslate"><span class="pre">temperature</span></code> of <code class="docutils literal notranslate"><span class="pre">12</span></code> <span class="math notranslate nohighlight">\(^{\circ}C\)</span>.</p></li>
+<li><p>Extract the temperature in <span class="math notranslate nohighlight">\(^{\circ}C\)</span> from the object <code class="docutils literal notranslate"><span class="pre">water_sensor</span></code>.</p>
+<ul class="simple">
+<li><p>Assign the output to a variable <code class="docutils literal notranslate"><span class="pre">temp_c</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Extract the temperature in <span class="math notranslate nohighlight">\(^{\circ}F\)</span> from the object <code class="docutils literal notranslate"><span class="pre">water_sensor</span></code>.</p>
+<ul class="simple">
+<li><p>Assign the output to a variable <code class="docutils literal notranslate"><span class="pre">temp_f</span></code>.</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your class for Thermometer goes here</span>
+<span class="o">...</span>
+
+<span class="c1"># Instantiate the Thermometer water_sensor here</span>
+<span class="o">...</span>
+
+<span class="c1"># extract the temperature in degrees celsius</span>
+<span class="o">...</span>
+
+<span class="c1"># extract the temperature in degrees fahrenheit</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q7-Building a Thermometer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>Recommended<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>We recommend that you run the following code to ensure your responses are recorded. This is an extra measure to ensure your results are aaved.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">submit_question</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="question-8-determining-a-price-for-a-circuit-40-points">
+<h2>Question 8: Determining a Price for a Circuit (40 Points)<a class="headerlink" href="#question-8-determining-a-price-for-a-circuit-40-points" title="Permalink to this heading">#</a></h2>
+<p>As an engineer, you might want to estimate the total price at which you would sell a circuit you designed based on the cost of goods from a supplier and a desired profit margin. We will write a Python function to assist you in this task.</p>
+<p>We have provided you with two dictionaries, <code class="docutils literal notranslate"><span class="pre">parts_cost</span></code> and <code class="docutils literal notranslate"><span class="pre">circuit_parts</span></code>. <code class="docutils literal notranslate"><span class="pre">parts_cost</span></code> defines the the parts from the supplier, and <code class="docutils literal notranslate"><span class="pre">circuit_parts</span></code> defines the components needed to build the circuit. The circuit uses two <code class="docutils literal notranslate"><span class="pre">Custom</span> <span class="pre">Processor</span></code> components, which are not available from the supplier, that each costs $12.</p>
+<p><em>Cost of Goods from Supplier</em></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Part Name (Key)</p></th>
+<th class="head"><p>Cost per Item (value, in $)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>10-ohm resistor</p></td>
+<td><p>0.025</p></td>
+</tr>
+<tr class="row-odd"><td><p>100-ohm resistor</p></td>
+<td><p>0.03</p></td>
+</tr>
+<tr class="row-even"><td><p>1-pF capacitor</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>10-pF capacitor</p></td>
+<td><p>0.12</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Components Required for Building the Circuit</em></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Part Name  (Key)</p></th>
+<th class="head"><p>Quantity (sub-key)</p></th>
+<th class="head"><p>Cost to Build (value, in $)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>10-ohm resistor</p></td>
+<td><p>10</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>10-pF capacitor</p></td>
+<td><p>3</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>1-pF capacitor</p></td>
+<td><p>7</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>Custom Processor</p></td>
+<td><p>2</p></td>
+<td><p>12</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li><p>Import the package <code class="docutils literal notranslate"><span class="pre">numpy</span></code> as <code class="docutils literal notranslate"><span class="pre">np</span></code>.</p>
+<ul class="simple">
+<li><p>You might not need to do this step if you have done it as part of the previous questions; however, it is good practice.</p></li>
+</ul>
+</li>
+<li><p>Define a function <code class="docutils literal notranslate"><span class="pre">price_calculator</span></code> that accepts three inputs: <code class="docutils literal notranslate"><span class="pre">parts_cost</span></code>, <code class="docutils literal notranslate"><span class="pre">circuit_parts</span></code>, and <code class="docutils literal notranslate"><span class="pre">profit</span></code>.</p>
+<ul class="simple">
+<li><p>Initialize a variable <code class="docutils literal notranslate"><span class="pre">cost_of_goods</span></code>, and set it equal to 0.</p></li>
+<li><p>Using a loop, compute the total <code class="docutils literal notranslate"><span class="pre">cost_of_goods</span></code>.</p>
+<ul>
+<li><p>You should use the <code class="docutils literal notranslate"><span class="pre">.items()</span></code> method of a dictionary that returns an iterator, where each iteration is a tuple containing the key and the value.</p></li>
+<li><p>You will need to use a branching statement to get the cost per item from the dictionary with the cost per item or the nested dictionary with the cost to build, whichever is appropriate for the part.</p></li>
+</ul>
+</li>
+<li><p>Determine the <code class="docutils literal notranslate"><span class="pre">sales_price</span></code> by adding the profit to the <code class="docutils literal notranslate"><span class="pre">cost_of_goods</span></code>.</p>
+<ul>
+<li><p>Multiply the <code class="docutils literal notranslate"><span class="pre">cost_of_goods</span></code> by (1 + <code class="docutils literal notranslate"><span class="pre">profit</span></code>).</p></li>
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">np.round</span></code> method, round the price to 2 decimal places.</p></li>
+<li><p>Save this value to the variable <code class="docutils literal notranslate"><span class="pre">sales_price</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Call the <code class="docutils literal notranslate"><span class="pre">print_total</span></code> function within <code class="docutils literal notranslate"><span class="pre">price_calculator</span></code>.</p>
+<ul>
+<li><p>Save the output to the variable <code class="docutils literal notranslate"><span class="pre">order_total</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Print the variable <code class="docutils literal notranslate"><span class="pre">order_total</span></code> within the <code class="docutils literal notranslate"><span class="pre">price_calculator</span></code> function.</p></li>
+<li><p>Return the variable <code class="docutils literal notranslate"><span class="pre">sales_price</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Call the function <code class="docutils literal notranslate"><span class="pre">price_calculator</span></code> with the inputs <code class="docutils literal notranslate"><span class="pre">parts_cost</span></code>, <code class="docutils literal notranslate"><span class="pre">circuit_parts</span></code>, <code class="docutils literal notranslate"><span class="pre">profit</span></code>.</p>
+<ul class="simple">
+<li><p>Save the output to the variable <code class="docutils literal notranslate"><span class="pre">total_price</span></code>.</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your import statement goes here.</span>
+<span class="o">...</span>
+
+<span class="n">parts_cost</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;10-ohm resistor&quot;</span><span class="p">:</span> <span class="mf">0.025</span><span class="p">,</span>
+    <span class="s2">&quot;100-ohm resistor&quot;</span><span class="p">:</span> <span class="mf">0.03</span><span class="p">,</span>
+    <span class="s2">&quot;1-pF capacitor&quot;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span>
+    <span class="s2">&quot;10-pF capacitor&quot;</span><span class="p">:</span> <span class="mf">0.12</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">circuit_parts</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;10-ohm resistor&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>
+    <span class="s2">&quot;10-pF capacitor&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="s2">&quot;1-pF capacitor&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">},</span>
+    <span class="s2">&quot;Custom Processor&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">},</span>
+<span class="p">}</span>
+
+<span class="c1"># profit assignment goes here, we have set this to 63%</span>
+<span class="n">profit</span> <span class="o">=</span> <span class="mf">0.63</span>
+
+<span class="c1"># We have provided you with a function to print the total cost of the order</span>
+<span class="c1"># you need to call this function but do not need to change it.</span>
+<span class="k">def</span> <span class="nf">print_total</span><span class="p">(</span><span class="n">sales_price</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Total cost of the order: $</span><span class="si">{</span><span class="n">sales_price</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="c1"># Your function price_calculator goes here</span>
+<span class="c1"># Completion of this step should pass test 3</span>
+<span class="o">...</span>
+
+<span class="c1"># Your call of the function price_calculator goes here</span>
+<span class="c1"># Completion of this step should pass all tests</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q8-Determining a Price for a Circuit&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>Recommended<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>We recommend that you run the following code to ensure your responses are recorded. This is an extra measure to ensure your results are aaved.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">submit_question</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="question-9-plotting-and-fitting-60-points">
+<h2>Question 9: Plotting and Fitting (60 Points):<a class="headerlink" href="#question-9-plotting-and-fitting-60-points" title="Permalink to this heading">#</a></h2>
+<p>One of the most common tasks in engineering is fitting data to a model. For this question we will generate some noisy data with a gaussian distribution - one of the most common statistical distributions. We will then plot this data, and fit this data to the model.</p>
+<ol class="arabic simple">
+<li><p>Start by importing the necessary tools. If you imported any of these packages before, you might not need to do so again; however, it is good practice.</p>
+<ul class="simple">
+<li><p>Import <code class="docutils literal notranslate"><span class="pre">numpy</span></code> as the variable <code class="docutils literal notranslate"><span class="pre">np</span></code>.</p></li>
+<li><p>Import the <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> module from <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> as a variable <code class="docutils literal notranslate"><span class="pre">plt</span></code>.</p></li>
+<li><p>Import the function <code class="docutils literal notranslate"><span class="pre">curve_fit</span></code> from <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Define a function <code class="docutils literal notranslate"><span class="pre">gaussian</span></code> that computes the Gaussian function using the following equation:
+$<span class="math notranslate nohighlight">\(Ae^{\frac{-(x-b)^2}{2c^2}}\)</span>$</p>
+<ul class="simple">
+<li><p>The function should accept inputs of <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">linspace</span></code> method in <code class="docutils literal notranslate"><span class="pre">numpy</span></code> to generate a vector from <code class="docutils literal notranslate"><span class="pre">-20</span></code> to <code class="docutils literal notranslate"><span class="pre">20</span></code> with <code class="docutils literal notranslate"><span class="pre">100</span></code> steps.</p>
+<ul class="simple">
+<li><p>Save this vector to the variable <code class="docutils literal notranslate"><span class="pre">x_data</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Use the defined <code class="docutils literal notranslate"><span class="pre">gaussian</span></code> function to compute the true, resulting value when <code class="docutils literal notranslate"><span class="pre">a</span></code> is <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> is <code class="docutils literal notranslate"><span class="pre">4</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code> is <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p>
+<ul class="simple">
+<li><p>Save this to the variable <code class="docutils literal notranslate"><span class="pre">y_true</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Generate noisy data using the <code class="docutils literal notranslate"><span class="pre">random.normal</span></code> method in <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
+<ul class="simple">
+<li><p>The noisy data should be the same size as the <code class="docutils literal notranslate"><span class="pre">x_data</span></code>.</p></li>
+<li><p>Scale the noise by a factor of <code class="docutils literal notranslate"><span class="pre">0.3</span></code>, and add the noise the <code class="docutils literal notranslate"><span class="pre">y_true</span></code> variable.</p></li>
+<li><p>Assign the output to <code class="docutils literal notranslate"><span class="pre">y_noisy</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">scatter</span></code> method from <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>, plot the <code class="docutils literal notranslate"><span class="pre">x_data</span></code> vs <code class="docutils literal notranslate"><span class="pre">y_noisy</span></code>.</p>
+<ul class="simple">
+<li><p>Add a label, “Noisy Data”.</p></li>
+<li><p>Save this plot to the variable <code class="docutils literal notranslate"><span class="pre">plot_1</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Use the imported <code class="docutils literal notranslate"><span class="pre">curve_fit</span></code> method to fit the noisy data to the <code class="docutils literal notranslate"><span class="pre">gaussian</span></code> function over the range of <code class="docutils literal notranslate"><span class="pre">x_data</span></code>.</p>
+<ul class="simple">
+<li><p>Save the fit results to the variable <code class="docutils literal notranslate"><span class="pre">popt</span></code>, and the parameter covariances to a variable <code class="docutils literal notranslate"><span class="pre">pcov</span></code>.</p>
+<ul>
+<li><p><strong>Do not provide any initial guess</strong>, or provide <code class="docutils literal notranslate"><span class="pre">None</span></code>. If you provide an initial guess, the autograder might fail.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Calculate the fitted curve using the defined <code class="docutils literal notranslate"><span class="pre">gaussian</span></code> function.</p>
+<ul class="simple">
+<li><p>You can use the * method to unpack the list of fitted parameters if you like.</p></li>
+<li><p>Save the result to a variable <code class="docutils literal notranslate"><span class="pre">y_fit</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Plot the fit results as <code class="docutils literal notranslate"><span class="pre">x_data</span></code> vs <code class="docutils literal notranslate"><span class="pre">y_fit</span></code> using the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method in <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>.</p>
+<ul class="simple">
+<li><p>Set the color of the line to green using the <code class="docutils literal notranslate"><span class="pre">g</span></code> tag.</p></li>
+<li><p>Add a label, “Fitted Gaussian”.</p></li>
+<li><p>Save this plot to the variable <code class="docutils literal notranslate"><span class="pre">plot_2</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Using the methods within <code class="docutils literal notranslate"><span class="pre">plt</span></code>, set the <code class="docutils literal notranslate"><span class="pre">x_label</span></code> and <code class="docutils literal notranslate"><span class="pre">y_label</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>, respectively.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">legend</span></code> method in <code class="docutils literal notranslate"><span class="pre">plt</span></code> to add a legend.</p></li>
+</ol>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Add your import statements here. </span>
+<span class="c1"># Completion of this step will pass the first test</span>
+<span class="o">...</span>
+
+<span class="c1"># do not delete the line of code below, it will cause problems with the autograder.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># 2. Define the Gaussian function.</span>
+<span class="c1"># completion of this step will pass test 2.</span>
+<span class="o">...</span>
+
+<span class="c1"># 3. define your x_data vector</span>
+<span class="c1"># completion of this step will pass test 3.</span>
+<span class="o">...</span>
+
+<span class="c1"># 4. Call the gaussian function as described above</span>
+<span class="c1"># save the output to the variable y_true</span>
+<span class="c1"># completion of this step will pass test 4.</span>
+<span class="o">...</span>
+
+<span class="c1">#5. Generate the noisy data described above</span>
+<span class="c1"># save the output to the variable y_noisy</span>
+<span class="c1"># completion of this step will pass test 5.</span>
+<span class="o">...</span>
+
+<span class="c1"># 6. Plot the noisy data using a scatterplot</span>
+<span class="c1"># make sure to add the label &quot;Noisy Data&quot;</span>
+<span class="c1"># save the output to the variable plot_1</span>
+<span class="o">...</span>
+
+<span class="c1"># 7. Fit the noisy data to a Gaussian function using curve_fit</span>
+<span class="c1"># save the outputs to the variables popt and pcov</span>
+<span class="c1"># completion of this step will pass test 6.</span>
+<span class="o">...</span>
+
+<span class="c1"># 8. Calculate the fitted curve using the gaussian function</span>
+<span class="c1"># save the output to the variable y_fit</span>
+<span class="c1"># completion of this step will pass test 7. </span>
+<span class="o">...</span>
+
+<span class="c1"># 9. Plot the fitted results as described in the instructions</span>
+<span class="c1"># save the output to the variable plot_2</span>
+<span class="c1"># completion of this step will pass several more tests. </span>
+<span class="c1"># make sure to add the label &quot;Fitted Gaussian&quot;</span>
+<span class="o">...</span>
+
+<span class="c1"># 10. Add axis labels to the plot</span>
+<span class="c1"># completion of this step will pass a test.</span>
+<span class="o">...</span>
+
+<span class="c1"># 11. Add a legend to the plot</span>
+<span class="c1"># completion of this step will pass all tests.</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q9-Plotting and Fitting&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h2>Recommended<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<p>We recommend that you run the following code to ensure your responses are recorded. This is an extra measure to ensure your results are aaved.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">submit_question</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="validating-your-log-file">
+<h2>Validating your log file<a class="headerlink" href="#validating-your-log-file" title="Permalink to this heading">#</a></h2>
+<p>Before your submit your results we would recommend running the following command to validate your log file. This will ensure that you have followed the correct format and that your log file is valid.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ValidateLogFile</span><span class="p">(</span><span class="s2">&quot;./output.log&quot;</span><span class="p">,</span> <span class="n">responses</span><span class="p">[</span><span class="s2">&quot;assignment&quot;</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="submitting-your-assignment">
+<h2>Submitting Your Assignment<a class="headerlink" href="#submitting-your-assignment" title="Permalink to this heading">#</a></h2>
+<p>To submit your assignment please use the following link the assignment on GitHub classroom.</p>
+<p>Use this <a class="reference external" href="https://classroom.github.com/a/ClDJl_RS">link</a> to navigate to the assignment on GitHub classroom.</p>
+<p><strong>Please submit just your output.log file. No other files are needed.</strong></p>
+<p>If you need further instructions on submitting your assignment, please ask your TA during lab.</p>
+</section>
+<section id="viewing-your-score">
+<h2>Viewing your score<a class="headerlink" href="#viewing-your-score" title="Permalink to this heading">#</a></h2>
+<p>Each <code class="docutils literal notranslate"><span class="pre">log</span></code> file you have uploaded will have a file with the name of your file + <code class="docutils literal notranslate"><span class="pre">Grade_Report.md</span></code>. You can view this file by clicking on the file name. This will show you the results of the autograder.</p>
+<p><strong>Make sure you run your code, and run the tests. If you do not run the test you will not get credit for your work.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In python and particularly jupyter notebooks it is common that during testing you run cells in a different order, or run cells and modify them. This can cause there to be local variables needed for your solution that would not be recreated on running your code again from scratch. Your assignment will be graded based on running your code from scratch. This means before you submit your assignment you should restart the kernel and run all cells. You can do this by clicking <code class="docutils literal notranslate"><span class="pre">Kernel</span></code> and selecting <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">and</span> <span class="pre">Run</span> <span class="pre">All</span></code>. If you code does not run as expected after restarting the kernel and running all cells it means you have an error in your code.</p>
+</div>
+</section>
+<section id="fin">
+<h2>Fin<a class="headerlink" href="#fin" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./week10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../week9/quiz9/quiz9link.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Quiz Link</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-entering-your-information-for-credit">Part 1: Entering Your Information for Credit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-begin">Before you begin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5-making-a-graph">Question 5: Making a Graph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended">Recommended</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6-using-data-types-30-points">Question 6: Using Data Types (30 Points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Recommended</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-7-building-a-thermometer-36-points">Question 7: Building a Thermometer (36 Points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Recommended</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8-determining-a-price-for-a-circuit-40-points">Question 8: Determining a Price for a Circuit (40 Points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Recommended</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9-plotting-and-fitting-60-points">Question 9: Plotting and Fitting (60 Points):</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Recommended</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validating-your-log-file">Validating your log file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-your-assignment">Submitting Your Assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-your-score">Viewing your score</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fin">Fin</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Shannon Capps and Joshua C. Agar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
