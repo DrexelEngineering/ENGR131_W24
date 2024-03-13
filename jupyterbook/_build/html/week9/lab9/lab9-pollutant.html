@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Lab 9: Pollutant Triangulation &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -19,49 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week9/lab9/lab9-pollutant';</script>
@@ -78,10 +73,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -122,11 +116,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -160,7 +157,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -345,6 +353,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">week 10</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../week10/Final_Exam_Practice.html">📚✍️🧠 Practice Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week10/lab10/week_10_lab_intro.html">🧪 📝 Week 10 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week10/lab10/lab10-fitting.html">💻🧪 Lab 10: Combining Concepts to Build Interoperable Code for Plotting</a></li>
+
+
+
 </ul>
 
     </div>
@@ -609,7 +622,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -621,13 +634,13 @@ document.write(`
 </div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="lab-9-pollutant-triangulation">
-<h1>Lab 9: Pollutant Triangulation<a class="headerlink" href="#lab-9-pollutant-triangulation" title="Permalink to this heading">#</a></h1>
+<h1>Lab 9: Pollutant Triangulation<a class="headerlink" href="#lab-9-pollutant-triangulation" title="Link to this heading">#</a></h1>
 <p>This lab uses classes to solve a problem involving pollutant triangulation.</p>
 <section id="entering-your-information-for-credit">
-<h2>Entering Your Information for Credit<a class="headerlink" href="#entering-your-information-for-credit" title="Permalink to this heading">#</a></h2>
+<h2>Entering Your Information for Credit<a class="headerlink" href="#entering-your-information-for-credit" title="Link to this heading">#</a></h2>
 <p>To receive credit for assignments it is important we can identify your work from others. To do this we will ask you to enter your information in the following code block.</p>
 <section id="before-you-begin">
-<h3>Before you begin<a class="headerlink" href="#before-you-begin" title="Permalink to this heading">#</a></h3>
+<h3>Before you begin<a class="headerlink" href="#before-you-begin" title="Link to this heading">#</a></h3>
 <p>Run the block of code at the top of the notebook that imports and sets up the autograder. This will allow you to check your work.</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
@@ -662,14 +675,14 @@ document.write(`
 </section>
 </section>
 <section id="use-triangulation-to-locate-pollutant-source">
-<h2>Use triangulation to locate pollutant source<a class="headerlink" href="#use-triangulation-to-locate-pollutant-source" title="Permalink to this heading">#</a></h2>
+<h2>Use triangulation to locate pollutant source<a class="headerlink" href="#use-triangulation-to-locate-pollutant-source" title="Link to this heading">#</a></h2>
 <p>Triangulation, such as used in GPS positioning uses three points and two distances to calculate the location of an unknown point.</p>
 <p>Now, let’s suppose that the unknown point is actually a point source for some pollutant X, and at time 0 it
 releases a burst of Chemical X. Assume no wind, and that X diffuses freely from its release point.</p>
 <p>Suppose that we have measurement devices at the three points 1, 2, and 3 that track the concentration of X as a function of time, and that the concentration of X is detected to peak at times <span class="math notranslate nohighlight">\(t_1\)</span>, <span class="math notranslate nohighlight">\(t_2\)</span>, and <span class="math notranslate nohighlight">\(t_3\)</span>, at each point, respectively. Can we determine the location of the evil point source?</p>
 </section>
 <section id="task-1-make-a-class-for-point-in-pollutant-system">
-<h2>Task 1: Make a class for point in pollutant system<a class="headerlink" href="#task-1-make-a-class-for-point-in-pollutant-system" title="Permalink to this heading">#</a></h2>
+<h2>Task 1: Make a class for point in pollutant system<a class="headerlink" href="#task-1-make-a-class-for-point-in-pollutant-system" title="Link to this heading">#</a></h2>
 <p>In this system, we have collected data at points <span class="math notranslate nohighlight">\((x_1,y_1)\)</span>, <span class="math notranslate nohighlight">\((x_2,y_2)\)</span>, and <span class="math notranslate nohighlight">\((x_3,y_3)\)</span>, at times <span class="math notranslate nohighlight">\(t_1\)</span>, <span class="math notranslate nohighlight">\(t_2\)</span>, and <span class="math notranslate nohighlight">\(t_3\)</span> respectively. We would like to encapsulate this data, and find a way to extract distance using the diffusivity of <span class="math notranslate nohighlight">\(X\)</span> <span class="math notranslate nohighlight">\((D_X)\)</span>.</p>
 <p>Let’s make the assumption that the time intervals <span class="math notranslate nohighlight">\((t_i)\)</span> scale with the square of the distance <span class="math notranslate nohighlight">\((d_i)\)</span> divided by the diffusivity of <span class="math notranslate nohighlight">\(X\)</span> <span class="math notranslate nohighlight">\((D_X)\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -725,7 +738,7 @@ releases a burst of Chemical X. Assume no wind, and that X diffuses freely from 
 </div>
 </section>
 <section id="task-2-make-a-class-to-triangulate-between-3-points">
-<h2>Task 2: Make a class to triangulate between 3 points<a class="headerlink" href="#task-2-make-a-class-to-triangulate-between-3-points" title="Permalink to this heading">#</a></h2>
+<h2>Task 2: Make a class to triangulate between 3 points<a class="headerlink" href="#task-2-make-a-class-to-triangulate-between-3-points" title="Link to this heading">#</a></h2>
 <p>In the previous task, we determined how to calculate the distance between a point and a pollutant source, given diffusion constant <span class="math notranslate nohighlight">\(K\)</span> and time <span class="math notranslate nohighlight">\(t\)</span>. How can we use this information to find the location of a pollutant source?</p>
 <p><strong>Intro to Triangulation</strong></p>
 <p>Triangulation is the process of locating an unknown point given two know points, and two known distances.</p>
@@ -794,7 +807,7 @@ $<span class="math notranslate nohighlight">\( b = - \frac{x_2 - x_1}{y_2 - y_1}
 </div>
 </section>
 <section id="task-3-predict-location-of-pollutant-and-diffusivity">
-<h2>Task 3: Predict location of pollutant and diffusivity<a class="headerlink" href="#task-3-predict-location-of-pollutant-and-diffusivity" title="Permalink to this heading">#</a></h2>
+<h2>Task 3: Predict location of pollutant and diffusivity<a class="headerlink" href="#task-3-predict-location-of-pollutant-and-diffusivity" title="Link to this heading">#</a></h2>
 <p>Our system consists of three points, <span class="math notranslate nohighlight">\(P_1=(-4,7), P_2=(-5,-6), P_3=(9,1)\)</span>, and a pollution source with unknown coordinates and diffusion coefficient <span class="math notranslate nohighlight">\(K\)</span>. After the release of the chemical, the pollution peaked at the three points at times <span class="math notranslate nohighlight">\(300,400,500\)</span> respectively. We want to estimate <span class="math notranslate nohighlight">\(K\)</span> and the coordinates of the pollutant.</p>
 <p>We can achieve this using an iterative process that slowly modifies K by multiplying it by a change factor <span class="math notranslate nohighlight">\(\epsilon\)</span>, and recalculates the predicted coordinates. The process will repeat until K is modified by less than a factor of <span class="math notranslate nohighlight">\(10^{-6}\)</span> (In other words, the code runs if <span class="math notranslate nohighlight">\(|K-K\epsilon|&gt;K10^{-6}\)</span>). Write a code to do the following:</p>
 <ul class="simple">
@@ -866,13 +879,13 @@ $<span class="math notranslate nohighlight">\( b = - \frac{x_2 - x_1}{y_2 - y_1}
 </div>
 </section>
 <section id="submitting-your-assignment">
-<h2>Submitting Your Assignment<a class="headerlink" href="#submitting-your-assignment" title="Permalink to this heading">#</a></h2>
+<h2>Submitting Your Assignment<a class="headerlink" href="#submitting-your-assignment" title="Link to this heading">#</a></h2>
 <p>To submit your assignment please use the following link the assignment on GitHub classroom.</p>
 <p>Use this <a class="reference external" href="https://classroom.github.com/a/wVbN8SwU">link</a> to navigate to the assignment on GitHub classroom.</p>
 <p>If you need further instructions on submitting your assignment please look at Lab 1.</p>
 </section>
 <section id="viewing-your-score">
-<h2>Viewing your score<a class="headerlink" href="#viewing-your-score" title="Permalink to this heading">#</a></h2>
+<h2>Viewing your score<a class="headerlink" href="#viewing-your-score" title="Link to this heading">#</a></h2>
 <p><strong>It is your responsibility to ensure that your grade report shows correctly. We can only provide corrections to grades if a grading error is determined. If you do not receive a grade report your grade has not been recorded. It is your responsibility either resubmit the assignment correctly or contact the instructors before the assignment due date.</strong></p>
 <p>Each <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file you have uploaded will have a file with the name of your file + <code class="docutils literal notranslate"><span class="pre">Grade_Report.md</span></code>. You can view this file by clicking on the file name. This will show you the results of the autograder.</p>
 <p>We have both public and hidden tests. You will be able to see the score of both tests, but not the specific details of why the test passed or failed.</p>
@@ -882,7 +895,7 @@ $<span class="math notranslate nohighlight">\( b = - \frac{x_2 - x_1}{y_2 - y_1}
 </div>
 </section>
 <section id="fin">
-<h2>Fin<a class="headerlink" href="#fin" title="Permalink to this heading">#</a></h2>
+<h2>Fin<a class="headerlink" href="#fin" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -943,6 +956,7 @@ $<span class="math notranslate nohighlight">\( b = - \frac{x_2 - x_1}{y_2 - y_1}
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -984,7 +998,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1008,8 +1022,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

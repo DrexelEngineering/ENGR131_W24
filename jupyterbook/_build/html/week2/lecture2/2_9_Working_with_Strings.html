@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>📝 Working with Strings &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -19,49 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week2/lecture2/2_9_Working_with_Strings';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,10 +71,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -120,11 +114,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -158,7 +155,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -343,6 +351,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">week 10</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../week10/Final_Exam_Practice.html">📚✍️🧠 Practice Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week10/lab10/week_10_lab_intro.html">🧪 📝 Week 10 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week10/lab10/lab10-fitting.html">💻🧪 Lab 10: Combining Concepts to Build Interoperable Code for Plotting</a></li>
+
+
+
 </ul>
 
     </div>
@@ -621,10 +634,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="working-with-strings">
-<h1>📝 Working with Strings<a class="headerlink" href="#working-with-strings" title="Permalink to this heading">#</a></h1>
+<h1>📝 Working with Strings<a class="headerlink" href="#working-with-strings" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">friendly</span> <span class="kn">import</span> <span class="o">*</span>
@@ -633,15 +646,20 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>friendly_traceback 0.7.61; friendly 0.7.21.
-Type &#39;Friendly&#39; for basic help.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">friendly</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">friendly.jupyter</span> <span class="kn">import</span> <span class="n">friendly_tb</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;friendly&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <p>A lot of times you want to relay information to a user or send new instructions to a program. One common method to perform these tasks in Python is to use strings.</p>
 <section id="defining-strings">
-<h2>Defining Strings<a class="headerlink" href="#defining-strings" title="Permalink to this heading">#</a></h2>
+<h2>Defining Strings<a class="headerlink" href="#defining-strings" title="Link to this heading">#</a></h2>
 <p>Recall that to represent a string you wrap it in quotes:</p>
 <ul class="simple">
 <li><p>Single quotes <code class="docutils literal notranslate"><span class="pre">'</span></code> allows you to embed double quotes <code class="docutils literal notranslate"><span class="pre">&quot;</span></code></p></li>
@@ -796,7 +814,7 @@ object: a string (<span style="color: #005500; text-decoration-color: #005500; b
 </div>
 </section>
 <section id="formatting-within-a-string">
-<h2>Formatting within a string<a class="headerlink" href="#formatting-within-a-string" title="Permalink to this heading">#</a></h2>
+<h2>Formatting within a string<a class="headerlink" href="#formatting-within-a-string" title="Link to this heading">#</a></h2>
 <p>You can add tabs to a string using <code class="docutils literal notranslate"><span class="pre">\t</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -835,7 +853,7 @@ Internally, they are not interpreted as normal strings, but rather as special ch
 </div>
 </section>
 <section id="length-of-a-string">
-<h2>Length of a String<a class="headerlink" href="#length-of-a-string" title="Permalink to this heading">#</a></h2>
+<h2>Length of a String<a class="headerlink" href="#length-of-a-string" title="Link to this heading">#</a></h2>
 <p>You can find the length of a string using the built-in <code class="docutils literal notranslate"><span class="pre">len()</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -844,14 +862,12 @@ Internally, they are not interpreted as normal strings, but rather as special ch
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style='white-space:pre;overflow-x:auto;line-height:normal'></pre></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>130
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><pre style='white-space:pre;overflow-x:auto;line-height:normal'><span style="color: #101010; text-decoration-color: #101010">51</span>
+</pre></div></div>
 </div>
 </section>
 <section id="string-slicing">
-<h2>String Slicing<a class="headerlink" href="#string-slicing" title="Permalink to this heading">#</a></h2>
+<h2>String Slicing<a class="headerlink" href="#string-slicing" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Since strings are a sequence of characters, you can access it through slicing and indexing just like you would with Python lists or tuples.</p></li>
 <li><p>Strings are indexed with respect to each character in the string and the indexing begins at 0</p></li>
@@ -911,7 +927,7 @@ Internally, they are not interpreted as normal strings, but rather as special ch
 </div>
 </section>
 <section id="extracting-a-substring">
-<h2>Extracting a Substring<a class="headerlink" href="#extracting-a-substring" title="Permalink to this heading">#</a></h2>
+<h2>Extracting a Substring<a class="headerlink" href="#extracting-a-substring" title="Link to this heading">#</a></h2>
 <p>You can extract a substring using range slicing <code class="docutils literal notranslate"><span class="pre">[Start</span> <span class="pre">index</span> <span class="pre">(included):</span> <span class="pre">Stop</span> <span class="pre">index</span> <span class="pre">(excluded)]</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -961,7 +977,7 @@ Chocolate Cookie.
 </div>
 </div>
 <section id="using-a-stride">
-<h3>Using a Stride<a class="headerlink" href="#using-a-stride" title="Permalink to this heading">#</a></h3>
+<h3>Using a Stride<a class="headerlink" href="#using-a-stride" title="Link to this heading">#</a></h3>
 <p>It is possible to use a 3rd parameter stride to specify how many characters you would like to move forward.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -978,7 +994,7 @@ Chocolate Cookie.
 </div>
 </section>
 <section id="reversing-a-string">
-<h3>Reversing a String<a class="headerlink" href="#reversing-a-string" title="Permalink to this heading">#</a></h3>
+<h3>Reversing a String<a class="headerlink" href="#reversing-a-string" title="Link to this heading">#</a></h3>
 <p>Strides can be used to reverse a string</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -996,7 +1012,7 @@ Chocolate Cookie.
 </section>
 </section>
 <section id="concatenation-of-string">
-<h2>Concatenation of String<a class="headerlink" href="#concatenation-of-string" title="Permalink to this heading">#</a></h2>
+<h2>Concatenation of String<a class="headerlink" href="#concatenation-of-string" title="Link to this heading">#</a></h2>
 <p>There are many times where you might want to join or concatenate strings. In python this can be done using the simple addition operator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1179,7 +1195,7 @@ string (<span style="color: #005500; text-decoration-color: #005500; background-
 </div>
 </section>
 <section id="repeating-strings">
-<h2>Repeating Strings<a class="headerlink" href="#repeating-strings" title="Permalink to this heading">#</a></h2>
+<h2>Repeating Strings<a class="headerlink" href="#repeating-strings" title="Link to this heading">#</a></h2>
 <p>The multiply operator allows you to repeat strings</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1197,10 +1213,10 @@ string (<span style="color: #005500; text-decoration-color: #005500; background-
 </div>
 </section>
 <section id="built-in-string-methods">
-<h2>Built-in String Methods<a class="headerlink" href="#built-in-string-methods" title="Permalink to this heading">#</a></h2>
+<h2>Built-in String Methods<a class="headerlink" href="#built-in-string-methods" title="Link to this heading">#</a></h2>
 <p>Python provides many built-in methods or helper functions to manipulate strings.</p>
 <section id="capitalize-a-string">
-<h3>Capitalize a String<a class="headerlink" href="#capitalize-a-string" title="Permalink to this heading">#</a></h3>
+<h3>Capitalize a String<a class="headerlink" href="#capitalize-a-string" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;drexel engineering&quot;</span>
@@ -1217,7 +1233,7 @@ string (<span style="color: #005500; text-decoration-color: #005500; background-
 </div>
 </section>
 <section id="checks-if-lower-case">
-<h3>Checks if lower case<a class="headerlink" href="#checks-if-lower-case" title="Permalink to this heading">#</a></h3>
+<h3>Checks if lower case<a class="headerlink" href="#checks-if-lower-case" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;drexel engineering&quot;</span>
@@ -1234,7 +1250,7 @@ string (<span style="color: #005500; text-decoration-color: #005500; background-
 </div>
 </section>
 <section id="finds-substring">
-<h3>Finds Substring<a class="headerlink" href="#finds-substring" title="Permalink to this heading">#</a></h3>
+<h3>Finds Substring<a class="headerlink" href="#finds-substring" title="Link to this heading">#</a></h3>
 <p>Returns the lowest index in the string where the substring is found.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1250,7 +1266,7 @@ string (<span style="color: #005500; text-decoration-color: #005500; background-
 </div>
 </section>
 <section id="count-occurrence">
-<h3>Count Occurrence<a class="headerlink" href="#count-occurrence" title="Permalink to this heading">#</a></h3>
+<h3>Count Occurrence<a class="headerlink" href="#count-occurrence" title="Link to this heading">#</a></h3>
 <p>Counts how many times a substring occurs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1272,7 +1288,7 @@ string (<span style="color: #005500; text-decoration-color: #005500; background-
 </section>
 </section>
 <section id="replace-values">
-<h2>Replace Values<a class="headerlink" href="#replace-values" title="Permalink to this heading">#</a></h2>
+<h2>Replace Values<a class="headerlink" href="#replace-values" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">str.replace(substring,</span> <span class="pre">new)</span></code>: replaces all occurrences of the substring in string with new. You can also define a third argument max, which replaces at most max occurrences of substring in the string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1292,8 +1308,8 @@ string (<span style="color: #005500; text-decoration-color: #005500; background-
 Hip Hip hurray! Hip Hip hurray! Hip Hip hurray!
 
 IDs
-140704149846032
-140704149845936
+140321838649328
+140321838650576
 </pre></div>
 </div>
 </div>
@@ -1301,7 +1317,7 @@ IDs
 <p>You can see that the IDs for the string change. This is because they are immutable.</p>
 </section>
 <section id="splitting-strings">
-<h2>Splitting Strings<a class="headerlink" href="#splitting-strings" title="Permalink to this heading">#</a></h2>
+<h2>Splitting Strings<a class="headerlink" href="#splitting-strings" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">str.split(sep=&quot;&quot;)</span></code>: splits the string according to the delimiter (space if not provided) and returns a list of substrings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1310,27 +1326,26 @@ IDs
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style='white-space:pre;overflow-x:auto;line-height:normal'></pre></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span>
-│   &#39;Hip&#39;,
-│   &#39;Hip&#39;,
-│   &#39;hurray!&#39;,
-│   &#39;Hip&#39;,
-│   &#39;Hip&#39;,
-│   &#39;hurray!&#39;,
-│   &#39;Hip&#39;,
-│   &#39;Hip&#39;,
-│   &#39;hurray!&#39;
-<span class=" -Color -Color-Bold">]</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><pre style='white-space:pre;overflow-x:auto;line-height:normal'>
+<span style="font-weight: bold">[</span>
+<span style="color: #808080; text-decoration-color: #808080">│   </span><span style="color: #8b008b; text-decoration-color: #8b008b">'Hip'</span>,
+<span style="color: #808080; text-decoration-color: #808080">│   </span><span style="color: #8b008b; text-decoration-color: #8b008b">'Hip'</span>,
+<span style="color: #808080; text-decoration-color: #808080">│   </span><span style="color: #8b008b; text-decoration-color: #8b008b">'hurray!'</span>,
+<span style="color: #808080; text-decoration-color: #808080">│   </span><span style="color: #8b008b; text-decoration-color: #8b008b">'Hip'</span>,
+<span style="color: #808080; text-decoration-color: #808080">│   </span><span style="color: #8b008b; text-decoration-color: #8b008b">'Hip'</span>,
+<span style="color: #808080; text-decoration-color: #808080">│   </span><span style="color: #8b008b; text-decoration-color: #8b008b">'hurray!'</span>,
+<span style="color: #808080; text-decoration-color: #808080">│   </span><span style="color: #8b008b; text-decoration-color: #8b008b">'Hip'</span>,
+<span style="color: #808080; text-decoration-color: #808080">│   </span><span style="color: #8b008b; text-decoration-color: #8b008b">'Hip'</span>,
+<span style="color: #808080; text-decoration-color: #808080">│   </span><span style="color: #8b008b; text-decoration-color: #8b008b">'hurray!'</span>
+<span style="font-weight: bold">]</span>
+</pre></div></div>
 </div>
 </section>
 <section id="formatting-strings">
-<h2>Formatting Strings<a class="headerlink" href="#formatting-strings" title="Permalink to this heading">#</a></h2>
+<h2>Formatting Strings<a class="headerlink" href="#formatting-strings" title="Link to this heading">#</a></h2>
 <p>Sometimes you might want to substitute a variable into a string.</p>
 <section id="python-version-3-6-formatter">
-<h3>Python Version 3.6 Formatter<a class="headerlink" href="#python-version-3-6-formatter" title="Permalink to this heading">#</a></h3>
+<h3>Python Version 3.6 Formatter<a class="headerlink" href="#python-version-3-6-formatter" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span>
@@ -1363,7 +1378,7 @@ IDs
 </div>
 </section>
 <section id="python-version-3-6-f-strings">
-<h3>Python Version &gt;3.6 F-strings<a class="headerlink" href="#python-version-3-6-f-strings" title="Permalink to this heading">#</a></h3>
+<h3>Python Version &gt;3.6 F-strings<a class="headerlink" href="#python-version-3-6-f-strings" title="Link to this heading">#</a></h3>
 <p>f-string is a string literal that is prefixed with <code class="docutils literal notranslate"><span class="pre">f</span></code> or <code class="docutils literal notranslate"><span class="pre">F</span></code>. You can define identifiers to be used in your string within curly braces { }.</p>
 <p>We recommend using F-strings because their beautiful practicality and simplicity.</p>
 <div class="cell docutils container">
@@ -1442,6 +1457,7 @@ IDs
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1497,7 +1513,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1521,8 +1537,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

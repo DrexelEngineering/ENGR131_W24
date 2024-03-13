@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>📝 Introduction to Plotting in Python &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
   
@@ -19,49 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week9/lecture9/1_Introduction_plotting';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,10 +71,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -120,11 +114,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -158,7 +155,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -343,6 +351,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">week 10</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../week10/Final_Exam_Practice.html">📚✍️🧠 Practice Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week10/lab10/week_10_lab_intro.html">🧪 📝 Week 10 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week10/lab10/lab10-fitting.html">💻🧪 Lab 10: Combining Concepts to Build Interoperable Code for Plotting</a></li>
+
+
+
 </ul>
 
     </div>
@@ -615,16 +628,16 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-plotting-in-python">
-<h1>📝 Introduction to Plotting in Python<a class="headerlink" href="#introduction-to-plotting-in-python" title="Permalink to this heading">#</a></h1>
+<h1>📝 Introduction to Plotting in Python<a class="headerlink" href="#introduction-to-plotting-in-python" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Python would serve you well as your primary tool for visualizing quantitative data for most classes you will take as well as in your career.</p></li>
 <li><p>Matplotlib is the most common used Python package for 2-dimensional graphics.</p></li>
 </ul>
 <section id="data-visualization">
-<h2>Data visualization<a class="headerlink" href="#data-visualization" title="Permalink to this heading">#</a></h2>
+<h2>Data visualization<a class="headerlink" href="#data-visualization" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Graphics display information using a coordinate system, numbers, lines, symbols, words, shading, and color.</p></li>
 </ul>
@@ -635,7 +648,7 @@ document.write(`
 <li><p><strong>Graphics can be more informative than statistics!</strong></p></li>
 </ul>
 <section id="what-characterizes-a-valuable-graphic">
-<h3>What characterizes a valuable graphic?<a class="headerlink" href="#what-characterizes-a-valuable-graphic" title="Permalink to this heading">#</a></h3>
+<h3>What characterizes a valuable graphic?<a class="headerlink" href="#what-characterizes-a-valuable-graphic" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Presents data accurately, clearly, and efficiently</p></li>
 </ul>
@@ -645,12 +658,12 @@ document.write(`
 </section>
 </section>
 <section id="examples-of-data-visualization">
-<h2>Examples of data visualization<a class="headerlink" href="#examples-of-data-visualization" title="Permalink to this heading">#</a></h2>
+<h2>Examples of data visualization<a class="headerlink" href="#examples-of-data-visualization" title="Link to this heading">#</a></h2>
 <p>Famous dot map of deaths from Cholera in central London in September 1854 by Dr. John Snow</p>
 <p><strong>What could someone learn from reading this graphic?</strong></p>
 <p><img alt="title" src="../../_images/snow.png" /></p>
 <section id="including-various-dimensions">
-<h3>Including Various Dimensions<a class="headerlink" href="#including-various-dimensions" title="Permalink to this heading">#</a></h3>
+<h3>Including Various Dimensions<a class="headerlink" href="#including-various-dimensions" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Most data have at least two dimensions, which are represented on an x-axis and y-axis.</p></li>
 <li><p>Color, size, and marker type are common ways to represent additional dimensions of data.</p></li>
@@ -660,7 +673,7 @@ document.write(`
 </section>
 </section>
 <section id="principles-of-graphical-excellence">
-<h2>Principles of Graphical Excellence<a class="headerlink" href="#principles-of-graphical-excellence" title="Permalink to this heading">#</a></h2>
+<h2>Principles of Graphical Excellence<a class="headerlink" href="#principles-of-graphical-excellence" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Presentation of data needs to consider <em>substance, statistics, and design</em></p></li>
 </ul>
@@ -671,14 +684,14 @@ document.write(`
 <li><p>Graphics must not deceive the audience, intentionally or unintentionally.</p></li>
 </ul>
 <section id="what-is-wrong-with-this-figure">
-<h3>What is wrong with this figure?<a class="headerlink" href="#what-is-wrong-with-this-figure" title="Permalink to this heading">#</a></h3>
+<h3>What is wrong with this figure?<a class="headerlink" href="#what-is-wrong-with-this-figure" title="Link to this heading">#</a></h3>
 <img src="figs/Army_Figure.png" width="1200">
 </section>
 </section>
 <section id="guiding-principles">
-<h2>Guiding Principles<a class="headerlink" href="#guiding-principles" title="Permalink to this heading">#</a></h2>
+<h2>Guiding Principles<a class="headerlink" href="#guiding-principles" title="Link to this heading">#</a></h2>
 <section id="appropriate-visualization-for-the-data">
-<h3>Appropriate visualization for the data<a class="headerlink" href="#appropriate-visualization-for-the-data" title="Permalink to this heading">#</a></h3>
+<h3>Appropriate visualization for the data<a class="headerlink" href="#appropriate-visualization-for-the-data" title="Link to this heading">#</a></h3>
 <ul>
 <li><p>Avoid if possible since people are not good at determining angles.</p>
 <p><img alt="title" src="../../_images/pie_chart_1.png" /></p>
@@ -691,7 +704,7 @@ document.write(`
 </ul>
 </section>
 <section id="plots-with-multiple-y-axes">
-<h3>Plots with multiple y-axes<a class="headerlink" href="#plots-with-multiple-y-axes" title="Permalink to this heading">#</a></h3>
+<h3>Plots with multiple y-axes<a class="headerlink" href="#plots-with-multiple-y-axes" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Multiple y-axes are possible when it is important to show the interrelationship of two variables with different absolute values.</p></li>
 <li><p>Be intentional and careful when choosing this strategy.</p></li>
@@ -700,7 +713,7 @@ document.write(`
 <p><img alt="title" src="../../_images/two_lines_2.png" /></p>
 </section>
 <section id="make-the-y-value-zero-at-the-origin">
-<h3>Make the y-value zero at the origin<a class="headerlink" href="#make-the-y-value-zero-at-the-origin" title="Permalink to this heading">#</a></h3>
+<h3>Make the y-value zero at the origin<a class="headerlink" href="#make-the-y-value-zero-at-the-origin" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Most bar charts and figures with physical quantities are best represented with a value of zero at the origin.</p></li>
 <li><p>If the reference point and all of the values are greater than zero, it may be acceptable to have a non-zero value at the origin.</p></li>
@@ -708,7 +721,7 @@ document.write(`
 </section>
 </section>
 <section id="how-to-plot-in-python">
-<h2>How to plot in Python<a class="headerlink" href="#how-to-plot-in-python" title="Permalink to this heading">#</a></h2>
+<h2>How to plot in Python<a class="headerlink" href="#how-to-plot-in-python" title="Link to this heading">#</a></h2>
 <p>Plotting is easy using matplotlib.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -728,7 +741,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/4c94f0c39313c7a545d9bc889d5a826fa21441fe824d1871cf0fcb8ec250731d.png" src="../../_images/4c94f0c39313c7a545d9bc889d5a826fa21441fe824d1871cf0fcb8ec250731d.png" />
+<img alt="../../_images/526d612a35e49f59fc4e13a0d725d2bb3c22767d4edf45504871e9826a6ac990.png" src="../../_images/526d612a35e49f59fc4e13a0d725d2bb3c22767d4edf45504871e9826a6ac990.png" />
 </div>
 </div>
 <p>You might have noticed we used <code class="docutils literal notranslate"><span class="pre">try</span></code> and <code class="docutils literal notranslate"><span class="pre">except</span></code> this is called exception handling.</p>
@@ -757,7 +770,7 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Something went wrong with the plot!
 </pre></div>
 </div>
-<img alt="../../_images/0e55f04f3a11297b3d321ceabb0d3a600a2789a4914902578a1590cc0e0de83f.png" src="../../_images/0e55f04f3a11297b3d321ceabb0d3a600a2789a4914902578a1590cc0e0de83f.png" />
+<img alt="../../_images/b939873a0ebfe0d1abe1e7218ce8f485bb698d87d0fd5a003af297c5e30b4bbf.png" src="../../_images/b939873a0ebfe0d1abe1e7218ce8f485bb698d87d0fd5a003af297c5e30b4bbf.png" />
 </div>
 </div>
 </section>
@@ -820,6 +833,7 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -869,7 +883,7 @@ By Shannon Capps and Joshua C. Agar
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -893,8 +907,8 @@ By Shannon Capps and Joshua C. Agar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

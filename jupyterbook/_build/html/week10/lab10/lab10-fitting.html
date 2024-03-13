@@ -1,0 +1,1394 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>💻🧪 Lab 10: Combining Concepts to Build Interoperable Code for Plotting &#8212; ENGR 131: Winter 2024: Introductory Programming for Engineers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'week10/lab10/lab10-fitting';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="📝Week 10 - Lab Intro" href="week_10_lab_intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/Drexel_Logo.png" class="logo__image only-light" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>
+    <script>document.write(`<img src="../../_static/Drexel_Logo.png" class="logo__image only-dark" alt="ENGR 131: Winter 2024: Introductory Programming for Engineers - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to ENGR 131
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Syllabus 📜</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../syllabus/index_syllabus.html">Syllabus</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/1_Intro.html">1.0 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/2_Contact_Process.html">2.0 Contact Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/3_Student_Learning_Information.html">3.0 Student Learning Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/4_Course_Materials.html">4.0 Course Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/5_Course_Schedule.html">5.0 Course Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/6_Earning_Credit.html">6.0 Earning Credit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/7_Expectations_of_Students.html">7.0 Expectations of Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/8_Academic_Policies.html">8.0 Academic Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/9_Counseling_Services.html">9.0 Counseling Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../syllabus/10_Tips_For_Success.html">10.0 Tips For Success</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week1/lecture1/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_1_Why_Coding_is_the_most_important_skill.html">📝 Why Computer Programming is an Essential Skill</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_2_Who_is_Prof_Capps.html">📝 Who is Professor Capps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_3_Who_is_Prof_Agar.html">📝 Who is Professor Agar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_4_Engr131_Instructors.html">👨🏽👩🏾Engineering 131 Winter 2024 Instructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_5_Accessing_Course_Content.html">📝 Accessing Course Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_6_How_to_Use_Jupyterhub.html">📝 How to Use JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_7_Activity_1_Using_the_Jupyter_Hub.html">💻 Activity: Hello World JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_8_Introduction_to_Python.html">📝Why Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_9_Modules_and_Packages.html">📝Modules and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_10_Programming_Basics.html">📝Programming Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_11_Operators.html">📝 Python Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_12_Variables.html">📝 Variables and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week1/lecture1/1_13_Activity_1_2.html">💻 Activity: Practice with Variables and Operators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/lab1/lab_1-assignment-workflow.html">🧪 Lab 1 Assignment Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/homework1/Homework_1_Hello_World_Python.html">🏡📝 Homework 1 Hello World Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week1/NOTE_re-running_actions.html">Guide to Re-running an Action in GitHub</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week2/lecture2/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_1_Modules_and_Packages.html">📝Modules and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_2_Programming_Basics.html">📝Programming Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_3_Operators.html">📝 Python Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_4_Variables.html">📝 Variables and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_5_Activity_2_1.html">💻 Activity: Practice with Variables and Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_6_Data_Types_non_num.html">📝Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_7_Dictionaries.html">📝 Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_8_Lists_Tuples.html">📝 Collections in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_9_Working_with_Strings.html">📝 Working with Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week2/lecture2/2_10_Activity_2_2_Profanity_Detector.html">💻 Activity 3.2: Profanity &amp; Word Count Detector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/week_2_lab_intro.html">📝 Week 2 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/lab2/lab2-scrabble.html">🧪 Lab 2 Scrabble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/homework2/hw2-math.html">🏡📝 Homework 2 Using Python to Solve Math Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week2/quiz2/quiz_2_Hello_World_Python.html">🤔❓ Quiz 2 Hello World Python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week3/lecture3/Intro.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_1_Numerical_Data_Types.html">📝 Numerical Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_2_Dictionaries.html">📝 Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_3_Lists_Tuples.html">📝 Collections in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_4_Activity_1_SignalProcessing_Activity.html">💻 Activity 3.1: Indoor Temperature Control with Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_5_Intro_to_numpy.html">📝 Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week3/lecture3/3_6_Activity_2_Image_Activity.html">💻 Activity 3.2: Drawing a Blue “L” on an Image using NumPy and Matplotlib</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week3/week_3_lab_intro.html">📝Week 3 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week3/lab3/lab3-image.html">🧪🖥 Lab 3: Image Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week3/homework3/hw3-types.html">🏡📝 Homework 3 - Understanding Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week3/quiz3/jbook-quiz-3-math.html">🤔❓ Quiz 3 Using Python to Solve Math Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week4/lecture4/lecture4.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/0_Conceptual_Overview.html">📝 Conceptual Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/1_Introduction_to_functions.html">📝 Introduction to Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/2_activity_4_1.html">💻 Activity 4.1: Build a function to convert inches to feet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/3_Functions_as_objects.html">📝Functions as Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/4_Dynamic_Behavior_in_Python.html">📝 Dynamic Behavior in Python</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/5_activity_4_2.html">💻 Activity 4.2: Solving an Old School Punishment With a New Trick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/6_Debugging_in_functions.html">📝 Debugging in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/7_Functions_that_Return.html">📝 Return Output using Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/8_activity_4_3.html">💻 Activity 4.3: Analyzing Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week4/lecture4/9_activity_4_4.html">💻 Activity 4.4: Using Functions to Build the Game of Craps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week4/lab4/week_4_lab_intro.html">📝Week 4 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week4/lab4/lab4-classifier.html">Lab Activity: Training a Neural Network Classifier</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../week4/homework4/hw4-functions.html">🏡📝 Homework 4 - Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week4/quiz4/jbook-quiz4-types.html">🤔❓ Quiz 4 DataTypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week4/midtermPractice/midtermPractice.html">💪 Midterm Practice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week5/midterm_exam.html">📖😊🎓 Midterm Exam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week5/lab5/lab5-installAnaconda.html">🧪🖥 Week 5 - Set up Local Jupyter Notebooks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week6/lecture6/lecture6.html">Lecture 👩‍🏫</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week6/lecture6/1_intro_branching.html">📝 Introduction to Branching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week6/lecture6/2_activity_6_1.html">💻 Activity 6.1: Nuclear Plant Temperature Alert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week6/lecture6/3_intro_loops_integrals.html">📝 Introduction to Loops with Integrals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week6/lecture6/4_activity_6_2.html">💻 Activity 6.2: Taking integrals with loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week6/lecture6/5_activity_6_3.html">💻 Activity 6.3: Advancing integral evaluations by combining loops and branches</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week6/lab6/week_6_lab_intro.html">📝Week 6 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week6/lab6/lab6-RPS.html">Lab 6: Rock, Paper, Scissors Game</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../week6/hw6/hw6-branching.html">🏡📝 Homework 6 - Branching</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture 7️⃣</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week7/lecture7/0_Lecture_7.html">👩‍🏫 Lecture 7</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week7/lecture7/1_Iterators.html">Ordered Iteration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week7/lecture7/2_Nested_Lists.html">Accessing Items in a List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week7/lecture7/3_activity_current.html">💻 Activity: Accessing Items in a List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week7/lecture7/4_break_continue.html">Interrupting Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week7/lecture7/5_activity_modulus_operator.html">💻 Activity: Write the modulus operator using a while loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week7/lecture7/6_enumerate.html">Review of Enumerate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week7/lecture7/7_file_handling.html">File Handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week7/lab7/week_7_lab_intro.html">📝 Week 7 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week7/lab7/lab7-DNA.html">🧪 Lab 7: DNA Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week7/hw7/hw7-loops.html">🏡📝 Homework 7 - Loops and Flow Control</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week8/lecture8/Week_8.html">👩‍🏫 Lecture 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/1_Introduction_to_Classes.html">📝Classes</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/2_Activity_1_building_a_sensor.html">💻 Activity: Building a Sensor Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Creating_Multiple_Objects_of_a_Class.html">📝 Creating Multiple Objects of a Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/3_Inheritance.html">📝 Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/4_Creating_a_Circuit_Class.html">📝 Creating a Class for Storing and Operating on Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/5_Activity_2_Make_Parallel_Circuit_Class.html">💻 Activity: Create a Class for Parallel Circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/5_sol_Activity_2_Make_Parallel_Circuit_Class.html">💻 Activity: Create a Class for Parallel Circuits (solution)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week8/lecture8/6_Activity_lrc.html">💻 Activity: Building the game LCR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/lab8/Week_8_lab_intro.html">🧪 📝 Week 8 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/lab8/lab8-audio.html">🧪 Lab 8: Audio Synthesis with Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/hw8/hw8-strings.html">🏡📝 Homework 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8practice-functions-loops.html">🤔❓ ⌛️ Quiz 8 Practice - Using Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week8/quiz8/quiz8link.html">🤔❓ Quiz Link</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../week9/lecture9/0_lecture9.html">👩‍🏫 Lecture 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/1_Introduction_plotting.html">📝 Introduction to Plotting in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/2_Activity_1_refining_a_plot.html">💻 Activity: Refining a Simple Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/3_Colormaps.html">📝 Choices for Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/4_Activity_2_Bubble_plot.html">💻 Activity: Making a Updated Bubble Plot of Engineering Jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/5_Curve_Fitting.html">📝 Curve Fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../week9/lecture9/6_Interactive_Graphics.html">📝 Interactive Plotting with Bokeh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week9/lab9/lab9-pollutant.html">🧪 Lab 9: Pollutant Triangulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week9/lab9/week_9_lab_intro.html">🧪 📝 Week 9 - Lab Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week9/hw9/hw9-classes.html">🏡📝 Homework 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week9/quiz9/quiz9-classes-practice.html">🤔❓ ⌛️ Quiz 9 Practice - Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week9/quiz9/quiz9link.html">🤔❓ Quiz Link</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">week 10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Final_Exam_Practice.html">📚✍️🧠 Practice Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_10_lab_intro.html">🧪 📝 Week 10 - Lab Intro</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">💻🧪 Lab 10: Combining Concepts to Build Interoperable Code for Plotting</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://engrjhub.eastus.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/DrexelEngineering/ENGR131_W24&urlpath=lab/tree/ENGR131_W24/jupyterbook/week10/lab10/lab10-fitting.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/DrexelEngineering/ENGR131_W24/blob/main/jupyterbook/week10/lab10/lab10-fitting.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/DrexelEngineering/ENGR131_W24" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/DrexelEngineering/ENGR131_W24/issues/new?title=Issue%20on%20page%20%2Fweek10/lab10/lab10-fitting.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/week10/lab10/lab10-fitting.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>💻🧪 Lab 10: Combining Concepts to Build Interoperable Code for Plotting</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">💻🧪 Lab 10: Combining Concepts to Build Interoperable Code for Plotting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entering-your-information-for-credit">Entering Your Information for Credit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-begin">Before you begin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-functions">2. Importing Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementing-a-class-for-mathexpressions">3. Implementing a Class for MathExpressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-linear-function">4. Define a Linear Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">5. Plotting</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-noisyfunction">6. A NoisyFunction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-our-class">7. Testing our Class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-new-math-functions">8. Defining new math functions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-our-class-with-the-sine-function">9 Using our class with the sine function</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-our-class-with-the-exponential-function">10 Using our class with the Exponential function</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-your-assignment">Submitting Your Assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fin">Fin</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize Otter</span>
+<span class="kn">import</span> <span class="nn">otter</span>
+<span class="n">grader</span> <span class="o">=</span> <span class="n">otter</span><span class="o">.</span><span class="n">Notebook</span><span class="p">(</span><span class="s2">&quot;lab10-fitting.ipynb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="lab-10-combining-concepts-to-build-interoperable-code-for-plotting">
+<h1>💻🧪 Lab 10: Combining Concepts to Build Interoperable Code for Plotting<a class="headerlink" href="#lab-10-combining-concepts-to-build-interoperable-code-for-plotting" title="Link to this heading">#</a></h1>
+<p>This lab uses all of the concepts we have learned in python programming to make reusable building blocks for generating, plotting, and fitting data.</p>
+<p>As an engineer you will regularly be presented with noisy data and want to fit that data to a function. In this assignment, we will build some machinery and a coding schema to generate noisy data (since we do not have real data), plot data, and fit the results. We will build tools to simplify the visualization of the results. The code will be designed to be interoperable. If we were to have a new type of data or mathematical expression, we could reuse all the code we have written.</p>
+<section id="entering-your-information-for-credit">
+<h2>Entering Your Information for Credit<a class="headerlink" href="#entering-your-information-for-credit" title="Link to this heading">#</a></h2>
+<p>To receive credit for assignments it is important we can identify your work from others. To do this we will ask you to enter your information in the following code block.</p>
+<section id="before-you-begin">
+<h3>Before you begin<a class="headerlink" href="#before-you-begin" title="Link to this heading">#</a></h3>
+<p>Run the block of code at the top of the notebook that imports and sets up the autograder. This will allow you to check your work.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Please provide your first name, last name, Drexel ID, and Drexel email. Make sure these are provided as strings. &quot;STRINGS ARE TEXT ENCLOSED IN QUOTATION MARKS.&quot;</span>
+
+<span class="c1"># In the assignments you will see sections of code that you need to fill in that are marked with ... (three dots). Replace the ... with your code.</span>
+<span class="n">first_name</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">drexel_id</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">drexel_email</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q0-Checking-Your-Name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="importing-functions">
+<h2>2. Importing Functions<a class="headerlink" href="#importing-functions" title="Link to this heading">#</a></h2>
+<p>Here we will import some packages that we need for this assignment</p>
+<p>2.1 import <code class="docutils literal notranslate"><span class="pre">numpy</span></code> as <code class="docutils literal notranslate"><span class="pre">np</span></code></p>
+<p>2.2 import the submodule <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> and assign it to <code class="docutils literal notranslate"><span class="pre">plt</span></code></p>
+<p>2.3 import from <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> the <code class="docutils literal notranslate"><span class="pre">curve_fit</span></code> function</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2.1 you need to import numpy as np</span>
+<span class="o">...</span>
+
+<span class="c1"># 2.2 You need to import the submodule matplotlib.pyplot and assign it to plt</span>
+<span class="o">...</span>
+
+<span class="c1"># 2.3 You need to import from scipy.optimize the curve_fit function</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q2-Importing Functions&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="implementing-a-class-for-mathexpressions">
+<h2>3. Implementing a Class for MathExpressions<a class="headerlink" href="#implementing-a-class-for-mathexpressions" title="Link to this heading">#</a></h2>
+<p>In Python and programming in general, it is common to have a base class that adds functionality to an object. For example, if you have a car that you are building, you might want to add blind spot detection. You can create the blind spot detection software and hardware and install it on multiple cars types. We will do the same with a math function. We will build a class that adds a methods to fit and evaluate a math expression.</p>
+<p>When we build this class we need it to be flexible to accept math functions with a flexible number of input parameters. We implement a fit function where we can input any parameters into the function (this is important for optimization required to fit data), and an evaluate method which uses the parameters set during initialization.</p>
+<p>Follow these steps:</p>
+<p>3.1 Define a <code class="docutils literal notranslate"><span class="pre">class</span></code> <code class="docutils literal notranslate"><span class="pre">MathExpression</span></code>.</p>
+<p>3.2 Build an initialization function.</p>
+<ul class="simple">
+<li><p>The function should take a variable <code class="docutils literal notranslate"><span class="pre">func</span></code> which is a mathematical function</p></li>
+<li><p>The function should accept <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code></p>
+<ul>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> will be the parameters of the fitting function</p></li>
+<li><p>We want to save the <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>, each key-value pair of <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> where the key is the variable name, and <code class="docutils literal notranslate"><span class="pre">func</span></code> as an attribute of the object</p></li>
+</ul>
+</li>
+</ul>
+<p>3.3 Define a method <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p>
+<ul class="simple">
+<li><p>That accepts a required input <code class="docutils literal notranslate"><span class="pre">x</span></code>, and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code></p></li>
+<li><p>Return the result when you call the objects method <code class="docutils literal notranslate"><span class="pre">func</span></code> that accepts a required input <code class="docutils literal notranslate"><span class="pre">x</span></code>, and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code></p></li>
+</ul>
+<p>3.4 Define an method for the <code class="docutils literal notranslate"><span class="pre">class</span></code> <code class="docutils literal notranslate"><span class="pre">evaluate</span></code>.</p>
+<ul class="simple">
+<li><p>Takes a required input <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+<li><p>Returns the result when you call the objects method <code class="docutils literal notranslate"><span class="pre">func</span></code> that accepts a required input <code class="docutils literal notranslate"><span class="pre">x</span></code>, and the <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> values set at initialization.</p></li>
+</ul>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3.1 define a class MathExpression</span>
+<span class="o">...</span>
+    
+    <span class="c1"># 3.2 Use the built in initialization function</span>
+    <span class="c1"># The function should take a variable func which is a mathematical function for generation and fitting (we will define this later)</span>
+    <span class="c1"># The function should accept **kwargs</span>
+    <span class="c1"># The kwargs will be the parameters of the fitting function </span>
+    <span class="o">...</span>
+        
+        <span class="c1"># use the .items() method to extract from kwargs a list of tuples with the key value pairs</span>
+        <span class="c1"># Create a for loop that extracts the key value pairs from the kwargs</span>
+        <span class="c1">#   make sure to unpack the tuple into the variables key and value</span>
+        <span class="c1"># Inside the for loop, use the built in python method setattr to add an attribute to the MathExpression Object </span>
+        <span class="c1">#   for the key, use the variable key, </span>
+        <span class="c1">#   for the value, use the variable value</span>
+        <span class="o">...</span>
+        
+        <span class="c1"># save the kwargs as an attribute of the object named kwargs</span>
+        <span class="o">...</span>
+        
+        <span class="c1"># save the function as an attribute of the object named func</span>
+        <span class="o">...</span>
+        
+    <span class="c1"># 3.3 for the class, define a method fit that accepts a required input x, and **kwargs</span>
+    <span class="c1">#   x is the points to sample along the x axis</span>
+    <span class="c1">#   **kwargs are new parameters to test</span>
+    <span class="c1">#   Note: this is a requirement of the fitting function</span>
+    <span class="o">...</span>
+        
+        <span class="c1"># return the result when you call the object&#39;s method func that accepts a required input x and **kwargs</span>
+        <span class="o">...</span>
+        
+    <span class="c1"># 3.4 for the class, define a method evaluate that takes a required input x</span>
+    <span class="o">...</span>
+       
+        <span class="c1"># return the result when you call the object&#39;s method func that accepts a required input x and the kwargs values set at initialization.</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q3-Implement MathExpression&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="define-a-linear-function">
+<h2>4. Define a Linear Function<a class="headerlink" href="#define-a-linear-function" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[ Y = slope * x + intercept \]</div>
+<p>We want to define a simple linear function. A linear model is one of the simplest fitting functions used in science and engineering. It says that an independent variable directly influences a dependent variable.</p>
+<p>4.1 Build a function <code class="docutils literal notranslate"><span class="pre">LinearFunction</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">LinearFunction</span></code> should take three inputs: <code class="docutils literal notranslate"><span class="pre">x</span></code> for the independent variable, <code class="docutils literal notranslate"><span class="pre">m</span></code> for the slope, <code class="docutils literal notranslate"><span class="pre">b</span></code> for the intercept.</p></li>
+<li><p>Return the calculation of y, where y = slope * x + intercept.</p></li>
+<li><p>Make sure to replace slope and intercept with the correct variables.</p></li>
+</ul>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4.1 build a function LinearFunction</span>
+<span class="c1"># linear function should take two inputs m - for the slope, and b for the intercept</span>
+<span class="c1"># return the calculation of y, where y = slope * x + intercept. </span>
+<span class="c1"># Make sure to replace slope and intercept with the correct variables.</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q4 - Linear Function&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plotting">
+<h2>5. Plotting<a class="headerlink" href="#plotting" title="Link to this heading">#</a></h2>
+<p>One of the best ways to understand your code is doing what you expect is to visualize the results. We can do this by plotting the data.</p>
+<p>5.1 Instantiate an object <code class="docutils literal notranslate"><span class="pre">Linear_</span></code> using the <code class="docutils literal notranslate"><span class="pre">MathExpression</span></code> <code class="docutils literal notranslate"><span class="pre">Class</span></code>.</p>
+<ul class="simple">
+<li><p>The input <code class="docutils literal notranslate"><span class="pre">func</span></code> should be the <code class="docutils literal notranslate"><span class="pre">LinearFunction</span></code> you wrote</p></li>
+<li><p>The variables needed for kwargs must be provided as key value pairs.</p></li>
+<li><p>In this case, those key value pairs are <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">1</span></code>, and <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">-3</span></code>.</p></li>
+</ul>
+<p>5.2 Derive a linearly-spaced vector for the independent variable.</p>
+<ul class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> function to make a linearly-spaced array from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">10</span></code> with <code class="docutils literal notranslate"><span class="pre">100</span></code> steps</p></li>
+<li><p>Assign the array to <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+</ul>
+<p>5.3. call the built-in <code class="docutils literal notranslate"><span class="pre">evaluate</span></code> method of the <code class="docutils literal notranslate"><span class="pre">LinearFunction</span></code> object over the range defined by <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<ul class="simple">
+<li><p>assign the output to a variable <code class="docutils literal notranslate"><span class="pre">y</span></code></p></li>
+</ul>
+<p>5.4 Use the function <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> to plot <code class="docutils literal notranslate"><span class="pre">x</span></code> vs <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<ul class="simple">
+<li><p>assign the plot to a variable called <code class="docutils literal notranslate"><span class="pre">linear_plot</span></code></p></li>
+</ul>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.1 Instantiate an object Linear_ using the MathExpression Class</span>
+<span class="c1"># The variables needed for the Kwargs m = 1, and b = -3 need to be provided as key value pairs. </span>
+<span class="c1"># example my_function(x=1), this would provide a **kwargs key (x) value (1)</span>
+
+<span class="o">...</span>
+
+<span class="c1"># 5.2 use the np.linspace function to make a linearly-spaced array from 0 to 10, with 100 steps</span>
+<span class="c1"># save this to the variable x</span>
+
+<span class="o">...</span>
+
+<span class="c1"># 5.3 call the built-in `evaluate` method of the LinearFunction object over the range defined by x</span>
+<span class="c1"># assign the output to a variable y</span>
+
+<span class="o">...</span>
+
+<span class="c1"># 5.4 use the function plt.plot to plot x vs y</span>
+
+<span class="o">...</span>
+
+<span class="c1"># we do not need to add more labels to this plot. It was just for testing.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q5 - Plotting&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="a-noisyfunction">
+<h1>6. A NoisyFunction<a class="headerlink" href="#a-noisyfunction" title="Link to this heading">#</a></h1>
+<p><em>You are not responsible for writing any code or comments in this Task.</em></p>
+<p>We have written a function with several useful methods that you might want to use as an engineer.</p>
+<p>6.1 It inherits information from an object of type <code class="docutils literal notranslate"><span class="pre">MathExpression</span></code></p>
+<p>6.2 It can generate noisy data, which is to simulate real experimental data.</p>
+<p>6.3 It can fit the data to an known function.</p>
+<p>6.4 It can fit, plot and format the results for quick visualization.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># build a class Noisy Function that Inherits MathExpression</span>
+<span class="c1"># This is simply done writing class NoisyFunction(MathExpression)</span>
+<span class="k">class</span> <span class="nc">NoisyFunction</span><span class="p">(</span><span class="n">MathExpression</span><span class="p">):</span>
+    
+    <span class="c1"># This class does not require any specific initialization variables, but it will require that we pass the inherited variable through.</span>
+    <span class="c1"># we have done this for you </span>
+    <span class="c1"># you should not touch this code. If you do, here it is</span>
+    <span class="c1"># def __init__(self, *args, **kwargs):</span>
+    <span class="c1">#    super().__init__(*args, **kwargs)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="c1"># build a function generate noisy data with two required inputs</span>
+    <span class="c1">#   x_range - a list of the minimum and max ranges for to generate the data</span>
+    <span class="c1">#   noise_amplitude - a float from which sets the magnitude of the noise</span>
+    <span class="k">def</span> <span class="nf">generate_noisy_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_range</span><span class="p">,</span> <span class="n">noise_amplitude</span><span class="p">):</span>
+        <span class="c1"># use np.linspace to generate x data along the range</span>
+        <span class="c1"># generate 100 points</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x_range</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">100</span><span class="p">)</span>
+        
+        <span class="c1"># call the evaluate method of the base function object to return the true values</span>
+
+        <span class="n">y_true</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        
+        <span class="c1"># generate the noise vector by multiplying the noise amplitude by an random noise vector of length x  </span>
+        <span class="c1"># the random noise vector should be generated with np.random.randn</span>
+
+        <span class="n">noise</span> <span class="o">=</span> <span class="n">noise_amplitude</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        
+        <span class="c1"># add the noise to the y_true value</span>
+        <span class="c1"># save it in a new variable y</span>
+
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y_true</span> <span class="o">+</span> <span class="n">noise</span>
+        
+        <span class="c1"># return x, y, and y_true</span>
+
+        <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_true</span>
+
+    <span class="c1"># build a function fit_data that takes 2 inputs x and y</span>
+    <span class="k">def</span> <span class="nf">fit_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="c1"># call the curvefit function</span>
+        <span class="c1"># provide the inherited pointed to the function</span>
+        <span class="c1"># For the initial guess provide the true values they are contained within the saved variable kwargs</span>
+        <span class="c1"># You can get the values of a dictionary using the built-in method .values()</span>
+        <span class="c1"># P0 takes a list. You need to convert the values to a list.</span>
+        <span class="c1"># Curvefit should return two values assign them to popt and pcov. </span>
+        <span class="c1"># popt is the fit results</span>
+
+        <span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+        
+        <span class="c1"># Return popt and pcov</span>
+
+        <span class="k">return</span> <span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span>
+
+    <span class="c1"># build a function plot_fit_results that plots the raw and fit results</span>
+    <span class="c1"># This function should take two input parameters:</span>
+    <span class="c1">#   x_range - a tuple defining the x range to plot</span>
+    <span class="c1">#   noise_amplitude - a float used to control the magnitude of the noise</span>
+    <span class="k">def</span> <span class="nf">plot_fit_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_range</span><span class="p">,</span> <span class="n">noise_amplitude</span><span class="p">):</span>
+    
+
+            <span class="c1"># use the subplots function in pyplot to create a multiplot figure with 2 columns and 1 row.</span>
+            <span class="c1"># set the figure size = 10, 5 - figsize takes a tuple</span>
+            <span class="c1"># assign the output to two variables fig and axs</span>
+    
+            <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+            
+
+            <span class="c1"># make a list of strings called labels </span>
+            <span class="c1"># The 0th index should be &quot;True Fit&quot;</span>
+            <span class="c1"># The 1st index should be &quot;Noisy Fit&quot;</span>
+    
+            <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;True Fit&#39;</span><span class="p">,</span> <span class="s1">&#39;Noisy Fit&#39;</span><span class="p">]</span>
+            
+
+            <span class="c1"># call the generate_noisy_data function from this class</span>
+            <span class="c1"># save the returned variables to x, y, and y_true</span>
+    
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_true</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_noisy_data</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">noise_amplitude</span><span class="p">)</span>
+            
+
+            <span class="c1"># make a look that loops over the axs with enumerate.</span>
+            <span class="c1"># set the iterator equal to the variable i</span>
+            <span class="c1"># set the value equal to the variable ax</span>
+    
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axs</span><span class="p">):</span>
+                
+    
+                <span class="c1"># create a scatterplot on the axis object </span>
+                <span class="c1"># plot x vs y</span>
+                <span class="c1"># make the marker size = 5 (with the `s` tag)</span>
+                <span class="c1"># add a label &#39;Raw Data&#39; (with the `label` tag)</span>
+        
+                <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Raw Data&#39;</span><span class="p">)</span>
+                
+    
+                <span class="c1"># write an if statement that is true if the label of the graph is &quot;True Fit&quot;. This is ordered by the list labels you created.</span>
+        
+                <span class="k">if</span> <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;True Fit&#39;</span><span class="p">:</span>
+                    
+        
+                    <span class="c1"># if the statement was true on the axis object plot</span>
+                    <span class="c1"># x vs y true</span>
+                    <span class="c1"># make the line red using the &#39;r&#39; flag</span>
+                    <span class="c1"># add a label as indexed from the list</span>
+            
+                    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                
+    
+                <span class="c1"># add an elif statement that is true if the label of the graph is &quot;Noisy Fit&quot; this is ordered by the list labels you created.</span>
+        
+                <span class="k">elif</span> <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Noisy Fit&#39;</span><span class="p">:</span>
+                    
+        
+                    <span class="c1"># call the method in the class fit_data</span>
+                    <span class="c1"># This should fit the x and y data</span>
+                    <span class="c1"># have it return the variables popt and pcov</span>
+            
+                    <span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                    
+        
+                    <span class="c1"># use the predicted popt and the inherited function to generate the y values for the fit results</span>
+                    <span class="c1"># make sure to unpack the popt list with the * operator</span>
+            
+                    <span class="n">y_noisy_fit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">)</span>
+                    
+        
+                    <span class="c1"># on the axis object plot</span>
+                    <span class="c1"># x vs y_noisy_fit</span>
+                    <span class="c1"># make the line blue using the &#39;b&#39; flag</span>
+                    <span class="c1"># add a label as indexed from the list</span>
+            
+                    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_noisy_fit</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                 
+    
+                <span class="c1"># else passes to the next loop</span>
+            
+                <span class="k">else</span><span class="p">:</span> 
+                    <span class="k">pass</span>
+            
+    
+                <span class="c1"># use the set_xlabel method to set the x-label of the graph to &#39;x&#39;</span>
+                <span class="c1"># use the set_ylabel method to set the y-label of the graph to &#39;y&#39;</span>
+        
+                <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+                
+    
+                <span class="c1"># call the legend method of the axis object to show the legend</span>
+        
+                <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+                               
+            <span class="k">return</span> <span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="testing-our-class">
+<h2>7. Testing our Class<a class="headerlink" href="#testing-our-class" title="Link to this heading">#</a></h2>
+<p>In coding it is always a good idea to run all parts of your code to check it is performing as expected.</p>
+<p>7.1 Create a <code class="docutils literal notranslate"><span class="pre">NoisyFunction</span></code> instance for a linear function</p>
+<ul class="simple">
+<li><p>Assign this object to the variable <code class="docutils literal notranslate"><span class="pre">linear_func</span></code></p></li>
+<li><p>The input <code class="docutils literal notranslate"><span class="pre">func</span></code> should be the <code class="docutils literal notranslate"><span class="pre">LinearFunction</span></code> you wrote</p></li>
+<li><p>The slope should be <code class="docutils literal notranslate"><span class="pre">3</span></code> and the intercept should be <code class="docutils literal notranslate"><span class="pre">4</span></code></p></li>
+</ul>
+<p>7.2 Call the proper method of <code class="docutils literal notranslate"><span class="pre">linear_func</span></code> to generate noisy data over the range from 0- <span class="math notranslate nohighlight">\(2\pi\)</span></p>
+<ul class="simple">
+<li><p>the noise amplitude is <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p>save the results to <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">y_true</span></code></p></li>
+</ul>
+<p>7.3 Fit the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> data using the proper method of <code class="docutils literal notranslate"><span class="pre">linear_func</span></code></p>
+<ul class="simple">
+<li><p>save the fit results to <code class="docutils literal notranslate"><span class="pre">popt</span></code>, <code class="docutils literal notranslate"><span class="pre">pcov</span></code></p></li>
+<li><p>(these names represent the optimal parameters (<code class="docutils literal notranslate"><span class="pre">popt</span></code>) and the parameters’ covariance (<code class="docutils literal notranslate"><span class="pre">pcov</span></code>))</p></li>
+</ul>
+<p>7.4 Use the built-in method to plot the fit result</p>
+<ul class="simple">
+<li><p>set the range equal to <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">16</span></code></p></li>
+<li><p>set the noise amplitude equal to <code class="docutils literal notranslate"><span class="pre">0.3</span></code></p></li>
+<li><p>Save this to the variable plot</p></li>
+</ul>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># 7.1 Create a NoisyFunction instance for a linear function</span>
+<span class="c1"># Assign this object to the variable linear_func</span>
+<span class="c1"># The slope should be 3 and the intercept should be 4</span>
+<span class="n">linear_func</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># 7.2 call the generate_noisy_data function of the object the linear_func to produce noisy data over the range from 0-2pi</span>
+<span class="c1">#   use a tuple to indicate the range from 0-2pi</span>
+<span class="c1">#   the noise amplitude is 1</span>
+<span class="c1">#   save the results to x, y, and y_true</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_true</span>  <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># 7.3 Fit the data</span>
+<span class="c1"># save the fit results to popt, pcov</span>
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># 7.4 Use the built-in method to plot the fit result</span>
+<span class="c1"># set the range equal to 0 to 16</span>
+<span class="c1"># set the noise amplitude equal to 0.3</span>
+<span class="c1"># Save this to the variable plot</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q7 - plotting and fitting&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="defining-new-math-functions">
+<h2>8. Defining new math functions<a class="headerlink" href="#defining-new-math-functions" title="Link to this heading">#</a></h2>
+<p>Now we can view the flexibility (interoperability) of our code.</p>
+<p>Define two new functions. Follow the logic of the way you created <code class="docutils literal notranslate"><span class="pre">LinearFunction</span></code>.</p>
+<p>8.1 <code class="docutils literal notranslate"><span class="pre">SineFunction</span></code></p>
+<div class="math notranslate nohighlight">
+\[g(x) = A (sin(2\pi f x+\phi))\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> represents amplitude, <span class="math notranslate nohighlight">\(f\)</span> represents the frequency, and <span class="math notranslate nohighlight">\(\phi\)</span> represents the phase.</p>
+<p>8.2 <code class="docutils literal notranslate"><span class="pre">ExponentialFunction</span></code></p>
+<div class="math notranslate nohighlight">
+\[h(x) = ae^{bx}\]</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 8.1 Write the SineFunction here</span>
+<span class="c1"># the inputs should be x, amplitude, frequency, phase</span>
+<span class="o">...</span>
+
+<span class="c1"># 8.1 Write the ExponentialFunction here</span>
+<span class="c1"># the inputs should be x, a, b</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q8-new functions&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="using-our-class-with-the-sine-function">
+<h1>9 Using our class with the sine function<a class="headerlink" href="#using-our-class-with-the-sine-function" title="Link to this heading">#</a></h1>
+<p>Now we can use nearly the same code from Task 7 to test our <code class="docutils literal notranslate"><span class="pre">SineFunction</span></code>.</p>
+<p>9.1 Create a <code class="docutils literal notranslate"><span class="pre">NoisyFunction</span></code> instance for the sine function</p>
+<ul class="simple">
+<li><p>Assign this object to the variable <code class="docutils literal notranslate"><span class="pre">sine_func</span></code></p></li>
+<li><p>The input <code class="docutils literal notranslate"><span class="pre">func</span></code> should be the <code class="docutils literal notranslate"><span class="pre">SineFunction</span></code> you wrote</p></li>
+<li><p>The amplitude should be 2, the frequency should be .2, and the phase should be .5</p></li>
+</ul>
+<p>9.2 Apply the <code class="docutils literal notranslate"><span class="pre">generate_noisy_data</span></code> method of <code class="docutils literal notranslate"><span class="pre">sine_func</span></code> to produce noisy data over the range from 0-6 <span class="math notranslate nohighlight">\(\pi\)</span></p>
+<ul class="simple">
+<li><p>use a tuple to indicate the range from 0-6 <span class="math notranslate nohighlight">\(\pi\)</span></p></li>
+<li><p>the noise amplitude is 1.5</p></li>
+<li><p>save the results to <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">y_true</span></code></p></li>
+</ul>
+<p>9.3 Fit the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> data using the proper method of <code class="docutils literal notranslate"><span class="pre">sine_func</span></code></p>
+<ul class="simple">
+<li><p>save the fit results to <code class="docutils literal notranslate"><span class="pre">popt</span></code>, <code class="docutils literal notranslate"><span class="pre">pcov</span></code></p></li>
+</ul>
+<p>9.4 Use the built-in method to plot the fit results</p>
+<ul class="simple">
+<li><p>set the range equal to 0 to 6 <span class="math notranslate nohighlight">\(\pi\)</span></p></li>
+<li><p>set the noise amplitude equal to 1.5</p></li>
+<li><p>Save this to the variable <code class="docutils literal notranslate"><span class="pre">plot</span></code></p></li>
+</ul>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># 9.1 Create a NoisyFunction instance for a sine function</span>
+<span class="c1"># Assign this object to the variable sine_func</span>
+<span class="c1"># The amplitude should be 2, the frequency should be .2, and the phase should be .5</span>
+<span class="n">sine_func</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># 9.2 evaluate the sine_func to produce noisy data over the range from 0-6pi</span>
+<span class="c1"># the noise amplitude is 1.5</span>
+<span class="c1"># save the results to x, y, and y_true</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_true</span>  <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># 9.3 Fit the data</span>
+<span class="c1"># save the fit results to popt, pcov</span>
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># 9.4 Use the built-in method to plot the fit results</span>
+<span class="c1"># set the range equal to 0 to 6 pi</span>
+<span class="c1"># set the noise amplitude equal to 1.5</span>
+<span class="c1"># Save this to the variable plot</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q9-using the class with new Sine functions&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="using-our-class-with-the-exponential-function">
+<h1>10 Using our class with the Exponential function<a class="headerlink" href="#using-our-class-with-the-exponential-function" title="Link to this heading">#</a></h1>
+<p>Now we can use nearly the exact same code to test our Exponential function. We wrote one code that we can use over and over again in different ways!</p>
+<p>10.1 Create a <code class="docutils literal notranslate"><span class="pre">NoisyFunction</span></code> instance for a exponential function</p>
+<ul class="simple">
+<li><p>Assign this object to the variable <code class="docutils literal notranslate"><span class="pre">exp_func</span></code></p></li>
+<li><p>The input <code class="docutils literal notranslate"><span class="pre">func</span></code> should be the <code class="docutils literal notranslate"><span class="pre">ExponentialFunction</span></code> you wrote</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> should be 2, and <code class="docutils literal notranslate"><span class="pre">b</span></code> should be .2</p></li>
+</ul>
+<p>10.2 Call the proper method of <code class="docutils literal notranslate"><span class="pre">exp_func</span></code> to generate noisy data over the range from 0-6 <span class="math notranslate nohighlight">\(\pi\)</span></p>
+<ul class="simple">
+<li><p>use a tuple to indicate the range from 0-6 <span class="math notranslate nohighlight">\(\pi\)</span></p></li>
+<li><p>the noise amplitude is 1.5</p></li>
+<li><p>save the results to <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">y_true</span></code></p></li>
+</ul>
+<p>10.3 Fit the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> data using the proper method of <code class="docutils literal notranslate"><span class="pre">exp_func</span></code></p>
+<ul class="simple">
+<li><p>save the fit results to <code class="docutils literal notranslate"><span class="pre">popt</span></code>, <code class="docutils literal notranslate"><span class="pre">pcov</span></code></p></li>
+</ul>
+<p>10.4 Use the built-in method to plot the fit results</p>
+<ul class="simple">
+<li><p>set the range equal to 0 to 6 <span class="math notranslate nohighlight">\(\pi\)</span></p></li>
+<li><p>set the noise amplitude equal to 1.5</p></li>
+<li><p>save this to the variable <code class="docutils literal notranslate"><span class="pre">plot</span></code></p></li>
+</ul>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># 10.1 Create a NoisyFunction instance for a exponential function</span>
+<span class="c1"># Assign this object to the variable exp_func</span>
+<span class="c1"># The a should be 2, and b should be .2</span>
+<span class="n">exp_func</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># 10.2 evaluate the exp_func to produce noisy data over the range from 0-6pi</span>
+<span class="c1"># the noise amplitude is 1.5</span>
+<span class="c1"># save the results to x, y, and y_true</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_true</span>  <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># 10.3 Fit the data</span>
+<span class="c1"># save the fit results to popt, pcov</span>
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># 10.4 Use the built-in method to plot the fit results</span>
+<span class="c1"># set the range equal to 0 to 6 pi</span>
+<span class="c1"># set the noise amplitude equal to 1.5</span>
+<span class="c1"># Save this to the variable plot</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q10-using the class with new exponential functions&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="submitting-your-assignment">
+<h2>Submitting Your Assignment<a class="headerlink" href="#submitting-your-assignment" title="Link to this heading">#</a></h2>
+<p>To submit your assignment, please show the TA in your lab section your completed work before you leave the lab.</p>
+</section>
+<section id="fin">
+<h2>Fin<a class="headerlink" href="#fin" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./week10/lab10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="week_10_lab_intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">📝Week 10 - Lab Intro</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">💻🧪 Lab 10: Combining Concepts to Build Interoperable Code for Plotting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entering-your-information-for-credit">Entering Your Information for Credit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-begin">Before you begin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-functions">2. Importing Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementing-a-class-for-mathexpressions">3. Implementing a Class for MathExpressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-linear-function">4. Define a Linear Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">5. Plotting</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-noisyfunction">6. A NoisyFunction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-our-class">7. Testing our Class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-new-math-functions">8. Defining new math functions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-our-class-with-the-sine-function">9 Using our class with the sine function</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-our-class-with-the-exponential-function">10 Using our class with the Exponential function</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-your-assignment">Submitting Your Assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fin">Fin</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Shannon Capps and Joshua C. Agar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
