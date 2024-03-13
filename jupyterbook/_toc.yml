@@ -214,3 +214,5 @@ parts:
     chapters:
       - file: week10/Final_Exam_Practice
         title: "📚✍️🧠 Practice Final"
+      - file: week10/lab10_fitting
+        title: "🧪 Lab 10: Fitting"
